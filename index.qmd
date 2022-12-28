@@ -1,11 +1,24 @@
 ---
-title: "qweb"
+title: "Sam Harper"
+about:
+  template: trestles
+  image: portrait.jpg
+  links:
+    - icon: envelope
+      aria-label: email
+      href: "mailto:sam.harper@mcgill.ca"
+    - icon: twitter
+      href: https://twitter.com/sbh4th
+    - icon: github
+      href: https://github.com/sbh4th
+#    - icon: <i class="ai ai-google-scholar" role="img"></i>   
+#      href: https://scholar.google.ca/citations?user=Ipf8idcAAAAJ&hl=en
 ---
 
-This is a Quarto website.
+I am an associate professor in the Department of Epidemiology, Biostatistics & Occupational Health at McGill University. I am also a member of the McGill University [Centre on Population Dynamics](https://www.mcgill.ca/popcentre/) and McGill's [Public Policy and Population Health Observatory](https://3po.ca).
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+My research focuses on understanding population health and its social distribution, with specific interests in impact evaluation, measuring health inequalities, global health, demography, causal inference, and ethical issues in public health.
 
-```{r}
-1 + 1
-```
+More information on specific projects, papers, students, and teaching are in my CV.
+
+
