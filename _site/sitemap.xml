@@ -2,14 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.samharper.org/index.html</loc>
-    <lastmod>2023-01-08T20:11:46.496Z</lastmod>
+    <lastmod>2023-01-08T21:47:39.628Z</lastmod>
   </url>
   <url>
     <loc>https://www.samharper.org/about.html</loc>
-    <lastmod>2023-01-08T20:13:29.714Z</lastmod>
+    <lastmod>2023-01-08T21:53:16.136Z</lastmod>
   </url>
   <url>
     <loc>https://www.samharper.org/teaching/index.html</loc>
-    <lastmod>2023-01-08T20:14:00.767Z</lastmod>
+    <lastmod>2023-01-08T21:47:13.943Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/teaching/epib-706-2023/index.html</loc>
+    <lastmod>2023-01-08T21:42:43.443Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/teaching/epib-706-fall-2020/index.html</loc>
+    <lastmod>2023-01-08T21:48:15.148Z</lastmod>
   </url>
 </urlset>
