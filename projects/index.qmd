@@ -7,6 +7,7 @@ Below are links to some of my current and past research projects.
 # Current projects
 
 ## Early Childhood Education Policies and Child Health
+![Photo: http://policynote.ca](childcare.jpg)
 
 (with [Arijit Nandi](https://www.mcgill.ca/epi-biostat-occh/arijit-nandi), [Emis Akbari](https://www.oise.utoronto.ca/atkinson/About_Us/Staff_Faculty/Emis_Akbari.html), [Jody Heymann](https://ph.ucla.edu/faculty/heymann), and [Linda White](https://munkschool.utoronto.ca/person/linda-white))
 
@@ -21,7 +22,7 @@ The project's main objectives are to:
 Funding: [Social Sciences and Humanities Research Council](https://www.sshrc-crsh.gc.ca/home-accueil-eng.aspx)
 
 ## Beijing Houshold Energy Transitions [BHET]
-![PHoto: The Straits Times](bhet.jpg)
+![Photo: The Straits Times](bhet.jpg)
 
 (with [Jill Baumgartner](https://jillbaumgartner.weebly.com/))
 

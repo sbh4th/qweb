@@ -16,6 +16,8 @@ website:
         file: posts/index.qmd
       - text: "Projects"
         file: projects/index.qmd
+      - text: "CV"
+        file: cv/index.qmd
 
 format:
   html:
