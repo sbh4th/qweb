@@ -40,6 +40,8 @@ Nominee, top article for 2007: The Year in Research?, Robert Wood Johnson Founda
 
 Nominee, Paper of the Year, 2006, Lancet
 
+## Current Research Funding
+
 **Addressing the Wider Health Impacts of COVID-19**
 
 -   Agency: Canadian Institutes for Health Research
@@ -101,6 +103,8 @@ Nominee, Paper of the Year, 2006, Lancet
 -   Role: Co-PI (with Jennifer Hutcheon and Erin Strumpf)
 
 -   Amount: CAD \$221,850
+
+## Past Research Funding
 
 **Improving maternal and newborn health in underserved areas in Tanzania**
 
@@ -197,6 +201,8 @@ Nominee, Paper of the Year, 2006, Lancet
 -   Role: Co-Investigator (PI: Frank Elgar)
 
 -   Amount: CAD \$311,596
+
+## Journal Publications
 
 Hutcheon JA, **Harper S**. No, it is not too good to be true: Response by Hutcheon and Harper. *Paediatric and perinatal epidemiology* 2021;35(6): 781-782.
 
