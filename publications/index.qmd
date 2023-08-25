@@ -1,0 +1,13 @@
+---
+title: "Papers"
+format: html
+bibliography: publications.bib
+# csl: vancouver-author-date.csl
+csl: vancouver-website.csl
+nocite: |
+  @*
+---
+A list of my recent papers.
+
+::: {#refs}
+:::

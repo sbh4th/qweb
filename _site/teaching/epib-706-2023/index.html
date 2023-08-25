@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,7 +18,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -60,6 +60,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
@@ -76,37 +77,43 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Sam Harper</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching/index.html">
+    <a class="nav-link" href="../../teaching/index.html" rel="" target="">
  <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/index.html">
+    <a class="nav-link" href="../../posts/index.html" rel="" target="">
  <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/index.html">
+    <a class="nav-link" href="../../projects/index.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../cv/index.html">
+    <a class="nav-link" href="../../publications/index.html" rel="" target="">
+ <span class="menu-text">Papers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/index.html" rel="" target="">
  <span class="menu-text">CV</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -120,107 +127,107 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-description" id="toc-course-description" class="nav-link active" data-scroll-target="#course-description"><span class="toc-section-number">1</span>  Course Description</a></li>
-  <li><a href="#eligibility" id="toc-eligibility" class="nav-link" data-scroll-target="#eligibility"><span class="toc-section-number">2</span>  Eligibility</a></li>
-  <li><a href="#course-format" id="toc-course-format" class="nav-link" data-scroll-target="#course-format"><span class="toc-section-number">3</span>  Course Format</a></li>
-  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation"><span class="toc-section-number">4</span>  Evaluation</a>
+  <li><a href="#course-description" id="toc-course-description" class="nav-link active" data-scroll-target="#course-description"><span class="header-section-number">1</span> Course Description</a></li>
+  <li><a href="#eligibility" id="toc-eligibility" class="nav-link" data-scroll-target="#eligibility"><span class="header-section-number">2</span> Eligibility</a></li>
+  <li><a href="#course-format" id="toc-course-format" class="nav-link" data-scroll-target="#course-format"><span class="header-section-number">3</span> Course Format</a></li>
+  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation"><span class="header-section-number">4</span> Evaluation</a>
   <ul class="collapse">
-  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading"><span class="toc-section-number">4.1</span>  Reading</a></li>
-  <li><a href="#writing" id="toc-writing" class="nav-link" data-scroll-target="#writing"><span class="toc-section-number">4.2</span>  Writing</a></li>
-  <li><a href="#engagement" id="toc-engagement" class="nav-link" data-scroll-target="#engagement"><span class="toc-section-number">4.3</span>  Engagement</a>
+  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading"><span class="header-section-number">4.1</span> Reading</a></li>
+  <li><a href="#writing" id="toc-writing" class="nav-link" data-scroll-target="#writing"><span class="header-section-number">4.2</span> Writing</a></li>
+  <li><a href="#engagement" id="toc-engagement" class="nav-link" data-scroll-target="#engagement"><span class="header-section-number">4.3</span> Engagement</a>
   <ul class="collapse">
   <li><a href="#leading-discussion" id="toc-leading-discussion" class="nav-link" data-scroll-target="#leading-discussion">Leading Discussion</a></li>
   <li><a href="#participation" id="toc-participation" class="nav-link" data-scroll-target="#participation">Participation</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading"><span class="toc-section-number">5</span>  Grading</a></li>
-  <li><a href="#course-outline-12-questions-to-consider" id="toc-course-outline-12-questions-to-consider" class="nav-link" data-scroll-target="#course-outline-12-questions-to-consider"><span class="toc-section-number">6</span>  Course Outline (12 “questions” to consider)</a>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading"><span class="header-section-number">5</span> Grading</a></li>
+  <li><a href="#course-outline-12-questions-to-consider" id="toc-course-outline-12-questions-to-consider" class="nav-link" data-scroll-target="#course-outline-12-questions-to-consider"><span class="header-section-number">6</span> Course Outline (12 “questions” to consider)</a>
   <ul class="collapse">
-  <li><a href="#week-1-what-is-the-present-and-future-of-epidemiology-as-a-discipline" id="toc-week-1-what-is-the-present-and-future-of-epidemiology-as-a-discipline" class="nav-link" data-scroll-target="#week-1-what-is-the-present-and-future-of-epidemiology-as-a-discipline"><span class="toc-section-number">6.1</span>  Week 1: What is the present and future of epidemiology as a discipline?</a>
+  <li><a href="#week-1-what-is-the-present-and-future-of-epidemiology-as-a-discipline" id="toc-week-1-what-is-the-present-and-future-of-epidemiology-as-a-discipline" class="nav-link" data-scroll-target="#week-1-what-is-the-present-and-future-of-epidemiology-as-a-discipline"><span class="header-section-number">6.1</span> Week 1: What is the present and future of epidemiology as a discipline?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-01-04-course-introduction" id="toc-wednesday-2023-01-04-course-introduction" class="nav-link" data-scroll-target="#wednesday-2023-01-04-course-introduction">Wednesday 2023-01-04: Course introduction</a></li>
   <li><a href="#friday-2023-01-06-reflections-on-epidemiologys-past-and-present" id="toc-friday-2023-01-06-reflections-on-epidemiologys-past-and-present" class="nav-link" data-scroll-target="#friday-2023-01-06-reflections-on-epidemiologys-past-and-present">Friday 2023-01-06: Reflections on epidemiology’s past and present</a></li>
   </ul></li>
-  <li><a href="#week-2-what-kinds-of-questions-should-we-be-asking" id="toc-week-2-what-kinds-of-questions-should-we-be-asking" class="nav-link" data-scroll-target="#week-2-what-kinds-of-questions-should-we-be-asking"><span class="toc-section-number">6.2</span>  Week 2: What kinds of questions should we be asking?</a>
+  <li><a href="#week-2-what-kinds-of-questions-should-we-be-asking" id="toc-week-2-what-kinds-of-questions-should-we-be-asking" class="nav-link" data-scroll-target="#week-2-what-kinds-of-questions-should-we-be-asking"><span class="header-section-number">6.2</span> Week 2: What kinds of questions should we be asking?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-01-11-does-it-matter-whether-questions-and-methods-align" id="toc-wednesday-2023-01-11-does-it-matter-whether-questions-and-methods-align" class="nav-link" data-scroll-target="#wednesday-2023-01-11-does-it-matter-whether-questions-and-methods-align">Wednesday 2023-01-11: Does it matter whether questions and methods align?</a></li>
   <li><a href="#friday-2023-01-13-what-makes-a-good-question" id="toc-friday-2023-01-13-what-makes-a-good-question" class="nav-link" data-scroll-target="#friday-2023-01-13-what-makes-a-good-question">Friday 2023-01-13: What makes a ‘good’ question?</a></li>
   </ul></li>
-  <li><a href="#week-3-how-important-is-formal-causal-inference" id="toc-week-3-how-important-is-formal-causal-inference" class="nav-link" data-scroll-target="#week-3-how-important-is-formal-causal-inference"><span class="toc-section-number">6.3</span>  Week 3: How important is formal causal inference?</a>
+  <li><a href="#week-3-how-important-is-formal-causal-inference" id="toc-week-3-how-important-is-formal-causal-inference" class="nav-link" data-scroll-target="#week-3-how-important-is-formal-causal-inference"><span class="header-section-number">6.3</span> Week 3: How important is formal causal inference?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-01-18-are-potential-outcomes-and-dags-necessary" id="toc-wednesday-2023-01-18-are-potential-outcomes-and-dags-necessary" class="nav-link" data-scroll-target="#wednesday-2023-01-18-are-potential-outcomes-and-dags-necessary">Wednesday 2023-01-18: Are potential outcomes and DAGs necessary?</a></li>
   <li><a href="#friday-2023-01-20-are-well-defined-interventions-needed-for-causal-questions" id="toc-friday-2023-01-20-are-well-defined-interventions-needed-for-causal-questions" class="nav-link" data-scroll-target="#friday-2023-01-20-are-well-defined-interventions-needed-for-causal-questions">Friday 2023-01-20: Are well-defined interventions needed for causal questions?</a></li>
   </ul></li>
-  <li><a href="#week-4-how-should-we-study-non-manipulable-exposures" id="toc-week-4-how-should-we-study-non-manipulable-exposures" class="nav-link" data-scroll-target="#week-4-how-should-we-study-non-manipulable-exposures"><span class="toc-section-number">6.4</span>  Week 4: How should we study non-manipulable exposures?</a>
+  <li><a href="#week-4-how-should-we-study-non-manipulable-exposures" id="toc-week-4-how-should-we-study-non-manipulable-exposures" class="nav-link" data-scroll-target="#week-4-how-should-we-study-non-manipulable-exposures"><span class="header-section-number">6.4</span> Week 4: How should we study non-manipulable exposures?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-01-25-are-non-manipulable-exposures-causes" id="toc-wednesday-2023-01-25-are-non-manipulable-exposures-causes" class="nav-link" data-scroll-target="#wednesday-2023-01-25-are-non-manipulable-exposures-causes">Wednesday 2023-01-25: Are non-manipulable exposures causes?</a></li>
   <li><a href="#friday-2023-01-27-case-study-race-in-clinical-treatment." id="toc-friday-2023-01-27-case-study-race-in-clinical-treatment." class="nav-link" data-scroll-target="#friday-2023-01-27-case-study-race-in-clinical-treatment.">Friday 2023-01-27: Case study: race in clinical treatment.</a></li>
   </ul></li>
-  <li><a href="#week-5-should-we-try-to-randomize-interventions" id="toc-week-5-should-we-try-to-randomize-interventions" class="nav-link" data-scroll-target="#week-5-should-we-try-to-randomize-interventions"><span class="toc-section-number">6.5</span>  Week 5: Should we try to randomize interventions?</a>
+  <li><a href="#week-5-should-we-try-to-randomize-interventions" id="toc-week-5-should-we-try-to-randomize-interventions" class="nav-link" data-scroll-target="#week-5-should-we-try-to-randomize-interventions"><span class="header-section-number">6.5</span> Week 5: Should we try to randomize interventions?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-02-01-are-rcts-special" id="toc-wednesday-2023-02-01-are-rcts-special" class="nav-link" data-scroll-target="#wednesday-2023-02-01-are-rcts-special">Wednesday 2023-02-01: Are RCT’s special?</a></li>
   <li><a href="#friday-2023-02-03-what-if-we-cant-randomize" id="toc-friday-2023-02-03-what-if-we-cant-randomize" class="nav-link" data-scroll-target="#friday-2023-02-03-what-if-we-cant-randomize">Friday 2023-02-03: What if we can’t randomize?</a></li>
   </ul></li>
-  <li><a href="#week-6-do-we-need-representative-samples" id="toc-week-6-do-we-need-representative-samples" class="nav-link" data-scroll-target="#week-6-do-we-need-representative-samples"><span class="toc-section-number">6.6</span>  Week 6: Do we need representative samples?</a>
+  <li><a href="#week-6-do-we-need-representative-samples" id="toc-week-6-do-we-need-representative-samples" class="nav-link" data-scroll-target="#week-6-do-we-need-representative-samples"><span class="header-section-number">6.6</span> Week 6: Do we need representative samples?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-02-08-should-our-studies-be-representative" id="toc-wednesday-2023-02-08-should-our-studies-be-representative" class="nav-link" data-scroll-target="#wednesday-2023-02-08-should-our-studies-be-representative">Wednesday 2023-02-08: Should our studies be representative?</a></li>
   <li><a href="#friday-2023-02-10-case-study-covid-19-vaccine-uptake" id="toc-friday-2023-02-10-case-study-covid-19-vaccine-uptake" class="nav-link" data-scroll-target="#friday-2023-02-10-case-study-covid-19-vaccine-uptake">Friday 2023-02-10: Case study: COVID-19 vaccine uptake</a></li>
   </ul></li>
-  <li><a href="#week-7-how-should-we-make-statistical-inferences" id="toc-week-7-how-should-we-make-statistical-inferences" class="nav-link" data-scroll-target="#week-7-how-should-we-make-statistical-inferences"><span class="toc-section-number">6.7</span>  Week 7: How should we make statistical inferences?</a>
+  <li><a href="#week-7-how-should-we-make-statistical-inferences" id="toc-week-7-how-should-we-make-statistical-inferences" class="nav-link" data-scroll-target="#week-7-how-should-we-make-statistical-inferences"><span class="header-section-number">6.7</span> Week 7: How should we make statistical inferences?</a>
   <ul class="collapse">
   <li><a href="#thursday-wednesday-2023-02-15-how-should-we-use-p-values" id="toc-thursday-wednesday-2023-02-15-how-should-we-use-p-values" class="nav-link" data-scroll-target="#thursday-wednesday-2023-02-15-how-should-we-use-p-values">Thursday Wednesday 2023-02-15: How should we use p-values?</a></li>
   <li><a href="#friday-2023-02-17-what-are-alternatives-to-p-values" id="toc-friday-2023-02-17-what-are-alternatives-to-p-values" class="nav-link" data-scroll-target="#friday-2023-02-17-what-are-alternatives-to-p-values">Friday 2023-02-17: What are alternatives to p-values?</a></li>
   </ul></li>
-  <li><a href="#week-8-how-bad-can-it-be" id="toc-week-8-how-bad-can-it-be" class="nav-link" data-scroll-target="#week-8-how-bad-can-it-be"><span class="toc-section-number">6.8</span>  Week 8: How bad can it be?</a>
+  <li><a href="#week-8-how-bad-can-it-be" id="toc-week-8-how-bad-can-it-be" class="nav-link" data-scroll-target="#week-8-how-bad-can-it-be"><span class="header-section-number">6.8</span> Week 8: How bad can it be?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-02-22-how-can-we-quantify-our-assumptions" id="toc-wednesday-2023-02-22-how-can-we-quantify-our-assumptions" class="nav-link" data-scroll-target="#wednesday-2023-02-22-how-can-we-quantify-our-assumptions">Wednesday 2023-02-22: How can we quantify our assumptions?</a></li>
   <li><a href="#friday-2023-02-24-can-bias-analysis-be-biased" id="toc-friday-2023-02-24-can-bias-analysis-be-biased" class="nav-link" data-scroll-target="#friday-2023-02-24-can-bias-analysis-be-biased">Friday 2023-02-24: Can bias analysis be biased?</a></li>
   </ul></li>
-  <li><a href="#week-9-winter-break" id="toc-week-9-winter-break" class="nav-link" data-scroll-target="#week-9-winter-break"><span class="toc-section-number">6.9</span>  Week 9: Winter Break</a>
+  <li><a href="#week-9-winter-break" id="toc-week-9-winter-break" class="nav-link" data-scroll-target="#week-9-winter-break"><span class="header-section-number">6.9</span> Week 9: Winter Break</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-03-01-no-class" id="toc-wednesday-2023-03-01-no-class" class="nav-link" data-scroll-target="#wednesday-2023-03-01-no-class">Wednesday 2023-03-01: No class</a></li>
   <li><a href="#friday-2023-03-03-no-class" id="toc-friday-2023-03-03-no-class" class="nav-link" data-scroll-target="#friday-2023-03-03-no-class">Friday 2023-03-03: No class</a></li>
   </ul></li>
-  <li><a href="#week-10-to-whom-do-epidemiologic-results-apply" id="toc-week-10-to-whom-do-epidemiologic-results-apply" class="nav-link" data-scroll-target="#week-10-to-whom-do-epidemiologic-results-apply"><span class="toc-section-number">6.10</span>  Week 10: To whom do epidemiologic results apply?</a>
+  <li><a href="#week-10-to-whom-do-epidemiologic-results-apply" id="toc-week-10-to-whom-do-epidemiologic-results-apply" class="nav-link" data-scroll-target="#week-10-to-whom-do-epidemiologic-results-apply"><span class="header-section-number">6.10</span> Week 10: To whom do epidemiologic results apply?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-03-08-how-should-we-think-about-generalizing-to-other-populations" id="toc-wednesday-2023-03-08-how-should-we-think-about-generalizing-to-other-populations" class="nav-link" data-scroll-target="#wednesday-2023-03-08-how-should-we-think-about-generalizing-to-other-populations">Wednesday 2023-03-08: How should we think about generalizing to other populations?</a></li>
   <li><a href="#friday-2023-03-10-should-we-generalize-to-specific-individuals" id="toc-friday-2023-03-10-should-we-generalize-to-specific-individuals" class="nav-link" data-scroll-target="#friday-2023-03-10-should-we-generalize-to-specific-individuals">Friday 2023-03-10: Should we generalize to specific individuals?</a></li>
   </ul></li>
-  <li><a href="#week-11-is-research-including-epidemiology-reliable" id="toc-week-11-is-research-including-epidemiology-reliable" class="nav-link" data-scroll-target="#week-11-is-research-including-epidemiology-reliable"><span class="toc-section-number">6.11</span>  Week 11: Is research (including epidemiology) reliable?</a>
+  <li><a href="#week-11-is-research-including-epidemiology-reliable" id="toc-week-11-is-research-including-epidemiology-reliable" class="nav-link" data-scroll-target="#week-11-is-research-including-epidemiology-reliable"><span class="header-section-number">6.11</span> Week 11: Is research (including epidemiology) reliable?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-03-15-is-science-broken" id="toc-wednesday-2023-03-15-is-science-broken" class="nav-link" data-scroll-target="#wednesday-2023-03-15-is-science-broken">Wednesday 2023-03-15: Is science broken?</a></li>
   <li><a href="#friday-2023-03-17-what-are-some-potential-solutions" id="toc-friday-2023-03-17-what-are-some-potential-solutions" class="nav-link" data-scroll-target="#friday-2023-03-17-what-are-some-potential-solutions">Friday 2023-03-17: What are some potential solutions?</a></li>
   </ul></li>
-  <li><a href="#week-12-how-should-we-put-together-all-of-the-evidence" id="toc-week-12-how-should-we-put-together-all-of-the-evidence" class="nav-link" data-scroll-target="#week-12-how-should-we-put-together-all-of-the-evidence"><span class="toc-section-number">6.12</span>  Week 12: How should we put together all of the evidence?</a>
+  <li><a href="#week-12-how-should-we-put-together-all-of-the-evidence" id="toc-week-12-how-should-we-put-together-all-of-the-evidence" class="nav-link" data-scroll-target="#week-12-how-should-we-put-together-all-of-the-evidence"><span class="header-section-number">6.12</span> Week 12: How should we put together all of the evidence?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-03-22-can-triangulation-help" id="toc-wednesday-2023-03-22-can-triangulation-help" class="nav-link" data-scroll-target="#wednesday-2023-03-22-can-triangulation-help">Wednesday 2023-03-22: Can “triangulation” help?</a></li>
   <li><a href="#friday-2023-03-24-does-meta-analysis-help-or-hurt" id="toc-friday-2023-03-24-does-meta-analysis-help-or-hurt" class="nav-link" data-scroll-target="#friday-2023-03-24-does-meta-analysis-help-or-hurt">Friday 2023-03-24: Does meta-analysis help or hurt?</a></li>
   </ul></li>
-  <li><a href="#week-13-how-should-we-communicate-epidemiologic-evidence" id="toc-week-13-how-should-we-communicate-epidemiologic-evidence" class="nav-link" data-scroll-target="#week-13-how-should-we-communicate-epidemiologic-evidence"><span class="toc-section-number">6.13</span>  Week 13: How should we communicate epidemiologic evidence?</a>
+  <li><a href="#week-13-how-should-we-communicate-epidemiologic-evidence" id="toc-week-13-how-should-we-communicate-epidemiologic-evidence" class="nav-link" data-scroll-target="#week-13-how-should-we-communicate-epidemiologic-evidence"><span class="header-section-number">6.13</span> Week 13: How should we communicate epidemiologic evidence?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-03-29-how-should-we-discuss-epidemiologic-results" id="toc-wednesday-2023-03-29-how-should-we-discuss-epidemiologic-results" class="nav-link" data-scroll-target="#wednesday-2023-03-29-how-should-we-discuss-epidemiologic-results">Wednesday 2023-03-29: How should we discuss epidemiologic results?</a></li>
   <li><a href="#friday-2023-03-31-how-much-does-evidence-even-matter" id="toc-friday-2023-03-31-how-much-does-evidence-even-matter" class="nav-link" data-scroll-target="#friday-2023-03-31-how-much-does-evidence-even-matter">Friday 2023-03-31: How much does “evidence” even matter?</a></li>
   </ul></li>
-  <li><a href="#week-14-what-is-to-be-done" id="toc-week-14-what-is-to-be-done" class="nav-link" data-scroll-target="#week-14-what-is-to-be-done"><span class="toc-section-number">6.14</span>  Week 14: What is to be done?</a>
+  <li><a href="#week-14-what-is-to-be-done" id="toc-week-14-what-is-to-be-done" class="nav-link" data-scroll-target="#week-14-what-is-to-be-done"><span class="header-section-number">6.14</span> Week 14: What is to be done?</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-04-05-can-we-change-scientific-culture" id="toc-wednesday-2023-04-05-can-we-change-scientific-culture" class="nav-link" data-scroll-target="#wednesday-2023-04-05-can-we-change-scientific-culture">Wednesday 2023-04-05: Can we change scientific culture?</a></li>
   <li><a href="#friday-2023-04-07-no-class-good-friday" id="toc-friday-2023-04-07-no-class-good-friday" class="nav-link" data-scroll-target="#friday-2023-04-07-no-class-good-friday">Friday 2023-04-07: No class (Good Friday)</a></li>
   </ul></li>
-  <li><a href="#week-15-parting-discussion" id="toc-week-15-parting-discussion" class="nav-link" data-scroll-target="#week-15-parting-discussion"><span class="toc-section-number">6.15</span>  Week 15: Parting discussion</a>
+  <li><a href="#week-15-parting-discussion" id="toc-week-15-parting-discussion" class="nav-link" data-scroll-target="#week-15-parting-discussion"><span class="header-section-number">6.15</span> Week 15: Parting discussion</a>
   <ul class="collapse">
   <li><a href="#wednesday-2023-04-12-no-class" id="toc-wednesday-2023-04-12-no-class" class="nav-link" data-scroll-target="#wednesday-2023-04-12-no-class">Wednesday 2023-04-12: No class</a></li>
   <li><a href="#thursday-2023-04-13-wrap-up" id="toc-thursday-2023-04-13-wrap-up" class="nav-link" data-scroll-target="#thursday-2023-04-13-wrap-up"><strong>Thursday</strong> 2023-04-13: Wrap up</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity"><span class="toc-section-number">7</span>  Academic Integrity</a>
+  <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity"><span class="header-section-number">7</span> Academic Integrity</a>
   <ul class="collapse">
-  <li><a href="#academic-offences" id="toc-academic-offences" class="nav-link" data-scroll-target="#academic-offences"><span class="toc-section-number">7.1</span>  Academic offences</a></li>
-  <li><a href="#plagarism" id="toc-plagarism" class="nav-link" data-scroll-target="#plagarism"><span class="toc-section-number">7.2</span>  Plagarism</a></li>
-  <li><a href="#cheating" id="toc-cheating" class="nav-link" data-scroll-target="#cheating"><span class="toc-section-number">7.3</span>  Cheating</a></li>
+  <li><a href="#academic-offences" id="toc-academic-offences" class="nav-link" data-scroll-target="#academic-offences"><span class="header-section-number">7.1</span> Academic offences</a></li>
+  <li><a href="#plagarism" id="toc-plagarism" class="nav-link" data-scroll-target="#plagarism"><span class="header-section-number">7.2</span> Plagarism</a></li>
+  <li><a href="#cheating" id="toc-cheating" class="nav-link" data-scroll-target="#cheating"><span class="header-section-number">7.3</span> Cheating</a></li>
   </ul></li>
-  <li><a href="#language-rights" id="toc-language-rights" class="nav-link" data-scroll-target="#language-rights"><span class="toc-section-number">8</span>  Language Rights</a></li>
+  <li><a href="#language-rights" id="toc-language-rights" class="nav-link" data-scroll-target="#language-rights"><span class="header-section-number">8</span> Language Rights</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -237,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    Sam Harper 
+    <p class="author">Sam Harper </p>
   </div>
     <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -837,9 +844,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -904,6 +925,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
