@@ -1,0 +1,9 @@
+---
+title: "Recent Talks"
+listing:
+  # contents: "/*/index.qmd"
+  # sort: "date desc"
+  - id: ser-2023
+    contents: ser/ser-mlm.yml
+---
+Some recent presentations of my work. 

@@ -1,0 +1,7 @@
+---
+title: "Social Determinants of Health--Concepts and Methods Relevant to Air Pollution"
+date: "2020-05-20T12:00:00"
+image: "featured.png"
+categories: ["air pollution", "health inequalities", "social determinants"]
+
+---

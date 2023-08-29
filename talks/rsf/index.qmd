@@ -1,0 +1,6 @@
+---
+title: "Past and present rural-urban mortality transitions"
+subtitle: "Russell Sage Foundation: Listening to Rural America"
+date: '2019-03-15'
+image: "featured.png"
+---
