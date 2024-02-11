@@ -5,7 +5,8 @@ format:
   html:
     toc: true
 ---
-[PDF version](/cv/index.pdf)  
+
+[PDF version](/cv/index.pdf)
 
 |              |                                                                                                                               |
 |------------------------------------|------------------------------------|
@@ -66,7 +67,7 @@ format:
 ### Editorial boards
 
 |              |                                                                                                                                                                    |
-|-----------------|-------------------------------------------------------|
+|------------------|------------------------------------------------------|
 | 2022         | Guest Editor (with Shelley Clark and Bruce Weber), *RSF: The Russell Sage Foundation Journal of the Social Sciences*, Special Issue on Growing up in Rural America |
 | 2019-present | Editorial Board, *Injury Prevention*                                                                                                                               |
 | 2018-present | Editorial Board, *Social Science & Medicine-Population Health*                                                                                                     |
@@ -105,7 +106,7 @@ format:
 ### Panel Member
 
 |           |                                                                                                                     |
-|-----------------|-------------------------------------------------------|
+|------------------|------------------------------------------------------|
 | 2018-2023 | Scientific Officer, Canadian Institutes for Health Research (CIHR), Public, Community & Population Health Committee |
 | 2017-2018 | Member, Canadian Institutes for Health Research (CIHR), Public, Community & Population Health Committee             |
 | 2014-2016 | Canadian Institutes for Health Research (CIHR), Doctoral Research Awards                                            |
@@ -118,7 +119,7 @@ format:
 ### Ad hoc reviews
 
 |      |                                                                                                          |
-|-----------------|-------------------------------------------------------|
+|------------------|------------------------------------------------------|
 | 2021 | Robert Wood Johnson Foundation Interdisciplinary Research Leaders Competition                            |
 | 2019 | CIHR Canada Research Chairs (Tier 1)                                                                     |
 | 2019 | Faculty of Medicine, Internal grant review (2)                                                           |
@@ -429,7 +430,7 @@ Scientific American, The Economist, CNN, CTV, Reuters, Voice of America, The Hea
 ### Doctoral students (13)
 
 |              |                                                                                |
-|-----------------|-------------------------------------------------------|
+|------------------|------------------------------------------------------|
 | 2022-present | Siobhan Carroll (co-supervised with Jill Baumgartner)                          |
 | 2021-present | Wenlu Yuan (co-supervised with Jill Baumgartner)                               |
 | 2021-present | Peter Socha (co-supervised with Jennifer Hutcheon)                             |
@@ -475,7 +476,7 @@ Scientific American, The Economist, CNN, CTV, Reuters, Voice of America, The Hea
 ### Master's degree students (8)
 
 |           |                                                                 |
-|-----------|-----------------------------------------------------------------|
+|---------------|---------------------------------------------------------|
 | 2021-2022 | Melia Alcantara (co-supervised with Seungmi Yang)               |
 | 2020-2021 | Peter Socha (co-supervised with Jennifer Hutcheon)              |
 |           |    *FRQS master's award, \$35,000, 2021-2022*                   |
@@ -559,7 +560,7 @@ Scientific American, The Economist, CNN, CTV, Reuters, Voice of America, The Hea
 ### National
 
 |      |                                                                                                                                                                           |
-|-----------------|-------------------------------------------------------|
+|------------------|------------------------------------------------------|
 | 2023 | Invited Discussant "Causal Inference and Hierarchy of Evidence". AI for Public Health Summer Institute, University of Toronto, July 21, 2023                              |
 | 2019 | *Socioeconomic Inequalities in Health: From Causal Inference to Policies*, Canadian Society for Epidemiology & Biostatistics Annual Meeting, Ottawa (Keynote Address)     |
 | 2013 | *The Impact of Framing the Scale of Inequality on Judgements of Intervention Impacts.* Department of Community Health and Epidemiology, Dalhousie University, Halifax.    |

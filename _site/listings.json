@@ -1,12 +1,12 @@
 [
   {
+    "listing": "/talks/index.html",
+    "items": []
+  },
+  {
     "listing": "/research/index.html",
     "items": [
       "/research/articles/harper-2021-wv/index.html"
     ]
-  },
-  {
-    "listing": "/talks/index.html",
-    "items": []
   }
 ]

@@ -6,7 +6,8 @@ website:
   site-url: "https://www.samharper.org"
   repo-url: "https://github.com/sbh4th/qweb"
   navbar:
-    left:
+    search: true
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
