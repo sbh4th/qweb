@@ -5,12 +5,13 @@ website:
   title: "Sam Harper"
   site-url: "https://www.samharper.org"
   repo-url: "https://github.com/sbh4th/qweb"
+  repo-actions: [edit, issue]
   navbar:
     search: true
     right:
       - href: index.qmd
         text: Home
-      - about.qmd
+      # - about.qmd
       - text: "Teaching"
         file: teaching/index.qmd
       - text: "Posts"
@@ -30,5 +31,5 @@ format:
     css: styles.css
     toc: true
 
-editor: visual
+editor: source
 
