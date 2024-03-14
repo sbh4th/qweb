@@ -1,23 +1,23 @@
 ---
 title: "Curriculum Vitae"
-format: 
-  html:
-    toc: true
-#format:
-# pdf:
-#   colorlinks: true
-#   link-citations: true
-#   keep-tex: true
-#   number-sections: true
-#   # fontfamily: CrimsonPro
-#   include-in-header:
-#     - text: |
-#         \usepackage{etaremune}
-#         \usepackage{doi}
-#         \usepackage{enumitem}
-#         \setlist[itemize]{noitemsep}
-#         \usepackage{scrlayer-scrpage}
-#         \rohead{\textsf{CV - S.Harper}}
+#format: 
+#  html:
+#    toc: true
+format:
+ pdf:
+   colorlinks: true
+   link-citations: true
+   keep-tex: true
+   number-sections: true
+   # fontfamily: CrimsonPro
+   include-in-header:
+     - text: |
+         \usepackage{etaremune}
+         \usepackage{doi}
+         \usepackage{enumitem}
+         \setlist[itemize]{noitemsep}
+         \usepackage{scrlayer-scrpage}
+         \rohead{\textsf{CV - S.Harper}}
 editor_options: 
   markdown: 
     wrap: sentence
@@ -783,7 +783,11 @@ My research focuses on investigating how social and environmental factors impact
 ```{=tex}
 \begin{etaremune}
 
-\item *Socha PM, \textbf{Harper S}, Strumpf E, Murphy KE, Hutcheon JA. Antenatal corticosteroids and newborn respiratory outcomes in twins: A regression discontinuity study. \emph{BJOG}. \doi{10.1111/1471-0528.17754}
+\item Socha PM*, \textbf{Harper S}, Hutcheon JA. Methods of confounder selection in obstetrics and gynaecology studies: An overview of recent practice. \emph{BJOG}. 2024 \doi{10.1111/1471-0528.17799}. Online ahead of print.
+ 
+\item Hetherington E*, Darling E, \textbf{Harper S}, Nguyen F, Schummers L, Norman WV. Inequalities in access to prenatal care during the COVID-19 pandemic: Analysis of a population-based cohort. \emph{Paediatr Perinat Epidemiol} 2024 \doi{10.1111/ppe.13050}. Online ahead of print.
+
+\item *Socha PM, \textbf{Harper S}, Strumpf E, Murphy KE, Hutcheon JA. Antenatal corticosteroids and newborn respiratory outcomes in twins: A regression discontinuity study. \emph{BJOG}. \doi{10.1111/1471-0528.17754}. Online ahead of print.
 
 \item \textbf{Harper S}, Nandi A. Empirical Challenges in Defining Treatments and Time in the Evaluation of Gun Laws. \emph{Epidemiology} 2023 Nov 1;34(6):793-5. \doi{10.1097/EDE.0000000000001663}
 
