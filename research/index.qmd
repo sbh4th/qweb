@@ -3,8 +3,8 @@ title: "Research"
 listing:
   - id: articles
     contents: "articles/*/index.qmd"
-  - id: book-chapters
-    contents: "chapters/*/index.qmd"
+  #- id: book-chapters
+  #  contents: "chapters/*/index.qmd"
 page-layout: full
 include-back-link: false
 toc-location: right

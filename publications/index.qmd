@@ -4,8 +4,8 @@ format: html
 bibliography: publications.bib
 # csl: vancouver-author-date.csl
 csl: vancouver-website.csl
-nocite: |
-  @*
+#nocite: |
+#  @*
 ---
 A list of my recent papers.
 

@@ -86,10 +86,6 @@
 \rohead{\textsf{CV - S.Harper}}
 \KOMAoption{captions}{tableheading}
 \makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -125,18 +121,10 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
-\makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
 \makeatother
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
@@ -159,12 +147,11 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, breakable, enhanced, borderline west={3pt}{0pt}{shadecolor}, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
+\href{../cv/index.pdf}{PDF version}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{identification}{%
-\section{Identification}\label{identification}}
+\section{Identification}\label{identification}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -188,8 +175,7 @@ Citizenship: & United States, Canada (Naturalized) \\
 Languages: & English, French (Basic) \\
 \end{longtable}
 
-\hypertarget{education}{%
-\section{Education}\label{education}}
+\section{Education}\label{education}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -208,8 +194,7 @@ Analysis of Intimate Partner Violence.} \\
 USA. \\
 \end{longtable}
 
-\hypertarget{appointments}{%
-\section{Appointments}\label{appointments}}
+\section{Appointments}\label{appointments}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -230,9 +215,8 @@ Epidemiology, Biostatistics \& Occupational Health, McGill University \\
 Biostatistics \& Occupational Health, McGill University \\
 \end{longtable}
 
-\hypertarget{special-honors-awards-and-recognition}{%
 \section{Special Honors, Awards, and
-Recognition}\label{special-honors-awards-and-recognition}}
+Recognition}\label{special-honors-awards-and-recognition}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -258,18 +242,14 @@ Johnson Foundation. \\
 2007 & Nominee, Paper of the Year, 2006, Lancet. \\
 \end{longtable}
 
-\hypertarget{teaching}{%
-\section{Teaching}\label{teaching}}
+\section{Teaching}\label{teaching}
 
-\hypertarget{mcgill}{%
-\subsection{McGill}\label{mcgill}}
+\subsection{McGill}\label{mcgill}
 
-\hypertarget{postgraduate-courses}{%
-\subsubsection{Postgraduate Courses}\label{postgraduate-courses}}
+\subsubsection{Postgraduate Courses}\label{postgraduate-courses}
 
-\hypertarget{postgraduate-guest-lectures}{%
 \subsubsection{Postgraduate guest
-lectures}\label{postgraduate-guest-lectures}}
+lectures}\label{postgraduate-guest-lectures}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -312,11 +292,9 @@ Occupational Health, McGill University. \\
 (Introduction to Population Health and Social Epidemiology) \\
 \end{longtable}
 
-\hypertarget{undergraduate}{%
-\subsubsection{Undergraduate}\label{undergraduate}}
+\subsubsection{Undergraduate}\label{undergraduate}
 
-\hypertarget{international}{%
-\subsection{International}\label{international}}
+\subsection{International}\label{international}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -359,12 +337,10 @@ and Methods}, Institut national de la santé et de la recherche médicale
 (INSERM), Paris, France. \\
 \end{longtable}
 
-\hypertarget{research-trainees-supervised}{%
 \subsection{Research Trainees
-Supervised}\label{research-trainees-supervised}}
+Supervised}\label{research-trainees-supervised}
 
-\hypertarget{postdoctoral-fellows-7}{%
-\subsubsection{Postdoctoral fellows (7)}\label{postdoctoral-fellows-7}}
+\subsubsection{Postdoctoral fellows (7)}\label{postdoctoral-fellows-7}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -384,8 +360,7 @@ Supervised}\label{research-trainees-supervised}}
 2011-2012 & Kristin Voigt (co-supervised with Nick King) \\
 \end{longtable}
 
-\hypertarget{doctoral-students-13}{%
-\subsubsection{Doctoral students (13)}\label{doctoral-students-13}}
+\subsubsection{Doctoral students (13)}\label{doctoral-students-13}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -440,9 +415,8 @@ University} \\
 & ~~ \emph{HD-IDEAS Matching Studentship (2010, 2013)} \\
 \end{longtable}
 
-\hypertarget{masters-degree-students-8}{%
 \subsubsection{Master's degree students
-(8)}\label{masters-degree-students-8}}
+(8)}\label{masters-degree-students-8}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -466,12 +440,10 @@ University} \\
 2009-2010 & Jessica Adam-Smith \\
 \end{longtable}
 
-\hypertarget{thesis-committee-member-15}{%
 \subsubsection{Thesis committee member
-(15)}\label{thesis-committee-member-15}}
+(15)}\label{thesis-committee-member-15}
 
-\hypertarget{completed-degree}{%
-\paragraph{Completed degree}\label{completed-degree}}
+\paragraph{Completed degree}\label{completed-degree}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -493,8 +465,7 @@ University} \\
 2008-2010 & Candace Sirjoosingh (MSc, Epidemiology) \\
 \end{longtable}
 
-\hypertarget{current}{%
-\paragraph{Current}\label{current}}
+\paragraph{Current}\label{current}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -509,12 +480,10 @@ University} \\
 2014-present & Miriam Kinkaid (PhD, Epidemiology) \\
 \end{longtable}
 
-\hypertarget{invited-lectures-talks-presentations}{%
 \subsection{Invited Lectures, Talks,
-Presentations}\label{invited-lectures-talks-presentations}}
+Presentations}\label{invited-lectures-talks-presentations}
 
-\hypertarget{international-1}{%
-\subsubsection{International}\label{international-1}}
+\subsubsection{International}\label{international-1}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -601,8 +570,7 @@ Institute, Bethesda, MD USA. \\
 Symposium, National Cancer Institute, Bethesda, MD USA. \\
 \end{longtable}
 
-\hypertarget{national}{%
-\subsubsection{National}\label{national}}
+\subsubsection{National}\label{national}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -629,14 +597,11 @@ de L'Universite de Montreal, Montreal. \\
 Framework.} Queen's University, Kingston. \\
 \end{longtable}
 
-\hypertarget{other-contributions}{%
-\section{Other Contributions}\label{other-contributions}}
+\section{Other Contributions}\label{other-contributions}
 
-\hypertarget{journals}{%
-\subsection{Journals}\label{journals}}
+\subsection{Journals}\label{journals}
 
-\hypertarget{editorial-boards}{%
-\subsubsection{Editorial boards}\label{editorial-boards}}
+\subsubsection{Editorial boards}\label{editorial-boards}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -655,12 +620,10 @@ Medicine-Population Health} \\
 Special Issue on Data Systems and the Social Determinants of Health \\
 \end{longtable}
 
-\hypertarget{ad-hoc-reviews}{%
-\subsubsection{Ad hoc reviews}\label{ad-hoc-reviews}}
+\subsubsection{Ad hoc reviews}\label{ad-hoc-reviews}
 
-\hypertarget{epidemiology-and-public-health}{%
 \paragraph{Epidemiology and Public
-Health}\label{epidemiology-and-public-health}}
+Health}\label{epidemiology-and-public-health}
 
 \emph{American Journal of Public Health; Annals of Epidemiology;
 Epidemiology; International Journal of Epidemiology; Journal of
@@ -677,46 +640,39 @@ Action; Traffic Injury Prevention; Cancer; Oxford University Press (book
 proposal); Journal of Drug Issues; Environmental Health; Nature
 Communications Medicine; Nature; Nature Medicine }
 
-\hypertarget{general-medicine}{%
-\paragraph{General Medicine}\label{general-medicine}}
+\paragraph{General Medicine}\label{general-medicine}
 
 \emph{Annals of Internal Medicine; BMJ (top 10\% of peer reviewers in
 2007); The Lancet; PLOS Medicine; JAMA; New England Journal of Medicine;
 Canadian Medical Association Journal; JAMA Pediatrics; Canadian J
 Cardiology}
 
-\hypertarget{health-policy}{%
-\paragraph{Health Policy}\label{health-policy}}
+\paragraph{Health Policy}\label{health-policy}
 
 \emph{Milbank Quarterly; Health Affairs; Health Policy; Health Services
 Research; Evaluation Review}
 
-\hypertarget{social-science}{%
-\paragraph{Social Science}\label{social-science}}
+\paragraph{Social Science}\label{social-science}
 
 \emph{Demography; Population Studies; Social Compass; Social Science
 History; Sociological Focus; Journal of Health and Social Behavior;
 Population Research and Policy Review; Journal of Health and Social
 Behavior}
 
-\hypertarget{biostatistics}{%
-\paragraph{Biostatistics}\label{biostatistics}}
+\paragraph{Biostatistics}\label{biostatistics}
 
 \emph{Journal of the Royal Statistical Society (A); Statistics in
 Medicine}
 
-\hypertarget{economics}{%
-\paragraph{Economics}\label{economics}}
+\paragraph{Economics}\label{economics}
 
 \emph{B.E. Journal of Economics and Policy; Health Economics; Oxford
 Development Studies; Journal of Economic Issues; Applied Economics
 Letters; American Journal of Economics \& Sociology}
 
-\hypertarget{grant-reviews}{%
-\subsection{Grant Reviews}\label{grant-reviews}}
+\subsection{Grant Reviews}\label{grant-reviews}
 
-\hypertarget{panel-member}{%
-\subsubsection{Panel Member}\label{panel-member}}
+\subsubsection{Panel Member}\label{panel-member}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -739,8 +695,7 @@ Research Awards \\
 Canadian Cancer Society Research Institute (CCSRI). \\
 \end{longtable}
 
-\hypertarget{ad-hoc-reviews-1}{%
-\subsubsection{Ad hoc reviews}\label{ad-hoc-reviews-1}}
+\subsubsection{Ad hoc reviews}\label{ad-hoc-reviews-1}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -771,12 +726,10 @@ Research Programme (HIRP) \\
 2007 & Michael Smith Foundation for Health Research, Canada \\
 \end{longtable}
 
-\hypertarget{administrative-responsibilities}{%
 \subsection{Administrative
-Responsibilities}\label{administrative-responsibilities}}
+Responsibilities}\label{administrative-responsibilities}
 
-\hypertarget{current-1}{%
-\subsubsection{Current}\label{current-1}}
+\subsubsection{Current}\label{current-1}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -789,8 +742,7 @@ Responsibilities}\label{administrative-responsibilities}}
 Biostatistics \& Occupational Health (starting January, 2015) \\
 \end{longtable}
 
-\hypertarget{past}{%
-\subsubsection{Past}\label{past}}
+\subsubsection{Past}\label{past}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -803,11 +755,9 @@ Biostatistics \& Occupational Health (starting January, 2015) \\
 Biostatistics \& Occupational Health \\
 \end{longtable}
 
-\hypertarget{committees}{%
-\subsection{Committees}\label{committees}}
+\subsection{Committees}\label{committees}
 
-\hypertarget{international-2}{%
-\subsubsection{International}\label{international-2}}
+\subsubsection{International}\label{international-2}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -841,8 +791,7 @@ Study} \\
 Disparities Think Tank, National Cancer Institute, Bethesda, MD USA. \\
 \end{longtable}
 
-\hypertarget{national-1}{%
-\subsubsection{National}\label{national-1}}
+\subsubsection{National}\label{national-1}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -859,8 +808,7 @@ Initiative}, Canadian Institute for Health Information \\
 Statistics Canada \\
 \end{longtable}
 
-\hypertarget{university}{%
-\subsubsection{University}\label{university}}
+\subsubsection{University}\label{university}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -877,8 +825,7 @@ series \\
 Statistics Management Committee \\
 \end{longtable}
 
-\hypertarget{departmental}{%
-\subsubsection{Departmental}\label{departmental}}
+\subsubsection{Departmental}\label{departmental}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -923,8 +870,7 @@ Sohn) \\
 2011 & External Examiner, Master's Degree Thesis (Helen Cerigo) \\
 \end{longtable}
 
-\hypertarget{professional-societies}{%
-\subsection{Professional Societies}\label{professional-societies}}
+\subsection{Professional Societies}\label{professional-societies}
 
 \begin{itemize}
 \tightlist
@@ -942,13 +888,11 @@ Sohn) \\
   International Union for the Scientific Study of Population
 \end{itemize}
 
-\hypertarget{other-professional-and-scientific-contributions}{%
 \subsection{Other Professional and Scientific
-Contributions}\label{other-professional-and-scientific-contributions}}
+Contributions}\label{other-professional-and-scientific-contributions}
 
-\hypertarget{other-mcgill-contributions}{%
 \subsubsection{Other McGill
-contributions}\label{other-mcgill-contributions}}
+contributions}\label{other-mcgill-contributions}
 
 \begin{itemize}
 \tightlist
@@ -968,9 +912,8 @@ contributions}\label{other-mcgill-contributions}}
   2013 Pro-Dean, Department of English (Ian Whittington)
 \end{itemize}
 
-\hypertarget{reviews-for-promotion-or-tenure}{%
 \subsubsection{Reviews for promotion or
-tenure}\label{reviews-for-promotion-or-tenure}}
+tenure}\label{reviews-for-promotion-or-tenure}
 
 \begin{itemize}
 \tightlist
@@ -985,9 +928,8 @@ tenure}\label{reviews-for-promotion-or-tenure}}
   St.~Michael's
 \end{itemize}
 
-\hypertarget{reviews-of-protocols-and-theses}{%
 \subsubsection{Reviews of protocols and
-theses}\label{reviews-of-protocols-and-theses}}
+theses}\label{reviews-of-protocols-and-theses}
 
 \begin{itemize}
 \tightlist
@@ -1004,9 +946,8 @@ theses}\label{reviews-of-protocols-and-theses}}
   Juneau)
 \end{itemize}
 
-\hypertarget{conference-workshop-and-panel-organization}{%
 \subsubsection{Conference, workshop and panel
-organization}\label{conference-workshop-and-panel-organization}}
+organization}\label{conference-workshop-and-panel-organization}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
@@ -1049,9 +990,8 @@ Club, Department of Epidemiology, Biostatistics \& Occupational Health,
 McGill University \\
 \end{longtable}
 
-\hypertarget{media-appearances-selected}{%
 \subsubsection{Media appearances
-(selected)}\label{media-appearances-selected}}
+(selected)}\label{media-appearances-selected}
 
 \emph{Interviews}
 
@@ -1158,11 +1098,9 @@ Sun-Sentinel, Jamaica Gleaner, Detroit News, Journal of the National
 Cancer Institute, BreastCancer.Net News, Fierce for Black Women,
 Futurity, Medical Daily, Medscape, Science Recorder,
 
-\hypertarget{research}{%
-\section{Research}\label{research}}
+\section{Research}\label{research}
 
-\hypertarget{research-activities}{%
-\subsection{Research Activities}\label{research-activities}}
+\subsection{Research Activities}\label{research-activities}
 
 My research focuses on investigating how social and environmental
 factors impact health outcomes and health inequalities. My work is
@@ -1217,8 +1155,7 @@ areas of focus are:
   \end{enumerate}
 \end{itemize}
 
-\hypertarget{personal-support-awards}{%
-\subsection{Personal Support Awards}\label{personal-support-awards}}
+\subsection{Personal Support Awards}\label{personal-support-awards}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2000}}
@@ -1236,11 +1173,9 @@ Québec -- Santé. \$241,008 \\
 Santé du Québec. \$219,764 \\
 \end{longtable}
 
-\hypertarget{research-grants}{%
-\subsection{Research Grants}\label{research-grants}}
+\subsection{Research Grants}\label{research-grants}
 
-\hypertarget{current-2}{%
-\subsubsection{Current}\label{current-2}}
+\subsubsection{Current}\label{current-2}
 
 \textbf{Impacts of cannabis decriminalization and legalization on
 cannabis and other substance use: a systematic review of global policy
@@ -1323,8 +1258,7 @@ Jennifer Hutcheon and Erin Strumpf)\\
 \$221,850\\
 \hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration: 2018-2023\\
 
-\hypertarget{past-1}{%
-\subsubsection{Past}\label{past-1}}
+\subsubsection{Past}\label{past-1}
 
 \textbf{The CART PREG-Epi Study: Pandemic Reproductive health and health
 Equity: Guidance from Epidemiology to improve reproductive, perinatal,
@@ -1562,12 +1496,10 @@ CAD \$40,000\\
 \hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
 2007-2008\\
 
-\hypertarget{publications}{%
-\subsection{Publications}\label{publications}}
+\subsection{Publications}\label{publications}
 
-\hypertarget{articles-in-peer-reviewed-journals}{%
 \subsubsection{Articles in peer reviewed
-journals}\label{articles-in-peer-reviewed-journals}}
+journals}\label{articles-in-peer-reviewed-journals}
 
 *Indicates one of my trainees.
 
@@ -1962,8 +1894,7 @@ Epidemiol.} 2017 Dec;52(12):1501-1511. doi: 10.1007/s00127-017-1448-z.
 
 \end{etaremune}
 
-\hypertarget{technical-reports}{%
-\subsubsection{Technical reports}\label{technical-reports}}
+\subsubsection{Technical reports}\label{technical-reports}
 
 \begin{etaremune}
 
@@ -1987,9 +1918,8 @@ Epidemiol.} 2017 Dec;52(12):1501-1511. doi: 10.1007/s00127-017-1448-z.
 
 \end{etaremune}
 
-\hypertarget{reviews-book-chapters-books}{%
 \subsubsection{Reviews, book chapters,
-books}\label{reviews-book-chapters-books}}
+books}\label{reviews-book-chapters-books}
 
 \begin{etaremune}
 
@@ -2007,9 +1937,8 @@ books}\label{reviews-book-chapters-books}}
 
 \end{etaremune}
 
-\hypertarget{abstracts-and-conference-presentations}{%
 \subsubsection{Abstracts and conference
-presentations}\label{abstracts-and-conference-presentations}}
+presentations}\label{abstracts-and-conference-presentations}
 
 \begin{etaremune}
 
@@ -2126,8 +2055,7 @@ Association of America, Apr 2017
 
 \end{etaremune}
 
-\hypertarget{policy-briefs}{%
-\subsubsection{Policy briefs}\label{policy-briefs}}
+\subsubsection{Policy briefs}\label{policy-briefs}
 
 \begin{etaremune}
 
