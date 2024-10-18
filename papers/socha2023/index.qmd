@@ -1,0 +1,8 @@
+---
+title: "Subgroup Effects Should Be Examined Using Both Relative and Absolute Effect Measures"
+author: Socha, Peter, Harper, Sam, Hutcheon, Jennifer A.
+date: 2023-01-01
+categories: [corticosteroid,epidemiology,preterm birth,relative risk,statistics]
+doi: "10.1111/ajo.13656"
+---
+

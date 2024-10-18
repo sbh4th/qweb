@@ -1,0 +1,8 @@
+---
+title: "Declining {{Life Expectancy}} in the {{United States}}: {{Missing}} the {{Trees}} for the {{Forest}}"
+author: Harper, Sam, Riddell, Corinne A., King, Nicholas B.
+date: 2021-01-01
+categories: [cardiovascular diseases,health inequalities,homicide,life expectancy,opioids,suicide]
+doi: "10.1146/annurev-publhealth-082619-104231"
+---
+

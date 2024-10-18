@@ -1,0 +1,7 @@
+---
+title: "Methods in Social Epidemiology"
+author: Strumpf, Erin C., Harper, Sam, Kaufman, Jay S.
+date: 2017-01-01
+categories: [NA]
+---
+

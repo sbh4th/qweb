@@ -5,7 +5,7 @@ website:
   title: "Sam Harper"
   site-url: "https://www.samharper.org"
   repo-url: "https://github.com/sbh4th/qweb"
-  repo-actions: [edit, issue]
+  repo-actions: [issue]
   navbar:
     search: true
     right:
