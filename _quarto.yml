@@ -21,7 +21,7 @@ website:
       - text: "Projects"
         file: projects/index.qmd
       - text: "Papers"
-        file: publications/index.qmd
+        file: papers/index.qmd
       - text: "CV"
         file: cv/index.qmd
 
