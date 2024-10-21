@@ -1,8 +1,29 @@
 ---
-title: "Declining {{Life Expectancy}} in the {{United States}}: {{Missing}} the {{Trees}} for the {{Forest}}"
-author: Harper, Sam, Riddell, Corinne A., King, Nicholas B.
-date: 2021-01-01
-categories: [cardiovascular diseases,health inequalities,homicide,life expectancy,opioids,suicide]
-doi: "10.1146/annurev-publhealth-082619-104231"
+format: html
+lightbox: true
+execute:
+  echo: false
 ---
+
+```{r setup, include=FALSE}
+source(here::here("_common.R"))
+pub <- get_pubs() %>% 
+    filter(bibtexkey == 'harper2021')
+pub$summary <- FALSE
+```
+
+# `r pub$title` 
+
+```{r}
+make_pub(pub)
+```
+
+**Abstract**:
+
+`r pub$abstract`
+
+- Mandatory 
+  Whatever {{< fa thumbs-up >}}:
+
+
 

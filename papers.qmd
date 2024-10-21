@@ -32,3 +32,6 @@ pubs <- get_pubs()
 ## Journal Articles
 
 `r make_pub_list(pubs, "ARTICLE")`
+
+## Book Chapters
+

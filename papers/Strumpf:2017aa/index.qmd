@@ -1,7 +1,25 @@
 ---
-title: "Methods in Social Epidemiology"
-author: Strumpf, Erin C., Harper, Sam, Kaufman, Jay S.
-date: 2017-01-01
-categories: [NA]
+format: html
+lightbox: true
+execute:
+  echo: false
 ---
+
+```{r setup, include=FALSE}
+source(here::here("_common.R"))
+pub <- get_pubs() %>% 
+    filter(bibtexkey == 'Strumpf:2017aa')
+pub$summary <- FALSE
+```
+
+# `r pub$title` 
+
+```{r}
+make_pub(pub)
+```
+
+**Abstract**:
+
+`r pub$abstract`
+
 

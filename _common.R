@@ -1,9 +1,11 @@
 
+library(here)
 library(htmltools)
 library(stringr)
 library(dplyr)
 library(readr)
 library(fontawesome)
+library(bib2df)
 
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -13,33 +15,61 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-gscholar_stats <- function(url) {
-  cites <- get_cites(url)
-  return(glue::glue(
-    'Citations: {cites$citations} | h-index: {cites$hindex} | i10-index: {cites$i10index}'
-  ))
+# gscholar_stats <- function(url) {
+#   cites <- get_cites(url)
+#   return(glue::glue(
+#     'Citations: {cites$citations} | h-index: {cites$hindex} | i10-index: # {cites$i10index}'
+#   ))
+# }
+# 
+# get_cites <- function(url) {
+#   html <- xml2::read_html(url)
+#   node <- rvest::html_nodes(html, xpath='//*[@id="gsc_rsb_st"]')
+#   cites_df <- rvest::html_table(node)[[1]]
+#   cites <- data.frame(t(as.data.frame(cites_df)[,2]))
+#   names(cites) <- c('citations', 'hindex', 'i10index')
+#   return(cites)
+# }
+
+# Vancouver style author formatting
+format_author_vancouver <- function(author_name) {
+  # Split the author name by comma
+  name_parts <- strsplit(author_name, ", ")[[1]]
+  
+  # Extract last name and first name(s)
+  last_name <- name_parts[1]
+  first_names <- name_parts[2]
+  
+  # Extract the first letter of each first name (and middle name if available)
+  initials <- paste0(substr(unlist(strsplit(first_names, " ")), 1, 1), collapse = "")
+  
+  # Combine last name and initials (with no space between initials)
+  return(paste0(last_name, " ", initials))
 }
 
-get_cites <- function(url) {
-  html <- xml2::read_html(url)
-  node <- rvest::html_nodes(html, xpath='//*[@id="gsc_rsb_st"]')
-  cites_df <- rvest::html_table(node)[[1]]
-  cites <- data.frame(t(as.data.frame(cites_df)[,2]))
-  names(cites) <- c('citations', 'hindex', 'i10index')
-  return(cites)
+# Function to reformat a list of authors
+reformat_authors_vancouver <- function(authors) {
+  # Apply the format function to each author in the vector
+  formatted_authors <- sapply(authors, format_author_vancouver)
+  
+  # Collapse the authors into a single string separated by commas
+  return(paste(formatted_authors, collapse = ", "))
 }
+
 
 get_pubs <- function() {
-    pubs <- gsheet::gsheet2tbl(
-        url = 'https://docs.google.com/spreadsheets/d/1xyzgW5h1rVkmtO1rduLsoNRF9vszwfFZPd72zrNmhmU')
+    pubs <- here("papers", "website.bib") %>% 
+      bib2df() %>% rename_with(tolower)
+    pubs$author <- sapply(pubs$author, 
+      reformat_authors_vancouver)
     pubs <- make_citations(pubs)
-    pubs$summary <- ifelse(is.na(pubs$summary), FALSE, pubs$summary)
-    pubs$stub <- make_stubs(pubs)
-    pubs$url_summary <- file.path('research', pubs$stub, "index.html")
-    pubs$url_scholar <- ifelse(
-      is.na(pubs$id_scholar), NA, 
-      glue::glue('https://scholar.google.com/citations?view_op=view_citation&hl=en&user=DY2D56IAAAAJ&citation_for_view=DY2D56IAAAAJ:{pubs$id_scholar}')
-    )
+    pubs$summary <- ifelse(is.na(pubs$bibtexkey), FALSE, TRUE)
+    # pubs$stub <- make_stubs(pubs)
+    pubs$url_summary <- file.path('papers', pubs$bibtexkey, "index.html")
+    # pubs$url_scholar <- ifelse(
+    #  is.na(pubs$id_scholar), NA, 
+    #  glue::glue('https://scholar.google.com/citations?view_op=view_citation&hl=en&user=DY2D56IAAAAJ&citation_for_view=DY2D56IAAAAJ:{pubs$id_scholar}')
+    # )
     return(pubs)
 }
 
@@ -48,22 +78,27 @@ make_citations <- function(pubs) {
   return(pubs)
 }
 
+
+
 make_citation <- function(pub) {
-  if (!is.na(pub$journal)) {
-    pub$journal <- glue::glue('_{pub$journal}_.')
+  if (!is.na(pub$journaltitle)) {
+    pub$journal <- glue::glue('_{pub$journaltitle}_.')
   }
-  if (!is.na(pub$number)) {
-    pub$number <- glue::glue('{pub$number}.')
+  if (!is.na(pub$volume)) {
+    pub$volume <- glue::glue('{pub$volume}:')
+  }
+  if (!is.na(pub$pages)) {
+    pub$pages <- glue::glue('{pub$pages}.')
   }
   if (!is.na(pub$doi)) {
     pub$doi <- make_doi(pub$doi)
   }
-  pub$year <- glue::glue("({pub$year})")
+  pub$year <- glue::glue("{pub$date};")
   pub$title <- glue::glue('"{pub$title}"')
   pub[,which(is.na(pub))] <- ''
   return(paste(
-    pub$author, pub$year, pub$title, pub$journal, 
-    pub$number, pub$doi
+    pub$author, pub$title, pub$journal, 
+    pub$year, pub$volume, pub$pages, pub$doi
   ))
 }
 
@@ -81,7 +116,7 @@ make_stubs <- function(pubs) {
     journal <- str_replace_all(journal, ',', '')
     journal <- str_replace_all(journal, '  ', '-')
     journal <- str_replace_all(journal, ' ', '-')
-    return(paste0(pubs$year, '-', journal))
+    return(paste0(pubs$date, '-', journal))
 }
 
 make_pub_list <- function(pubs, category) {
@@ -111,37 +146,36 @@ make_pub <- function(pub, index = NULL) {
     <div class="g-col-11"> {markdown_to_html(cite)} </div>
     <div class="g-col-1"> {altmetric} </div>
     </div>
-    {icons}
-    </div>{make_haiku(pub, header)}'
+    {icons}'
   )))
 }
 
 make_altmetric <- function(pub) {
   altmetric <- ""
-  if (pub$category == 'peer_reviewed') {
+  if (pub$category == 'ARTICLE') {
     altmetric <- glue::glue('<div data-badge-type="donut" data-doi="{pub$doi}" data-hide-no-mentions="true" class="altmetric-embed"></div>')
   }
   return(altmetric)
 }
 
-make_haiku <- function(pub, header = FALSE) {
-  html <- ""
-  haiku <- em(
-    pub$haiku1, HTML("&#8226;"), 
-    pub$haiku2, HTML("&#8226;"), 
-    pub$haiku3
-  )
-  if (!is.na(pub$haiku1)) {
-    if (header) {
-      html <- as.character(aside_center(list(
-        HTML("<b>Haiku Summary</b>"), br(), haiku))
-      )
-    } else {
-      html <- as.character(aside_center(list(haiku)))
-    }
-  }
-  return(html)
-}
+# make_haiku <- function(pub, header = FALSE) {
+#   html <- ""
+#   haiku <- em(
+#     pub$haiku1, HTML("&#8226;"), 
+#     pub$haiku2, HTML("&#8226;"), 
+#     pub$haiku3
+#   )
+#   if (!is.na(pub$haiku1)) {
+#     if (header) {
+#       html <- as.character(aside_center(list(
+#         HTML("<b>Haiku Summary</b>"), br(), haiku))
+#       )
+#     } else {
+#       html <- as.character(aside_center(list(haiku)))
+#     }
+#   }
+#   return(html)
+# }
 
 aside <- function(text) {
   return(tag("aside", list(text)))
@@ -189,50 +223,50 @@ make_icons <- function(pub) {
       target = "_self"
     )))      
   }
-  if (!is.na(pub$url_pub)) {
+  if (!is.na(pub$url)) {
     html <- c(html, as.character(icon_link(
       icon = "fas fa-external-link-alt",
       text = "View",
-      url  = pub$url_pub
+      url  = pub$url
     )))
   }
-  if (!is.na(pub$url_pdf)) {
-    html <- c(html, as.character(icon_link(
-      icon = "fa fa-file-pdf",
-      text = "PDF",
-      url  = pub$url_pdf
-    )))
-  }
-  if (!is.na(pub$url_repo)) {
-    html <- c(html, as.character(icon_link(
-      icon = "fab fa-github",
-      text = "Code & Data",
-      url  = pub$url_repo
-    )))
-  }
-  if (!is.na(pub$url_other)) {
-    html <- c(html, as.character(icon_link(
-      icon = "fas fa-external-link-alt",
-      text = pub$other_label,
-      url  = pub$url_other
-    )))
-  }
-  if (!is.na(pub$url_rg)) {
-    html <- c(html, as.character(icon_link(
-      icon = "ai ai-researchgate",
-      # text = "&nbsp;",
-      text = "RG",
-      url  = pub$url_rg
-    )))
-  }
-  if (!is.na(pub$url_scholar)) {
-    html <- c(html, as.character(icon_link(
-      icon = "ai ai-google-scholar",
-      # text = "&nbsp;",
-      text = "Scholar",
-      url  = pub$url_scholar
-    )))
-  }
+#  if (!is.na(pub$url_pdf)) {
+#    html <- c(html, as.character(icon_link(
+#      icon = "fa fa-file-pdf",
+#      text = "PDF",
+#      url  = pub$url_pdf
+#    )))
+#  }
+#  if (!is.na(pub$url_repo)) {
+#    html <- c(html, as.character(icon_link(
+#      icon = "fab fa-github",
+#      text = "Code & Data",
+#      url  = pub$url_repo
+#    )))
+#  }
+#  if (!is.na(pub$url_other)) {
+#    html <- c(html, as.character(icon_link(
+#      icon = "fas fa-external-link-alt",
+#      text = pub$other_label,
+#      url  = pub$url_other
+#    )))
+#  }
+#  if (!is.na(pub$url_rg)) {
+#    html <- c(html, as.character(icon_link(
+#      icon = "ai ai-researchgate",
+#      # text = "&nbsp;",
+#      text = "RG",
+#      url  = pub$url_rg
+#    )))
+#  }
+#  if (!is.na(pub$url_scholar)) {
+#    html <- c(html, as.character(icon_link(
+#      icon = "ai ai-google-scholar",
+#      # text = "&nbsp;",
+#      text = "Scholar",
+#      url  = pub$url_scholar
+#    )))
+#  }
   return(paste(html, collapse = ""))
 }
 
@@ -273,14 +307,15 @@ last_updated <- function() {
   )
 }
 
-make_media_list <- function() {
-  media <- gsheet::gsheet2tbl(
-    url = 'https://docs.google.com/spreadsheets/d/1xyzgW5h1rVkmtO1rduLsoNRF9vszwfFZPd72zrNmhmU/edit#gid=2088158801')
-  temp <- media %>% 
-    mutate(
-      date = format(date, format = "%b %d, %Y"), 
-      outlet = paste0("**", outlet, "**"),
-      post = paste0("- ", date, " - ", outlet, ": ", post)
-    )
-  return(paste(temp$post, collapse = "\n"))
-}
+# make_media_list <- function() {
+#   media <- gsheet::gsheet2tbl(
+#     url = 'https://docs.google.com/spreadsheets/d# /1xyzgW5h1rVkmtO1rduLsoNRF9vszwfFZPd72zrNmhmU/edit#gid=2088158801')
+#   temp <- media %>% 
+#     mutate(
+#       date = format(date, format = "%b %d, %Y"), 
+#       outlet = paste0("**", outlet, "**"),
+#       post = paste0("- ", date, " - ", outlet, ": ", post)
+#     )
+#   return(paste(temp$post, collapse = "\n"))
+# }
+
