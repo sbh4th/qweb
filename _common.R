@@ -1,4 +1,3 @@
-
 library(here)
 library(htmltools)
 library(stringr)
@@ -59,17 +58,30 @@ reformat_authors_vancouver <- function(authors) {
 
 get_pubs <- function() {
     pubs <- here("papers", "website.bib") %>% 
-      bib2df() %>% rename_with(tolower)
+      bib2df() %>% rename_with(tolower) %>%
+      arrange(desc(date)) %>%
+      mutate(title = gsub("[{}]", "", title),
+             booktitle = gsub("[{}]", "", booktitle),
+             mtitle = str_to_lower(title),
+             year = str_sub(date, 1,4))
+    gsp <- read_rds(here("data", "gspubs.rds")) %>%
+       select(mtitle, cites, id_scholar)
+    
+    pubs <- pubs %>% 
+      left_join(gsp, by = "mtitle") %>%
+      select(-mtitle)
     pubs$author <- sapply(pubs$author, 
+      reformat_authors_vancouver)
+    pubs$editor <- sapply(pubs$editor,
       reformat_authors_vancouver)
     pubs <- make_citations(pubs)
     pubs$summary <- ifelse(is.na(pubs$bibtexkey), FALSE, TRUE)
     # pubs$stub <- make_stubs(pubs)
-    pubs$url_summary <- file.path('papers', pubs$bibtexkey, "index.html")
-    # pubs$url_scholar <- ifelse(
-    #  is.na(pubs$id_scholar), NA, 
-    #  glue::glue('https://scholar.google.com/citations?view_op=view_citation&hl=en&user=DY2D56IAAAAJ&citation_for_view=DY2D56IAAAAJ:{pubs$id_scholar}')
-    # )
+    pubs$url_summary <- file.path(pubs$bibtexkey, "index.html")
+    pubs$url_scholar <- ifelse(
+      is.na(pubs$id_scholar), NA, 
+      glue::glue('https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ipf8idcAAAAJ&citation_for_view=Ipf8idcAAAAJJ:{pubs$id_scholar}')
+    )
     return(pubs)
 }
 
@@ -78,28 +90,63 @@ make_citations <- function(pubs) {
   return(pubs)
 }
 
-
-
 make_citation <- function(pub) {
-  if (!is.na(pub$journaltitle)) {
-    pub$journal <- glue::glue('_{pub$journaltitle}_.')
+  # Check if it's a book chapter (presence of booktitle indicates it's a book chapter)
+  if (!is.na(pub$booktitle)) {
+    # For book chapters
+    if (!is.na(pub$editor)) {
+      pub$editor <- glue::glue('{pub$editor} (Eds.).')
+    }
+    if (!is.na(pub$booktitle)) {
+      pub$book <- glue::glue('_{pub$booktitle}_.')
+    }
+    if (!is.na(pub$edition)) {
+      pub$edition <- glue::glue('{pub$edition}nd ed.')
+    }
+    if (!is.na(pub$publisher)) {
+      pub$publisher <- glue::glue('{pub$publisher}.')
+    }
+    if (!is.na(pub$pages)) {
+      pub$pages <- glue::glue('pp. {pub$pages}.')
+    }
+    
+    pub$year <- glue::glue("({pub$year}).")
+    pub$title <- glue::glue('"{pub$title}"')
+    
+    pub[,which(is.na(pub))] <- ''
+    
+    # Format for book chapters
+    return(paste(
+      pub$author, pub$year, pub$title, "In:", pub$editor, pub$book,
+      pub$edition, pub$publisher, pub$pages,
+      "Citations:", pub$cites
+    ))
+    
+  } else {
+    # For regular journal articles
+    if (!is.na(pub$journaltitle)) {
+      pub$journal <- glue::glue('_{pub$journaltitle}_.')
+    }
+    if (!is.na(pub$volume)) {
+      pub$volume <- glue::glue('{pub$volume}:')
+    }
+    if (!is.na(pub$pages)) {
+      pub$pages <- glue::glue('{pub$pages}.')
+    }
+    if (!is.na(pub$doi)) {
+      pub$doi <- make_doi(pub$doi)
+    }
+    pub$year <- glue::glue("{pub$year};")
+    pub$title <- glue::glue('"{pub$title}"')
+    pub[,which(is.na(pub))] <- ''
+    
+    # Format the citation for journal articles
+    return(paste(
+      pub$author, pub$title, pub$journal, 
+      pub$year, pub$volume, pub$pages, pub$doi, 
+      "Citations:", pub$cites
+    ))
   }
-  if (!is.na(pub$volume)) {
-    pub$volume <- glue::glue('{pub$volume}:')
-  }
-  if (!is.na(pub$pages)) {
-    pub$pages <- glue::glue('{pub$pages}.')
-  }
-  if (!is.na(pub$doi)) {
-    pub$doi <- make_doi(pub$doi)
-  }
-  pub$year <- glue::glue("{pub$date};")
-  pub$title <- glue::glue('"{pub$title}"')
-  pub[,which(is.na(pub))] <- ''
-  return(paste(
-    pub$author, pub$title, pub$journal, 
-    pub$year, pub$volume, pub$pages, pub$doi
-  ))
 }
 
 make_doi <- function(doi) {
@@ -259,14 +306,14 @@ make_icons <- function(pub) {
 #      url  = pub$url_rg
 #    )))
 #  }
-#  if (!is.na(pub$url_scholar)) {
-#    html <- c(html, as.character(icon_link(
-#      icon = "ai ai-google-scholar",
-#      # text = "&nbsp;",
-#      text = "Scholar",
-#      url  = pub$url_scholar
-#    )))
-#  }
+  if (!is.na(pub$url_scholar)) {
+    html <- c(html, as.character(icon_link(
+      icon = "ai ai-google-scholar",
+      # text = "&nbsp;",
+      text = "Scholar",
+      url  = pub$url_scholar
+    )))
+  }
   return(paste(html, collapse = ""))
 }
 

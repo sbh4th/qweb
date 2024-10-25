@@ -29,6 +29,10 @@ source(here("_common.R"))
 pubs <- get_pubs()
 ```
 
-## Journal Articles
+## Recent Journal Articles
 
 `r make_pub_list(pubs, "ARTICLE")`
+
+## Book Chapters
+
+`r make_pub_list(pubs, "INCOLLECTION")`

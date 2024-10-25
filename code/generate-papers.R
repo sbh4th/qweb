@@ -2,8 +2,6 @@ library(here)
 library(tidyverse)
 library(bib2df)
 
-papers <- bib2df(here("papers", "website.bib"))
-
 ## 1: Import the .bib file as a dataframe
 # Specify .bib file path
 bib_file <- here("papers", "website.bib") 

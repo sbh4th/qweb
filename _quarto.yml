@@ -30,6 +30,7 @@ format:
     theme: materia
     css: styles.css
     toc: true
+    include-in-header: "_includes/header.html"
 
 editor: source
 
