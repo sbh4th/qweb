@@ -1,0 +1,24 @@
+---
+title: "Despair and Disadvantage: Some Questions"
+date: "2024-06-10"
+image: "featured.png"
+categories: ["health inequalities", "life expectancy"]
+
+---
+
+Presentation given at the MORTAL workshop that took place at Nuffield College, Oxford University, UK Jun 10-11, 2024.
+
+Below you can access the slides.
+
+:::columns
+::: {.column width="45%"}
+<center> [HTML version](https://samharper.org/mortal) </center>
+[![](featured.png)](https://samharper.org/mortal){width=50%}
+:::
+
+::: {.column width="45%"}
+<center> [PDF version](Harper-Mortal.pdf) </center>
+[![](featured.png)](Harper-Mortal.pdf){width=30%}
+:::
+
+:::

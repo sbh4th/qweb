@@ -1,7 +1,14 @@
 ---
 title: "Social Determinants of Health--Concepts and Methods Relevant to Air Pollution"
-date: "2020-05-20T12:00:00"
+date: "2020-05-20"
 image: "featured.png"
 categories: ["air pollution", "health inequalities", "social determinants"]
 
 ---
+
+Presentation given for the Health Effects Institute Annual Conference, Boston, MA, USA, May 20, 2020 (given remotely).
+
+Below you can access the slides.
+
+<center> [PDF version](hei.pdf) </center>
+[![](featured.png)](hei.pdf){width=30%}

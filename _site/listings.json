@@ -1,12 +1,19 @@
 [
   {
-    "listing": "/talks/index.html",
-    "items": []
-  },
-  {
     "listing": "/research/index.html",
     "items": [
       "/research/articles/harper-2021-wv/index.html"
+    ]
+  },
+  {
+    "listing": "/talks/index.html",
+    "items": [
+      "/talks/mortal/index.html",
+      "/talks/nasem/index.html",
+      "/talks/ser/index.html",
+      "/talks/hei/index.html",
+      "/talks/rsf/index.html",
+      "/talks/kickoff/index.html"
     ]
   }
 ]

@@ -345,6 +345,55 @@ references:
   URL: https://doi.org/10.1146/annurev-publhealth-082619-104231
   volume: '42'
 
+- id: lynch2004
+  abstract: >-
+    This article reviews 98 aggregate and multilevel studies examining the
+    associations between income inequality and health. Overall, there seems to
+    be little support for the idea that income inequality is a major,
+    generalizable determinant of population health differences within or between
+    rich countries. Income inequality may, however, directly influence some
+    health outcomes, such as homicide in some contexts. The strongest evidence
+    for direct health effects is among states in the United States, but even
+    that is somewhat mixed. Despite little support for a direct effect of income
+    inequality on health per se, reducing income inequality by raising the
+    incomes of the most disadvantaged will improve their health, help reduce
+    health inequalities, and generally improve population health.
+  author:
+    - family: Lynch
+      given: John
+    - family: Smith
+      given: George Davey
+    - family: Harper
+      given: Sam
+    - family: Hillemeier
+      given: Marianne
+    - family: Ross
+      given: Nancy
+    - family: Kaplan
+      given: George A.
+    - family: Wolfson
+      given: Michael
+  citation-key: lynch2004
+  container-title: The Milbank Quarterly
+  container-title-short: Milbank Q
+  DOI: 10.1111/j.0887-378x.2004.00302.x
+  ISSN: 0887-378X
+  issue: '1'
+  issued:
+    - year: 2004
+  language: eng
+  page: 5-99
+  PMCID: PMC2690209
+  PMID: '15016244'
+  source: PubMed
+  title: >-
+    Is income inequality a determinant of population health? Part 1. A
+    systematic review
+  title-short: Is income inequality a determinant of population health?
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/10.1111/j.0887-378X.2004.00302.x
+  volume: '82'
+
 - id: socha2023
   abstract: "Treatment effects can be measured on the relative scale (eg, risk ratios, odds ratios) or the absolute scale (eg, risk differences). If the baseline risk of an outcome is different between subgroups, the effect of the treatment will differ between subgroups on at least one scale (relative, absolute, or both). We illustrate this using two examples from the literature where only relative effects were estimated, but conclusions about subgroup differences would likely have changed had absolute effects also been considered. To identify all meaningful subgroup differences, researchers and clinicians should compare\_effects on the relative and absolute scale."
   accessed:
@@ -403,4 +452,42 @@ references:
   section: Fixed effects and difference-in-differences
   title: Fixed Effects and Difference-in-Differences
   type: chapter
+
+- id: windle2022
+  accessed:
+    - year: 2024
+      month: 10
+      day: 31
+  author:
+    - family: Windle
+      given: Sarah B.
+    - family: Socha
+      given: Peter
+    - family: Nazif-Munoz
+      given: José Ignacio
+    - family: Harper
+      given: Sam
+    - family: Nandi
+      given: Arijit
+  citation-key: windle2022
+  container-title: American Journal of Preventive Medicine
+  container-title-short: American Journal of Preventive Medicine
+  DOI: 10.1016/j.amepre.2022.07.012
+  ISSN: '07493797'
+  issue: '6'
+  issued:
+    - year: 2022
+      month: 12
+  language: en
+  page: 1037-1052
+  source: DOI.org (Crossref)
+  title: >-
+    The Impact of Cannabis Decriminalization and Legalization on Road Safety
+    Outcomes: A Systematic Review
+  title-short: >-
+    The Impact of Cannabis Decriminalization and Legalization on Road Safety
+    Outcomes
+  type: article-journal
+  URL: https://linkinghub.elsevier.com/retrieve/pii/S0749379722004093
+  volume: '63'
 ...

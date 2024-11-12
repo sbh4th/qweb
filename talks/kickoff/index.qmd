@@ -1,5 +1,13 @@
 ---
 title: "Challenges, advantages, and limitations of quasi-experimental approaches to evaluate interventions on health inequalities"
-date: "2018-10-12T13:00:00"
+date: "2018-10-12"
 image: "featured.png"
+categories: ["quasi-experiments", "health inequalities"]
 ---
+
+Presentation given at the kickoff event for the *Smarter Choices, Better Health* project at Erasmus University, Rotterdam, The Netherlands, Oct 12, 2018. 
+
+Slides:
+
+<center> [PDF version](Harper-Erasmus-Kickoff.pdf) </center>
+[![](featured.png)](Harper-Erasmus-Kickoff.pdf){width=30%}

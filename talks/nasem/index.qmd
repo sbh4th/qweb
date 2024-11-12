@@ -1,0 +1,24 @@
+---
+title: "Measuring Health Equity: Beyond Description"
+date: "2023-06-21"
+image: "featured.png"
+categories: ["health inequalities", "social determinants"]
+
+---
+
+Presentation given at the US National Academy of Sciences, Engineering, & Medicine for *The Ecosystem of Health Equity Measures: A Workshop*, Oakland, CA, USA June 21, 2023 (given remotely).
+
+Below you can access the slides.
+
+:::columns
+::: {.column width="45%"}
+<center> [HTML version](https://samharper.org/nasem) </center>
+[![](featured.png)](https://samharper.org/nasem){width=50%}
+:::
+
+::: {.column width="45%"}
+<center> [PDF version](Harper-NASEM.pdf) </center>
+[![](featured.png)](Harper-NASEM.pdf){width=30%}
+:::
+
+:::

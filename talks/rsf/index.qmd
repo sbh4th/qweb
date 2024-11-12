@@ -3,4 +3,12 @@ title: "Past and present rural-urban mortality transitions"
 subtitle: "Russell Sage Foundation: Listening to Rural America"
 date: '2019-03-15'
 image: "featured.png"
+categories: ["rural health", "health inequalities", "suicide"]
 ---
+
+Presentation given for the Russell Sage Foundation, New York, NY, Mar 15, 2019. 
+
+Slides:
+
+<center> [PDF version](Harper-RSF-2019.pdf) </center>
+[![](featured.png)](Harper-RSF-2019.pdf){width=30%}

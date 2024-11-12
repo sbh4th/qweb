@@ -2,13 +2,23 @@
 title: "A Quarter Century of Multilevel Models in Social Epidemiology"
 subtitle: "A Short Story in Three Acts"
 date: 2023-06-14
-date-format: iso
-links:
-- name: Slides
-  url: https://samharper.org/ser-mlm
-  icon: fa-solid fa-chalkboard-user
-- name: GitHub repository
-  url: https://github.com/sbh4th/ser-mlm
-  icon: fa-brands fa-github
+image: "featured.png"
+categories: ["multilevel models", "social epidemiology"]
 ---
 
+Presentation given at the annual meeting of the Society for Epidemiologic Research in Portland, OR, USA June 14, 2023.
+
+Below you can access the slides.
+
+:::columns
+::: {.column width="45%"}
+<center> [HTML version](https://samharper.org/ser-mlm) </center>
+[![](featured.png)](https://samharper.org/ser-mlm){width=50%}
+:::
+
+::: {.column width="45%"}
+<center> [PDF version](Harper-SER-2023.pdf) </center>
+[![](featured.png)](Harper-SER-2023.pdf){width=30%}
+:::
+
+:::
