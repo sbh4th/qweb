@@ -1,24 +1,24 @@
 ---
-title: "Difference-in-Differences for Social Epidemiology"
-date: "2024-11-06"
+title: "Multilevel Models in Social Epidemiology: Past, Present, and Future"
+date: "2024-11-07"
 image: "featured.png"
-categories: ["quasi-experiments", "difference-in-differences", "social epidemiology"]
+categories: ["multilevel models", "social epidemiology"]
 
 ---
 
-Presentation given at the Danish Epidemiology Society workshop that took place at Aarhus University, Aarhus, DK  Nov 6, 2024.
+Presentation given at the Danish Epidemiology Society annual meeting that took place at Aarhus University, Aarhus, DK  Nov 7, 2024.
 
 Below you can access the slides.
 
 :::columns
 ::: {.column width="45%"}
-<center> [HTML version](https://samharper.org/des-dd) </center>
-[![](featured.png)](https://samharper.org/des-dd){width=50%}
+<center> [HTML version](https://samharper.org/des-mlm) </center>
+[![](featured.png)](https://samharper.org/des-mlm){width=50%}
 :::
 
 ::: {.column width="45%"}
-<center> [PDF version](des-dd.pdf) </center>
-[![](featured.png)](des-dd.pdf){width=30%}
+<center> [PDF version](des-mlm.pdf) </center>
+[![](featured.png)](des-mlm.pdf){width=30%}
 :::
 
 :::

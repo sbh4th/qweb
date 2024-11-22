@@ -1,0 +1,24 @@
+---
+title: "Multilevel Models in Social Epidemiology: Past, Present, and Future"
+date: "2024-11-07"
+image: "featured.png"
+categories: ["multilevel models", "social epidemiology"]
+
+---
+
+Presentation given at the Danish Epidemiology Society annual meeting that took place at Aarhus University, Aarhus, DK  Nov 7, 2024.
+
+Below you can access the slides.
+
+:::columns
+::: {.column width="45%"}
+<center> [HTML version](https://samharper.org/des-mlm) </center>
+[![](featured.png)](https://samharper.org/des-mlm){width=50%}
+:::
+
+::: {.column width="45%"}
+<center> [PDF version](des-mlm.pdf) </center>
+[![](featured.png)](des-mlm.pdf){width=30%}
+:::
+
+:::
