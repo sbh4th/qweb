@@ -8,6 +8,7 @@
   {
     "listing": "/talks/index.html",
     "items": [
+      "/talks/des-dd/index.html",
       "/talks/mortal/index.html",
       "/talks/nasem/index.html",
       "/talks/ser/index.html",

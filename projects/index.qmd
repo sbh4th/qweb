@@ -6,8 +6,17 @@ Below are links to some of my current and past research projects.
 
 # Current projects
 
+## Examining the role of discrimination in restricting women’s labor force participation in India
+![Photo: India Express](india-express.jpg)
+
+(with [Arijit Nandi](https://www.mcgill.ca/epi-biostat-occh/arijit-nandi), Anoushaka Chandrashekar, Rosa Abraham, [Nick King](http://www.nicholasbking.net/), Rahul Lahoti, and Anup Roy)
+
+The objective of this project in the longer term is to estimate the impact of gender discrimination on hiring behavior in India. Using an experimental “correspondence study” approach that submits applications from fictitious candidates for positions advertised in India’s largest cities, we will examine the magnitude of gender discrimination, measured by the gender difference in “callback” rates, and if this varies based on the characteristics of the applicant (e.g., age, occupation) or the employer/job (e.g., part-time vs. full-time work, industry, number of employees). Additionally, we will assess if the degree of gender discrimination in callbacks is greater for women of child-bearing age or with a pre-primary school-aged child, depending on whether the prospective employer is subject to providing benefits as stipulated by the 2017 Amendment to the Indian Maternity Benefit Act.
+
+
 ## Early Childhood Education Policies and Child Health
 ![Photo: http://policynote.ca](childcare.jpg)
+
 
 (with [Arijit Nandi](https://www.mcgill.ca/epi-biostat-occh/arijit-nandi), [Emis Akbari](https://www.oise.utoronto.ca/atkinson/About_Us/Staff_Faculty/Emis_Akbari.html), [Jody Heymann](https://ph.ucla.edu/faculty/heymann), and [Linda White](https://munkschool.utoronto.ca/person/linda-white))
 

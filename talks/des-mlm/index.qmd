@@ -1,0 +1,24 @@
+---
+title: "Difference-in-Differences for Social Epidemiology"
+date: "2024-11-06"
+image: "featured.png"
+categories: ["quasi-experiments", "difference-in-differences", "social epidemiology"]
+
+---
+
+Presentation given at the Danish Epidemiology Society workshop that took place at Aarhus University, Aarhus, DK  Nov 6, 2024.
+
+Below you can access the slides.
+
+:::columns
+::: {.column width="45%"}
+<center> [HTML version](https://samharper.org/des-dd) </center>
+[![](featured.png)](https://samharper.org/des-dd){width=50%}
+:::
+
+::: {.column width="45%"}
+<center> [PDF version](des-dd.pdf) </center>
+[![](featured.png)](des-dd.pdf){width=30%}
+:::
+
+:::
