@@ -25,47 +25,35 @@
     <lastmod>2024-10-26T16:27:12.235Z</lastmod>
   </url>
   <url>
-    <loc>https://www.samharper.org/talks/nasem/index.html</loc>
-    <lastmod>2024-10-26T15:55:47.826Z</lastmod>
+    <loc>https://www.samharper.org/talks/asm/index.html</loc>
+    <lastmod>2024-11-22T17:39:53.148Z</lastmod>
   </url>
   <url>
-    <loc>https://www.samharper.org/publications/index.html</loc>
-    <lastmod>2024-08-15T15:54:57.725Z</lastmod>
+    <loc>https://www.samharper.org/talks/des-dd/index.html</loc>
+    <lastmod>2024-11-22T16:54:37.522Z</lastmod>
   </url>
   <url>
-    <loc>https://www.samharper.org/papers.html</loc>
-    <lastmod>2024-10-21T07:54:10.531Z</lastmod>
+    <loc>https://www.samharper.org/projects/index.html</loc>
+    <lastmod>2024-11-21T07:58:44.350Z</lastmod>
   </url>
   <url>
-    <loc>https://www.samharper.org/papers/socha2023/index.html</loc>
-    <lastmod>2024-10-26T14:16:44.739Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.samharper.org/papers/auger2011/index.html</loc>
-    <lastmod>2024-10-26T14:16:44.736Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.samharper.org/papers/arsenault2020/index.html</loc>
-    <lastmod>2024-10-26T14:16:44.735Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.samharper.org/papers/strumpf2017/index.html</loc>
-    <lastmod>2024-10-26T14:16:44.739Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.samharper.org/papers/lynch2004/index.html</loc>
-    <lastmod>2024-10-26T14:16:44.738Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.samharper.org/research/articles/harper-2021-wv/index.html</loc>
+    <loc>https://www.samharper.org/publications/harper-2021-wv/index.html</loc>
     <lastmod>2023-08-26T19:08:22.039Z</lastmod>
   </url>
   <url>
-    <loc>https://www.samharper.org/research/index.html</loc>
-    <lastmod>2024-08-15T15:54:57.725Z</lastmod>
+    <loc>https://www.samharper.org/papers/banack2018/index.html</loc>
+    <lastmod>2024-10-26T14:16:44.737Z</lastmod>
   </url>
   <url>
-    <loc>https://www.samharper.org/papers/harper2019ph/index.html</loc>
+    <loc>https://www.samharper.org/papers/harper2021/index.html</loc>
+    <lastmod>2024-10-26T14:16:44.738Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/papers/al-soneidar2022/index.html</loc>
+    <lastmod>2024-10-26T14:16:44.720Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/papers/breen2017/index.html</loc>
     <lastmod>2024-10-26T14:16:44.737Z</lastmod>
   </url>
   <url>
@@ -73,32 +61,56 @@
     <lastmod>2024-10-25T07:56:43.526Z</lastmod>
   </url>
   <url>
-    <loc>https://www.samharper.org/papers/breen2017/index.html</loc>
+    <loc>https://www.samharper.org/papers/harper2019ph/index.html</loc>
     <lastmod>2024-10-26T14:16:44.737Z</lastmod>
   </url>
   <url>
-    <loc>https://www.samharper.org/papers/al-soneidar2022/index.html</loc>
-    <lastmod>2024-10-26T14:16:44.720Z</lastmod>
+    <loc>https://www.samharper.org/research/index.html</loc>
+    <lastmod>2024-08-15T15:54:57.725Z</lastmod>
   </url>
   <url>
-    <loc>https://www.samharper.org/papers/harper2021/index.html</loc>
-    <lastmod>2024-10-26T14:16:44.738Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.samharper.org/papers/banack2018/index.html</loc>
-    <lastmod>2024-10-26T14:16:44.737Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.samharper.org/publications/harper-2021-wv/index.html</loc>
+    <loc>https://www.samharper.org/research/articles/harper-2021-wv/index.html</loc>
     <lastmod>2023-08-26T19:08:22.039Z</lastmod>
   </url>
   <url>
-    <loc>https://www.samharper.org/projects/index.html</loc>
-    <lastmod>2024-11-21T07:58:44.350Z</lastmod>
+    <loc>https://www.samharper.org/papers/lynch2004/index.html</loc>
+    <lastmod>2024-10-26T14:16:44.738Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/papers/strumpf2017/index.html</loc>
+    <lastmod>2024-10-26T14:16:44.739Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/papers/arsenault2020/index.html</loc>
+    <lastmod>2024-10-26T14:16:44.735Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/papers/auger2011/index.html</loc>
+    <lastmod>2024-10-26T14:16:44.736Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/papers/socha2023/index.html</loc>
+    <lastmod>2024-10-26T14:16:44.739Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/papers.html</loc>
+    <lastmod>2024-10-21T07:54:10.531Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/publications/index.html</loc>
+    <lastmod>2024-08-15T15:54:57.725Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/talks/nasem/index.html</loc>
+    <lastmod>2024-10-26T15:55:47.826Z</lastmod>
   </url>
   <url>
     <loc>https://www.samharper.org/talks/kickoff/index.html</loc>
     <lastmod>2024-10-26T16:30:25.005Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/talks/des-mlm/index.html</loc>
+    <lastmod>2024-11-22T17:32:03.481Z</lastmod>
   </url>
   <url>
     <loc>https://www.samharper.org/talks/index.html</loc>
@@ -119,17 +131,5 @@
   <url>
     <loc>https://www.samharper.org/teaching/epib-706-fall-2020/index.html</loc>
     <lastmod>2023-01-08T21:46:22.264Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.samharper.org/talks/des-dd/index.html</loc>
-    <lastmod>2024-11-22T16:54:37.522Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.samharper.org/talks/des-mlm/index.html</loc>
-    <lastmod>2024-11-22T17:32:03.481Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.samharper.org/talks/asm/index.html</loc>
-    <lastmod>2024-11-22T17:39:53.148Z</lastmod>
   </url>
 </urlset>

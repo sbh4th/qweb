@@ -27,7 +27,7 @@ website:
 
 format:
   html:
-    theme: materia
+    theme: flatly
     css: styles.css
     toc: true
     include-in-header: "_includes/header.html"
