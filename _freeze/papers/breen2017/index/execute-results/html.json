@@ -1,0 +1,15 @@
+{
+  "hash": "00bbcadef9138eb46cf51093003bac66",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n\n\n\n# Assessing Disparities in Colorectal Cancer Mortality by Socioeconomic Status Using New Tools: Health Disparities Calculator and Socioeconomic Quintiles \n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\"> <p>Breen N, Lewis DR, Gibson JT, Yu M, Harper S.  “Assessing Disparities in Colorectal Cancer Mortality by Socioeconomic Status Using New Tools: Health Disparities Calculator and Socioeconomic Quintiles” <em>Cancer Causes &amp; Control</em>. 2017; 28: 117–125. DOI: <a href=\"https://doi.org/10.1007/s10552-016-0842-2\">10.1007/s10552-016-0842-2</a> Citations: 38</p>\n </div>\n<div class=\"g-col-1\"> <div data-badge-type=\"donut\" data-doi=\"10.1007/s10552-016-0842-2\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\"></div> </div>\n</div>\n<a href=\"https://doi.org/10.1007/s10552-016-0842-2\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-external-link-alt\"></i> View</a><a href=\"https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=Ipf8idcAAAAJ&amp;citation_for_view=Ipf8idcAAAAJJ:ML0RJ9NH7IQC\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"ai ai-google-scholar\"></i> Scholar</a>\n```\n\n:::\n:::\n\n\n\n\n**Abstract**:\n\nColorectal cancer mortality rates dropped by half in the past three decades, but these gains were accompanied by striking differences in colorectal cancer mortality by socioeconomic status (SES). Our research objective is to examine disparities in colorectal cancer mortality by SES, using a scientifically rigorous and reproducible approach with publicly available online tools, HD*Calc and NCI SES Quintiles.\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

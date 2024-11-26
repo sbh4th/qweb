@@ -38,6 +38,66 @@ references:
   URL: https://www.sciencedirect.com/science/article/pii/S1877782122001102
   volume: '79'
 
+- id: al-soneidar2024a
+  author:
+    - family: Al-Soneidar
+      given: W.A.
+    - family: Harper
+      given: S.
+    - family: Coutlée
+      given: F.
+    - family: Gheit
+      given: T.
+    - family: Tommasino
+      given: M.
+    - family: Nicolau
+      given: B.
+  citation-key: al-soneidar2024a
+  container-title: The Journal of Infectious Diseases
+  DOI: 10.1093/infdis/jiad335
+  issue: '4'
+  issued:
+    - year: 2024
+  language: en
+  page: 1088–1096
+  title: >-
+    Prevalence of alpha, beta, and gamma human papillomaviruses in patients with
+    head and neck cancer and noncancer controls and relation to behavioral
+    factors
+  type: article-journal
+  volume: '229'
+
+- id: anato2023a
+  author:
+    - family: Anato
+      given: J.L.F.
+    - family: Ma
+      given: H.
+    - family: Hamilton
+      given: M.A.
+    - family: Xia
+      given: Y.
+    - family: Harper
+      given: S.
+    - family: Buckeridge
+      given: D.
+    - family: Maheu-Giroux
+      given: M.
+  citation-key: anato2023a
+  container-title: CMAJ Open
+  DOI: 10.9778/cmajo.20220242
+  issue: '5'
+  issued:
+    - year: 2023
+  language: en
+  page: 995– 1005
+  title: >-
+    Impact of a vaccine passport on first-dose SARS-CoV-2 vaccine coverage by
+    age and area-level social determinants of health in the Canadian provinces
+    of Quebec and Ontario: an interrupted time series analysis
+  type: article-journal
+  volume: '11'
+
 - id: arsenault2020
   abstract: >-
     Background Beyond the prevention of illness and death, vaccination may
@@ -256,6 +316,96 @@ references:
   URL: https://doi.org/10.1007/s10552-016-0842-2
   volume: '28'
 
+- id: burgos-ochoa2024a
+  abstract: >-
+    Objective: Investigate the acute impact of COVID-19 mitigation measures
+    implemented in March 2020 on a comprehensive range of perinatal outcomes.
+
+
+    Study design: National registry-based quasi-experimental study.
+
+
+    Methods: We obtained data from the Dutch Perinatal Registry (2010-2020)
+    which was linked to multiple population registries containing
+    sociodemographic variables. A difference-in-discontinuity approach was used
+    to examine the impact of COVID-19 mitigation measures on various perinatal
+    outcomes. We investigated preterm birth incidence across onset types,
+    alongside other perinatal outcomes including low birth weight,
+    small-for-gestational-age, NICU admission, low-APGAR-score, perinatal
+    mortality, neonatal death, and stillbirths.
+
+
+    Results: The analysis of the national-level dataset revealed a consistent
+    pattern of reduced preterm births after the enactment of COVID-19 mitigation
+    measures on March 9, 2020 (OR = 0.80, 95% CI 0.68-0.96). A drop in
+    spontaneous preterm births post-implementation was observed (OR = 0.80, 95%
+    CI 0.62-0.98), whereas no change was observed for iatrogenic births.
+    Regarding stillbirths (OR = 0.95, 95% CI 0.46-1.95) our analysis did not
+    find compelling evidence of substantial changes. For the remaining outcomes,
+    no discernible shifts were observed.
+
+
+    Conclusions: Our findings confirm the reduction in preterm births following
+    COVID-19 mitigation measures in the Netherlands. No discernible changes were
+    observed for other outcomes, including stillbirths. Our results challenge
+    previous concerns of a potential increase in stillbirths contributing to the
+    drop in preterm births, suggesting alternative mechanisms.
+  author:
+    - family: Burgos-Ochoa
+      given: L.
+    - family: Bertens
+      given: L.C.
+    - family: Boderie
+      given: N.W.
+    - family: Gravesteijn
+      given: B.Y.
+    - family: Obermann-Borst
+      given: S.
+    - family: Rosman
+      given: A.
+    - family: P.R.E.P.A.R.E.-consortium
+      given: ''
+  citation-key: burgos-ochoa2024a
+  container-title: Public Health
+  DOI: 10.1016/j.puhe.2024.09.002
+  issued:
+    - year: 2024
+  language: en
+  page: 322–327
+  title: >-
+    Impact of COVID-19 mitigation measures on perinatal outcomes in the
+    Netherlands
+  type: article-journal
+  volume: '236'
+
+- id: gravesteijn2024a
+  author:
+    - family: Gravesteijn
+      given: B.Y.
+    - family: Boderie
+      given: N.W.
+    - family: Akker
+      given: T.
+    - family: Bertens
+      given: L.C.M.
+    - family: Bloemenkamp
+      given: K.
+    - family: Burgos Ochoa
+      given: L.
+    - literal: P.R.E.P.A.R.E.-consortium
+  citation-key: gravesteijn2024a
+  container-title: Public Health
+  DOI: 10.1016/j.puhe.2024.06.024
+  issued:
+    - year: 2024
+  language: en
+  page: 15–25
+  title: >-
+    Effect of COVID-19 lockdown on maternity care and maternal outcome in the
+    Netherlands: a national quasi-experimental study
+  type: article-journal
+  volume: '235'
+
 - id: harper2019ph
   abstract: >-
     BACKGROUND: For policy questions where substantial empirical background
@@ -345,6 +495,186 @@ references:
   URL: https://doi.org/10.1146/annurev-publhealth-082619-104231
   volume: '42'
 
+- id: harper2023a
+  author:
+    - family: Harper
+      given: S.
+    - family: Nandi
+      given: A.
+  citation-key: harper2023a
+  DOI: 10.1097/EDE.0000000000001663
+  event-place: Cambridge
+  issue: '6'
+  issued:
+    - year: 2023
+  language: en
+  page: 793–795
+  publisher-place: Cambridge
+  title: >-
+    Empirical challenges in defining treatments and time in the evaluation of
+    gun laws. Epidemiology
+  type: document
+  volume: '34'
+
+- id: hawkins2023a
+  author:
+    - family: Hawkins
+      given: S.S.
+    - family: Harper
+      given: S.
+    - family: Baum
+      given: C.F.
+    - family: Kaufman
+      given: J.S.
+  citation-key: hawkins2023a
+  container-title: JAMA Pediatrics
+  DOI: 10.1001/jamapediatrics.2022.4136
+  issue: '1'
+  issued:
+    - year: 2023
+  language: en
+  page: 93–95
+  title: >-
+    Associations between state-level changes in reproductive health services and
+    indicators of severe maternal morbidity
+  type: article-journal
+  volume: '177'
+
+- id: hetherington2023
+  abstract: >-
+    Background The Tabora Maternal and Newborn Health Initiative project was a
+    multicomponent intervention to improve maternal and newborn health in the
+    Tabora region of Tanzania. Components included training healthcare providers
+    and community health workers, infrastructure upgrades, and improvements to
+    health management. This study aimed to examine the impact of trainings on
+    four key outcomes: skilled birth attendance, antenatal care, respectful
+    maternity care and patient–provider communication.
+
+    Methods Trainings were delivered sequentially at four time points between
+    2018 and 2019 in eight districts (two districts at a time). Cross-sectional
+    surveys were administered to a random sample of households in all districts
+    at baseline and after each training wave. Due to practical necessities, the
+    original stepped wedge cluster randomised design of the evaluation was
+    altered mid-programme. Therefore, a difference-in-differences for multiple
+    groups in multiple periods was adopted to compare outcomes in treated
+    districts to not yet treated districts. Risk differences were estimated for
+    the overall average treatment effect on the treated and group/time dynamic
+    effects.
+
+    Results Respondents reported 3895 deliveries over the course of the study.
+    The intervention was associated with a 12.9 percentage point increase in
+    skilled birth attendance (95% CI 0.4 to 25.4), which began to increase 4
+    months after the end of training in each district. There was little evidence
+    of impact on antenatal care visits, respectful treatment during delivery and
+    patient–provider communication.
+
+    Conclusion Interventions to train local healthcare workers in basic and
+    comprehensive emergency obstetric and newborn care increased skilled birth
+    attendance but had limited impact on other pregnancy-related outcomes.
+  accessed:
+    - year: 2023
+      month: 5
+      day: 4
+  author:
+    - family: Hetherington
+      given: Erin
+    - family: Harper
+      given: Sam
+    - family: Davidson
+      given: Rebecca
+    - family: Festo
+      given: Charles
+    - family: Lampkin
+      given: Nadia
+    - family: Mtenga
+      given: Sally
+    - family: Teixeira
+      given: Clarissa
+    - family: Vincent
+      given: Ilona
+    - family: Nandi
+      given: Arijit
+  citation-key: hetherington2023
+  container-title: J Epidemiol Community Health
+  container-title-short: J Epidemiol Community Health
+  DOI: 10.1136/jech-2022-219995
+  ISSN: 0143-005X, 1470-2738
+  issued:
+    - year: 2023
+      month: 4
+      day: 28
+  language: en
+  license: >-
+    © Author(s) (or their employer(s)) 2023. No commercial re-use. See rights
+    and permissions. Published by BMJ.
+  PMID: '37116960'
+  publisher: BMJ Publishing Group Ltd
+  section: Original research
+  source: jech.bmj.com
+  title: >-
+    Impact evaluation of the TAMANI project to improve maternal and child health
+    in Tanzania
+  type: article-journal
+  URL: https://jech.bmj.com/content/early/2023/04/27/jech-2022-219995
+
+- id: hetherington2024a
+  author:
+    - family: Hetherington
+      given: E.
+    - family: Darling
+      given: E.
+    - family: Harper
+      given: S.
+    - family: Nguyen
+      given: F.
+    - family: Schummers
+      given: L.
+    - family: Norman
+      given: W.V.
+  citation-key: hetherington2024a
+  container-title: Paediatric and Perinatal Epidemiology
+  DOI: 10.1111/ppe.13050
+  issue: '4'
+  issued:
+    - year: 2024
+  language: en
+  page: 291–301
+  title: >-
+    Inequalities in access to prenatal care during the COVID-19 pandemic:
+    Analysis of a population-based cohort
+  type: article-journal
+  volume: '38'
+
+- id: lee2024a
+  author:
+    - family: Lee
+      given: M.
+    - family: Chang
+      given: J.
+    - family: Deng
+      given: Q.
+    - family: Hu
+      given: P.
+    - family: Bixby
+      given: H.
+    - family: Harper
+      given: S.
+    - family: Liu
+      given: J.
+  citation-key: lee2024a
+  container-title: The Lancet. Planetary Health
+  DOI: 10.1016/S2542-5196(24)00243-2
+  issue: '11'
+  issued:
+    - year: 2024
+  language: en
+  page: 924– 932
+  title: >-
+    Effects of a coal to clean heating policy on acute myocardial infarction in
+    Beijing: a difference-in-differences analysis
+  type: article-journal
+  volume: '8'
+
 - id: lynch2004
   abstract: >-
     This article reviews 98 aggregate and multilevel studies examining the
@@ -425,6 +755,54 @@ references:
   type: article-journal
   URL: https://obgyn.onlinelibrary.wiley.com/doi/10.1111/ajo.13656
   volume: '63'
+
+- id: socha2024a
+  author:
+    - family: Socha
+      given: P.M.
+    - family: Harper
+      given: S.
+    - family: Hutcheon
+      given: J.A.
+  citation-key: socha2024a
+  container-title: 'BJOG: An International Journal of Obstetrics and Gynaecology'
+  DOI: 10.1111/1471-0528.17799
+  issue: '10'
+  issued:
+    - year: 2024
+  language: en
+  page: 1430–1431
+  title: >-
+    Methods of confounder selection in obstetrics and gynaecology studies: An
+    overview of recent practice
+  type: article-journal
+  volume: '131'
+
+- id: socha2024b
+  author:
+    - family: Socha
+      given: P.M.
+    - family: Harper
+      given: S.
+    - family: Strumpf
+      given: E.
+    - family: Murphy
+      given: K.E.
+    - family: Hutcheon
+      given: J.A.
+  citation-key: socha2024b
+  container-title: 'BJOG: An International Journal of Obstetrics and Gynaecology'
+  DOI: 10.1111/1471-0528.17754
+  issue: '8'
+  issued:
+    - year: 2024
+  language: en
+  page: 1064–1071
+  title: >-
+    Antenatal corticosteroids and newborn respiratory outcomes in twins: A
+    regression discontinuity study
+  type: article-journal
+  volume: '131'
 
 - id: strumpf2017
   author:

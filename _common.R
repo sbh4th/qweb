@@ -5,6 +5,7 @@ library(dplyr)
 library(readr)
 library(fontawesome)
 library(bib2df)
+library(rcrossref)
 
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -55,6 +56,31 @@ reformat_authors_vancouver <- function(authors) {
   return(paste(formatted_authors, collapse = ", "))
 }
 
+# Function to get the URL from CrossRef
+get_crossref_url <- function(doi) {
+  # Check if DOI is missing or NA
+  if (is.na(doi) || doi == "") {
+    return(NA)
+  }
+  tryCatch(
+    {
+      # Query CrossRef and extract the URL from the link tibble
+      res <- cr_works(doi)
+      if (!is.null(res$data$link)) {
+        # Extract the first URL from the 'link' tibble
+        res$data$link[[1]]$URL[1]
+      } else {
+        # Return NA if no link is available
+        NA
+      }
+    },
+    error = function(e) {
+      # Return NA if there's an error
+      NA
+    }
+  )
+}
+
 
 get_pubs <- function() {
     pubs <- here("papers", "website.bib") %>% 
@@ -63,13 +89,18 @@ get_pubs <- function() {
       mutate(title = gsub("[{}]", "", title),
              booktitle = gsub("[{}]", "", booktitle),
              mtitle = str_to_lower(title),
-             year = str_sub(date, 1,4))
+             stitle = word(string = mtitle, start = 1, 
+              end = 4, sep = fixed(" ")),
+             year = str_sub(date, 1,4),
+             url = ifelse(is.na(url),
+               sapply(doi, get_crossref_url), url),
+             url = gsub("\\.pdf|\\?(.*)", "", url))
     gsp <- read_rds(here("data", "gspubs.rds")) %>%
        select(mtitle, cites, id_scholar)
     
     pubs <- pubs %>% 
       left_join(gsp, by = "mtitle") %>%
-      select(-mtitle)
+      select(-mtitle, -stitle)
     pubs$author <- sapply(pubs$author, 
       reformat_authors_vancouver)
     pubs$editor <- sapply(pubs$editor,
@@ -136,6 +167,7 @@ make_citation <- function(pub) {
     if (!is.na(pub$doi)) {
       pub$doi <- make_doi(pub$doi)
     }
+    pub$author <- glue::glue("{pub$author}. ")
     pub$year <- glue::glue("{pub$year};")
     pub$title <- glue::glue('"{pub$title}"')
     pub[,which(is.na(pub))] <- ''
@@ -204,25 +236,6 @@ make_altmetric <- function(pub) {
   }
   return(altmetric)
 }
-
-# make_haiku <- function(pub, header = FALSE) {
-#   html <- ""
-#   haiku <- em(
-#     pub$haiku1, HTML("&#8226;"), 
-#     pub$haiku2, HTML("&#8226;"), 
-#     pub$haiku3
-#   )
-#   if (!is.na(pub$haiku1)) {
-#     if (header) {
-#       html <- as.character(aside_center(list(
-#         HTML("<b>Haiku Summary</b>"), br(), haiku))
-#       )
-#     } else {
-#       html <- as.character(aside_center(list(haiku)))
-#     }
-#   }
-#   return(html)
-# }
 
 aside <- function(text) {
   return(tag("aside", list(text)))
@@ -353,16 +366,4 @@ last_updated <- function() {
     style = "font-size:0.8rem;")
   )
 }
-
-# make_media_list <- function() {
-#   media <- gsheet::gsheet2tbl(
-#     url = 'https://docs.google.com/spreadsheets/d# /1xyzgW5h1rVkmtO1rduLsoNRF9vszwfFZPd72zrNmhmU/edit#gid=2088158801')
-#   temp <- media %>% 
-#     mutate(
-#       date = format(date, format = "%b %d, %Y"), 
-#       outlet = paste0("**", outlet, "**"),
-#       post = paste0("- ", date, " - ", outlet, ": ", post)
-#     )
-#   return(paste(temp$post, collapse = "\n"))
-# }
 

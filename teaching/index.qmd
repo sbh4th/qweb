@@ -18,8 +18,30 @@ Recent versions of this course:
 ### PPHS 617
 This course covers methods for estimating the effects of social interventions on health outcomes. We introduce and provide the intuition for conducting impact evaluation studies in public and population health and discuss recent methodological developments. We define causal policy effects within the potential outcomes framework and contrast methods for describing associations between an intervention and health outcome with methods for estimating causal effects. We introduce and formally define policy-relevant research questions based on specific causal contrasts. The course format is a mixture of didactic lectures, classroom evaluations of published evaluations, homework assignments, and student presentations. We introduce students to approaches for estimating the effects of social interventions, classified broadly as experimental or observational (quasi-experimental). The section on experimental research covers the use of randomized trials and cluster randomized trials for impact evaluation. The section on observational designs will describe quasi-experimental techniques, including interrupted time series, difference-in-differences, instrumental variables, synthetic control, and regression discontinuity designs. 
 
+- [Winter 2020](pphs-617-2020/index.qmd)
+
 ## Teaching at Erasmus University
-(to come)
+During my tenure as an Endowed Chair in Social Inequalities at Erasmus, I contributed several lectures to master's and PhD degree students in public health.
+
+- Master class on Health Inequalities: Some Methodological Challenges [[slides.pdf]](lectures/Harper-Erasmus-Master-slides.pdf)
+- Natural experiments [[slides.pdf]](lectures/Natural-Experiments-EMC-2020.pdf)
 
 ## Teaching at University of Copenhagen
-(to come)
+
+I have contributed to teaching a PhD course on *Advanced Social Epidemiology* for several years at the University of Copenhagen.
+
+### 2019 Lectures
+1. The Measurement of Social Inequality [[slides.pdf]](lectures/CPH1-Social-position-2019.pdf)
+2. Measuring Health Inequalities [[slides.pdf]](lectures/CPH2-Measuring-inequality-2019.pdf)
+3. Decomposition Techniques for Social Epidemiology [[slides.pdf]](lectures/CPH3-Decomposition-2019.pdf)
+4. Quasi-Experimental Designs [[slides.pdf]](lectures/CPH4-Quasi-Experiments-2019.pdf)
+
+### 2021 Lectures
+1. Measuring Social Inequality [[slides.pdf]](lectures/02-inequality.pdf)
+2. Decomposition Techniques for Social Epidemiology [[slides.pdf]](lectures/03-decomp.pdf)
+
+## Workshops
+
+In 2020 I ran a half-day pre-conference workshop on reproducible research for the Annual Meeting of the Society for Epidemiologic Research. 
+
+Lectures are available online  [here](https://samharper.org/reproducibility-workshop-2020) and the repository with the other course materials is [here](https://github.com/sbh4th/reproducibility-workshop-2020).

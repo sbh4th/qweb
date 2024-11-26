@@ -18,5 +18,13 @@
       "/talks/rsf/index.html",
       "/talks/kickoff/index.html"
     ]
+  },
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/peer-review/index.html",
+      "/posts/420-update/index.html",
+      "/posts/is-420-deadly/index.html"
+    ]
   }
 ]

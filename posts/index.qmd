@@ -1,3 +1,10 @@
 ---
 title: Posts
+listing:
+  contents: "/*/index.qmd"
+  sort: "date desc"
+  #id: ser-2023
+  # contents: ser/ser-mlm.yml
+---
+Some thoughts. 
 ---
