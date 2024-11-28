@@ -1,0 +1,15 @@
+{
+  "hash": "30bb6458fe18640d7595daf02bbb9d21",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n\n\n\n# Increasing Educational Inequality in Preterm Birth in Québec, Canada, 1981–2006 \n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\"> <p>Auger N, Roncarolo F, Harper S.  “Increasing Educational Inequality in Preterm Birth in Québec, Canada, 1981–2006” <em>J Epidemiol Community Health</em>. 2011; 65: 1091–1096. DOI: <a href=\"https://doi.org/10.1136/jech.2009.102350\">10.1136/jech.2009.102350</a> Citations:</p>\n </div>\n<div class=\"g-col-1\"> <div data-badge-type=\"donut\" data-doi=\"10.1136/jech.2009.102350\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\"></div> </div>\n</div>\n<a href=\"https://jech.bmj.com/content/65/12/1091\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-external-link-alt\"></i> View</a>\n```\n\n:::\n:::\n\n\n\n\n**Abstract**:\n\nBackground Few studies have evaluated the relationship between preterm birth (PTB) and maternal education over time. We sought to determine whether educational inequalities in PTB have increased in Québec, Canada. Methods The authors analysed 2 124 909 singleton live births from 1981 to 2006, and computed the Relative Index of Inequality (RII) and Slope Index of Inequality (SII) with 95\\% CIs for the relationship between maternal education and extreme, very or moderate PTB (≤27, 28–31, and 32–36 completed weeks of gestation, respectively) for five periods (1981–1985, 1986–1990, 1991–1995, 1996–2000, 2001–2006), adjusting for maternal age, marital status, birthplace, language spoken at home, parity and infant sex. Results Average rates of extreme and moderate PTB increased over time but decreased for very PTB. A statistically significant increase in the RII over time was present for extreme and moderate PTB. The adjusted RII for extreme PTB increased from 1.58 (95\\% CI 1.24 to 2.01) in 1981–1985 to 3.11 (95\\% CI 2.54 to 3.81) in 2001–2006. For moderate PTB, the corresponding RIIs were 1.53 (95\\% CI 1.44 to 1.61) and 1.91 (95\\% CI 1.81 to 2.01). Absolute differences in the PTB proportion between the least and most educated mothers increased from 1981 to 2006 for extreme (adjusted SII 0.11\\% vs 0.28\\%) and moderate PTB (adjusted SII 1.67\\% vs 3.11\\%). Absolute differences in the proportion very PTB did not increase. Conclusions Relative and absolute educational inequalities in extreme and moderate PTB have increased over time in Québec. Relative increases were largest for extreme PTB, and absolute increases were largest for moderate PTB.\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -81,6 +81,30 @@ get_crossref_url <- function(doi) {
   )
 }
 
+# Define name replacements
+name_replacements <- c(
+      'Harper S' = '**Harper S**',
+      'Socha PM' = 'Socha PM*',
+      'Hetherington E' = 'Hetherington E*',
+      'Al-Soneidar W' = 'Al-Soneidar W*',
+      'Riddell CA' = 'Riddell CA*',
+      'Majid F' = 'Majid F*',
+      'Hajizadeh M' = 'Hajizadeh M*',
+      'Voigt K' = 'Voigt K*',
+      'Carroll S' = 'Carroll S*', 
+      'Yuan W' = 'Yuan W*',
+      'Sternbach TS' = 'Sternbach TS*',
+      'Farhat I' = 'Farhat I*',
+      'Vargas Lopez F' = 'Vargas Lopez F*',
+      'Capurro DA' = 'Capurro DA*',
+      'Austin NA' = 'Austin NA*',
+      'Arsenault CA' = 'Arsenault CA*',
+      'Richardson RA' = 'Richardson RA*',
+      'Manivong P' = 'Manivong P*',
+      'McKinnon BA' = 'McKinnon BA*',
+      'Gray AP' = 'Gray AP*',
+      'Mah SM' = 'Mah SM*')
+      # Add more names as needed
 
 get_pubs <- function() {
     pubs <- here("papers", "website.bib") %>% 
@@ -103,6 +127,8 @@ get_pubs <- function() {
       select(-mtitle, -stitle)
     pubs$author <- sapply(pubs$author, 
       reformat_authors_vancouver)
+    pubs$author <- str_replace_all(pubs$author, 
+      name_replacements)
     pubs$editor <- sapply(pubs$editor,
       reformat_authors_vancouver)
     pubs <- make_citations(pubs)
@@ -113,6 +139,7 @@ get_pubs <- function() {
       is.na(pubs$id_scholar), NA, 
       glue::glue('https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ipf8idcAAAAJ&citation_for_view=Ipf8idcAAAAJJ:{pubs$id_scholar}')
     )
+    
     return(pubs)
 }
 

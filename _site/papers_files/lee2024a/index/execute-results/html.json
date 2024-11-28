@@ -1,0 +1,15 @@
+{
+  "hash": "57dc0b153031a03fb05d5cb7e5d2ae38",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n\n\n\n# Effects of a Coal to Clean Heating Policy on Acute Myocardial Infarction in Beijing: A Difference-in-Differences Analysis \n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\"> <p>Lee M, Chang J, Deng Q, Hu P, Bixby H, Harper S, Liu J.  “Effects of a Coal to Clean Heating Policy on Acute Myocardial Infarction in Beijing: A Difference-in-Differences Analysis” <em>The Lancet. Planetary Health</em>. 2024; 8: 924–932. DOI: <a href=\"https://doi.org/10.1016/S2542-5196(24)00243-2\">10.1016/S2542-5196(24)00243-2</a> Citations: 0</p>\n </div>\n<div class=\"g-col-1\"> <div data-badge-type=\"donut\" data-doi=\"10.1016/S2542-5196(24)00243-2\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\"></div> </div>\n</div>\n<a href=\"https://api.elsevier.com/content/article/PII:S2542519624002432\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-external-link-alt\"></i> View</a><a href=\"https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=Ipf8idcAAAAJ&amp;citation_for_view=Ipf8idcAAAAJJ:mel-f30kHHgC\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"ai ai-google-scholar\"></i> Scholar</a>\n```\n\n:::\n:::\n\n\n\n\n**Abstract**:\n\nNA\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

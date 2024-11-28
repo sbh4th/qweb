@@ -1,0 +1,15 @@
+base
+methods
+datasets
+utils
+grDevices
+graphics
+stats
+here
+htmltools
+stringr
+dplyr
+readr
+fontawesome
+bib2df
+rcrossref

@@ -38,6 +38,68 @@ references:
   URL: https://www.sciencedirect.com/science/article/pii/S1877782122001102
   volume: '79'
 
+- id: al-soneidar2022a
+  abstract: >-
+    Objectives: Human papillomavirus 16 (HPV16) is an established risk factor
+    for Head and Neck Cancer (HNC). Recent reports have shown that genotypes
+    from the beta (β) and gamma (γ) genera, also known as cutaneous HPV, can be
+    found in the oral cavity, but their role is largely unidentified. We
+    investigated the interaction between oral HPV16 and cutaneous HPV in HNC.
+    Methods: We use data on incident HNC cases (n = 384) and frequency-matched
+    hospital-based controls (n = 423) from the HeNCe Life study in Montreal,
+    Canada. Participants were tested for alpha HPV and cutaneous genera using
+    oral mouth rinse and brush samples. We used unconditional logistic
+    regression to obtain adjusted odds ratios (aOR) and 95% confidence interval
+    (CI) as a measure of the effect between HPV and HNC and assessed the
+    interaction between HPV genotypes on the multiplicative and additive scales.
+    Results: Prevalence of HPV infection was higher among cases (73%) than
+    controls (63.4%), with cases more likely to be coinfected with more than a
+    single genotype, 52.9% vs. 43.5%, respectively. Infection with HPV16 alone
+    had a strong effect on HNC risk aOR = 18.2 [6.2, 53.2], while infection with
+    any cutaneous HPV, but not HPV16, appeared to have the opposite effect aOR =
+    0.8 [0.6, 1.1]. The observed effect of joint exposure to HPV16 and any
+    cutaneous HPV (aOR = 20.4 [8.3, 50.1]) was stronger than the expected effect
+    based on an assumption of independent exposures but was measured with
+    considerable imprecision. While the point estimate suggests a positive
+    interaction between HPV16 and cutaneous HPV, results were imprecise with
+    relative excess risk due to interaction (RERI) = 2.4 [−23.3, 28.2].
+    Conclusion: There could be biologic interaction between HPV16 and genotypes
+    from cutaneous genera, which warrants further investigation. Although
+    cutaneous HPVs are not usually found in tumor tissues, they are cofactors
+    that could interact with HPV16 in the oral cavity and thus strengthen the
+    latter’s carcinogenic effect.
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Al-Soneidar
+      given: Walid A.
+    - family: Harper
+      given: Sam
+    - family: Alli
+      given: Babatunde Y.
+    - family: Nicolau
+      given: Belinda
+  citation-key: al-soneidar2022a
+  container-title: Cancers
+  DOI: 10.3390/cancers14215197
+  ISSN: 2072-6694
+  issue: '21'
+  issued:
+    - year: 2022
+      month: 1
+  language: en
+  license: http://creativecommons.org/licenses/by/3.0/
+  number: '21'
+  page: '5197'
+  publisher: Multidisciplinary Digital Publishing Institute
+  source: www.mdpi.com
+  title: Interaction of HPV16 and Cutaneous HPV in Head and Neck Cancer
+  type: article-journal
+  URL: https://www.mdpi.com/2072-6694/14/21/5197
+  volume: '14'
+
 - id: al-soneidar2024a
   author:
     - family: Al-Soneidar
@@ -378,6 +440,354 @@ references:
   type: article-journal
   volume: '236'
 
+- id: capurro2022a
+  abstract: >-
+    ObjectiveParaguay’s health care system is characterized by segmented
+    provision and low public spending, with limited coverage and asymmetries in
+    terms of access and quality of care. The present study provides national
+    estimates of income-related inequality in health care utilization and trends
+    in the country over the past two decades.MethodsUsing data from the
+    Paraguayan Permanent Household Survey, we estimated socioeconomic inequality
+    in health care use during the period 1999–2018. We used poverty-to-income
+    ratio as the socioeconomic stratifier and defined health care use as having
+    reported a health problem and subsequent health care use in the last 90 days
+    before interview. Inequality was summarized by rank- and level-based
+    versions of the Concentration Index for binary outcomes.ResultsInequalities
+    affecting those with lower incomes were present in all years assessed,
+    although the magnitude of these inequalities declined over time. Inequality
+    as expressed by the rank-based index decreased from 0.209 (95%CI 0.164;
+    0.253) in 1999 to 0.032 (95%CI -0.010; 0.075) in 2018. The level-based index
+    decreased from 0.076 (95%CI -0.029; 0.182) in 1999 to 0.024 (0.002; 0.045)
+    in 2018. Trends in both indices were generally stable from 1999 to 2009,
+    with a noticeable decrease in 2010. The sharpest decreases relative to the
+    1999 baseline were observed in the period 2010–2018, reflecting changes in
+    health care use and income distribution. Stratification by area, sex and
+    older people suggest similar trends within subgroups.ConclusionsDecreases in
+    inequality coincide temporally with increments in public health expenditure,
+    removal of user fees in public health care facilities and the expansion of
+    conditional cash-transfer programmes. Future research should disentangle the
+    role of each of these policies in explaining the trends described.
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Capurro
+      given: Diego A
+    - family: Harper
+      given: Sam
+  citation-key: capurro2022a
+  container-title: Journal of Health Services Research & Policy
+  container-title-short: J Health Serv Res Policy
+  DOI: 10.1177/13558196221079160
+  ISSN: 1355-8196
+  issue: '3'
+  issued:
+    - year: 2022
+      month: 7
+      day: 1
+  language: en
+  page: 180-189
+  publisher: SAGE Publications
+  source: SAGE Journals
+  title: >-
+    Socioeconomic inequalities in health care utilization in Paraguay:
+    Description of trends from 1999 to 2018
+  title-short: Socioeconomic inequalities in health care utilization in Paraguay
+  type: article-journal
+  URL: https://doi.org/10.1177/13558196221079160
+  volume: '27'
+
+- id: carabali2022a
+  abstract: >-
+    We used surveillance data from Brazil and Colombia during 2007–2017 to
+    assess the presence of socioeconomic inequalities on dengue, chikungunya and
+    Zika at the neighborhood level in two Latin American cities.To quantify the
+    inequality, we estimated and decomposed the relative concentration index of
+    inequality (RCI) accounting for the spatiotemporal distribution of the
+    diseases.There were 281 426 arboviral cases notified in Fortaleza, Brazil,
+    and 40 889 in Medellin, Colombia. The RCI indicated greater concentration of
+    dengue cases among people living in low socioeconomic settings in both
+    sites. The RCIs for chikungunya in Fortaleza covered the line of equality
+    during their introduction in 2014, while the RCIs for Zika and chikungunya
+    in Medellin indicated the presence of a small inequality. The RCI
+    decomposition showed that year of notification and age were the main
+    contributors to this inequality. In Medellin, the RCI decomposition showed
+    that age and access to waste management accounted for 75.5%, 72.2% and 54.5%
+    of the overall inequality towards the poor for dengue, chikungunya and Zika,
+    respectively.Our study presents estimates of the socioeconomic inequality of
+    arboviruses and its decomposition in two Latin American cities. We
+    corroborate the concentration of arboviral diseases in low socioeconomic
+    neighborhoods and identify that year of occurrence, age, presence of
+    healthcare facilities and waste management are key determinants of the
+    heterogenous distribution of endemic arboviruses across the socioeconomic
+    spectrum.
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Carabali
+      given: Mabel
+    - family: Harper
+      given: Sam
+    - family: Lima Neto
+      given: Antonio S
+    - family: Santos de Sousa
+      given: Geziel
+      non-dropping-particle: dos
+    - family: Caprara
+      given: Andrea
+    - family: Restrepo
+      given: Berta Nelly
+    - family: Kaufman
+      given: Jay S
+  citation-key: carabali2022a
+  container-title: Transactions of The Royal Society of Tropical Medicine and Hygiene
+  container-title-short: Transactions of The Royal Society of Tropical Medicine and Hygiene
+  DOI: 10.1093/trstmh/trac004
+  ISSN: 0035-9203
+  issue: '8'
+  issued:
+    - year: 2022
+      month: 8
+      day: 5
+  page: 717-726
+  source: Silverchair
+  title: >-
+    Decomposition of socioeconomic inequalities in arboviral diseases in Brazil
+    and Colombia (2007–2017)
+  type: article-journal
+  URL: https://doi.org/10.1093/trstmh/trac004
+  volume: '116'
+
+- id: clark2022a
+  abstract: >-
+    This article examines the context of growing up in rural America and how
+    rural roots shape life chances. The distinctive physical, social, and
+    cultural attributes of rural areas can exacerbate many of the challenges of
+    childhood poverty. Yet rural children have better access to public childcare
+    services and perform as well as urban children on standardized tests. Life
+    trajectories diverge most sharply when rural youths decide whether to leave
+    their home communities. Those who stay typically face limited opportunities
+    for higher education and well-paid, stable employment, whereas those who
+    leave fare remarkably well with respect to their educational, economic, and
+    health outcomes. In sum, growing up in rural America offers distinctive
+    advantages and disadvantages, yet the benefits may accrue primarily to those
+    who leave.
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Clark
+      given: Shelley
+    - family: Harper
+      given: Sam
+    - family: Weber
+      given: Bruce
+  citation-key: clark2022a
+  container-title: 'RSF: The Russell Sage Foundation Journal of the Social Sciences'
+  DOI: 10.7758/RSF.2022.8.4.01
+  ISSN: 2377-8253, 2377-8261
+  issue: '4'
+  issued:
+    - year: 2022
+      month: 5
+      day: 1
+  language: en
+  license: >-
+    © 2022 Russell Sage Foundation. Clark, Shelley, Sam Harper, and Bruce Weber.
+    2022. “Growing Up in Rural America.” RSF: The Russell Sage Foundation
+    Journal of the Social Sciences 8(3): 1–47. DOI: 10.7758/RSF.2022.8.4.01. The
+    authors gratefully acknowledge funding from the Social Science and
+    Humanities Research Council of Canada (SSHRC) (435–2019–1117). Direct
+    correspondence to: Shelley Clark, at shelley.clark@mcgill.ca, 3460 McTavish,
+    Montreal, Quebec, H3A 0E6, Canada; Sam Harper, at sam.harper@mcgill.ca, 2001
+    Avenue McGill College, Room 1262, Montreal, Quebec, H3A 1G1, Canada; Bruce
+    Weber, at bruce.weber@oregonstate.edu, Department of Applied Economics, 213
+    Ballard Extension Hall, Oregon State University, Corvallis, OR 97331–3601,
+    United States.. Open Access Policy: RSF: The Russell Sage Foundation Journal
+    of the Social Sciences is an open access journal. This article is published
+    under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported
+    License.
+  page: 1-47
+  publisher: 'RSF: The Russell Sage Foundation Journal of the Social Sciences'
+  source: www.rsfjournal.org
+  title: Growing Up in Rural America
+  type: article-journal
+  URL: https://www.rsfjournal.org/content/8/4/1
+  volume: '8'
+
+- id: davis2022
+  abstract: >-
+    Introduction To provide equitable cancer care at the end of life, it is
+    essential to first understand the evidence underpinning the existence of
+    unequal cancer outcomes. Study design, measurement and analytical decisions
+    made by researchers are a function of their social systems, academic
+    training, values and biases, which influence both the findings and
+    interpretation of whether inequalities or inequities exist. Methodological
+    choices can lead to results with different implications for research and
+    policy priorities, including where supplementary programmes and services are
+    offered and for whom. The objective of this scoping review is to provide an
+    overview of the methods, including study design, measures and statistical
+    approaches, used in quantitative and qualitative observational studies of
+    health equity in end-of-life cancer care, and to consider how these methods
+    align with recommended approaches for studying health equity questions.
+
+    Methods and analysis This scoping review follows Arksey and O’Malley’s
+    expanded framework for scoping reviews. We will systematically search
+    Medline, Embase, CINAHL and PsycINFO electronic databases for quantitative
+    and qualitative studies that examined equity stratifiers in relation to
+    end-of-life cancer care and/or outcomes published in English or French
+    between 2010 and 2021. Two authors will independently review all titles,
+    abstracts and full texts to determine which studies meet the inclusion
+    criteria. Data from included full-text articles will be extracted into a
+    data form that will be developed and piloted by the research team. Extracted
+    information will be summarised quantitatively and qualitatively.
+
+    Ethics and dissemination No ethics approval is required for this scoping
+    review. Results will be disseminated to researchers examining questions of
+    health equity in cancer care through scientific publication and presentation
+    at relevant conferences.
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Davis
+      given: Laura E.
+    - family: Webber
+      given: Colleen
+    - family: Datta
+      given: Geetanjali D.
+    - family: Wiens
+      given: Allison
+    - family: Harper
+      given: Sam
+    - family: Hallet
+      given: Julie
+    - family: Coburn
+      given: Natalie G.
+    - family: Konikoff
+      given: Lauren
+    - family: Tanuseputro
+      given: Peter
+    - family: Mahar
+      given: Alyson L.
+  citation-key: davis2022
+  container-title: BMJ Open
+  DOI: 10.1136/bmjopen-2022-064743
+  ISSN: 2044-6055, 2044-6055
+  issue: '7'
+  issued:
+    - year: 2022
+      month: 7
+      day: 1
+  language: en
+  license: "© Author(s) (or their employer(s)) 2022. Re-use permitted under CC BY-NC. No commercial re-use. See rights and permissions. Published by BMJ.. http://creativecommons.org/licenses/by-nc/4.0/This is an open access article distributed in accordance with the Creative Commons Attribution Non Commercial (CC BY-NC 4.0) license, which permits others to distribute, remix, adapt, build upon this work non-commercially, and license their derivative works on different terms, provided the original work is properly cited, appropriate credit is given, any changes made indicated, and the use is non-commercial. See:\_http://creativecommons.org/licenses/by-nc/4.0/."
+  page: e064743
+  publisher: British Medical Journal Publishing Group
+  section: Oncology
+  source: bmjopen.bmj.com
+  title: >-
+    Assessing research methodologies used to evaluate inequalities in
+    end-of-life cancer care research: a scoping review protocol
+  title-short: >-
+    Assessing research methodologies used to evaluate inequalities in
+    end-of-life cancer care research
+  type: article-journal
+  URL: https://bmjopen.bmj.com/content/12/7/e064743
+  volume: '12'
+
+- id: davis2022a
+  abstract: >-
+    Introduction
+
+    To provide equitable cancer care at the end of life, it is essential to
+    first understand the evidence underpinning the existence of unequal cancer
+    outcomes. Study design, measurement and analytical decisions made by
+    researchers are a function of their social systems, academic training,
+    values and biases, which influence both the findings and interpretation of
+    whether inequalities or inequities exist. Methodological choices can lead to
+    results with different implications for research and policy priorities,
+    including where supplementary programmes and services are offered and for
+    whom. The objective of this scoping review is to provide an overview of the
+    methods, including study design, measures and statistical approaches, used
+    in quantitative and qualitative observational studies of health equity in
+    end-of-life cancer care, and to consider how these methods align with
+    recommended approaches for studying health equity questions.
+
+
+    Methods and analysis
+
+    This scoping review follows Arksey and O’Malley’s expanded framework for
+    scoping reviews. We will systematically search Medline, Embase, CINAHL and
+    PsycINFO electronic databases for quantitative and qualitative studies that
+    examined equity stratifiers in relation to end-of-life cancer care and/or
+    outcomes published in English or French between 2010 and 2021. Two authors
+    will independently review all titles, abstracts and full texts to determine
+    which studies meet the inclusion criteria. Data from included full-text
+    articles will be extracted into a data form that will be developed and
+    piloted by the research team. Extracted information will be summarised
+    quantitatively and qualitatively.
+
+
+    Ethics and dissemination
+
+    No ethics approval is required for this scoping review. Results will be
+    disseminated to researchers examining questions of health equity in cancer
+    care through scientific publication and presentation at relevant
+    conferences.
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Davis
+      given: Laura E
+    - family: Webber
+      given: Colleen
+    - family: Datta
+      given: Geetanjali D
+    - family: Wiens
+      given: Allison
+    - family: Harper
+      given: Sam
+    - family: Hallet
+      given: Julie
+    - family: Coburn
+      given: Natalie G
+    - family: Konikoff
+      given: Lauren
+    - family: Tanuseputro
+      given: Peter
+    - family: Mahar
+      given: Alyson L
+  citation-key: davis2022a
+  container-title: BMJ Open
+  container-title-short: BMJ Open
+  DOI: 10.1136/bmjopen-2022-064743
+  ISSN: 2044-6055
+  issue: '7'
+  issued:
+    - year: 2022
+      month: 7
+      day: 20
+  page: e064743
+  PMCID: PMC9305817
+  PMID: '35858722'
+  source: PubMed Central
+  title: >-
+    Assessing research methodologies used to evaluate inequalities in
+    end-of-life cancer care research: a scoping review protocol
+  title-short: >-
+    Assessing research methodologies used to evaluate inequalities in
+    end-of-life cancer care research
+  type: article-journal
+  URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9305817/
+  volume: '12'
+
 - id: gravesteijn2024a
   author:
     - family: Gravesteijn
@@ -495,25 +905,32 @@ references:
   URL: https://doi.org/10.1146/annurev-publhealth-082619-104231
   volume: '42'
 
-- id: harper2023a
+- id: harper2023
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
   author:
     - family: Harper
-      given: S.
+      given: Sam
     - family: Nandi
-      given: A.
-  citation-key: harper2023a
+      given: Arijit
+  citation-key: harper2023
+  container-title: Epidemiology
   DOI: 10.1097/EDE.0000000000001663
-  event-place: Cambridge
+  ISSN: 1044-3983
   issue: '6'
   issued:
     - year: 2023
+      month: 11
   language: en
-  page: 793–795
-  publisher-place: Cambridge
+  page: 793-795
+  source: DOI.org (Crossref)
   title: >-
-    Empirical challenges in defining treatments and time in the evaluation of
-    gun laws. Epidemiology
-  type: document
+    Empirical Challenges in Defining Treatments and Time in the Evaluation of
+    Gun Laws
+  type: article-journal
+  URL: https://journals.lww.com/10.1097/EDE.0000000000001663
   volume: '34'
 
 - id: hawkins2023a
@@ -645,6 +1062,94 @@ references:
   type: article-journal
   volume: '38'
 
+- id: hutcheon2022a
+  abstract: >-
+    Background: Antenatal corticosteroids reduce respiratory morbidity in
+    preterm infants, but their use during late preterm gestation (34–36 weeks)
+    is limited because their safety for longer-term child neurodevelopment is
+    unclear. We sought to determine if fetuses with higher probability of
+    exposure to antenatal corticosteroids had increased rates of prescriptions
+    for attention-deficit/hyperactivity disorder (ADHD) medication in childhood,
+    using a quasiexperimental design that better controls for confounding than
+    existing observational studies.
+
+    Methods: We identified 16 358 children whose birthing parents were admitted
+    for delivery between 31 + 0 (31 weeks, 0 days) and 36 + 6 weeks’ gestation
+    in 2000–2013, using a perinatal data registry from British Columbia, Canada,
+    and linked their records with population-based child ADHD medication data
+    (2000–2018). We used a regression discontinuity design to capitalize on the
+    fact that pregnancies presenting for delivery immediately before and
+    immediately after the clinical cut-off for antenatal corticosteroid
+    administration of 34 + 0 weeks’ gestation have very different levels of
+    exposure to corticosteroids, but are otherwise similar with respect to
+    confounders.
+
+    Results: Over a median follow-up period of 9 years, 892 (5.5%) children had
+    1 or more dispensations of ADHD medication. Children whose birthing parents
+    were admitted for delivery just before the corticosteroid clinical cut-off
+    of 34 + 0 weeks’ gestation did not appear to be more likely to be prescribed
+    ADHD medication than those admitted just after the cut-off (rate ratio 1.1,
+    95% confidence interval [CI] 0.8 to 1.6; 1.3 excess cases per 100 children,
+    95% CI −2.5 to 5.7).
+
+    Interpretation: We found little evidence that children with higher
+    probability of exposure to antenatal corticosteroids have higher rates of
+    ADHD prescriptions in childhood, supporting the safety of antenatal
+    corticosteroids for this neurodevelopmental outcome.
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Hutcheon
+      given: Jennifer A.
+    - family: Strumpf
+      given: Erin C.
+    - family: Liauw
+      given: Jessica
+    - family: Skoll
+      given: M. Amanda
+    - family: Socha
+      given: Peter
+    - family: Srour
+      given: Myriam
+    - family: Ting
+      given: Joseph Y.
+    - family: Harper
+      given: Sam
+  citation-key: hutcheon2022a
+  container-title: CMAJ
+  DOI: 10.1503/cmaj.211491
+  ISSN: 0820-3946, 1488-2329
+  issue: '7'
+  issued:
+    - year: 2022
+      month: 2
+      day: 22
+  language: en
+  license: >-
+    © 2022 CMA Impact Inc. or its licensors. This is an Open Access article
+    distributed in accordance with the terms of the Creative Commons Attribution
+    (CC BY-NC-ND 4.0) licence, which permits use, distribution and reproduction
+    in any medium, provided that the original publication is properly cited, the
+    use is noncommercial (i.e., research or educational use), and no
+    modifications or adaptations are made. See:
+    https://creativecommons.org/licenses/by-nc-nd/4.0/
+  page: E235-E241
+  PMID: '35193860'
+  publisher: CMAJ
+  section: Research
+  source: www.cmaj.ca
+  title: >-
+    Antenatal corticosteroid administration and attention-deficit/hyperactivity
+    disorder in childhood: a regression discontinuity study
+  title-short: >-
+    Antenatal corticosteroid administration and attention-deficit/hyperactivity
+    disorder in childhood
+  type: article-journal
+  URL: https://www.cmaj.ca/content/194/7/E235
+  volume: '194'
+
 - id: lee2024a
   author:
     - family: Lee
@@ -674,6 +1179,146 @@ references:
     Beijing: a difference-in-differences analysis
   type: article-journal
   volume: '8'
+
+- id: li2022b
+  abstract: >-
+    The coronavirus (COVID-19) lockdown in China is thought to have reduced air
+    pollution emissions due to reduced human mobility and economic activities.
+    Few studies have assessed the impacts of COVID-19 on community and indoor
+    air quality in environments with diverse socioeconomic and household energy
+    use patterns. The main goal of this study was to evaluate whether indoor and
+    community air pollution differed before, during, and after the COVID-19
+    lockdown in homes with different energy use patterns. Using calibrated
+    real-time PM2.5 sensors, we measured indoor and community air quality in 147
+    homes from 30 villages in Beijing over 4 months including periods before,
+    during, and after the COVID-19 lockdown. Community pollution was higher
+    during the lockdown (61 ± 47 μg/m3) compared with before (45 ± 35 μg/m3, p <
+    0.001) and after (47 ± 37 μg/m3, p < 0.001) the lockdown. However, we did
+    not observe significantly increased indoor PM2.5 during the COVID-19
+    lockdown. Indoor-generated PM2.5 in homes using clean energy for heating
+    without smokers was the lowest compared with those using solid fuel
+    with/without smokers, implying air pollutant emissions are reduced in homes
+    using clean energy. Indoor air quality may not have been impacted by the
+    COVID-19 lockdown in rural settings in China and appeared to be more
+    impacted by the household energy choice and indoor smoking than the COVID-19
+    lockdown. As clean energy transitions occurred in rural households in
+    northern China, our work highlights the importance of understanding multiple
+    possible indoor sources to interpret the impacts of interventions, intended
+    or otherwise.
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Li
+      given: Xiaoying
+    - family: Baumgartner
+      given: Jill
+    - family: Harper
+      given: Sam
+    - family: Zhang
+      given: Xiang
+    - family: Sternbach
+      given: Talia
+    - family: Barrington-Leigh
+      given: Christopher
+    - family: Brehmer
+      given: Collin
+    - family: Robinson
+      given: Brian
+    - family: Shen
+      given: Guofeng
+    - family: Zhang
+      given: Yuanxun
+    - family: Tao
+      given: Shu
+    - family: Carter
+      given: Ellison
+  citation-key: li2022b
+  container-title: Indoor Air
+  DOI: 10.1111/ina.13095
+  ISSN: 1600-0668
+  issue: '8'
+  issued:
+    - year: 2022
+  language: en
+  page: e13095
+  source: Wiley Online Library
+  title: >-
+    Field measurements of indoor and community air quality in rural Beijing
+    before, during, and after the COVID-19 lockdown
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1111/ina.13095
+  volume: '32'
+
+- id: li2022c
+  abstract: >-
+    The Chinese government implemented a national household energy transition
+    program that replaced residential coal heating stoves with
+    electricity-powered heat pumps for space heating in northern China. As part
+    of a baseline assessment of the program, this study investigated variability
+    in personal air pollution exposures within villages and between villages and
+    evaluated exposure patterns by sociodemographic factors. We randomly
+    recruited 446 participants in 50 villages in four districts in rural Beijing
+    and measured 24 h personal exposures to fine particulate matter (PM2.5) and
+    black carbon (BC). The geometric mean personal exposure to PM2.5 and BC was
+    72 and 2.5 μg/m3, respectively. The variability in PM2.5 and BC exposures
+    was greater within villages than between villages. Study participants who
+    used traditional stoves as their dominant source of space heating were
+    exposed to the highest levels of PM2.5 and BC. Wealthier households tended
+    to burn more coal for space heating, whereas less wealthy households used
+    more biomass. PM2.5 and BC exposures were almost uniformly distributed by
+    socioeconomic status. Future work that combines these results with PM2.5
+    chemical composition analysis will shed light on whether air pollution
+    source contributors (e.g., industrial, traffic, and household solid fuel
+    burning) follow similar distributions.
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Li
+      given: Xiaoying
+    - family: Baumgartner
+      given: Jill
+    - family: Barrington-Leigh
+      given: Christopher
+    - family: Harper
+      given: Sam
+    - family: Robinson
+      given: Brian
+    - family: Shen
+      given: Guofeng
+    - family: Sternbach
+      given: Talia
+    - family: Tao
+      given: Shu
+    - family: Zhang
+      given: Xiang
+    - family: Zhang
+      given: Yuanxun
+    - family: Carter
+      given: Ellison
+  citation-key: li2022c
+  container-title: Environmental Science & Technology
+  container-title-short: Environ. Sci. Technol.
+  DOI: 10.1021/acs.est.1c07402
+  ISSN: 0013-936X
+  issue: '12'
+  issued:
+    - year: 2022
+      month: 6
+      day: 21
+  page: 8308-8318
+  publisher: American Chemical Society
+  source: ACS Publications
+  title: >-
+    Socioeconomic and Demographic Associations with Wintertime Air Pollution
+    Exposures at Household, Community, and District Scales in Rural Beijing,
+    China
+  type: article-journal
+  URL: https://doi.org/10.1021/acs.est.1c07402
+  volume: '56'
 
 - id: lynch2004
   abstract: >-
@@ -723,6 +1368,102 @@ references:
   type: article-journal
   URL: https://onlinelibrary.wiley.com/doi/10.1111/j.0887-378X.2004.00302.x
   volume: '82'
+
+- id: nandi2022a
+  abstract: >-
+    Background Starting in 2006 to 2007, the Government of Bangladesh
+    implemented the Maternal Health Voucher Scheme (MHVS). This program provides
+    pregnant women with vouchers that can be exchanged for health services from
+    eligible public and private sector providers. In this study, we examined
+    whether access to the MHVS was associated with maternal health services
+    utilization, stillbirth, and neonatal and infant mortality. Methods and
+    findings We used information on pregnancies and live births between 2000 to
+    2016 reported by women 15 to 49 years of age surveyed as part of the
+    Bangladesh Demographic and Health Surveys. Our analytic sample included
+    23,275 pregnancies lasting at least 7 months for analyses of stillbirth and
+    between 15,125 and 21,668 live births for analyses of health services use,
+    neonatal, and infant mortality. With respect to live births occurring prior
+    to the introduction of the MHVS, 31.3%, 14.1%, and 18.0% of women,
+    respectively, reported receiving at least 3 antenatal care visits,
+    delivering in a health institution, and having a skilled birth attendant at
+    delivery. Rates of neonatal and infant mortality during this period were 40
+    and 63 per 1,000 live births, respectively, and there were 32 stillbirths
+    per 1,000 pregnancies lasting at least 7 months. We applied a
+    difference-in-differences design to estimate the effect of providing
+    subdistrict-level access to the MHVS program, with inverse probability of
+    treatment weights to address selection into the program. The introduction of
+    the MHVS program was associated with a lagged improvement in the probability
+    of delivering in a health facility, one of the primary targets of the
+    program, although associations with other health services were less evident.
+    After 6 years of access to the MHVS, the probabilities of reporting at least
+    3 antenatal care visits, delivering in a health facility, and having a
+    skilled birth attendant present increased by 3.0 [95% confidence interval
+    (95% CI) = −4.8, 10.7], 6.5 (95% CI = −0.6, 13.6), and 5.8 (95% CI = −1.8,
+    13.3) percentage points, respectively. We did not observe evidence
+    consistent with the program improving health outcomes, with probabilities of
+    stillbirth, neonatal mortality, and infant mortality decreasing by 0.7 (95%
+    CI = −1.3, 2.6), 0.8 (95% CI = −1.7, 3.4), and 1.3 (95% CI = −2.5, 5.1)
+    percentage points, respectively, after 6 years of access to the MHVS. The
+    sample size was insufficient to detect smaller associations with adequate
+    precision. Additionally, we cannot rule out the possibility of measurement
+    error, although it was likely nondifferential by treatment group, or
+    unmeasured confounding by concomitant interventions that were implemented
+    differentially in treated and control areas. Conclusions In this study, we
+    found that the introduction of the MHVS was positively associated with the
+    probability of delivering in a health facility, but despite a longer period
+    of follow-up than most extant evaluations, we did not observe attendant
+    reductions in stillbirth, neonatal mortality, or infant mortality. Further
+    work and engagement with stakeholders is needed to assess if the MHVS has
+    affected the quality of care and health inequalities and whether the design
+    and eligibility of the program should be modified to improve maternal and
+    neonatal health outcomes.
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Nandi
+      given: Arijit
+    - family: Charters
+      given: Thomas J.
+    - family: Quamruzzaman
+      given: Amm
+    - family: Strumpf
+      given: Erin C.
+    - family: Kaufman
+      given: Jay S.
+    - family: Heymann
+      given: Jody
+    - family: Mukherji
+      given: Arnab
+    - family: Harper
+      given: Sam
+  citation-key: nandi2022a
+  container-title: PLOS Medicine
+  container-title-short: PLOS Medicine
+  DOI: 10.1371/journal.pmed.1004022
+  ISSN: 1549-1676
+  issue: '8'
+  issued:
+    - year: 2022
+      month: 8
+      day: 15
+  language: en
+  page: e1004022
+  publisher: Public Library of Science
+  source: PLoS Journals
+  title: >-
+    Health care services use, stillbirth, and neonatal and infant survival
+    following implementation of the Maternal Health Voucher Scheme in
+    Bangladesh: A difference-in-differences analysis of Bangladesh Demographic
+    and Health Survey data, 2000 to 2016
+  title-short: >-
+    Health care services use, stillbirth, and neonatal and infant survival
+    following implementation of the Maternal Health Voucher Scheme in Bangladesh
+  type: article-journal
+  URL: >-
+    https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1004022
+  volume: '19'
 
 - id: socha2023
   abstract: "Treatment effects can be measured on the relative scale (eg, risk ratios, odds ratios) or the absolute scale (eg, risk differences). If the baseline risk of an outcome is different between subgroups, the effect of the treatment will differ between subgroups on at least one scale (relative, absolute, or both). We illustrate this using two examples from the literature where only relative effects were estimated, but conclusions about subgroup differences would likely have changed had absolute effects also been considered. To identify all meaningful subgroup differences, researchers and clinicians should compare\_effects on the relative and absolute scale."
@@ -804,6 +1545,54 @@ references:
   type: article-journal
   volume: '131'
 
+- id: sternbach2022a
+  abstract: "Objectives:\_\n          We aimed to estimate the effects of indoor and outdoor temperature on wintertime blood pressure (BP) among peri-urban Beijing adults.\n          Methods:\_\n          We enrolled 1279 adults (ages: 40–89 years) and conducted measurements in two winter campaigns in 2018–2019 and 2019–2020. Study staff traveled to participant homes to administer a questionnaire and measure brachial and central BP. Indoor temperature was measured in the 5 min prior to BP measurement. Outdoor temperature was estimated from regional meteorological stations. We used multivariable mixed-effects regression models to estimate the within-individual and between-individual effects of indoor and outdoor temperatures on BP.\n          Results:\_\n          Indoor and outdoor temperatures ranged from 0.0 to 28 °C and −14.3 to 6.4 °C, respectively. In adjusted models, a 1 °C increase in indoor temperature was associated with decreased SBP [−0.4 mmHg, 95% confidence interval (CI): −0.7 to −0.1 (between-individual; brachial and central BP); −0.5 mmHg, 95% CI: −0.8 to −0.2 (within-individual, brachial BP); −0.4 mmHg, 95% CI: −0.7 to −0.2 (within-individual, central BP)], DBP [−0.2 mmHg, 95% CI:−0.4 to −0.03 (between-individual); −0.3 mmHg, 95% CI: −0.5 to −0.04 (within-individual)], and within-individual pulse pressure [−0.2 mmHg, 95% CI: −0.4 to −0.04 (central); −0.3 mmHg, 95% CI: −0.4 to −0.1 (brachial)]. Between-individual SBP estimates were larger among participants with hypertension. There was no evidence of an effect of outdoor temperature on BP.\n          Conclusion:\_\n          Our results support previous findings of inverse associations between indoor temperature and BP but contrast with prior evidence of an inverse relationship with outdoor temperature. Wintertime home heating may be a population-wide intervention strategy for high BP and cardiovascular disease in China."
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Sternbach
+      given: Talia J.
+    - family: Harper
+      given: Sam
+    - family: Li
+      given: Xiaoying
+    - family: Zhang
+      given: Xiang
+    - family: Carter
+      given: Ellison
+    - family: Zhang
+      given: Yuanxun
+    - family: Shen
+      given: Guofeng
+    - family: Fan
+      given: Zhongjie
+    - family: Zhao
+      given: Liancheng
+    - family: Tao
+      given: Shu
+    - family: Baumgartner
+      given: Jill
+  citation-key: sternbach2022a
+  container-title: Journal of Hypertension
+  DOI: 10.1097/HJH.0000000000003198
+  ISSN: 0263-6352
+  issue: '10'
+  issued:
+    - year: 2022
+      month: 10
+  language: en-US
+  page: '1950'
+  source: journals.lww.com
+  title: >-
+    Effects of indoor and outdoor temperatures on blood pressure and central
+    hemodynamics in a wintertime longitudinal study of Chinese adults
+  type: article-journal
+  URL: >-
+    https://journals.lww.com/jhypertension/fulltext/2022/10000/Effects_of_indoor_and_outdoor_temperatures_on.12.aspx?context=FeaturedArticles&collectionId=1
+  volume: '40'
+
 - id: strumpf2017
   author:
     - family: Strumpf
@@ -867,5 +1656,83 @@ references:
     Outcomes
   type: article-journal
   URL: https://linkinghub.elsevier.com/retrieve/pii/S0749379722004093
+  volume: '63'
+
+- id: windle2022a
+  abstract: >-
+    Introduction
+
+    There is substantial debate concerning the impact of cannabis
+    decriminalization and legalization on road safety outcomes.
+
+    Methods
+
+    Seven databases were systematically searched: Embase, MEDLINE, and PsycINFO
+    through Ovid as well as Web of Science Core Collection, SafetyLit, Criminal
+    Justice Database (ProQuest), and Transport Research International
+    Documentation (from inception to June 16, 2021). Eligible primary studies
+    examined group-level cannabis decriminalization or legalization and a road
+    safety outcome in any population.
+
+    Results
+
+    A total of 65 reports of 64 observational studies were eligible, including
+    39 that applied a quasi-experimental design. Studies examined recreational
+    cannabis legalization (n=50), medical cannabis legalization (n=22), and
+    cannabis decriminalization (n=5). All studies except 1 used data from the
+    U.S. or Canada. Studies found mixed impacts of legalization on attitudes,
+    beliefs, and self-reported driving under the influence. Medical
+    legalization, recreational legalization, and decriminalization were
+    associated with increases in positive cannabis tests among drivers. Few
+    studies examined impacts on alcohol or other drug use, although findings
+    suggested a decrease in positive alcohol tests among drivers associated with
+    medical legalization. Medical legalization was associated with reductions in
+    fatal motor-vehicle collisions, whereas recreational legalization was
+    conversely associated with increases in fatal collisions.
+
+    Discussion
+
+    Increased cannabis positivity may reflect changes in cannabis use; however,
+    it does not in itself indicate increased impaired driving. Subgroups
+    impacted by medical and recreational legalization, respectively, likely
+    explain opposing findings for fatal collisions. More research is needed
+    concerning cannabis decriminalization; the impacts of decriminalization and
+    legalization on nonfatal injuries, alcohol and other drugs; and the
+    mechanisms by which legalization impacts road safety outcomes.
+  accessed:
+    - year: 2024
+      month: 11
+      day: 28
+  author:
+    - family: Windle
+      given: Sarah B.
+    - family: Socha
+      given: Peter
+    - family: Nazif-Munoz
+      given: José Ignacio
+    - family: Harper
+      given: Sam
+    - family: Nandi
+      given: Arijit
+  citation-key: windle2022a
+  container-title: American Journal of Preventive Medicine
+  container-title-short: American Journal of Preventive Medicine
+  DOI: 10.1016/j.amepre.2022.07.012
+  ISSN: 0749-3797
+  issue: '6'
+  issued:
+    - year: 2022
+      month: 12
+      day: 1
+  page: 1037-1052
+  source: ScienceDirect
+  title: >-
+    The Impact of Cannabis Decriminalization and Legalization on Road Safety
+    Outcomes: A Systematic Review
+  title-short: >-
+    The Impact of Cannabis Decriminalization and Legalization on Road Safety
+    Outcomes
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0749379722004093
   volume: '63'
 ...

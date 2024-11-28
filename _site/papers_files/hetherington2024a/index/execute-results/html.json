@@ -1,0 +1,15 @@
+{
+  "hash": "9143a6a224c30a2e2ae19ca272784303",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n\n\n\n# Inequalities in Access to Prenatal Care during the COVID-19 Pandemic: Analysis of a Population-Based Cohort \n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\"> <p>Hetherington E, Darling E, Harper S, Nguyen F, Schummers L, Norman W.  “Inequalities in Access to Prenatal Care during the COVID-19 Pandemic: Analysis of a Population-Based Cohort” <em>Paediatric and Perinatal Epidemiology</em>. 2024; 38: 291–301. DOI: <a href=\"https://doi.org/10.1111/ppe.13050\">10.1111/ppe.13050</a> Citations:</p>\n </div>\n<div class=\"g-col-1\"> <div data-badge-type=\"donut\" data-doi=\"10.1111/ppe.13050\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\"></div> </div>\n</div>\n<a href=\"https://onlinelibrary.wiley.com/doi/pdf/10.1111/ppe.13050\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-external-link-alt\"></i> View</a>\n```\n\n:::\n:::\n\n\n\n\n**Abstract**:\n\nNA\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

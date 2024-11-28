@@ -23,6 +23,7 @@ pubs <- get_pubs()
 ```
 
 ## Recent Journal Articles
+*indicates trainee under my supervision or co-supervision.
 
 `r make_pub_list(pubs, "ARTICLE")`
 
