@@ -85,7 +85,7 @@ get_crossref_url <- function(doi) {
 name_replacements <- c(
       'Harper S' = '**Harper S**',
       'Socha PM' = 'Socha PM*',
-      'Socha P' = 'Socha P*'
+      'Socha P' = 'Socha P*',
       'Hetherington E' = 'Hetherington E*',
       'Al-Soneidar WA' = 'Al-Soneidar WA*',
       'Riddell CA' = 'Riddell CA*',

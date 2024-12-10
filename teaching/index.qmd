@@ -40,6 +40,13 @@ I have contributed to teaching a PhD course on *Advanced Social Epidemiology* fo
 1. Measuring Social Inequality [[slides.pdf]](lectures/02-inequality.pdf)
 2. Decomposition Techniques for Social Epidemiology [[slides.pdf]](lectures/03-decomp.pdf)
 
+### 2024 Lectures
+- Counterfactuals and Causal Policy Effects [[.html]](https://samharper.org/adv-soc-epi/slides/00-causal/00-causal.html) [[.pdf]](lectures/00-causal-2024.pdf)
+- Quasi-Experimental Designs [[.html]](https://samharper.org/adv-soc-epi/slides/04-quasi/04-quasi.html)  [[slides.pdf]](lectures/04-quasi-2024.pdf)
+- Measuring Social Inequality [[.html]](https://samharper.org/adv-soc-epi/slides/02-inequality/02-inequality.html)  [[slides.pdf]](lectures/02-inequality-2024.pdf)
+- Decomposition Techniques for Social Epidemiology [[.html]](https://samharper.org/adv-soc-epi/slides/03-decomp/03-decomp.html)  [[slides.pdf]](lectures/03-decomp-2024.pdf)
+
+
 ## Workshops
 
 In 2020 I ran a half-day pre-conference workshop on reproducible research for the Annual Meeting of the Society for Epidemiologic Research. 
