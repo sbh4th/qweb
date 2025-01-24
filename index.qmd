@@ -1,8 +1,8 @@
 ---
-title: "Sam Harper"
+title: " "
 about:
   template: broadside
-  image: portrait.jpg
+  image: portrait.png
   links:
     - icon: envelope
       aria-label: email
@@ -28,3 +28,5 @@ I am a Professor in the [Department](https://www.mcgill.ca/epi-biostat-occh/) of
 My research focuses on understanding population health and its social distribution, with specific interests in impact evaluation, measuring health inequalities, global health, demography, causal inference, and ethical issues in public health.
 
 More information on specific projects, papers, students, and teaching are in my [CV](https://samharper.org/cv).
+
+Where (else) you can find me: <i class="fa-solid fa-arrow-turn-down"></i>

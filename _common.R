@@ -88,6 +88,7 @@ name_replacements <- c(
       'Socha P' = 'Socha P*',
       'Hetherington E' = 'Hetherington E*',
       'Al-Soneidar WA' = 'Al-Soneidar WA*',
+      'Al-Soneidar W' = 'Al-Soneidar W*',
       'Riddell CA' = 'Riddell CA*',
       'Majid F' = 'Majid F*',
       'Hajizadeh M' = 'Hajizadeh M*',

@@ -13,7 +13,7 @@ execute:
 page-layout: full
 include-back-link: false
 toc-location: right
-cache: true
+cache: false
 ---
 
 ```{r setup}

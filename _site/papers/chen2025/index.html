@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sam Harper">
-<meta name="dcterms.date" content="2019-02-08">
 
-<title>420 update – Sam Harper</title>
+<title>index – Sam Harper</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -78,6 +76,35 @@ ul.task-list li input[type="checkbox"] {
 <!-- fontawesome icons -->
 <script src="https://kit.fontawesome.com/1392a7030f.js" crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -143,146 +170,36 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#update" id="toc-update" class="nav-link" data-scroll-target="#update">Update</a>
-  <ul class="collapse">
-  <li><a href="#control-days-and-uncertainty" id="toc-control-days-and-uncertainty" class="nav-link" data-scroll-target="#control-days-and-uncertainty">Control days and uncertainty</a></li>
-  <li><a href="#compared-to-what" id="toc-compared-to-what" class="nav-link" data-scroll-target="#compared-to-what">Compared to what?</a></li>
-  <li><a href="#transient-or-persistent" id="toc-transient-or-persistent" class="nav-link" data-scroll-target="#transient-or-persistent">Transient or persistent?</a></li>
-  </ul></li>
-  <li><a href="#paper-data-code" id="toc-paper-data-code" class="nav-link" data-scroll-target="#paper-data-code">Paper + Data + Code</a></li>
+  <li><a href="#socioeconomic-inequalities-in-mortality-associated-with-mental-disorders-a-population-based-cohort-study" id="toc-socioeconomic-inequalities-in-mortality-associated-with-mental-disorders-a-population-based-cohort-study" class="nav-link active" data-scroll-target="#socioeconomic-inequalities-in-mortality-associated-with-mental-disorders-a-population-based-cohort-study">Socioeconomic Inequalities in Mortality Associated with Mental Disorders: A Population-Based Cohort Study</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sbh4th/qweb/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">420 update</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">replication</div>
-    <div class="quarto-category">reproducible research</div>
-    <div class="quarto-category">cannabis</div>
-    <div class="quarto-category">motor vehicle crashes</div>
-  </div>
-  </div>
 
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Sam Harper </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 8, 2019</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="featured.png" class="img-fluid figure-img"></p>
-<figcaption>‘Image credit: <a href="https://upload.wikimedia.org/wikipedia/commons/7/7e/I-420.svg"><strong>Wikipedia</strong></a>’</figcaption>
-</figure>
+<section id="socioeconomic-inequalities-in-mortality-associated-with-mental-disorders-a-population-based-cohort-study" class="level1">
+<h1>Socioeconomic Inequalities in Mortality Associated with Mental Disorders: A Population-Based Cohort Study</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div class="pub">
+<div class="grid">
+<div class="g-col-11"> <p>Chen D, Momen NC, Ejlskov L, Bødkergaard K, Werenberg Dreier J, Sørensen HT, Laustsen LM, <strong>Harper S</strong>, Hakulinen C, McGrath JJ, Plana-Ripoll O.  “Socioeconomic Inequalities in Mortality Associated with Mental Disorders: A Population-Based Cohort Study” <em>World Psychiatry</em>. 2025; 24: 92–102. DOI: <a href="https://doi.org/10.1002/wps.21278">10.1002/wps.21278</a> Citations:</p>
+ </div>
+<div class="g-col-1"> <div data-badge-type="donut" data-doi="10.1002/wps.21278" data-hide-no-mentions="true" class="altmetric-embed"></div> </div>
 </div>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>Last fall <a href="https://twitter.com/AdamPalayew">Adam Palayew</a> and I <a href="http://samharper.org/new-blog/2018/4/17/is-420-deadly">wrote</a> about an interesting <a href="https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2672202">paper</a> that claimed that the number of people in fatal traffic crashes increased by 12% on April the 20th. For those that don’t know, April 20th (or ‘420’) is a day of celebration of all things cannabis, with large outdoor gatherings where cannabis consumption is promoted, especially at 4:20pm. The idea behind the paper was that excess consumption of cannabis on April 20th led to more drugged driving, and therefore more fatal accidents.</p>
-<p>It’s an interesting and perhaps not implausible idea but, as always, the devil is in the details. The authors, John Staples and Donald Redelmeier used data from the Fatal Accident Accident Reporting System (FARS) and compared drivers involved in fatal accidents on 420 to those involved in accidents one week before and after for the period 1992-2016. This is an interesting design because it inherently compares fatal accidents on the same day of the week, and there is a lot of daily variation in fatal crashes (weekends are particularly deadly).</p>
-<p>They reported that the number of drivers involved in fatal accidents was 12% higher on 420 compared to control days. This paper made quite a splash in the media, and was the 8th most talked about article for <em>JAMA Internal Medicine</em> in all of 2018: <img src="jama-1.png" class="img-fluid" alt="header"> <img src="jama-2.png" class="img-fluid" alt="header"></p>
-<p>Of course it also was widely discussed on social media and twitter, for example:</p>
-<p></p><div id="tweet-78450"></div><script>tweet={"url":"https:\/\/twitter.com\/DavidJuurlink\/status\/987364170847965184","author_name":"David Juurlink","author_url":"https:\/\/twitter.com\/DavidJuurlink","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003ECelebrating \u003Ca href=\"https:\/\/twitter.com\/hashtag\/420day?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#420day\u003C\/a\u003E? Maybe also partake an Uber. \u003Ca href=\"https:\/\/t.co\/SCRxSoTAG4\"\u003Ehttps:\/\/t.co\/SCRxSoTAG4\u003C\/a\u003E \u003Ca href=\"https:\/\/t.co\/BZsiclK63L\"\u003Epic.twitter.com\/BZsiclK63L\u003C\/a\u003E\u003C\/p\u003E&mdash; David Juurlink (@DavidJuurlink) \u003Ca href=\"https:\/\/twitter.com\/DavidJuurlink\/status\/987364170847965184?ref_src=twsrc%5Etfw\"\u003EApril 20, 2018\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-78450").innerHTML = tweet["html"];</script><p></p>
-<p>And the authors also made some pretty strong claims in a <a href="https://www.sciencedaily.com/releases/2018/02/180212112005.htm">press release</a>:</p>
-<blockquote class="blockquote">
-<p>“Assuming fewer than 10 per cent of Americans drive while high on April 20, our results suggest that drug use at 420 celebrations more than doubles the risk of a fatal crash.”</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>-Donald Redelmeier, February 12, 2018</p>
-</blockquote>
-<p>This is a serious claim, though one might argue that the use of the relative term “doubling” doesn’t help to quantify how serious the problem might be in the absence of base rates. However, at a time of both liberalization of legislation for recreational marijuana and concern about the impacts of drugged driving, such claims naturally prompted other to look more carefully at the evidence.</p>
-<p>Jayson Aydelotte and colleages wrote a <a href="https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2712270">letter to the editor</a> at <em>JAMA Internal Medicine</em> specifically interrogating both the validity of considering two days a week before and after as control conditions, and, since 420 has been gaining in popularity, whether any impact might have increased over time.</p>
-<blockquote class="blockquote">
-<p>Disaggregating the control dates provided additional insights. When comparing the number of crashes for each study date over the study period, in some years the number of crashes on April 20 was quite similar to the number of crashes occurring on at least 1 of the control dates. The April 20 crash rate remained significantly higher than the April 13 crash rate (IRR, 1.12; 95% CI, 1.02-1.23) but was not significantly different from the April 27 crash rate (IRR, 1.09; 95%CI, 0.99-1.20).</p>
-</blockquote>
-<p>I’ll leave aside the continued focus on arbitrarily dividing the results into “significant” and “not significant”, which is not helpful, but they argue that April 13 and April 27 do not appear to be ‘equivalent’ control days (let’s be honest, however, that the intervals 1.02-1.23 and 0.99-1.20 are in no way substantively different). They also found weaker effects in more recent years, which is again perhaps at odds with what one would expect if 420 has become more popular.</p>
-</section>
-<section id="update" class="level2">
-<h2 class="anchored" data-anchor-id="update">Update</h2>
-<p>Adam and I also did our own analysis, which has now been published in the journal <em>Injury Prevention</em>, and we were able to replicate the findings of Staples and Redelmeier, but we also ran some additional sensitivity analyses and tried to put the findings in context of what we already know about “risky” driving days. A few key findings emerged from the paper, and I’ll just post a few figures from the paper to try and make the case.</p>
-<section id="control-days-and-uncertainty" class="level3">
-<h3 class="anchored" data-anchor-id="control-days-and-uncertainty">Control days and uncertainty</h3>
-<p>First, there is a somewhat arcane technical issue related to how to calculate uncertainty around the estimated increase in fatal accidents that happen on 420 relative to “control” days. Sadly, this is relevant because many prominent journals (including leading medical journals) use filters related to “statistical significance” as a way to highlight “novel” findings. In practice, that means it’s interesting only if {{&lt; hl  &gt;}}p &lt; 0.05{{&lt; /hl  &gt;}},<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and it is perhaps no surprise that the 420 paper found that, “The risk of a fatal crash was {{&lt; hl  &gt;}}significantly{{&lt; /hl  &gt;}} higher on April 20 (relative risk, 1.12; 95% CI, 1.05-1.19; P = .001).”</p>
-<p>We investigated this by: a) looking at alternative ways of estimating uncertainty; b) adding control days two weeks before/after the index date of 420 or using all other days as the control period; and c) comparing 420 to July 4th (previously shown to demonstrate excess deaths). Here is a figure showing the comparison between 420 and July 4th (left and right panels, respectively), and for different control periods (upper and lower panels, respectively):</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="420-fig1.png" class="img-fluid figure-img"></p>
-<figcaption>header</figcaption>
-</figure>
+<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/wps.21278" class="icon-link" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View</a>
 </div>
-<p>The thing to notice here is the greater uncertainty that is evident when one takes a more robust approach to estimating the variance, which may have tipped the paper into the <em>p</em> &gt;0.05 of what Edward Tufte used to <a href="https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001et">call</a> the “zone of boredom, ambiguity, and unpublishability”. But you can also see that expanding the control period to 2 weeks (or the rest of the year) diminshes any impact of 420, but not July 4th, which appears very reliably associated with excess deaths.</p>
-</section>
-<section id="compared-to-what" class="level3">
-<h3 class="anchored" data-anchor-id="compared-to-what">Compared to what?</h3>
-<p>Second, we also tried to look at how the “excess risk” on 420 compares with similar risks on all other days of the year. We basically just ran the same simple negative binomial regression for each day using 2 control days a week apart for each day of the year. The graph below shows the results on the (log) rate ratio scale:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="420-fig2.png" class="img-fluid figure-img"></p>
-<figcaption>header</figcaption>
-</figure>
 </div>
-<p>You can see from the figure above that the excess risk on 420 does not seem readily distinguishable from daily variations across the entire year. Some clear risky days stand out (July 4th, for example), but if one applies the same filter as the 420 paper and just looks for days when there are “significant” relative excesses (or deficits) of fatal crashes,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> there are actually a lot of days that need explaining:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="420-t8.png" class="img-fluid figure-img"></p>
-<figcaption>header</figcaption>
-</figure>
-</div>
-<p>I wonder if one just picked random years whether any of these days would be reliably associated with excess deaths? I would gather July 4th but, as it stands, it is hard to find plausible explanations for why some of these days stand out.</p>
-</section>
-<section id="transient-or-persistent" class="level3">
-<h3 class="anchored" data-anchor-id="transient-or-persistent">Transient or persistent?</h3>
-<p>Finally, we used a Bayesian hierarchical model and partial pooling across years to evaluate whether any impact of 420 changed over time (this was also partially addressed by the letter from Aydelotte et al.). The plots below show results from models where we allowed the impact of certain “key” dates well-known to be associated with excess fatal crashes (July 4th, Labor Day weekend) to vary over time. Since 420 is a recent phenomenon we wondered whether we could see changes over time (increases?) in excess deaths. What does seem clear is that there is no reliable excess of drivers involved in fatal crashes on 420, but very clear excesses (and deficits) on other days. This speaks to whether one might just argue that the data are too noisy to detect any reliable signal.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="420-fig3.png" class="img-fluid figure-img"></p>
-<figcaption>header</figcaption>
-</figure>
-</div>
-<p>A couple of final points. As we mentioned in the other <a href="http://samharper.org/new-blog/2018/4/17/is-420-deadly">post</a>, there are also important questions about whether, practically speaking, it is plausible that drugged driving on 420 would be serious enough to raise the population-wide rate of fatal accidents by something like 12%. It’s hard to believe, and our back-of-the-envelope calculations suggested that around 15% of the population would need to be driving while high on 420 from 4:20pm to midnight to generate the kinds of excess rates seen in the Staples/Redelmeier paper.</p>
-<p>And I should also say that this paper was not an attack on the original work by Staples and Redelmeier. I will cop to seeing the paper and being skeptical about the results, but through the process of trying to reproduce their results, we started to think about new questions that could be asked of the data, what kinds of methods might be necessary to answer a question like this, and in general I think this ended up being a really interesting process of discovery. I should also say that because we decided to make all of the data and code available when we submitted the paper (which was first rejected by the <em>Canadian Medical Association Journal</em>), the review process at <em>Injury Prevention</em> was really productive:</p>
-<p></p><div id="tweet-76789"></div><script>tweet={"url":"https:\/\/twitter.com\/sbh4th\/status\/1070710180361441280","author_name":"Sam Harper","author_url":"https:\/\/twitter.com\/sbh4th","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003E1\/7: Thread related to a recent experience with \u003Ca href=\"https:\/\/twitter.com\/hashtag\/reproducible?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#reproducible\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/research?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#research\u003C\/a\u003E and \u003Ca href=\"https:\/\/twitter.com\/hashtag\/peer?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#peer\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/review?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#review\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/epitwitter?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#epitwitter\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/openscience?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#openscience\u003C\/a\u003E\u003Cbr\u003E\u003Cbr\u003EI have recently begun uploading data (where feasible) and code to an accessible public repository (\u003Ca href=\"https:\/\/twitter.com\/OSFramework?ref_src=twsrc%5Etfw\"\u003E@OSFramework\u003C\/a\u003E) to reproduce results at the time of submission.\u003C\/p\u003E&mdash; Sam Harper (@sbh4th) \u003Ca href=\"https:\/\/twitter.com\/sbh4th\/status\/1070710180361441280?ref_src=twsrc%5Etfw\"\u003EDecember 6, 2018\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-76789").innerHTML = tweet["html"];</script><p></p>
-</section>
-</section>
-<section id="paper-data-code" class="level2">
-<h2 class="anchored" data-anchor-id="paper-data-code">Paper + Data + Code</h2>
-<p>If anyone is interested in the paper the gated version is now <a href="https://injuryprevention.bmj.com/content/early/2019/01/28/injuryprev-2018-043068">posted</a> on <em>Injury Prevention’s</em> website, but we have posted a <a href="https://osf.io/tzcsy/">preprint</a> on my Open Science Foundation page, and we have made all of the <a href="https://osf.io/jw258/">raw data</a> and <a href="https://osf.io/ck3db/">code</a> available to reproduce our results publicly available as well. Hope you find it interesting!</p>
+<p><strong>Abstract</strong>:</p>
+<p>Mental disorders are associated with elevated mortality rates and reduced life expectancy. However, it is unclear whether these associations differ by socioeconomic position (SEP). The aim of this study was to explore comprehensively the role of individual-level SEP in the associations between specific types of mental disorders and mortality (due to all causes, and to natural or external causes), presenting both relative and absolute measures. This was a cohort study including all residents in Denmark on January 1, 2000, following them up until December 31, 2020. Information on mental disorders, SEP (income percentile, categorized into low, {<span class="math inline">\(&lt;\)</span>}20%; medium, 20-79%; and high, ≥80%), and mortality was obtained from nationwide registers. We computed the average reduction in life expectancy for those with mental disorders, relative and absolute differences in mortality rates, and proportional attributable fractions. Subgroup analyses by sex and age groups were performed. Overall, 5,316,626 individuals (2,689,749 females and 2,626,877 males) were followed up for 95.2 million person-years. People with mental disorders had a shorter average life expectancy than the general population regardless of SEP (70.9-77.0 vs.&nbsp;77.2-85.1 years, depending on income percentile). Among individuals with a mental disorder, the subgroup in the top 3% of the income distribution had the longest average life expectancy (77.0 years), and this estimate was lower than the shortest life expectancy in the general Danish population (77.2 years for individuals in the bottom 6% income distribution). The mortality rate differences were larger in the low-income than the high-income group (19.6 vs.&nbsp;13.3 per 1,000 person-years). For natural causes of death, a socioeconomic gradient for differences in life expectancy and mortality rates was observed across most diagnoses, both sexes, and all age groups. For external causes, no such gradient was observed. In the low-SEP group, 10.1% of all deaths and 23.7% of those related to external causes were attributable to mental disorders, compared with 3.5% and 8.7% in the high-SEP group. Thus, our data indicate that people with mental disorders have a shorter life expectancy even than people with the lowest SEP in the general population. The socioeconomic gradients in mortality rates due to natural causes highlight a greater need for coordinated care of physical diseases in people with mental disorders and low SEP.</p>
 
 
-</section>
+</div></section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Unless, of course, the paper <em>overturns</em> a prior result where <em>p</em> &lt; 0.05, in which case <em>p</em> &gt; 0.05 is the filter. [See the letter above by Aydelotte et al.&nbsp;for evidence.] Sigh.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>I know what I said earlier (irony), but just trying to make a point here.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -708,5 +625,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sbh4th/qweb/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer><script src="https://platform.twitter.com/widgets.js"></script>
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sbh4th/qweb/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

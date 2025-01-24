@@ -1,4 +1,13 @@
 /* css styles */
+/*@font-face {
+  font-family: "MyFont";
+  src: url(".ttf");
+}*/
+
+ $web-font-path: "https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" !default; 
+ @if $web-font-path { 
+   @import url($web-font-path); 
+ } 
 
 /* Link buttons - see Research page */
 

@@ -30,9 +30,10 @@ website:
 
 format:
   html:
-    theme: flatly
+    theme: litera
     css: styles.css
     toc: true
+    # mainfont: "Alegreya"
     include-in-header: "_includes/header.html"
 
 editor: source
