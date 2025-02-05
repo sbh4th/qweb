@@ -1,0 +1,15 @@
+{
+  "hash": "7054d580f3f1dd40f077a3af8723dbd9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n\n\n# Socioeconomic and Demographic Associations with Wintertime Air Pollution Exposures at Household, Community, and District Scales in Rural Beijing, China \n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\"> <p>Li X, Baumgartner J, Barrington-Leigh C, <strong>Harper S</strong>, Robinson B, Shen G, Sternbach T, Tao S, Zhang X, Zhang Y, Carter E.  “Socioeconomic and Demographic Associations with Wintertime Air Pollution Exposures at Household, Community, and District Scales in Rural Beijing, China” <em>Environmental Science &amp; Technology</em>. 2022; 56: 8308–8318. DOI: <a href=\"https://doi.org/10.1021/acs.est.1c07402\">10.1021/acs.est.1c07402</a> Citations: 6</p>\n </div>\n<div class=\"g-col-1\"> <div data-badge-type=\"donut\" data-doi=\"10.1021/acs.est.1c07402\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\"></div> </div>\n</div>\n<a href=\"https://doi.org/10.1021/acs.est.1c07402\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-external-link-alt\"></i> View</a><a href=\"https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=Ipf8idcAAAAJ&amp;citation_for_view=Ipf8idcAAAAJJ:QyXJ3EUuO1IC\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"ai ai-google-scholar\"></i> Scholar</a>\n```\n\n:::\n:::\n\n\n\n**Abstract**:\n\nThe Chinese government implemented a national household energy transition program that replaced residential coal heating stoves with electricity-powered heat pumps for space heating in northern China. As part of a baseline assessment of the program, this study investigated variability in personal air pollution exposures within villages and between villages and evaluated exposure patterns by sociodemographic factors. We randomly recruited 446 participants in 50 villages in four districts in rural Beijing and measured 24 h personal exposures to fine particulate matter (PM2.5) and black carbon (BC). The geometric mean personal exposure to PM2.5 and BC was 72 and 2.5 μg/m3, respectively. The variability in PM2.5 and BC exposures was greater within villages than between villages. Study participants who used traditional stoves as their dominant source of space heating were exposed to the highest levels of PM2.5 and BC. Wealthier households tended to burn more coal for space heating, whereas less wealthy households used more biomass. PM2.5 and BC exposures were almost uniformly distributed by socioeconomic status. Future work that combines these results with PM2.5 chemical composition analysis will shed light on whether air pollution source contributors (e.g., industrial, traffic, and household solid fuel burning) follow similar distributions.\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

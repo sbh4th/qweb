@@ -1,0 +1,30 @@
+[
+  {
+    "listing": "/talks/index.html",
+    "items": [
+      "/talks/asm/index.html",
+      "/talks/des-mlm/index.html",
+      "/talks/des-dd/index.html",
+      "/talks/mortal/index.html",
+      "/talks/nasem/index.html",
+      "/talks/ser/index.html",
+      "/talks/hei/index.html",
+      "/talks/rsf/index.html",
+      "/talks/kickoff/index.html"
+    ]
+  },
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/peer-review/index.html",
+      "/posts/420-update/index.html",
+      "/posts/is-420-deadly/index.html"
+    ]
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/articles/harper-2021-wv/index.html"
+    ]
+  }
+]
