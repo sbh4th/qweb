@@ -3,30 +3,32 @@ title: "Curriculum Vitae"
 format: 
   html:
     toc: true
-#format:
-# pdf:
-#   colorlinks: true
-#   link-citations: true
-#   keep-tex: true
-#   number-sections: true
-#   # fontfamily: CrimsonPro
-#   include-in-header:
-#     - text: |
-#         \usepackage{etaremune}
-#         \usepackage{doi}
-#         \usepackage{enumitem}
-#         \setlist[itemize]{noitemsep}
-#         \usepackage{scrlayer-scrpage}
-#         \rohead{\textsf{CV - S.Harper}}
+
+# format:
+#  pdf:
+#    colorlinks: true
+#    link-citations: true
+#    keep-tex: true
+#    number-sections: true
+#    # fontfamily: CrimsonPro
+#    include-in-header:
+#      - text: |
+#          \usepackage{etaremune}
+#          \usepackage{doi}
+#          \usepackage{enumitem}
+#          \setlist[itemize]{noitemsep}
+#          \usepackage{scrlayer-scrpage}
+#          \rohead{\textsf{CV - S.Harper}}
 editor_options: 
   markdown: 
     wrap: sentence
 ---
 
+::: {.content-visible when-format="html"}
+
 [PDF version](/cv/index.pdf)
 
----
-
+:::
 
 # Identification
 
@@ -113,6 +115,7 @@ editor_options:
 ## International
 |  |  |
 |--|--|
+| 2024 (Dec) | Co-Instructor (4 lectures), *Ph.D. course in Advanced Social Epidemiology*.  Institute of Public Health, University of Copenhagen, Denmark. |
 | 2021 (Oct) | Co-Instructor (4 lectures), *Ph.D. course in Advanced Social Epidemiology*.  Institute of Public Health, University of Copenhagen, Denmark. |
 | 2021 (Nov) | Guest Lecturer (1 lecture), *CK050 : Principles of Public Health*. Erasmus Medical Centre, Rotterdam, The Netherlands. |
 | 2020 (Nov) | Guest Lecturer (1 lecture), *HS02c: Public health research: intervention development and evaluation*. Erasmus Medical Centre, Rotterdam, The Netherlands. | 
@@ -148,7 +151,8 @@ editor_options:
 
 |           |                                                |
 |-----------|------------------------------------------------|
-| 2022-present	| 	Siobhan Carroll (co-supervised with Jill Baumgartner) | 
+| 2022-present	| 	Siobhan Carroll (co-supervised with Jill Baumgartner)
+| |    *Dr. Robert Remis Fellowship, $60,000 (2024-2026)* | 
 | 2021-present	| 	Wenlu Yuan (co-supervised with Jill Baumgartner) | 
 | 2021-present | 	Peter Socha (co-supervised with Jennifer Hutcheon)  | 
 | |    *FRQS doctoral award, $100,000 (2023-2025)* |
@@ -213,6 +217,7 @@ editor_options:
 #### Completed degree
 |           |                                                |
 |-----------|------------------------------------------------|
+| 2022-2024	| Martha Lee (PhD, Epidemiology) |
 | 2017-2020	| Mabel Carabali (PhD, Epidemiology) |
 | 2016-2020	| Eva Graham, (PhD, Epidemiology) |
 | 2014-2019	| Stephanie Law (PhD, Epidemiology) |
@@ -230,9 +235,9 @@ editor_options:
 #### Current
 |           |                                                |
 |-----------|------------------------------------------------|
+| 2024-present	| Jordyn Gattie (MSc, Epidemiology) |
 | 2022-present	| Sarah Windle (PhD, Epidemiology) |
 | 2021-present	| Doris Duncan (PhD, Epidemiology) |
-| 2022-present	| Martha Lee (PhD, Epidemiology) |
 | 2014-present	| Miriam Kinkaid (PhD, Epidemiology) |
 
 : {tbl-colwidths="\[15,85\]"}
@@ -241,6 +246,10 @@ editor_options:
 ### International
 |   |     |
 |---|-----|
+| 2024 | *Impacts of transitioning to clean household energy.* Seminar given at the University of Copenhagen Section of Social Medicine, Copenhagen, DK, Nov 21, 2024 |
+| 2024 | Keynote Address: *Multilevel Models in Social Epidemiology: Past, Present, and Future.* Danish Epidemiology Society Annual Meeting, Aarhus University, Aarhus, DK Nov 7, 2024 |
+| 2024| Invited Workshop: *Difference-in-Differences for Social Epidemiology*. Danish Epidemiology Society Annual Meeting, Aarhus University, Aarhus, DK Nov 6, 2024 |
+| 2024 | *Despair and Disadvantage: Some Questions* Presentation given at the MORTAL workshop, Nuffield College, Oxford University, UK Jun 10-11, 2024 |
 | 2023  | *Measuring Health Equity: Beyond Description.* US National Academy of Sciences, Engineering, & Medicine, The Ecosystem of Health Equity Measures: A Workshop, Oakland, CA, USA June 21, 2023 (remote) | 
 | 2023	| *A Quarter Century of Multilevel Models in Social Epidemiology: A Short Story in Three Acts.* Society for Epidemiologic Research Annual Meeting, Portland, OR, USA June 14, 2023 | 
 | 2020	| *Social Determinants of Health: Concepts and Methods Relevant to Air Pollution*. Health Effects Institute Annual Conference, Boston, MA, USA, May 20, 2020 (remote) |
@@ -297,7 +306,7 @@ editor_options:
 
 ### Ad hoc reviews
 #### Epidemiology and Public Health
-*American Journal of Public Health; Annals of Epidemiology; Epidemiology; International Journal of Epidemiology; Journal of Epidemiology & Community Health; Social Science & Medicine; Scandinavian Journal of Public Health; BMC Public Health; Paediatrics & Child Health; International Journal for Equity in Health; Caries Research; Journal of Urban Health; Health & Place; American Journal of Epidemiology; International Journal of Obesity; Cancer Management and Research; Open Medicine; International Journal of Pediatric Obesity; Cancer Epidemiology, Biomarkers & Prevention; British Journal of Cancer; BMC Cancer; European Journal of Public Health; Cancer Causes & Control; PLOS ONE; Addiction; Population Health Metrics; Global Health Action; Traffic Injury Prevention; Cancer; Oxford University Press (book proposal); Journal of Drug Issues; Environmental Health; Nature Communications Medicine; Nature; Nature Medicine *
+*American Journal of Public Health; Annals of Epidemiology; Epidemiology; International Journal of Epidemiology; Journal of Epidemiology & Community Health; Social Science & Medicine; Scandinavian Journal of Public Health; BMC Public Health; Paediatrics & Child Health; International Journal for Equity in Health; Caries Research; Journal of Urban Health; Health & Place; American Journal of Epidemiology; International Journal of Obesity; Cancer Management and Research; Open Medicine; International Journal of Pediatric Obesity; Cancer Epidemiology, Biomarkers & Prevention; British Journal of Cancer; BMC Cancer; European Journal of Public Health; Cancer Causes & Control; PLOS ONE; Addiction; Population Health Metrics; Global Health Action; Traffic Injury Prevention; Cancer; Oxford University Press (book proposal); Journal of Drug Issues; Environmental Health; Nature Communications Medicine; Nature; Nature Medicine; The Lancet Regional Health – Southeast Asia *
 
 #### General Medicine
 *Annals of Internal Medicine; BMJ (top 10% of peer reviewers in 2007); The Lancet; PLOS Medicine; JAMA; New England Journal of Medicine; Canadian Medical Association Journal; JAMA Pediatrics; Canadian J Cardiology*
@@ -351,7 +360,7 @@ editor_options:
 ### Current
 |  |  |
 |--|--|
-| 2015-present	| Doctoral Program Director, Department of Epidemiology, Biostatistics & Occupational Health (starting January, 2015) |
+| 2015-2024	| Doctoral Program Director, Department of Epidemiology, Biostatistics & Occupational Health (starting January, 2015) |
 
 : {tbl-colwidths="\[15,85\]"}
 
@@ -449,6 +458,7 @@ editor_options:
 ## Other Professional and Scientific Contributions
 ### Other McGill contributions
 
+- 2024  Thesis Writing Workshop, EBOH
 - 2023  Thesis Writing Workshop, EBOH
 - 2022  Thesis Writing Workshop, EBOH
 - 2021  Thesis Writing Workshop, EBOH
@@ -465,6 +475,8 @@ editor_options:
 - 2012 Keenan Research Centre of the Li Ka Shing Knowledge Institute at St. Michael’s
 
 ### Reviews of protocols and theses
+- 2024 PhD half-time committee review, Karolinska Institute (Balram Rai)
+- 2024 PhD oral defense committee member, University of Toronto (Calvin Yip)
 - 2022 PhD oral defense committee member, Erasmus Medical Centre (Erica Renhard)
 - 2013 PhD protocol committee, Université de Montreal (Syed Ahsan Raza)
 - 2012 External Examiner, Doctoral Degree Thesis, McMaster University (Hmwe Hmwe Kyuu)
@@ -788,16 +800,27 @@ My research focuses on investigating how social and environmental factors impact
 
 \*Indicates one of my trainees.
 
-Socha PM\*, **Harper S**, Hutcheon JA. Methods of confounder selection
+Chen D, Momen NC, Ejlskov L, Bødkergaard K, Werenberg Dreier J, et al. Socioeconomic inequalities in mortality associated with mental disorders: a population‐based cohort study. *World Psychiatry* 2025;24(1):92-102.
+
+Nandi A, Agarwal P, Chandrashekar A, Maloney S, Richardson R, Thakur L, **Harper S**. Access to affordable daycare and women’s mental health in Rajasthan, India: Evidence from a cluster-randomised social intervention. *J Glob Health* 2024;14:04063.
+
+Lee M, Chang J, Deng Q, Hu P, Bixby H, **Harper S**, Shen G, Tao S, Guo M, et al. Effects of a coal to clean heating policy on acute myocardial infarction in Beijing: a difference-in-differences analysis. *Lancet Planet Health* 2024;8(11):e924-e932.
+
+Burgos-Ochoa L, Bertens LCM, Boderie NW, Gravesteijn BY, PREPARE Consortium et al. Impact of COVID-19 mitigation measures on perinatal outcomes in the Netherlands. *Public Health* 2024;236:322-7.
+
+Gravesteijn BY, Boderie NW, van den Akker T, Bertens LCM, PREPARE Consortium et al. Effect of COVID-19 lockdown on maternity care and maternal outcome in the Netherlands: a national quasi-experimental study. *Public Health* 2024;235:15-25.
+
+\*Al-Soneidar WA, **Harper S**, Coutlée F, Gheit T, Tommasino M, Nicolau B. Prevalence of Alpha, Beta, and Gamma Human Papillomaviruses in Patients With Head and Neck Cancer and Noncancer Controls and Relation to Behavioral Factors. *J Infect Dis* 2024;229(4):1088-96.
+
+\*Hetherington E, Darling E, **Harper S**, Nguyen F, Schummers L, et al. Inequalities in access to prenatal care during the COVID‐19 pandemic: Analysis of a population‐based cohort. *Paediatr Perinat Epidemiol* 2024;38:291–301.
+
+\*Socha PM, **Harper S**, Strumpf E, Murphy KE, Hutcheon JA. Antenatal corticosteroids and newborn respiratory outcomes in twins: A regression discontinuity study. *BJOG* 2024;131: 1064-1071.
+
+\*Socha PM, **Harper S**, Hutcheon JA. Methods of confounder selection
 in obstetrics and gynaecology studies: An overview of recent practice.
 *BJOG*. 2024 . Online ahead of print.
 
-Hetherington E\*, Darling E, **Harper S**, Nguyen F, Schummers L, Norman
-WV. Inequalities in access to prenatal care during the COVID-19
-pandemic: Analysis of a population-based cohort. *Paediatr Perinat
-Epidemiol* 2024 . Online ahead of print.
-
-Socha PM, **Harper S**, Strumpf E, Murphy KE, Hutcheon JA. Antenatal
+\*Socha PM, **Harper S**, Strumpf E, Murphy KE, Hutcheon JA. Antenatal
 corticosteroids and newborn respiratory outcomes in twins: A regression
 discontinuity study. *BJOG*. . Online ahead of print.
 
@@ -805,8 +828,7 @@ discontinuity study. *BJOG*. . Online ahead of print.
 Time in the Evaluation of Gun Laws. *Epidemiology* 2023 Nov
 1;34(6):793-5.
 
-Al-Soneidar W, **Harper S**, Coutlée F, Gheit T, Tomassino M, Nicolau B.
-Prevalence of Alpha, Beta, and Gamma Human Papillomaviruses (HPV) in
+\*Al-Soneidar W, **Harper S**, Coutlée F, Gheit T, Tomassino M, Nicolau B. Prevalence of Alpha, Beta, and Gamma Human Papillomaviruses (HPV) in
 head and neck cancer patients and non-cancer controls and relation to
 behavioral factors. *Journal of Infectious Diseases* 2023 (forthcoming).
 
@@ -816,18 +838,14 @@ passport on first-dose COVID-19 vaccine coverage by age and area-level
 social determinants in the Canadian provinces of Québec and Ontario: an
 interrupted time series analysis. *CMAJ Open* 2023;11(5):E995-E1005.
 
-Hetherington E, **Harper S**, Davidson R, Festo C, Lampkin N, Mtenga S,
+\*Hetherington E, **Harper S**, Davidson R, Festo C, Lampkin N, Mtenga S,
 Teixeira C, Vincent I, Nandi A. Impact evaluation of the TAMANI project
 to improve maternal and child health in Tanzania. *J Epidemiol Community
 Health* 2023;77(6):410-6.
 
-Socha P, **Harper S**, Hutcheon JA. Subgroup effects should be examined
+\*Socha P, **Harper S**, Hutcheon JA. Subgroup effects should be examined
 using both relative and absolute effect measures. Australian and New
 Zealand Journal of Obstetrics and Gynaecology; 2023 Jun;63(3):469-72.
-
-Socha P, **Harper S**, Hutcheon JA. Methods of confounder selection in
-recent obstetrics and gynecology studies: A review. American Journal of
-Obstetrics and Gynaecology; 2023 (in press).
 
 Hawkins SS, **Harper S**, Baum CF, Kaufman JS. Associations between
 State-Level Changes in Reproductive Health Services and Indicators of
@@ -837,10 +855,10 @@ Windle SB, \*Socha P, Nazif-Munoz JI, **Harper S**, Nandi A. The Impact
 of Cannabis Decriminalization and Legalization on Road Safety Outcomes:
 A Systematic Review. *Am J Prev Med* 2022;63(6):1037-1052.
 
-Al-Soneidar WA, **Harper S**, Alli BY, Nicolau B. Interaction of HPV16
+\*Al-Soneidar WA, **Harper S**, Alli BY, Nicolau B. Interaction of HPV16
 and Cutaneous HPV in Head and Neck Cancer. *Cancers* 2022;14(21).
 
-Sternbach TJ, **Harper S**, Li X, Zhang X, Carter E, Zhang Y, et al.
+\*Sternbach TJ, **Harper S**, Li X, Zhang X, Carter E, Zhang Y, et al.
 Effects of indoor and outdoor temperatures on blood pressure and central
 hemodynamics in a wintertime longitudinal study of Chinese adults. *J
 Hypertens* 2022;40(10):1950-1959.
@@ -866,7 +884,7 @@ A, Restrepo BN, et al. Decomposition of socioeconomic inequalities in
 arboviral diseases in Brazil and Colombia (2007-2017). *Trans R Soc Trop
 Med Hyg* 2022;116(8):717-726.
 
-Al-Soneidar WA, **Harper S**, Madathil SA, Schlecht NF, Nicolau B. Do
+\*Al-Soneidar WA, **Harper S**, Madathil SA, Schlecht NF, Nicolau B. Do
 cutaneous human papillomavirus genotypes affect head and neck cancer?
 Evidence and bias-correction from a case-control study. *Cancer
 Epidemiol* 2022;79.
@@ -876,7 +894,7 @@ Assessing research methodologies used to evaluate inequalities in
 end-of-life cancer care research: A scoping review protocol. *BMJ Open*
 2022;12(7).
 
-Capurro DA, **Harper S**. Socioeconomic inequalities in health care
+\*Capurro DA, **Harper S**. Socioeconomic inequalities in health care
 utilization in Paraguay: Description of trends from 1999 to 2018. *J
 Health Serv Res Policy* 2022;27(3):180-189.
 
@@ -935,12 +953,12 @@ Delivered Face-to-Face and by a Mobile Phone to Strengthen Vaccination
 Uptake and Improve Child Health in Rural India: Randomized Pilot Study.
 *JMIR Mhealth Uhealth.* 2020 Sep 21;8(9):e20356. .
 
-Richardson RA, **Harper S**, Weichenthal S, Nandi A, Mishra V, Jha P.
+\*Richardson RA, **Harper S**, Weichenthal S, Nandi A, Mishra V, Jha P.
 Extremes in water availability and suicide: Evidence from a nationally
 representative sample of rural Indian adults. *Environ Res.* 2020
 Nov;190:109969. .
 
-Arsenault C, **Harper S**, Nandi A. Effect of vaccination on children's
+\*Arsenault C, **Harper S**, Nandi A. Effect of vaccination on children's
 learning achievements: findings from the India Human Development Survey.
 *J Epidemiol Community Health.* 2020 Oct;74(10):778-784. .
 
@@ -948,7 +966,7 @@ Nunes A, **Harper S**, Hernandez KD. The Price Isn't Right: Autonomous
 Vehicles, Public Health, and Social Justice. *Am J Public Health*. 2020
 Jun;110(6):796-797. .
 
-Riddell CA, Kaufman JS, Torres JM, **Harper S**. Using change in a seat
+\*Riddell CA, Kaufman JS, Torres JM, **Harper S**. Using change in a seat
 belt law to study racially-biased policing in South Carolina. *Prev
 Med*. 2020 Jan;130:105884. .
 
@@ -965,11 +983,11 @@ Kaufman JS, \*Riddell CA, **Harper S**. Black and White differences in
 life expectancy in 4 US states, 1969-2013. *Public Health Reports*
 2019;134:634-642.
 
-Austin N, **Harper S**. Constructing a longitudinal database of targeted
+\*Austin N, **Harper S**. Constructing a longitudinal database of targeted
 regulation of abortion providers laws. *Health Serv Res*.
 2019;54(5):1084--1089. .
 
-Austin N, **Harper S**. Quantifying the impact of targeted regulation of
+\*Austin N, **Harper S**. Quantifying the impact of targeted regulation of
 abortion provider laws on US abortion rates: a multi-state assessment.
 *Contraception*. 2019;100(5);374-379 pii: S0010-7824(19)30202-1. .
 

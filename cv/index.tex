@@ -43,14 +43,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -126,10 +140,12 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -141,15 +157,14 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
+
 \title{Curriculum Vitae}
 \author{}
 \date{}
 
 \begin{document}
 \maketitle
-\href{../cv/index.pdf}{PDF version}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section{Identification}\label{identification}
 
@@ -203,9 +218,11 @@ USA. \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
+2024-present & Professor, Department of Epidemiology, Biostatistics \&
+Occupational Health, McGill University \\
 2019-2022 & Endowed Chair of of Impact of Health and Social Policies on
 Health Inequality, Erasmus Medical Center, Rotterdam, The Netherlands \\
-2015-present & Associate Professor, Department of Epidemiology,
+2015-2024 & Associate Professor, Department of Epidemiology,
 Biostatistics \& Occupational Health, McGill University \\
 2010-2015 & Assistant Professor, Department of Epidemiology,
 Biostatistics \& Occupational Health, McGill University \\
@@ -303,6 +320,9 @@ Occupational Health, McGill University. \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
+2024 (Dec) & Co-Instructor (4 lectures), \emph{Ph.D.~course in Advanced
+Social Epidemiology}. Institute of Public Health, University of
+Copenhagen, Denmark. \\
 2021 (Oct) & Co-Instructor (4 lectures), \emph{Ph.D.~course in Advanced
 Social Epidemiology}. Institute of Public Health, University of
 Copenhagen, Denmark. \\
@@ -452,6 +472,7 @@ University} \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
+2022-2024 & Martha Lee (PhD, Epidemiology) \\
 2017-2020 & Mabel Carabali (PhD, Epidemiology) \\
 2016-2020 & Eva Graham, (PhD, Epidemiology) \\
 2014-2019 & Stephanie Law (PhD, Epidemiology) \\
@@ -474,9 +495,9 @@ University} \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
+2024-present & Jordyn Gattie (MSc, Epidemiology) \\
 2022-present & Sarah Windle (PhD, Epidemiology) \\
 2021-present & Doris Duncan (PhD, Epidemiology) \\
-2022-present & Martha Lee (PhD, Epidemiology) \\
 2014-present & Miriam Kinkaid (PhD, Epidemiology) \\
 \end{longtable}
 
@@ -492,6 +513,18 @@ Presentations}\label{invited-lectures-talks-presentations}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
+2024 & \emph{Impacts of transitioning to clean household energy.}
+Seminar given at the University of Copenhagen Section of Social
+Medicine, Copenhagen, DK, Nov 21, 2024 \\
+2024 & Keynote Address: \emph{Multilevel Models in Social Epidemiology:
+Past, Present, and Future.} Danish Epidemiology Society Annual Meeting,
+Aarhus University, Aarhus, DK Nov 7, 2024 \\
+2024 & Invited Workshop: \emph{Difference-in-Differences for Social
+Epidemiology}. Danish Epidemiology Society Annual Meeting, Aarhus
+University, Aarhus, DK Nov 6, 2024 \\
+2024 & \emph{Despair and Disadvantage: Some Questions} Presentation
+given at the MORTAL workshop, Nuffield College, Oxford University, UK
+Jun 10-11, 2024 \\
 2023 & \emph{Measuring Health Equity: Beyond Description.} US National
 Academy of Sciences, Engineering, \& Medicine, The Ecosystem of Health
 Equity Measures: A Workshop, Oakland, CA, USA June 21, 2023 (remote) \\
@@ -738,7 +771,7 @@ Responsibilities}\label{administrative-responsibilities}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-2015-present & Doctoral Program Director, Department of Epidemiology,
+2015-2024 & Doctoral Program Director, Department of Epidemiology,
 Biostatistics \& Occupational Health (starting January, 2015) \\
 \end{longtable}
 
@@ -897,6 +930,8 @@ contributions}\label{other-mcgill-contributions}
 \begin{itemize}
 \tightlist
 \item
+  2024 Thesis Writing Workshop, EBOH
+\item
   2023 Thesis Writing Workshop, EBOH
 \item
   2022 Thesis Writing Workshop, EBOH
@@ -933,6 +968,11 @@ theses}\label{reviews-of-protocols-and-theses}
 
 \begin{itemize}
 \tightlist
+\item
+  2024 PhD half-time committee review, Karolinska Institute (Balram Rai)
+\item
+  2024 PhD oral defense committee member, University of Toronto (Calvin
+  Yip)
 \item
   2022 PhD oral defense committee member, Erasmus Medical Centre (Erica
   Renhard)
@@ -1110,6 +1150,7 @@ and society. My research covers a wide variety of topics, but my major
 areas of focus are:
 
 \begin{itemize}
+\tightlist
 \item
   \begin{enumerate}
   \def\labelenumi{(\roman{enumi})}
@@ -1177,324 +1218,231 @@ Santé du Québec. \$219,764 \\
 
 \subsubsection{Current}\label{current-2}
 
+\textbf{Examining the role of discrimination in restricting women's
+labor force participation in India: Developing the foundation for an
+experimental correspondence study}\\
+\strut ~~~Agency: Social Science and Humanities Research Council of
+Canada\\
+\strut ~~~Role: Co-Applicant (NPI Arijit Nandi)\\
+\strut ~~~Amount: CAD \$63,195\\
+\strut ~~~Duration: 2024-2025\\
+
 \textbf{Impacts of cannabis decriminalization and legalization on
 cannabis and other substance use: a systematic review of global policy
 changes}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency: Canadian
-Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role: Co-Applicant
-(NPI Arijit Nandi)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount: CAD
-\$110,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration: 2023-2025\\
+\strut ~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~Role: Co-Applicant (NPI Arijit Nandi)\\
+\strut ~~~Amount: CAD \$110,000\\
+\strut ~~~Duration: 2023-2025\\
 
 \textbf{PREgnancy outcomes during a PAndemic REsponse (PREPARE)
 Unlocking lockdown's silver lining}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency: ZonMW
-(Dutch)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role: Co-Applicant
-(NPI Jasper Been)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount: CAD
-\$293,606\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration: 2022-2024\\
+\strut ~~~Agency: ZonMW (Dutch)\\
+\strut ~~~Role: Co-Applicant (NPI Jasper Been)\\
+\strut ~~~Amount: CAD \$293,606\\
+\strut ~~~Duration: 2022-2024\\
 
 \textbf{The impact of early-childhood education and care policies on
 children's cognitive and non-cognitive skills, health and well-being in
 the United States}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency: Social
-Science and Humanities Research Council of Canada\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role: PI\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount: CAD
-\$220,650\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration: 2022-2025\\
+\strut ~~~Agency: Social Science and Humanities Research Council of
+Canada\\
+\strut ~~~Role: PI\\
+\strut ~~~Amount: CAD \$220,650\\
+\strut ~~~Duration: 2022-2025\\
 
 \textbf{Addressing the Wider Health Impacts of COVID-19}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency: Canadian
-Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role: Co-PI (NPI
-Arijit Nandi)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount: CAD
-\$423,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration: 2022-2024\\
+\strut ~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~Role: Co-PI (NPI Arijit Nandi)\\
+\strut ~~~Amount: CAD \$423,000\\
+\strut ~~~Duration: 2022-2024\\
 
 \textbf{How do Household Energy Interventions Work?}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency: Health
-Effects Institute\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role: NPI (with Jill
-Baumgartner)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount: CAD
-\$1,019,956\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration: 2019-2024\\
+\strut ~~~Agency: Health Effects Institute\\
+\strut ~~~Role: NPI (with Jill Baumgartner)\\
+\strut ~~~Amount: CAD \$1,019,956\\
+\strut ~~~Duration: 2019-2024\\
 
 \textbf{Evaluating the impact of universal early childhood education
 policies on adolescent scholastic achievement, health, and well-being in
 high-income countries.}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency: Social
-Science and Humanities Research Council of Canada\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role: Co-Investigator
-(PI: Arijit Nandi)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount: CAD
-\$300,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration: 2019-2023\\
+\strut ~~~Agency: Social Science and Humanities Research Council of
+Canada\\
+\strut ~~~Role: Co-Investigator (PI: Arijit Nandi)\\
+\strut ~~~Amount: CAD \$300,000\\
+\strut ~~~Duration: 2019-2023\\
 
 \textbf{Air Pollution, Indoor Temperature, and Health Impacts of the
 Beijing Coal Ban and Heating Stove Replacement}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency: Canadian
-Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role: Co-PI (with
-Jill Baumgartner)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount: CAD
-\$952,454\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration: 2018-2023\\
+\strut ~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~Role: Co-PI (with Jill Baumgartner)\\
+\strut ~~~Amount: CAD \$952,454\\
+\strut ~~~Duration: 2018-2023\\
 
 \textbf{Short term benefits but long term harm? Assessing the
 consequences of antenatal corticosteroid administration for child
 neurodevelopment}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency: Canadian
-Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role: Co-PI (with
-Jennifer Hutcheon and Erin Strumpf)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount: CAD
-\$221,850\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration: 2018-2023\\
+\strut ~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~Role: Co-PI (with Jennifer Hutcheon and Erin Strumpf)\\
+\strut ~~~Amount: CAD \$221,850\\
+\strut ~~~Duration: 2018-2023\\
 
 \subsubsection{Past}\label{past-1}
 
 \textbf{The CART PREG-Epi Study: Pandemic Reproductive health and health
 Equity: Guidance from Epidemiology to improve reproductive, perinatal,
 and maternal mental health and substance use care}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-PI (NPI Wendy Norman)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$100,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2021-2022\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-PI (NPI Wendy Norman)\\
+\strut ~~~~Amount: CAD \$100,000\\
+\strut ~~~~Duration: 2021-2022\\
 
 \textbf{Every maternal death counts: understanding driving safety in
 pregnant and post-partum women}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-PI (with Jennifer Hutcheon)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$75,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2021-2022\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: PI (with Jennifer Hutcheon)\\
+\strut ~~~~Amount: CAD \$75,000\\
+\strut ~~~~Duration: 2021-2022\\
 
 \textbf{Establishing a Relationship Between Philosophy and
 Epidemiological Research and Practice: Modelling Ethical Standards of
 Health Equity (MESHE)}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-applicant (NPI Maxwell Smith)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$20,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2019-2020\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-applicant (NPI Maxwell Smith)\\
+\strut ~~~~Amount: CAD \$20,000\\
+\strut ~~~~Duration: 2019-2020\\
 
 \textbf{Improving maternal and newborn health in underserved areas in
 Tanzania}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Department of Foreign Affairs, Trade, and Development\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Partner (Principal applicant: CARE Canada)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$12,000,000 total, CAD \$343,415 sub-award to McGill\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2017-2021\\
+\strut ~~~~Agency: Department of Foreign Affairs, Trade, and
+Development\\
+\strut ~~~~Role: Partner (Principal applicant: CARE Canada)\\
+\strut ~~~~Amount: CAD \$12,000,000 total, CAD \$343,415 sub-award to
+McGill\\
+\strut ~~~~Duration: 2017-2021\\
 
 \textbf{Identifying and Evaluating New Environmental Risk Factors for
 Cancer, Cardiovascular, and Neurological Diseases through Innovative
 Approaches to Population-Based Exposure Assessment}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-Investigator (NPI Scott Weichenthal)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$1,020,510\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2016-2021\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-Investigator (NPI Scott Weichenthal)\\
+\strut ~~~~Amount: CAD \$1,020,510\\
+\strut ~~~~Duration: 2016-2021\\
 
 \textbf{Impact of affordable daycare on early life education in rural
 India}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Spencer Foundation\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-PI\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$68,704\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2016-2017\\
+\strut ~~~~Agency: Spencer Foundation\\
+\strut ~~~~Role: PI\\
+\strut ~~~~Amount: CAD \$68,704\\
+\strut ~~~~Duration: 2016-2017\\
 
 \textbf{Affordable daycare to empower Indian women}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-International Development Research Centre\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-PI (with Arijit Nandi)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$1,000,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2014-2018\\
+\strut ~~~~Agency: International Development Research Centre\\
+\strut ~~~~Role: Co-PI (with Arijit Nandi)\\
+\strut ~~~~Amount: CAD \$1,000,000\\
+\strut ~~~~Duration: 2014-2018\\
 
 \textbf{Social, economic and policy influences on social inequalities in
 adolescent health: a cross-national comparative study in 43 countries
 (1986-2014)}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-Investigator (PI: Frank Elgar)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$311,596\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2014-2018\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-Investigator (PI: Frank Elgar)\\
+\strut ~~~~Amount: CAD \$311,596\\
+\strut ~~~~Duration: 2014-2018\\
 
 \textbf{Maximizing population benefit and impact by applying population
 risk tools: A new direction for diabetes prevention in Canada}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-Investigator (PI: Laura Rosella)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$1,740,300\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2014-2015\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-Investigator (PI: Laura Rosella)\\
+\strut ~~~~Amount: CAD \$1,740,300\\
+\strut ~~~~Duration: 2014-2015\\
 
 \textbf{From association to causation: Using natural experiments to
 evaluate the impact of population health interventions on health
 inequalities}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-NPI (with Erin Strumpf)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$200,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2012-2016\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: NPI (with Erin Strumpf)\\
+\strut ~~~~Amount: CAD \$200,000\\
+\strut ~~~~Duration: 2012-2016\\
 
 \textbf{Measuring global health}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-Investigator (PI: Kristin Voigt)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$44,011\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2012-2014\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-Investigator (PI: Kristin Voigt)\\
+\strut ~~~~Amount: CAD \$44,011\\
+\strut ~~~~Duration: 2012-2014\\
 
 \textbf{Reducing inequalities in the burden of human papillomavirus
 (HPV) related diseases in Canada through optimal vaccination and
 screening policies: A multidisciplinary model-based approach}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-Investigator (PI: Marc Brisson)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$532,776\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2012-2015\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-Investigator (PI: Marc Brisson)\\
+\strut ~~~~Amount: CAD \$532,776\\
+\strut ~~~~Duration: 2012-2015\\
 
 \textbf{Examining the Impact of Social Policies on Health Equity: How
 Policies Designed to Reduce Poverty and Gender Inequality Affect
 Morbidity and Mortality in Children and Women}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-Investigator (PI: Arijit Nandi)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$1,700,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2011-2016\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-Investigator (PI: Arijit Nandi)\\
+\strut ~~~~Amount: CAD \$1,700,000\\
+\strut ~~~~Duration: 2011-2016\\
 
 \textbf{Ethics, Social Determinants of Health, and Health Equity:
 Integrating Theory and Practice}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-Investigator (PIs: Nicholas B. King and Daniel Weinstock)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$1,740,300\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2011-2016\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-Investigator (PIs: Nicholas B. King and Daniel
+Weinstock)\\
+\strut ~~~~Amount: CAD \$1,740,300\\
+\strut ~~~~Duration: 2011-2016\\
 
 \textbf{Measurement, Ethics, and Health Policy: Investigating the Role
 of Value Judgments in the Measurement and Evaluation of Health
 Inequalities}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-Investigator (PI: Nicholas King)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$190,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2010-2013\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-Investigator (PI: Nicholas King)\\
+\strut ~~~~Amount: CAD \$190,000\\
+\strut ~~~~Duration: 2010-2013\\
 
 \textbf{CIHR Team in Microsimulation Modeling of the Impact of Health
 Interventions and Policies}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-Investigator (PI: Jacek Kopec)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$1,448,630\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2009-2014\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-Investigator (PI: Jacek Kopec)\\
+\strut ~~~~Amount: CAD \$1,448,630\\
+\strut ~~~~Duration: 2009-2014\\
 
 \textbf{Social Inequality in Reproductive Health: The Changing Role of
 Education as a Determinant of Preterm Birth and Fetal Growth Over
 Time}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-Investigator (PI: Nathalie Auger)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$77,863\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2010-2011\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-Investigator (PI: Nathalie Auger)\\
+\strut ~~~~Amount: CAD \$77,863\\
+\strut ~~~~Duration: 2010-2011\\
 
 \textbf{Investigating the Role of Self-Report Bias in Health
 Inequalities Between and Within Countries}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-PI\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$181,308\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2009-2012\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: PI\\
+\strut ~~~~Amount: CAD \$181,308\\
+\strut ~~~~Duration: 2009-2012\\
 
 \textbf{Strategic Training Initiative in Biostatistics}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-Investigator (PIs: Michal Abrahamowicz, Richard Cook, Jerald Lawless,
-Erica Moodie, Robert Platt)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$4,950\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2008-2009\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-Investigator (PIs: Michal Abrahamowicz, Richard
+Cook, Jerald Lawless, Erica Moodie, Robert Platt)\\
+\strut ~~~~Amount: CAD \$4,950\\
+\strut ~~~~Duration: 2008-2009\\
 
 \textbf{Methods for Monitoring Social Disparities in Health}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-US National Institutes for Health\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-PI\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$28,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2007-2009\\
+\strut ~~~~Agency: US National Institutes for Health\\
+\strut ~~~~Role: PI\\
+\strut ~~~~Amount: CAD \$28,000\\
+\strut ~~~~Duration: 2007-2009\\
 
 \textbf{Methods for Monitoring Social Disparities in Health}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Agency:
-Canadian Institutes for Health Research\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Role:
-Co-PI (with Spencer Moore and John Lynch)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Amount:
-CAD \$40,000\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Duration:
-2007-2008\\
+\strut ~~~~Agency: Canadian Institutes for Health Research\\
+\strut ~~~~Role: Co-PI (with Spencer Moore and John Lynch)\\
+\strut ~~~~Amount: CAD \$40,000\\
+\strut ~~~~Duration: 2007-2008\\
 
 \subsection{Publications}\label{publications}
 
@@ -1503,567 +1451,1268 @@ journals}\label{articles-in-peer-reviewed-journals}
 
 *Indicates one of my trainees.
 
-\begin{etaremune}
-
-\item Socha PM*, \textbf{Harper S}, Hutcheon JA. Methods of confounder selection in obstetrics and gynaecology studies: An overview of recent practice. \emph{BJOG}. 2024 \doi{10.1111/1471-0528.17799}. Online ahead of print.
- 
-\item Hetherington E*, Darling E, \textbf{Harper S}, Nguyen F, Schummers L, Norman WV. Inequalities in access to prenatal care during the COVID-19 pandemic: Analysis of a population-based cohort. \emph{Paediatr Perinat Epidemiol} 2024 \doi{10.1111/ppe.13050}. Online ahead of print.
-
-\item *Socha PM, \textbf{Harper S}, Strumpf E, Murphy KE, Hutcheon JA. Antenatal corticosteroids and newborn respiratory outcomes in twins: A regression discontinuity study. \emph{BJOG}. \doi{10.1111/1471-0528.17754}. Online ahead of print.
-
-\item \textbf{Harper S}, Nandi A. Empirical Challenges in Defining Treatments and Time in the Evaluation of Gun Laws. \emph{Epidemiology} 2023 Nov 1;34(6):793-5. \doi{10.1097/EDE.0000000000001663}
-
-\item *Al-Soneidar W, \textbf{Harper S}, Coutlée F, Gheit T, Tomassino M, Nicolau B. Prevalence of Alpha, Beta, and Gamma Human Papillomaviruses (HPV) in head and neck cancer patients and non-cancer controls and relation to behavioral factors. \emph{Journal of Infectious Diseases} 2023 (forthcoming). \doi{10.1093/infdis/jiad335}
-
-\item Flores Anato JL, Ma H, Hamilton MA, Xia Y, \textbf{Harper S}, Buckeridge D, Brisson M, Hillmer MP, Malikov KA, Kerem A, Beall R. Impact of a vaccine passport on first-dose COVID-19 vaccine coverage by age and area-level social determinants in the Canadian provinces of Québec and Ontario: an interrupted time series analysis. \emph{CMAJ Open} 2023;11(5):E995-E1005. \doi{10.9778/cmajo.20220242}
-
-\item *Hetherington E, \textbf{Harper S}, Davidson R, Festo C, Lampkin N, Mtenga S, Teixeira C, Vincent I, Nandi A. Impact evaluation of the TAMANI project to improve maternal and child health in Tanzania. \emph{J Epidemiol Community Health} 2023;77(6):410-6. \doi{10.1136/jech-2022-219995}
-
-\item *Socha P, \textbf{Harper S}, Hutcheon JA. Subgroup effects should be examined using both relative and absolute effect measures. Australian and New Zealand Journal of Obstetrics and Gynaecology; 2023 Jun;63(3):469-72. \doi{10.1111/ajo.13656}
-
-\item *Socha P, \textbf{Harper S}, Hutcheon JA. Methods of confounder selection in recent obstetrics and gynecology studies: A review. American Journal of Obstetrics and Gynaecology; 2023 (in press).
-
-\item Hawkins SS, \textbf{Harper S}, Baum CF, Kaufman JS. Associations between State-Level Changes in Reproductive Health Services and Indicators of Severe Maternal Morbidity. \emph{JAMA Pediatr} 2023;177(1):93-95.
-
-\item Windle SB, *Socha P, Nazif-Munoz JI, \textbf{Harper S}, Nandi A. The Impact of Cannabis Decriminalization and Legalization on Road Safety Outcomes: A Systematic Review. \emph{Am J Prev Med} 2022;63(6):1037-1052.
-
-\item *Al-Soneidar WA, \textbf{Harper S}, Alli BY, Nicolau B. Interaction of HPV16 and Cutaneous HPV in Head and Neck Cancer. \emph{Cancers} 2022;14(21).
-
-\item *Sternbach TJ, \textbf{Harper S}, Li X, Zhang X, Carter E, Zhang Y, et al. Effects of indoor and outdoor temperatures on blood pressure and central hemodynamics in a wintertime longitudinal study of Chinese adults. \emph{J Hypertens} 2022;40(10):1950-1959.
-
-\item *Lopes FV, Bakx P, \textbf{Harper S}, Ravesteijn B, Van Ourti T. The effects of supported housing for individuals with mental disorders. \emph{Health Econ} 2022;31(S2):115-133.
-
-\item Li X, Baumgartner J, \textbf{Harper S}, Zhang X, *Sternbach T, Barrington-Leigh C, et al. Field measurements of indoor and community air quality in rural Beijing before, during, and after the COVID-19 lockdown. \emph{Indoor Air} 2022;32(8).
-
-\item Nandi A, Charters TJ, Quamruzzaman A, Strumpf EC, Kaufman JS, Heymann J, Mukherji A, \textbf{Harper S}. Health care services use, stillbirth, and neonatal and infant survival following implementation of the Maternal Health Voucher Scheme in Bangladesh: A difference-in-differences analysis of Bangladesh Demographic and Health Survey data, 2000 to 2016. \emph{PLoS Med 2022};19(8).
-
-\item Carabali M, \textbf{Harper S}, Lima Neto AS, Dos Santos De Sousa G, Caprara A, Restrepo BN, et al. Decomposition of socioeconomic inequalities in arboviral diseases in Brazil and Colombia (2007-2017). \emph{Trans R Soc Trop Med Hyg} 2022;116(8):717-726.
-
-\item *Al-Soneidar WA, \textbf{Harper S}, Madathil SA, Schlecht NF, Nicolau B. Do cutaneous human papillomavirus genotypes affect head and neck cancer? Evidence and bias-correction from a case-control study. \emph{Cancer Epidemiol} 2022;79.
-
-\item Davis LE, Webber C, Datta GD, Wiens A, \textbf{Harper S}, Hallet J, et al. Assessing research methodologies used to evaluate inequalities in end-of-life cancer care research: A scoping review protocol. \emph{BMJ Open} 2022;12(7).
-
-\item *Capurro DA, \textbf{Harper S}. Socioeconomic inequalities in health care utilization in Paraguay: Description of trends from 1999 to 2018. \emph{J Health Serv Res Policy} 2022;27(3):180-189.
-
-\item Li X, Baumgartner J, Barrington-Leigh C, \textbf{Harper S}, Robinson B, Shen G, et al. Socioeconomic and Demographic Associations with Wintertime Air Pollution Exposures at Household, Community, and District Scales in Rural Beijing, China. \emph{Environ Sci Technol} 2022;56(12):8308-8318.
-
-\item Clark S, \textbf{Harper S}, Weber B. Growing Up in Rural America. \emph{RSF} 2022;8 (3) 1-47; \doi{10.7758/RSF.2022.8.3.01}
-
-\item Hutcheon JA, Strumpf EC, Liauw J, Skoll MA, *Socha P, Srour M, Ting JY, \textbf{Harper S}. Antenatal corticosteroid administration and attention-deficit/hyperactivity disorder in childhood: a regression discontinuity study. \emph{CMAJ} 2022;194(7):E235-E241.
-
-\item Hutcheon JA, \textbf{Harper S}. No, it is not too good to be true: Response by Hutcheon and Harper. \emph{Paediatric and perinatal epidemiology} 2021;35(6): 781-782.
-
-\item Jahagirdar D, Dimitris M, Strumpf EC, Kaufman JS, \textbf{Harper S}, Heymann J, Nandi A. Balancing work and care: the effect of paid adult medical leave policies on employment in Europe. \emph{Journal of Social Policy} 2021;50(3):552-568.
-
-\item Graham E, Watson T, Deschenes SS, Filion KB, Henderson M, \textbf{Harper S}, Rosella L, Schmitz N. Depression-related weight change and incident diabetes in a community sample. \emph{Scientific reports} 2021;11(1):1-10.
-
-\item Palayew A, \textbf{Harper S}, Hanley JA. Toward Reducing the Possibility of False-Positive Results in Epidemiologic Studies of Traffic Crashes. \emph{Chance} 2021;34(2):44-52.
-
-\item Hutcheon JA, \textbf{Harper S}. If it sounds too good to be true, it probably is: Conducting within-woman comparison studies with only one exposure observation per woman. \emph{Paediatr Perinat Epidemiol.} 2020 Dec 17. \doi{10.1111/ppe.12742}
-
-\item \textbf{Harper S}, *Riddell CA, King NB. Declining Life Expectancy in the United States: Missing the Trees for the Forest. \emph{Annu Rev Public Health.} 2020 Dec 16. \doi{ 10.1146/annurev-publhealth-082619-104231}
-
-\item Hutcheon JA, \textbf{Harper S}, Liauw J, Skoll MA, Srour M, Strumpf EC. Antenatal corticosteroid administration and early school age child development: A regression discontinuity study in British Columbia, Canada. \emph{PLoS Med.} 2020 Dec 7;17(12):e1003435. \doi{10.1371/journal.pmed.1003435}.
-
-\item Carabali M, \textbf{Harper S}, Lima Neto AS, Dos Santos de Sousa G, Caprara A, Restrepo BN, Kaufman JS.Spatiotemporal distribution and socioeconomic disparities of dengue, chikungunya and Zika in two Latin American cities from 2007 to 2017. \emph{Trop Med Int Health.} 2020 Nov 20. \doi{10.1111/tmi.13530}. Online ahead of print.
-
-\item Johri M, Chandra D, Kone KG, Sylvestre MP, Mathur AK, \textbf{Harper S}, Nandi A. Social and Behavior Change Communication Interventions Delivered Face-to-Face and by a Mobile Phone to Strengthen Vaccination Uptake and Improve Child Health in Rural India: Randomized Pilot Study. \emph{JMIR Mhealth Uhealth.} 2020 Sep 21;8(9):e20356. \doi{10.2196/20356}.
-
-\item *Richardson RA, \textbf{Harper S}, Weichenthal S, Nandi A, Mishra V, Jha P. Extremes in water availability and suicide: Evidence from a nationally representative sample of rural Indian adults. \emph{Environ Res.} 2020 Nov;190:109969. \doi{10.1016/j.envres.2020.109969}. 
-
-\item *Arsenault C, \textbf{Harper S}, Nandi A. Effect of vaccination on children's learning achievements: findings from the India Human Development Survey. \emph{J Epidemiol Community Health.} 2020 Oct;74(10):778-784. \doi{10.1136/jech-2019-213483}. 
-
-\item Nunes A, \textbf{Harper S}, Hernandez KD. The Price Isn't Right: Autonomous Vehicles, Public Health, and Social Justice. \emph{Am J Public Health}. 2020 Jun;110(6):796-797. \doi{10.2105/AJPH.2020.305608}.
-
-\item *Riddell CA, Kaufman JS, Torres JM, \textbf{Harper S}. Using change in a seat belt law to study racially-biased policing in South Carolina. \emph{Prev Med}. 2020 Jan;130:105884. \doi{10.1016/j.ypmed.2019.105884}.
-
-\item Goldstein ND, Hamra GB, \textbf{Harper S}. Are Descriptions of Methods Alone Sufficient for Study Reproducibility? An Example From the Cardiovascular Literature.
-\emph{Epidemiology}. 2020 Mar;31(2):184-188. \doi{10.1097/EDE.0000000000001149}.
-
-\item SS Hawkins, M Ghiani, \textbf{S Harper}, CF Baum, JS Kaufman. Impact of State-Level Changes on Maternal Mortality: A Population-Based, Quasi-Experimental Study. \emph{American Journal of Preventive Medicine} 2020;58:165-174.
-
-\item Kaufman JS, *Riddell CA, \textbf{Harper S}. Black and White differences in life expectancy in 4 US states, 1969-2013. \emph{Public Health Reports} 2019;134:634-642.
-
-\item *Austin N, \textbf{Harper S}. Constructing a longitudinal database of targeted regulation of abortion providers laws. \emph{Health Serv Res}. 2019;54(5):1084–1089. \doi{10.1111/1475-6773.13185}. 
-
-\item *Austin N, \textbf{Harper S}. Quantifying the impact of targeted regulation of abortion provider laws on US abortion rates: a multi-state assessment. \emph{Contraception}. 2019;100(5);374-379 pii: S0010-7824(19)30202-1. \doi{10.1016/j.contraception.2019.06.003}. 
-
-\item *Richardson R, Nandi A, Jaswal S, \textbf{Harper S}. The effect of intimate partner violence on women's mental distress: a prospective cohort study of 3010 rural Indian women. \emph{Soc Psychiatry Psychiatr Epidemiol}. 2019 Jun 8. \doi{10.1007/s00127-019-01735-5}. [Epub ahead of print]
-
-\item *Richardson RA, \textbf{Harper S}, Bates LM, Nandi A. The effect of agency on women's mental distress: A prospective cohort study from rural Rajasthan, India. \emph{Soc Sci Med}. 2019 Jul;233:47-56. \doi{10.1016/j.socscimed.2019.05.052}.
-
-\item Sreeramareddy CT, \textbf{Harper S}. Trends in educational and wealth inequalities in adult tobacco use in Nepal 2001-2016: secondary data analyses of four Demographic and Health Surveys. \emph{BMJ Open}. 2019 Sep 6;9(9):e029712. \doi{10.1136/bmjopen-2019-029712}.
-
-\item Hamra GB, Goldstein ND, \textbf{Harper S}. Resource Sharing to Improve Research Quality. \emph{Journal of the American Heart Association}. 2019;8(15):e012292.
-
-\item J Ahn, \textbf{S Harper}, M Yu, EJ Feuer, B Liu. Improved Monte Carlo methods for estimating confidence intervals for eleven commonly used health disparity measures. \emph{PloS ONE}. 2019 Jul 11;14 (7), e0219542.
-
-\item Hamadani F, Razek T, Massinga E, Gupta S, Muataco M, Muripiha P, Maguni C, Muripa V, Percina I, Costa A, Yohannan P, Bracco D, Wong E, \textbf{Harper S}, Deckelbaum DL, Neves O.. Trauma Surveillance and Registry Development in Mozambique: Results of a 1-Year Study and the First Phase of National Implementation. \emph{World J Surg}. 2019 Jul;43(7):1628-1635. \doi{10.1007/s00268-019-04947-7}.
-
-\item \textbf{Harper S}. A future for observational epidemiology: Clarity, credibility, transparency. \emph{Am J Epidemiol} 2019;188:840-845.
-
-\item \textbf{Harper S}. Would stronger seat belt laws reduce motor vehicle crash deaths? A semi-Bayesian analysis. \emph{Epidemiology} 2019;30:380-7.
-
-\item \textbf{Harper S}, Palayew A. The annual cannabis holiday and fatal traffic crashes. \emph{Inj Prev} 2019;25:433–437. \doi{10.1136/injuryprev-2018-043068}.
-
-\item Hutcheon JA, \textbf{Harper S}. Invited Commentary: Promise and pitfalls of the sibling comparison design in studies of optimal birth spacing. \emph{Am J Epidemiol} 2019;188(1):17-21. \doi{10.1093/aje/kwy195}. PubMed PMID: 30188975.
-
-\item Ahrens KA, Hutcheon JA, Ananth CV, Basso O, Brise PA, Ferr CD, Frederiksen BN, \textbf{Harper S}, Hernandez-Diaz S, Hirai AH, Kirby RS, Klebanoff MA, Lindberg L, Mumford SL, Nelson HD, Platt RW, Rossen LM, Stubbe AM, Thoma ME, Vladutiu CJ, Moskosky S. Report of the Office of Population Affairs' expert work group meeting on short birth spacing and adverse pregnancy outcomes: Methodological quality of existing studies and future directions for research. \emph{Paediatr Perinat Epidemiol}. 2019 Jan;33(1):O5-O14. \doi{10.1111/ppe.12504}. Epub 2018 Oct 9. PubMed PMID: 30300948; PubMed Central PMCID: PMC6378402.
-
-\item Hutcheon JA, Moskosky S, Ananth CV, Basso O, Briss PA, Ferr CD, Frederiksen BN, \textbf{Harper S}, Hernendez-Diaz S, Hirai AH, Kirby RS, Klebanoff MA, Lindberg L, Mumford SL, Nelson HD, Platt RW, Rossen LM, Stuebe AM, Thoma ME, Vladutiu CJ, Ahrens KA. Good practices for the design, analysis, and interpretation of observational studies on birth spacing and perinatal health outcomes. \emph{Paediatr Perinat Epidemiol}. 2019 Jan;33(1):O15-O24. \doi{10.1111/ppe.12512}. Epub 2018 Oct 12. PubMed PMID: 30311958; PubMed Central PMCID: PMC6378590.
-
-\item Ahn J, \textbf{Harper S}, Yu M, Feuer EJ, Liu B, Luta G. Variance Estimation and Confidence Intervals for 11 Commonly Used Health Disparity Measures. \emph{JCO Clin Cancer Inform}. 2018 Dec;2:1-19. \doi{10.1200/CCI.18.00031}. PubMed PMID: 30652598.
-
-\item *Richardson RA, \textbf{Harper S}, Schmitz N, Nandi A. The effect of affordable daycare on women's mental health: Evidence from a cluster randomized trial in rural India. Soc Sci Med. 2018 Nov;217:32-41. doi{: 10.1016/j.socscimed.2018.09.061}. Epub 2018 Oct 1. PubMed PMID: 30292875.
-
-\item Mejia GC, Elani HW, \textbf{Harper S}, Murray Thomson W, Ju X, Kawachi I, Kaufman JS, Jamieson LM. Socioeconomic status, oral health and dental disease in Australia, Canada, New Zealand and the United States. BMC Oral Health. 2018 Oct 26;18(1):176. \doi{10.1186/s12903-018-0630-3}. PubMed PMID: 30367654; PubMed Central PMCID: PMC6204046.
-
-\item \textbf{Harper S}. Comment on the equity impact of women's community groups on inequalities in neonatal mortality. Int J Epidemiol. 2018;48:182–185. \doi{10.1093/ije/dyy216}.
-
-\item McLinden T, Moodie EEM, \textbf{Harper S}, Hamelin AM, Anema A, Aibibula W, Klein MB, Cox J. Injection drug use, food insecurity, and HIV-HCV co-infection: a longitudinal cohort analysis. AIDS Care. 2018 Oct;30(10):1322-1328. \doi{10.1080/09540121.2018.1465171}. Epub 2018 May 1. PubMed PMID: 29716392.
-
-\item Nandi A, Jahagirdar D, Dimitris MC, Labrecque JA, Strumpf EC, Kaufman JS, Vincent I, Atabay E, \textbf{Harper S}, Earle A, Heymann SJ. The Impact of Parental and Medical Leave Policies on Socioeconomic and Health Outcomes in OECD Countries: A Systematic Review of the Empirical Literature. \emph{Milbank Q}. 2018;96(3):434-471. \doi{10.1111/1468-0009.12340}.
-
-\item Jahagirdar D, \textbf{Harper S}, Heymann J, Swaminathan H, Mukherji A, Nandi A. The effect of paid maternity leave on early childhood growth in low-income and
-middle-income countries. \emph{BMJ Glob Health. 2017} Sep 7;2(3):e000294. \doi{10.1136/bmjgh-2017-000294}. eCollection 2017. PubMed PMID: 29988584
-
-\item *Austin N, \textbf{Harper S}. Assessing the impact of TRAP laws on abortion and women's health in the USA: a systematic review. \emph{BMJ Sex Reprod Health.} 2018
-Apr;44(2):128-134. \doi{10.1136/bmjsrh-2017-101866}. Epub 2018 Mar 9. PubMed PMID: 29921636.
-
-\item *Riddell CA, Morrison KT, Kaufman JS, \textbf{Harper S}. Trends in the contribution of major causes of death to the black-white life expectancy gap by US state. \emph{Health 
-Place.} 2018 Jul;52:85-100. \doi{10.1016/j.healthplace.2018.04.003}. Epub 2018 Jun 1. PubMed PMID: 29864731.
-
-\item Banack HR, \textbf{Harper S}, Kaufman JS. Accounting for Selection Bias in Studies of Acute Cardiac Events. \emph{Can J Cardiol.} 2018 Jun;34(6):709-716. \doi{10.1016/j.cjca.2018.01.013}.
-
-\item McLinden T, Moodie EEM, \textbf{Harper S}, Hamelin AM, Anema A, Aibibula W, Klein MB, Cox J. Injection drug use, food insecurity, and HIV-HCV co-infection: a
-longitudinal cohort analysis. \emph{AIDS Care.} 2018 May 1:1-7. \doi{10.1080/09540121.2018.1465171}. PubMed PMID: 29716392.
-
-\item *Riddell CA, \textbf{Harper S}, Cerda M, Kaufman JS. Comparison of Rates of Firearm and Nonfirearm Homicide and Suicide in Black and White Non-Hispanic Men, by U.S.
-State. \emph{Ann Intern Med. 2018} May 15;168(10):712-720. \doi{10.7326/M17-2976}. 
-
-\item King NB, \textbf{Harper S}, Young M, Berry SC, *Voigt K. The impact of social and psychological consequences of disease on judgments of disease severity: An
-experimental study. \emph{PLoS One.} 2018 Apr 17;13(4):e0195338. doi: 10.1371/journal.pone.0195338.
-
-\item McLinden T, Moodie EEM, Hamelin AM, \textbf{Harper S}, Rossi C, Walmsley SL, Rourke SB, Cooper C, Klein MB, Cox J. Methadone treatment, severe food insecurity, and
-HIV-HCV co-infection: A propensity score matching analysis. \emph{Drug Alcohol Depend.} 2018;185:374-380. doi: 10.1016/j.drugalcdep.2017.12.031.
-
-\item *Richardson RA, Nandi A, Jaswal S, \textbf{Harper S}. Are work demands associated with mental distress? Evidence from women in rural India. \emph{Soc Psychiatry Psychiatr
-Epidemiol.} 2017 Dec;52(12):1501-1511. doi: 10.1007/s00127-017-1448-z.
-
-\item Strumpf EC, Charters TJ, \textbf{Harper S}, Nandi A. Did the Great Recession affect mortality rates in the metropolitan United States? Effects on mortality by age, gender and cause of death. \emph{Soc Sci Med.} 2017;189:11-16. doi: 10.1016/j.socscimed.2017.07.016.
-
-\item McLinden T, Moodie EEM, Hamelin AM, \textbf{Harper S}, Walmsley SL, Paradis G, Aibibula W, Klein MB, Cox J. Injection Drug Use, Unemployment, and Severe Food Insecurity Among HIV-HCV Co-Infected Individuals: A Mediation Analysis. \emph{AIDS Behav.} 2017;21(12):3496-3505. doi: 10.1007/s10461-017-1850-2.
-
-\item *Riddell CA, \textbf{Harper S}, Kaufman JS. Trends in Differences in US Mortality Rates Between Black and White Infants. \emph{JAMA Pediatr.} 2017 Sep 1;171(9):911-913. doi: 10.1001/jamapediatrics.2017.1365.
-
-\item \textbf{Harper S}, Bruckner TA. Did the Great Recession increase suicides in the USA? Evidence from an interrupted time-series analysis. \emph{Ann Epidemiol} 2017 Jun 1. pii: S1047-2797(16)30356-8. doi: 10.1016/j.annepidem.2017.05.017. [Epub ahead of print] PubMed PMID: 28625812.
-
-\item \textbf{Harper S}, Kaufman JS, Cooper RS. Declining United States Life Expectancy: A First Look. \emph{Epidemiology} 2017 Nov;28(6):e54-e56. doi: 10.1097/EDE.0000000000000677.
-
-\item \textbf{Harper S}, Strumpf EC. Primary Enforcement of Mandatory Seat Belt Laws and Motor Vehicle Crash Deaths. \emph{Am J Prev Med} 2017 2017 Aug;53(2):176-183. doi: 10.1016/j.amepre.2017.02.003.
-
-\item Sreeramareddy CT, \textbf{Harper S}, Ernsten L. Educational and wealth inequalities in tobacco use among men and women in 54 low-and-middle-income countries. \emph{Tobacco Control} (in press).
- 
-\item *Arsenault C, \textbf{Harper S}, Nandi A, Rodriguez JMM, Hansen PM, Johri M. An equity dashboard to monitor vaccination coverage for the Sustainable Development Goals. \emph{Bulletin of the World Health Organization} (in press).
- 
-\item Jamieson L, Elani H, Mejia GC, Ju X, Kawachi I, \textbf{Harper S}, Thomson WM, Kaufman JS Inequalities in Indigenous oral health: findings from three countries. \emph{Journal of Dental Research} (in press).
-
-\item King NB, \textbf{Harper S}, Strumpf EC. Has the rise in disability insurance participation contributed to increased opioid-related mortality? \emph{Annals of Internal Medicine} 2016 Aug 30. doi: 10.7326/M16-0918. [Epub ahead of print].
- 
-\item Hutcheon JA, *Riddell C, Strumpf EC, Lee L, \textbf{Harper S}. Safety of labour and delivery following obstetrical service closures in small community hospitals in British Columbia, Canada. \emph{Canadian Medical Association Journal} 2016 Nov 7. pii: cmaj.160461. [Epub ahead of print].
- 
-\item Carter R, Quesnel-Vallee A, Levesque J-F, \textbf{Harper S}. Measuring the effect of Family Medicine Group enrolment on avoidable visits to emergency departments by patients with diabetes in Quebec, Canada. \emph{Journal of Evaluation in Clinical Practice} 2016 Aug 30. doi: 10.1111/jep.12627. [Epub ahead of print].
- 
-\item *Gray A, \textbf{Harper S}. Richer F. Individual- and community-level determinants of Inuit youth mental wellness. \emph{Can J Public Health} 2016; 107(3): e251-e257.
- 
-\item Nandi A, Maloney S, Agarwal P, Chandrashekar A, \textbf{Harper S}. The effect of an affordable daycare program on health and economic well-being in Rajasthan, India: protocol for a cluster-randomized impact evaluation study. \emph{BMC Public Health.} 2016 Jun 9;16:490. doi: 10.1186/s12889-016-3176-9.
- 
-\item Kopec JA, Sayre EC, Fines P, Flanagan WM, Nadeau C, Okhmatovskaia A, Wolfson MC, Simulation Technology for Applied Research Team (Buckeridge D, Dahaghin S, \textbf{Harper S}, Heath A, Hennessy D,  Liu R, Manuel D, Oderkirk J, Rahman M,  Sharif B, Smith B, Tuna, M). Effects of Reductions in Body Mass Index on the Future Osteoarthritis Burden in Canada: A Population-Based Microsimulation Study. \emph{Arthritis Care and Research} 2016; 68(8):1098-1105.
- 
-\item Charters TJ, \textbf{Harper S}, Strumpf EC, Subramanian SV, Arcaya M, Nandi A. The effect of metropolitan-area mortgage delinquency on health behaviors, access to health services, and self-rated health in the United States, 2003-2010. \emph{Soc Sci Med} 2016 Jul;161:74-82.
- 
-\item *Majid MF, Mendoza Rodriguez JM, \textbf{Harper S}, Frank J, Nandi A. Do minimum wages improve early life health? Evidence from developing countries. \emph{Soc Sci Med} 2016 Jun;158:105-13.
- 
-\item Nandi A, *Hajizadeh M, \textbf{Harper S}, Koski A, Strumpf EC, Heymann SJ. Increased duration of paid maternity leave lowers infant mortality in low- and middle-income countries: a quasi-experimental study. \emph{PLoS Medicine} 2016 Mar 29;13(3):e1001985. doi: 10.1371/journal.pmed.1001985. eCollection 2016.
- 
-\item Hajna S, Ross NA, Joseph L, \textbf{Harper S}, Dasgupta K. Neighbourhood Walkability and Daily Steps in Adults with Type 2 Diabetes. \emph{PLoS ONE.} 2016 Mar 18;11(3):e0151544. \doi{10.1371/journal.pone.0151544}. eCollection 2016.
- 
-\item *Austin N, \textbf{Harper S}, Strumpf EC. Estimating the impact of racial residential segregation on birth weight: an instrumental variables approach. \emph{Epidemiology} 2016 Sep;27(5):682-9.
- 
-\item *Austin N, \textbf{Harper S}, Kaufman JS, Hamra G. Challenges in Reproducing Results from Publicly Available Data: An Example of Sexual Orientation and Cardiovascular Disease Risk. \emph{J Epidemiol Community Health} 2016 2016;70(8):807-12.
- 
-\item *McKinnon B, \textbf{Harper S}, Kaufman JS. Do Socioeconomic Inequalities in Neonatal Mortality Reflect Inequalities in Coverage of Maternal Health Services? Evidence from 48 Low- and Middle-Income Countries. \emph{Matern Child Health J.} 2015 Nov 6. [Epub ahead of print]
-
-\item \textbf{Harper S}, Charters TJ, Strumpf EC. Trends in socioeconomic inequalities in motor vehicle accident mortality in the United States, 1995-2010. \emph{Am J Epidemiol.} 2015; 182(7):606-614.
- 
-\item Hutcheon JA, Strumpf EC, \textbf{Harper S}, Giesbrecht E. Maternal and neonatal outcomes after implementation of a hospital policy to limit planned Cesarean deliveries before 39 weeks' gestation. \emph{BJOG: An International Journal of Obstetrics and Gynaecology} 2015;122(9):1200-6.
- 
-\item Hajna S, Ross NA, Joseph L, \textbf{Harper S}, Dasgupta K. Neighbourhood walkability, daily steps and utilitarian walking in Canadian adults. \emph{BMJ Open.} 2015 Nov 24;5(11):e008964.
- 
-\item *Hajizadeh M, Heymann J, Strumpf E, \textbf{Harper S}, Nandi A. Paid maternity leave and childhood vaccination uptake: Longitudinal evidence from 20 low-and-middle-income countries. \emph{Soc Sci Med} 2015;140:104-17.
- 
-\item *Richardson RA, Charters TJ, Strumpf EC, \textbf{Harper S}. Trends in socioeconomic inequalities in drug poisoning mortality in the United States, 1994-2010. \emph{Am J Public Health} 2015;105(9):1859-65
- 
-\item \textbf{Harper S}, Charters TJ, Strumpf EC, Galea S, Nandi A. Economic downturns and suicide mortality in the United States, 1980-2010. \emph{Int J Epidemiol.} 2015;44(3):956-66.
- 
-\item *McKinnon B, \textbf{Harper S}, Kaufman JS. Who benefits from removing user fees for facility-based delivery services? Evidence on socioeconomic differences from Ghana, Senegal, Kenya, and Niger. \emph{Social Science \& Medicine} 2015;135:117-123.
- 
-\item *McKinnon B, \textbf{Harper S}, Kaufman JS, Bergevin Y. Removing user fees for facility-based delivery services: a difference-in-differences evaluation from ten sub-Saharan African countries. \emph{Health Policy \& Planning} 2015;30(4):432-41.
- 
-\item \textbf{Harper S}. APC? It's easy as 1,2,3! \emph{American Journal of Epidemiology.} 2015;182(4):313-7..
- 
-\item Nandi A, \textbf{Harper S}. How consequential is social epidemiology? A review of recent evidence. \emph{Current Epidemiology Reports} 2014. doi: 10.1007/s40471-014-0031-3.
- 
-\item *McKinnon B, \textbf{Harper S}, Kaufman JS, Bergevin Y. Removing user fees for facility-based delivery services: a difference-in-differences evaluation from ten sub-Saharan African countries. \emph{Health Policy \& Planning} 2014 May 10. doi: 10.1093/heapol/czu027 [Epub ahead of print].
-
-\item Frenz P, Delgado I, Kaufman JS, \textbf{Harper S}. Achieving effective universal health coverage with equity: evidence from Chile. \emph{Health Policy Plan.} 2014;29(6):717-731.
- 
-\item \textbf{Harper S}, MacLehose RF, Kaufman JS. Trends in the black-white life expectancy gap among US states, 1990-2011. \emph{Health Affairs} 2014;33(8):1375-82.
- 
-\item Auger N, Feuillet P, Martel S, Lo E, Barry AD, \textbf{Harper S}. Mortality inequality in populations with equal life expectancy: Arriaga's decomposition method in SAS, Stata, and Excel. \emph{Annals of Epidemiology.} 2014;24(8):575-580.e571.
- 
-\item Manuel DG, Ho TH, \textbf{Harper S}, Anderson GM, Lynch J, Rosella LC. Modelling preventive effectiveness to estimate the equity tipping point: At what coverage can individual preventive interventions reduce socioeconomic disparities in diabetes risk? \emph{Chronic diseases and injuries in Canada.} 2014;34(2-3):94-102.
- 
-\item King NB, Fraser V, Boikos C, *Richardson R, \textbf{Harper S}. Determinants of increased opioid-related mortality in the United States and Canada, 1990-2013: A systematic review. \emph{Am J Public Health.} 2014;104(8):e32-e42.
- 
-\item Smith BT, Smith PM, \textbf{Harper S}, Manuel DG, Mustard CA. Reducing social inequalities in health: The role of simulation modelling in chronic disease epidemiology to evaluate the impact of population health interventions. \emph{Journal of Epidemiology and Community Health.} 2014;68(4):384-389.
- 
-\item *McKinnon B, \textbf{Harper S}, Kaufman JS, Bergevin Y. Socioeconomic inequality in neonatal mortality in countries of low and middle income: A multicountry analysis. \emph{The Lancet Global Health.} 2014;2(3):165-173.
- 
-\item *McKinnon B, \textbf{Harper S}, Kaufman JS, Abdullah M. Distance to emergency obstetric services and early neonatal mortality in ethiopia. \emph{Tropical Medicine and International Health.} 2014.
- 
-\item Hutcheon JA, \textbf{Harper S}, Strumpf EC, Lee L, Marquette G. Using inter-institutional practice variation to understand the risks and benefits of routine labour induction at 41+0 weeks. \emph{BJOG: An International Journal of Obstetrics and Gynaecology.} 2014.
- 
-\item \textbf{Harper S}, Strumpf EC, Burris S, Smith GD, Lynch J. The Effect of Mandatory Seat Belt Laws on Seat Belt Use by Socioeconomic Position. \emph{Journal of Policy Analysis and Management.} 2014;33(1):141-161.
-
-\item Kaufman JS, \textbf{Harper S}. Health equity: Utopian and scientific. \emph{Preventive Medicine} 2013;57:739?40.
- 
-\item Nandi A, Charters TJ, Strumpf EC, Heymann J, \textbf{Harper S}. Economic conditions and health behaviours during the 'Great Recession'. \emph{J Epidemiol Community Health.} 2013;67:1038-1046.
- 
-\item Maika M, Mittinty MN, Brinkman S, \textbf{Harper S}, Satriawan E, Lynch JW. Changes in Socioeconomic Inequality in Indonesian Children's Cognitive Function from 2000 to 2007: A Decomposition Analysis.  \emph{PLoS ONE} 2013; 8(10):?e78809.?doi:10.1371/journal.pone.0078809.
- 
-\item Speybroeck N, Van Malderen C, \textbf{Harper S}, Maller B, Devleesschauwer B. Simulation models for socioeconomic inequalities of health: A systematic review. \emph{Int J Environ Res Public Health.} 2013; 10(11), 5750-5780. doi:10.3390/ijerph10115750
- 
-\item \textbf{Harper S}, Ruder E, Roman HA, Geggel A, Nweke O, Payne-Sturges D, Levy JI. Using inequality measures to incorporate environmental justice into regulatory analyses. \emph{Int J Environ Res Public Health.} 2013;10(9):4039-59. doi: 10.3390/ijerph10094039.
- 
-\item Auger N, \textbf{Harper S}, Barry AD, Diverging socioeconomic inequality in life expectancy of Francophones and Anglophones in Montreal, Quebec: Tobacco to blame? \emph{Journal of Public Health.} 2013;21(4):317-324.
- 
-\item *McKinnon B, \textbf{Harper S}, Moore S. The relationship of living arrangements and depressive symptoms among older adults in sub-Saharan Africa. \emph{BMC Public Health} 2013;13: 682.??doi:10.1186/1471-2458-13-682
- 
-\item \textbf{Harper S}, King NB, Young ME. Impact of selective evidence presentation on judgments of health inequality trends: an experimental study \emph{PLoS ONE} 2013;8(5): doi: 10.1371/journal.pone.0063362.
-
-\item \textbf{Harper S}, King N. Best practice for what? \emph{The Milbank Quarterly.} 2013;91(1):205-209.
- 
-\item Platt R, \textbf{Harper S}. Survey data with sampling weights: is there a "best" approach? \emph{Environmental Research} 2013;120:43-144.
- 
-\item King NB, \textbf{Harper S}, Young ME. Who cares about health inequalities? \emph{Health Policy \& Planning} 2013;28(5):558-571.
- 
-\item Young ME, King NB, \textbf{Harper S}. The influence of popular media on perceptions of personal and population risk in possible disease outbreaks.?\emph{Health, Risk, and Society} 2013;15(1):103-114.
- 
-\item Auger N, Park AL, \textbf{Harper S}. Francophone and Anglophone perinatal health: temporal and regional inequalities in a Canadian setting, 1981-2008. \emph{International Journal of Public Health} 2012;57(6):925-934.
- 
-\item Speybroeck N, \textbf{Harper S}, de Savigny D, Victora C. Inequalities of health indicators for policy makers: Seven Hints. \emph{Int J Public Health} 2012;57(5): 855-858. [Erratum published: 2012;57(5): 859-860].
- 
-\item Kaufman JS, \textbf{Harper S}. Deficiency of the odds ratio for common outcomes [Letter]. \emph{Am J Psychiatry.} 2012 Oct;169(10):1118; author reply 1118-9. [Comment on: Chen  LS et al. Interplay of genetic risk factors (CHRNA5-CHRNA3-CHRNB4) and cessation treatments in smoking cessation success.  \emph{Am J Psychiatry} 2012; 169:735?742.]
- 
-\item \textbf{Harper S}, Strumpf EC. Social epidemiology: Questionable answers and answerable questions. \emph{Epidemiology} 2012;23(6):795-8.
- 
-\item Hosseinpoor AR, Bergen N, Kunst A, \textbf{Harper S}, Guthold R, Rekve D, Tursan d'Espaignet E, Naidoo N, Chatterji S. Socioeconomic inequalities in risk factors for noncommunicable diseases in low-income and middle-income countries. \emph{BMC Public Health.} 2012 Oct 28;12(1):912.
- 
-\item King NB, \textbf{Harper S}, Young ME. Use of relative and absolute effect measures in reporting health inequalities: structured review. \emph{BMJ} 2012;345:e5774.
- 
-\item Elani HW, \textbf{Harper S}, Allison PJ, Bedos C, Kaufman JS. Socio-economic Inequalities and Oral Health in Canada and the United States. \emph{Journal of Dental Research} 2012;91(9):865?870. 
- 
-\item Hosseinpoor AR, \textbf{Harper S}, Lee J, Lynch J, Mathers C, Abou-Zahr C. International shortfall inequality in life expectancy in women and in men, 1950-2010. \emph{Bulletin of the World Health Organization} 2012;90:588-594.
- 
-\item Hosseinpoor AR, Bergen N, Mendis S, \textbf{Harper S}, Verdes E, Kunst A, Chatterji S. Socioeconomic inequality in the prevalence of noncommunicable diseases in low- and middle-income countries: Results from the World Health Survey. \emph{BMC Public Health} 2012;12:474.
- 
-\item Yang S, Khang Y-H, \textbf{Harper S}, Lynch J, Chun H. The Changing Gender Differences in Life Expectancy in Korea 1970-2005. \emph{Social Science \& Medicine} 2012;75:1280-7.
- 
-\item Toporowski A, \textbf{Harper S}, Fuhrer R, Buffler PA, Detels R, Krieger N, Franco EL. Burden of disease, health indicators and challenges for epidemiology in North America. \emph{Int J Epidemiol.} 2012;41(2):540-56.
- 
-\item \textbf{Harper S}, Rushani D, Kaufman JS. Trends in the Black-White Life Expectancy Gap, 2003-2008. \emph{JAMA} 2012; 307: 2257-2259.
- 
-\item Banack HR, \textbf{Harper S}, Kaufman JS. Re: Number of coronary heart disease risk factors and mortality in patients with myocardial infarction [Letter]. \emph{JAMA} 2012;307:1137-8. [Comment on: Canto JG, Kiefe CI, Rogers WJ, et al. Number of coronary heart disease risk factors and mortality in patients with first myocardial infarction. \emph{JAMA.} 2011;306(19):2120?2127.]
- 
-\item Auger N, \textbf{Harper S}, Barry AD, Trempe N, Daniel M. Inequality in life expectancy between the Francophone majority and Anglophone minority of a Canadian population. \emph{European J Epidemiol} 2012;27:27?38.
- 
-\item \textbf{Harper S}, Strumpf EC, Kaufman JS. Do Medical Marijuana Laws Increase Marijuana Use? Replication Study and Extension. \emph{Ann Epidemiol} 2012;22:207-12.
- 
-\item \textbf{Harper S}, Kaufman JS, King NB. Re: Cigarette smoking as a risk factor for coronary heart disease in women compared with men: a systematic review and meta-analysis of prospective cohort studies. [Letter] \emph{Lancet} 2012;379:801-2. [Comment on:  Huxley RR, Woodward M. Cigarette smoking as a risk factor for coronary heart disease in women compared with men: a systematic review and meta-analysis of prospective cohort studies. \emph{Lancet.} 2011 Oct 8;378(9799):1297-305]
- 
-\item Auger N, Delezire P, \textbf{Harper S}, Platt RW. Maternal education and stillbirth. \emph{Epidemiology} 2012;23: 247-254
- 
-\item Auger N, Park AL, \textbf{Harper S}, Daniel M, Roncarlo F, Platt RW. Educational inequalities in preterm and term small-for-gestational-age birth over time. \emph{Ann Epidemiol} 2012;22:160-67. 
- 
-\item \textbf{Harper S}, *McKinnon B. Global socioeconomic inequalities in tobacco use: Internationally comparable estimates from the World Health Surveys. \emph{Cancer Causes Control} 2012;23:11?25.
-
-\item Kaufman JS, \textbf{Harper S}, King NB. RE: Higher cardiovascular disease prevalence and mortality among younger blacks compared to whites [Letter]. \emph{American Journal of Medicine} 2011 May 124(5): e5-6.  [Comment on: Jolly S, et al. Higher cardiovascular disease prevalence and mortality among younger blacks compared to whites. \emph{Am J Med.} 2010 Sep;123(9):811-8]
- 
-\item Agha G, Murabito JM, Lynch JW, Abrahamowicz M, \textbf{Harper S}B, Loucks EB. Relation of Socioeconomic Position with Ankle-Brachial Index. \emph{Am J Cardiology} 2011;108:1651-7.
- 
-\item Auger N, Roncarlo F, \textbf{Harper S}. Increasing educational inequality in preterm birth in Quebec, Canada, 1981-2006. \emph{Journal of Epidemiology \& Community Health} 2011;65:1091-1096. 
- 
-\item Auger N, Gamache P, Adam-Smith J, \textbf{Harper S}. Relative and absolute disparities in preterm birth related to neighbourhood education. \emph{Ann Epidemiol} 2011;21;481-488.
- 
-\item Sadana R. \textbf{Harper S}. Data systems linking social determinants of health with health outcomes - advancing public goods to support research and evidence-based policy and programs. \emph{Public Health Reports} 2011;126 Suppl 3:6-13.
- 
-\item Larose A, Moore S, \textbf{Harper S}, Lynch J. Global income-related inequalities in HIV testing. \emph{J Public Health} 2011;33:345-352
- 
-\item *Adam-Smith J, \textbf{Harper S}, Auger N. Causes of widening life expectancy inequalities in Quebec, Canada, 1989-2004. \emph{Can J Public Health} 2011;102:375-381
- 
-\item Smith BT, Loucks EB, \textbf{Harper S}, Abrahamowicz M, Fox CS, Lynch JW. Life course socioeconomic position and incidence of type 2 diabetes: Framingham Offspring Study. \emph{Am J Epidemiol} 2011;173:438-447.
- 
-\item *McKinnon B, \textbf{Harper S}, Moore DS. Decomposing Income Related Inequality in Cervical Screening in 67 Countries. \emph{Int J Public Health} 2011;56(2):139-152.
- 
-\item \textbf{Harper S}, Lynch J, Davey Smith G. Social determinants and the decline of cardiovascular diseases: Understanding the links. \emph{Ann Rev Public Health} 2011;32:39-69.
-
-\item Speybroeck N, Konings P, Lynch J, \textbf{Harper S}, Hosseinpoor A, Berkvens D, Lorant V, Geckova A.  Decomposing socioeconomic health inequalities.  \emph{Int J Public Health} 2010;55:347-51.
- 
-\item McTavish S, Moore S, \textbf{Harper S}, Lynch J. National female literacy, individual socio-economic status, and maternal health care use in sub-Saharan Africa. \emph{Soc Sci Med} 2010;71(11): 1958-63.
- 
-\item Kopec JA, Fines P, Manuel DG, Buckeridge D, Flanagan WM, Oderkirk J, Abrahamowicz M, \textbf{Harper S}, Sharif B, Okhmatovskaia A, Sayre EC, Rahman MM, Wolfson MC. Validation of Population-Based Disease Simulation Models: A Review of Concepts and Methods. \emph{BMC Public Health} 2010;10:710.
- 
-\item \textbf{Harper S}. Inequalities in Cancer Survival and the NHS Cancer Plan: Evidence of Progress? \emph{Br J Cancer} 2010;103:437-8.
- 
-\item Yang S, Khang Y-H, \textbf{Harper S}, Davey Smith G, Leon D, Lynch J.  Understanding the Rapid Increase in Life Expectancy in South Korea.  \emph{Am J Public Health} 2010;100:896-903.
- 
-\item Moore S, Hall JN, \textbf{Harper S}, Lynch JW. Global and National Socio-Economic Disparities in Obesity, Overweight, and Underweight Status. \emph{Journal of Obesity} 2010;2010:1-11.
- 
-\item \textbf{Harper S}, King N, Meersman SC, Breen N, Reichman ME, Lynch J. Implicit value judgments in the measurement of health inequalities.  \emph{Milbank Quarterly} 2010;88:4-29. Translated and published in Spanish as: Juicios de valor implicitos en la medicien de las desigualdades en salud. \emph{Rev Panam Salud Publica} vol.35 n.4 Apr. 2014. 
- 
-\item Konings P, \textbf{Harper S}, Lynch J, Berkvens D, Hosseinpoor A, Lorant V, Geckova A, Speybroeck N. Analysis of Socioeconomic Inequalities using the Concentration Index.  \emph{Int J Public Health} 2010;55:71?74.
- 
-\item King NB, Kaufman JS, \textbf{Harper S}. Relative Measures Alone Tell Only Part of the Story [Letter]. \emph{Am J Public Health} 2010 Nov;100(11):2014-5; author reply 2015-6. [Comment on: Rubin MS, et al. Examination of inequalities in HIV/AIDS mortality in the United States from a fundamental cause perspective. \emph{Am J Public Health.} 2010;100(6):1053?1059]
-
-\item \textbf{Harper S}. Essay Review: Rose?s Strategy of Preventive Medicine.  \emph{Int J Epidemiol} 2009;38:1743-45.
- 
-\item \textbf{Harper S}. Commentary: Trends in indigenous inequalities in health in New Zealand.  \emph{Int J Epidemiol} 2009;38: 1722-1724.
- 
-\item Alvarado BE, \textbf{Harper S}, Platt R, Davey Smith G, Lynch G. Would Achieving Healthy-People 2010?s Targets Reduce Both Population Levels and Social Disparities in Heart Disease? \emph{Circ Cardiovasc Qual Outcomes} 2009;2:598-606.
- 
-\item \textbf{Harper S}, Lynch J, Meersman SC, Breen N, Davis WW, Reichman ME.  Trends in race-ethnic and socioeconomic disparities in breast cancer incidence, stage at diagnosis, screening, mortality, and survival, 1987-2005.  \emph{Cancer Epidemiol Biomarkers Prev} 2009;18:121-31.
- 
-\item Hall JN, Moore DS, \textbf{Harper S}, Lynch J. Global variability in low fruit and vegetable consumption. \emph{Am J Prev Med} 2009; 36(5):402-409.
- 
-\item Khang Y-H, Lynch J, Yang S, \textbf{Harper S}, Yun S-C, Jung-Choi K, Kim HR.  The contribution of material, psychosocial, and behavioral factors in explaining educational and occupational mortality inequalities in a nationally representative sample of South Koreans: Relative and absolute perspectives.  \emph{Soc Sci Med} 2009;68(5):858-66.
-
-\item \textbf{Harper S}, Lynch J, Meersman SC, Breen N, Davis WW, Reichman ME.  An overview of methods for monitoring social disparities in cancer with an example using trends in lung cancer incidence by socioeconomic position and race-ethnicity, 1992-2004.  \emph{Am J Epidemiol} 2008;167(8):889-99.
- 
-\item \textbf{Harper S}, Lynch J, Meersman SC, Breen N, Davis WW, Reichman ME.  Response to Messer. \emph{Am J Epidemiol} 2008;167(8):905-7.
-
-\item \textbf{Harper S}, Lynch J. Trends in socioeconomic inequalities in adult health behaviors among U.S. states, 1990-2004  \emph{Public Health Rep} 2007;122(2):177-89.
- 
-\item \textbf{Harper S}, Lynch J. Highly active antiretroviral therapy and socioeconomic inequalities in AIDS mortality in Spain. (letter) \emph{Eur J Public Health} 2007;17(2):231.
- 
-\item \textbf{Harper S}, Lynch J, Burris S, Davey Smith G.  Trends in the black-white life expectancy gap in the United States, 1983-2003.  \emph{JAMA} 2007;297(11):1224-32.
- 
-\item Cho H-J, Khang Y-H, Yang S, \textbf{Harper S}, Lynch J.  Socioeconomic differentials in cause-specific mortality among South Korean adolescents.  \emph{Int J Epidemiol} 2007; 36:50-57
- 
-\item \textbf{Harper S}. Did clean water reduce black-white mortality inequalities in the United States?  \emph{Int J Epidemiol} 2007;36: 248-257.
- 
-\item \textbf{Harper S}, Lynch J.  Commentary: Using innovative inequality measures in epidemiology.  \emph{Int J Epidemiol} 2007;36: 926-928.
-
-\item Lynch J, Davey Smith G, \textbf{Harper S}, Bainbridge K.  Explaining the social gradient in coronary heart disease:  comparing relative and absolute risk approaches.  \emph{J Epidemiol Community Health} 2006;60:436-441. (*2006 paper of the year nominee by \emph{Lancet} 2007;369:91-92;cited in the Best of Epidemiology and Cardiovascular Prevention in 2006 by \emph{Archives des Maladies du Coeur et des Vaisseaux} 2007;100:57-64)
- 
-\item Jackson R, Lynch J, \textbf{Harper S}.  Does Rose?s population prevention axiom apply to coronary heart disease prevention in the 21st century?  \emph{BMJ} 2006;332:617-618.
- 
-\item Kelleher C, Lynch JW, Daly L, \textbf{Harper S}, Fitz-simon N, Bimpeh Y, Daly E, Ulmer H. The "Americanisation" of migrants: Evidence for the contribution of ethnicity, social deprivation, lifestyle and life-course processes to the mid-20th century coronary heart disease epidemic in the US.  \emph{Soc Sci Med} 2006;63:465-84.
- 
-\item \textbf{Harper S}. What explains widening geographic differences in life expectancy in New Zealand?  \emph{Int J Epidemiol} 2006;35:604-6.
-
-\item Lynch J, \textbf{Harper S}, Davey Smith G, Kaplan G. Association between income inequality and mortality across U.S. states depends upon time period and source of income data.  \emph{Am J Public Health} 2005;95:1424-1430.
- 
-\item Huynh M, Parker J, Pamuk E, \textbf{Harper S}, Schoendorf K. Contextual effect of income inequality on birth outcomes.  \emph{Int J Epidemiol} 2005;34: 888-895. 
- 
-\item Lynch J, Davey Smith G, \textbf{Harper S}, Hillemeier M, Ross N, Wolfson M. Is income inequality a determinant of population health? Part 1. A systematic review. \emph{Milbank Q} 2004;82(1):5-99.
- 
-\item Lynch J, Davey Smith G, \textbf{Harper S}, Hillemeier M.  Is income inequality a determinant of population health? Part 2. U.S. national and regional trends in income inequality and age- and cause-specific mortality. \emph{Milbank Q} 2004;82(2):355-400.
- 
-\item Lynch J, \textbf{Harper S}, Davey Smith G, Ross N, Wolfson M, Dunn J. US regional and national cause-specific mortality and trends in income inequality: descriptive findings. \emph{Demographic Res} [serial online] 2004;Special collection 2(Article 8):184-228. Available at http://www.demographic-research.org/special/2/8/s2-8.pdf.
- 
-\item Kelleher CC, Lynch JW, \textbf{Harper S}, Tay J, Nolan G.  Hurling Alone? How social capital failed to save the Irish from cardio-vascular disease in the United States of America.  \emph{Am J Public Health} 2004;94:2162-9.
- 
-\item Hillemeier MM, Lynch J, \textbf{Harper S}, Raghunathan T, Kaplan GA. Relative or absolute standards for child poverty: a state-level analysis of infant and child mortality. \emph{Am J Public Health} 2003; 93(4):652-7.
- 
-\item Hillemeier MM, Lynch J, \textbf{Harper S}, Casper M. Measuring contextual characteristics for community health.  \emph{Health Serv Res} 2003;38:1645-1718 
- 
-\item Lynch, J, \textbf{Harper S}, and Davey Smith G. Commentary: Plugging leaks and repelling boarders?where to next for the SS Income Inequality? \emph{Int J Epidemiol} 2003;32(6):1029-36
-
-\item \textbf{Harper S}, Lynch, J, Hsu, WL, Everson, SA, Hillemeier MM, Raghunathan TE, Salonen JT,  Kaplan GA. Life course socioeconomic conditions and adult psychosocial functioning. \emph{Int J Epidemiol} 2002;31(2):395-403.
-
-\end{etaremune}
+Chen D, Momen NC, Ejlskov L, Bødkergaard K, Werenberg Dreier J, et
+al.~Socioeconomic inequalities in mortality associated with mental
+disorders: a population‐based cohort study. \emph{World Psychiatry}
+2025;24(1):92-102.
+
+Nandi A, Agarwal P, Chandrashekar A, Maloney S, Richardson R, Thakur L,
+\textbf{Harper S}. Access to affordable daycare and women's mental
+health in Rajasthan, India: Evidence from a cluster-randomised social
+intervention. \emph{J Glob Health} 2024;14:04063.
+
+Lee M, Chang J, Deng Q, Hu P, Bixby H, \textbf{Harper S}, Shen G, Tao S,
+Guo M, et al.~Effects of a coal to clean heating policy on acute
+myocardial infarction in Beijing: a difference-in-differences analysis.
+\emph{Lancet Planet Health} 2024;8(11):e924-e932.
+
+Burgos-Ochoa L, Bertens LCM, Boderie NW, Gravesteijn BY, PREPARE
+Consortium et al.~Impact of COVID-19 mitigation measures on perinatal
+outcomes in the Netherlands. \emph{Public Health} 2024;236:322-7.
+
+Gravesteijn BY, Boderie NW, van den Akker T, Bertens LCM, PREPARE
+Consortium et al.~Effect of COVID-19 lockdown on maternity care and
+maternal outcome in the Netherlands: a national quasi-experimental
+study. \emph{Public Health} 2024;235:15-25.
+
+*Al-Soneidar WA, \textbf{Harper S}, Coutlée F, Gheit T, Tommasino M,
+Nicolau B. Prevalence of Alpha, Beta, and Gamma Human Papillomaviruses
+in Patients With Head and Neck Cancer and Noncancer Controls and
+Relation to Behavioral Factors. \emph{J Infect Dis} 2024;229(4):1088-96.
+
+*Hetherington E, Darling E, \textbf{Harper S}, Nguyen F, Schummers L, et
+al.~Inequalities in access to prenatal care during the COVID‐19
+pandemic: Analysis of a population‐based cohort. \emph{Paediatr Perinat
+Epidemiol} 2024;38:291--301.
+
+*Socha PM, \textbf{Harper S}, Strumpf E, Murphy KE, Hutcheon JA.
+Antenatal corticosteroids and newborn respiratory outcomes in twins: A
+regression discontinuity study. \emph{BJOG} 2024;131: 1064-1071.
+
+*Socha PM, \textbf{Harper S}, Hutcheon JA. Methods of confounder
+selection in obstetrics and gynaecology studies: An overview of recent
+practice. \emph{BJOG}. 2024 . Online ahead of print.
+
+*Socha PM, \textbf{Harper S}, Strumpf E, Murphy KE, Hutcheon JA.
+Antenatal corticosteroids and newborn respiratory outcomes in twins: A
+regression discontinuity study. \emph{BJOG}. . Online ahead of print.
+
+\textbf{Harper S}, Nandi A. Empirical Challenges in Defining Treatments
+and Time in the Evaluation of Gun Laws. \emph{Epidemiology} 2023 Nov
+1;34(6):793-5.
+
+*Al-Soneidar W, \textbf{Harper S}, Coutlée F, Gheit T, Tomassino M,
+Nicolau B. Prevalence of Alpha, Beta, and Gamma Human Papillomaviruses
+(HPV) in head and neck cancer patients and non-cancer controls and
+relation to behavioral factors. \emph{Journal of Infectious Diseases}
+2023 (forthcoming).
+
+Flores Anato JL, Ma H, Hamilton MA, Xia Y, \textbf{Harper S}, Buckeridge
+D, Brisson M, Hillmer MP, Malikov KA, Kerem A, Beall R. Impact of a
+vaccine passport on first-dose COVID-19 vaccine coverage by age and
+area-level social determinants in the Canadian provinces of Québec and
+Ontario: an interrupted time series analysis. \emph{CMAJ Open}
+2023;11(5):E995-E1005.
+
+*Hetherington E, \textbf{Harper S}, Davidson R, Festo C, Lampkin N,
+Mtenga S, Teixeira C, Vincent I, Nandi A. Impact evaluation of the
+TAMANI project to improve maternal and child health in Tanzania. \emph{J
+Epidemiol Community Health} 2023;77(6):410-6.
+
+*Socha P, \textbf{Harper S}, Hutcheon JA. Subgroup effects should be
+examined using both relative and absolute effect measures. Australian
+and New Zealand Journal of Obstetrics and Gynaecology; 2023
+Jun;63(3):469-72.
+
+Hawkins SS, \textbf{Harper S}, Baum CF, Kaufman JS. Associations between
+State-Level Changes in Reproductive Health Services and Indicators of
+Severe Maternal Morbidity. \emph{JAMA Pediatr} 2023;177(1):93-95.
+
+Windle SB, *Socha P, Nazif-Munoz JI, \textbf{Harper S}, Nandi A. The
+Impact of Cannabis Decriminalization and Legalization on Road Safety
+Outcomes: A Systematic Review. \emph{Am J Prev Med}
+2022;63(6):1037-1052.
+
+*Al-Soneidar WA, \textbf{Harper S}, Alli BY, Nicolau B. Interaction of
+HPV16 and Cutaneous HPV in Head and Neck Cancer. \emph{Cancers}
+2022;14(21).
+
+*Sternbach TJ, \textbf{Harper S}, Li X, Zhang X, Carter E, Zhang Y, et
+al. Effects of indoor and outdoor temperatures on blood pressure and
+central hemodynamics in a wintertime longitudinal study of Chinese
+adults. \emph{J Hypertens} 2022;40(10):1950-1959.
+
+Lopes FV, Bakx P, \textbf{Harper S}, Ravesteijn B, Van Ourti T. The
+effects of supported housing for individuals with mental disorders.
+\emph{Health Econ} 2022;31(S2):115-133.
+
+Li X, Baumgartner J, \textbf{Harper S}, Zhang X, *Sternbach T,
+Barrington-Leigh C, et al.~Field measurements of indoor and community
+air quality in rural Beijing before, during, and after the COVID-19
+lockdown. \emph{Indoor Air} 2022;32(8).
+
+Nandi A, Charters TJ, Quamruzzaman A, Strumpf EC, Kaufman JS, Heymann J,
+Mukherji A, \textbf{Harper S}. Health care services use, stillbirth, and
+neonatal and infant survival following implementation of the Maternal
+Health Voucher Scheme in Bangladesh: A difference-in-differences
+analysis of Bangladesh Demographic and Health Survey data, 2000 to 2016.
+\emph{PLoS Med 2022};19(8).
+
+Carabali M, \textbf{Harper S}, Lima Neto AS, Dos Santos De Sousa G,
+Caprara A, Restrepo BN, et al.~Decomposition of socioeconomic
+inequalities in arboviral diseases in Brazil and Colombia (2007-2017).
+\emph{Trans R Soc Trop Med Hyg} 2022;116(8):717-726.
+
+*Al-Soneidar WA, \textbf{Harper S}, Madathil SA, Schlecht NF, Nicolau B.
+Do cutaneous human papillomavirus genotypes affect head and neck cancer?
+Evidence and bias-correction from a case-control study. \emph{Cancer
+Epidemiol} 2022;79.
+
+Davis LE, Webber C, Datta GD, Wiens A, \textbf{Harper S}, Hallet J, et
+al. Assessing research methodologies used to evaluate inequalities in
+end-of-life cancer care research: A scoping review protocol. \emph{BMJ
+Open} 2022;12(7).
+
+*Capurro DA, \textbf{Harper S}. Socioeconomic inequalities in health
+care utilization in Paraguay: Description of trends from 1999 to 2018.
+\emph{J Health Serv Res Policy} 2022;27(3):180-189.
+
+Li X, Baumgartner J, Barrington-Leigh C, \textbf{Harper S}, Robinson B,
+Shen G, et al.~Socioeconomic and Demographic Associations with
+Wintertime Air Pollution Exposures at Household, Community, and District
+Scales in Rural Beijing, China. \emph{Environ Sci Technol}
+2022;56(12):8308-8318.
+
+Clark S, \textbf{Harper S}, Weber B. Growing Up in Rural America.
+\emph{RSF} 2022;8 (3) 1-47;
+
+Hutcheon JA, Strumpf EC, Liauw J, Skoll MA, *Socha P, Srour M, Ting JY,
+\textbf{Harper S}. Antenatal corticosteroid administration and
+attention-deficit/hyperactivity disorder in childhood: a regression
+discontinuity study. \emph{CMAJ} 2022;194(7):E235-E241.
+
+Hutcheon JA, \textbf{Harper S}. No, it is not too good to be true:
+Response by Hutcheon and Harper. \emph{Paediatric and perinatal
+epidemiology} 2021;35(6): 781-782.
+
+Jahagirdar D, Dimitris M, Strumpf EC, Kaufman JS, \textbf{Harper S},
+Heymann J, Nandi A. Balancing work and care: the effect of paid adult
+medical leave policies on employment in Europe. \emph{Journal of Social
+Policy} 2021;50(3):552-568.
+
+Graham E, Watson T, Deschenes SS, Filion KB, Henderson M, \textbf{Harper
+S}, Rosella L, Schmitz N. Depression-related weight change and incident
+diabetes in a community sample. \emph{Scientific reports}
+2021;11(1):1-10.
+
+Palayew A, \textbf{Harper S}, Hanley JA. Toward Reducing the Possibility
+of False-Positive Results in Epidemiologic Studies of Traffic Crashes.
+\emph{Chance} 2021;34(2):44-52.
+
+Hutcheon JA, \textbf{Harper S}. If it sounds too good to be true, it
+probably is: Conducting within-woman comparison studies with only one
+exposure observation per woman. \emph{Paediatr Perinat Epidemiol.} 2020
+Dec 17.
+
+\textbf{Harper S}, *Riddell CA, King NB. Declining Life Expectancy in
+the United States: Missing the Trees for the Forest. \emph{Annu Rev
+Public Health.} 2020 Dec 16.
+
+Hutcheon JA, \textbf{Harper S}, Liauw J, Skoll MA, Srour M, Strumpf EC.
+Antenatal corticosteroid administration and early school age child
+development: A regression discontinuity study in British Columbia,
+Canada. \emph{PLoS Med.} 2020 Dec 7;17(12):e1003435. .
+
+Carabali M, \textbf{Harper S}, Lima Neto AS, Dos Santos de Sousa G,
+Caprara A, Restrepo BN, Kaufman JS.Spatiotemporal distribution and
+socioeconomic disparities of dengue, chikungunya and Zika in two Latin
+American cities from 2007 to 2017. \emph{Trop Med Int Health.} 2020 Nov
+20. . Online ahead of print.
+
+Johri M, Chandra D, Kone KG, Sylvestre MP, Mathur AK, \textbf{Harper S},
+Nandi A. Social and Behavior Change Communication Interventions
+Delivered Face-to-Face and by a Mobile Phone to Strengthen Vaccination
+Uptake and Improve Child Health in Rural India: Randomized Pilot Study.
+\emph{JMIR Mhealth Uhealth.} 2020 Sep 21;8(9):e20356. .
+
+*Richardson RA, \textbf{Harper S}, Weichenthal S, Nandi A, Mishra V, Jha
+P. Extremes in water availability and suicide: Evidence from a
+nationally representative sample of rural Indian adults. \emph{Environ
+Res.} 2020 Nov;190:109969. .
+
+*Arsenault C, \textbf{Harper S}, Nandi A. Effect of vaccination on
+children's learning achievements: findings from the India Human
+Development Survey. \emph{J Epidemiol Community Health.} 2020
+Oct;74(10):778-784. .
+
+Nunes A, \textbf{Harper S}, Hernandez KD. The Price Isn't Right:
+Autonomous Vehicles, Public Health, and Social Justice. \emph{Am J
+Public Health}. 2020 Jun;110(6):796-797. .
+
+*Riddell CA, Kaufman JS, Torres JM, \textbf{Harper S}. Using change in a
+seat belt law to study racially-biased policing in South Carolina.
+\emph{Prev Med}. 2020 Jan;130:105884. .
+
+Goldstein ND, Hamra GB, \textbf{Harper S}. Are Descriptions of Methods
+Alone Sufficient for Study Reproducibility? An Example From the
+Cardiovascular Literature. \emph{Epidemiology}. 2020 Mar;31(2):184-188.
+.
+
+SS Hawkins, M Ghiani, \textbf{S Harper}, CF Baum, JS Kaufman. Impact of
+State-Level Changes on Maternal Mortality: A Population-Based,
+Quasi-Experimental Study. \emph{American Journal of Preventive Medicine}
+2020;58:165-174.
+
+Kaufman JS, *Riddell CA, \textbf{Harper S}. Black and White differences
+in life expectancy in 4 US states, 1969-2013. \emph{Public Health
+Reports} 2019;134:634-642.
+
+*Austin N, \textbf{Harper S}. Constructing a longitudinal database of
+targeted regulation of abortion providers laws. \emph{Health Serv Res}.
+2019;54(5):1084--1089. .
+
+*Austin N, \textbf{Harper S}. Quantifying the impact of targeted
+regulation of abortion provider laws on US abortion rates: a multi-state
+assessment. \emph{Contraception}. 2019;100(5);374-379 pii:
+S0010-7824(19)30202-1. .
+
+Richardson R, Nandi A, Jaswal S, \textbf{Harper S}. The effect of
+intimate partner violence on women's mental distress: a prospective
+cohort study of 3010 rural Indian women. \emph{Soc Psychiatry Psychiatr
+Epidemiol}. 2019 Jun 8. . {[}Epub ahead of print{]}
+
+Richardson RA, \textbf{Harper S}, Bates LM, Nandi A. The effect of
+agency on women's mental distress: A prospective cohort study from rural
+Rajasthan, India. \emph{Soc Sci Med}. 2019 Jul;233:47-56. .
+
+Sreeramareddy CT, \textbf{Harper S}. Trends in educational and wealth
+inequalities in adult tobacco use in Nepal 2001-2016: secondary data
+analyses of four Demographic and Health Surveys. \emph{BMJ Open}. 2019
+Sep 6;9(9):e029712. .
+
+Hamra GB, Goldstein ND, \textbf{Harper S}. Resource Sharing to Improve
+Research Quality. \emph{Journal of the American Heart Association}.
+2019;8(15):e012292.
+
+J Ahn, \textbf{S Harper}, M Yu, EJ Feuer, B Liu. Improved Monte Carlo
+methods for estimating confidence intervals for eleven commonly used
+health disparity measures. \emph{PloS ONE}. 2019 Jul 11;14 (7),
+e0219542.
+
+Hamadani F, Razek T, Massinga E, Gupta S, Muataco M, Muripiha P, Maguni
+C, Muripa V, Percina I, Costa A, Yohannan P, Bracco D, Wong E,
+\textbf{Harper S}, Deckelbaum DL, Neves O.. Trauma Surveillance and
+Registry Development in Mozambique: Results of a 1-Year Study and the
+First Phase of National Implementation. \emph{World J Surg}. 2019
+Jul;43(7):1628-1635. .
+
+\textbf{Harper S}. A future for observational epidemiology: Clarity,
+credibility, transparency. \emph{Am J Epidemiol} 2019;188:840-845.
+
+\textbf{Harper S}. Would stronger seat belt laws reduce motor vehicle
+crash deaths? A semi-Bayesian analysis. \emph{Epidemiology}
+2019;30:380-7.
+
+\textbf{Harper S}, Palayew A. The annual cannabis holiday and fatal
+traffic crashes. \emph{Inj Prev} 2019;25:433--437. .
+
+Hutcheon JA, \textbf{Harper S}. Invited Commentary: Promise and pitfalls
+of the sibling comparison design in studies of optimal birth spacing.
+\emph{Am J Epidemiol} 2019;188(1):17-21. . PubMed PMID: 30188975.
+
+Ahrens KA, Hutcheon JA, Ananth CV, Basso O, Brise PA, Ferr CD,
+Frederiksen BN, \textbf{Harper S}, Hernandez-Diaz S, Hirai AH, Kirby RS,
+Klebanoff MA, Lindberg L, Mumford SL, Nelson HD, Platt RW, Rossen LM,
+Stubbe AM, Thoma ME, Vladutiu CJ, Moskosky S. Report of the Office of
+Population Affairs' expert work group meeting on short birth spacing and
+adverse pregnancy outcomes: Methodological quality of existing studies
+and future directions for research. \emph{Paediatr Perinat Epidemiol}.
+2019 Jan;33(1):O5-O14. . Epub 2018 Oct 9. PubMed PMID: 30300948; PubMed
+Central PMCID: PMC6378402.
+
+Hutcheon JA, Moskosky S, Ananth CV, Basso O, Briss PA, Ferr CD,
+Frederiksen BN, \textbf{Harper S}, Hernendez-Diaz S, Hirai AH, Kirby RS,
+Klebanoff MA, Lindberg L, Mumford SL, Nelson HD, Platt RW, Rossen LM,
+Stuebe AM, Thoma ME, Vladutiu CJ, Ahrens KA. Good practices for the
+design, analysis, and interpretation of observational studies on birth
+spacing and perinatal health outcomes. \emph{Paediatr Perinat
+Epidemiol}. 2019 Jan;33(1):O15-O24. . Epub 2018 Oct 12. PubMed PMID:
+30311958; PubMed Central PMCID: PMC6378590.
+
+Ahn J, \textbf{Harper S}, Yu M, Feuer EJ, Liu B, Luta G. Variance
+Estimation and Confidence Intervals for 11 Commonly Used Health
+Disparity Measures. \emph{JCO Clin Cancer Inform}. 2018 Dec;2:1-19. .
+PubMed PMID: 30652598.
+
+Richardson RA, \textbf{Harper S}, Schmitz N, Nandi A. The effect of
+affordable daycare on women's mental health: Evidence from a cluster
+randomized trial in rural India. Soc Sci Med. 2018 Nov;217:32-41. doi:
+10.1016/j.socscimed.2018.09.061. Epub 2018 Oct 1. PubMed PMID: 30292875.
+
+Mejia GC, Elani HW, \textbf{Harper S}, Murray Thomson W, Ju X, Kawachi
+I, Kaufman JS, Jamieson LM. Socioeconomic status, oral health and dental
+disease in Australia, Canada, New Zealand and the United States. BMC
+Oral Health. 2018 Oct 26;18(1):176. . PubMed PMID: 30367654; PubMed
+Central PMCID: PMC6204046.
+
+\textbf{Harper S}. Comment on the equity impact of women's community
+groups on inequalities in neonatal mortality. Int J Epidemiol.
+2018;48:182--185. .
+
+McLinden T, Moodie EEM, \textbf{Harper S}, Hamelin AM, Anema A, Aibibula
+W, Klein MB, Cox J. Injection drug use, food insecurity, and HIV-HCV
+co-infection: a longitudinal cohort analysis. AIDS Care. 2018
+Oct;30(10):1322-1328. . Epub 2018 May 1. PubMed PMID: 29716392.
+
+Nandi A, Jahagirdar D, Dimitris MC, Labrecque JA, Strumpf EC, Kaufman
+JS, Vincent I, Atabay E, \textbf{Harper S}, Earle A, Heymann SJ. The
+Impact of Parental and Medical Leave Policies on Socioeconomic and
+Health Outcomes in OECD Countries: A Systematic Review of the Empirical
+Literature. \emph{Milbank Q}. 2018;96(3):434-471. .
+
+Jahagirdar D, \textbf{Harper S}, Heymann J, Swaminathan H, Mukherji A,
+Nandi A. The effect of paid maternity leave on early childhood growth in
+low-income and middle-income countries. \emph{BMJ Glob Health. 2017} Sep
+7;2(3):e000294. . eCollection 2017. PubMed PMID: 29988584
+
+Austin N, \textbf{Harper S}. Assessing the impact of TRAP laws on
+abortion and women's health in the USA: a systematic review. \emph{BMJ
+Sex Reprod Health.} 2018 Apr;44(2):128-134. . Epub 2018 Mar 9. PubMed
+PMID: 29921636.
+
+Riddell CA, Morrison KT, Kaufman JS, \textbf{Harper S}. Trends in the
+contribution of major causes of death to the black-white life expectancy
+gap by US state. \emph{Health Place.} 2018 Jul;52:85-100. . Epub 2018
+Jun 1. PubMed PMID: 29864731.
+
+Banack HR, \textbf{Harper S}, Kaufman JS. Accounting for Selection Bias
+in Studies of Acute Cardiac Events. \emph{Can J Cardiol.} 2018
+Jun;34(6):709-716. .
+
+McLinden T, Moodie EEM, \textbf{Harper S}, Hamelin AM, Anema A, Aibibula
+W, Klein MB, Cox J. Injection drug use, food insecurity, and HIV-HCV
+co-infection: a longitudinal cohort analysis. \emph{AIDS Care.} 2018 May
+1:1-7. . PubMed PMID: 29716392.
+
+Riddell CA, \textbf{Harper S}, Cerda M, Kaufman JS. Comparison of Rates
+of Firearm and Nonfirearm Homicide and Suicide in Black and White
+Non-Hispanic Men, by U.S. State. \emph{Ann Intern Med. 2018} May
+15;168(10):712-720. .
+
+King NB, \textbf{Harper S}, Young M, Berry SC, *Voigt K. The impact of
+social and psychological consequences of disease on judgments of disease
+severity: An experimental study. \emph{PLoS One.} 2018 Apr
+17;13(4):e0195338. doi: 10.1371/journal.pone.0195338.
+
+McLinden T, Moodie EEM, Hamelin AM, \textbf{Harper S}, Rossi C, Walmsley
+SL, Rourke SB, Cooper C, Klein MB, Cox J. Methadone treatment, severe
+food insecurity, and HIV-HCV co-infection: A propensity score matching
+analysis. \emph{Drug Alcohol Depend.} 2018;185:374-380. doi:
+10.1016/j.drugalcdep.2017.12.031.
+
+Richardson RA, Nandi A, Jaswal S, \textbf{Harper S}. Are work demands
+associated with mental distress? Evidence from women in rural India.
+\emph{Soc Psychiatry Psychiatr Epidemiol.} 2017 Dec;52(12):1501-1511.
+doi: 10.1007/s00127-017-1448-z.
+
+Strumpf EC, Charters TJ, \textbf{Harper S}, Nandi A. Did the Great
+Recession affect mortality rates in the metropolitan United States?
+Effects on mortality by age, gender and cause of death. \emph{Soc Sci
+Med.} 2017;189:11-16. doi: 10.1016/j.socscimed.2017.07.016.
+
+McLinden T, Moodie EEM, Hamelin AM, \textbf{Harper S}, Walmsley SL,
+Paradis G, Aibibula W, Klein MB, Cox J. Injection Drug Use,
+Unemployment, and Severe Food Insecurity Among HIV-HCV Co-Infected
+Individuals: A Mediation Analysis. \emph{AIDS Behav.}
+2017;21(12):3496-3505. doi: 10.1007/s10461-017-1850-2.
+
+Riddell CA, \textbf{Harper S}, Kaufman JS. Trends in Differences in US
+Mortality Rates Between Black and White Infants. \emph{JAMA Pediatr.}
+2017 Sep 1;171(9):911-913. doi: 10.1001/jamapediatrics.2017.1365.
+
+\textbf{Harper S}, Bruckner TA. Did the Great Recession increase
+suicides in the USA? Evidence from an interrupted time-series analysis.
+\emph{Ann Epidemiol} 2017 Jun 1. pii: S1047-2797(16)30356-8. doi:
+10.1016/j.annepidem.2017.05.017. {[}Epub ahead of print{]} PubMed PMID:
+28625812.
+
+\textbf{Harper S}, Kaufman JS, Cooper RS. Declining United States Life
+Expectancy: A First Look. \emph{Epidemiology} 2017 Nov;28(6):e54-e56.
+doi: 10.1097/EDE.0000000000000677.
+
+\textbf{Harper S}, Strumpf EC. Primary Enforcement of Mandatory Seat
+Belt Laws and Motor Vehicle Crash Deaths. \emph{Am J Prev Med} 2017 2017
+Aug;53(2):176-183. doi: 10.1016/j.amepre.2017.02.003.
+
+Sreeramareddy CT, \textbf{Harper S}, Ernsten L. Educational and wealth
+inequalities in tobacco use among men and women in 54
+low-and-middle-income countries. \emph{Tobacco Control} (in press).
+
+Arsenault C, \textbf{Harper S}, Nandi A, Rodriguez JMM, Hansen PM, Johri
+M. An equity dashboard to monitor vaccination coverage for the
+Sustainable Development Goals. \emph{Bulletin of the World Health
+Organization} (in press).
+
+Jamieson L, Elani H, Mejia GC, Ju X, Kawachi I, \textbf{Harper S},
+Thomson WM, Kaufman JS Inequalities in Indigenous oral health: findings
+from three countries. \emph{Journal of Dental Research} (in press).
+
+King NB, \textbf{Harper S}, Strumpf EC. Has the rise in disability
+insurance participation contributed to increased opioid-related
+mortality? \emph{Annals of Internal Medicine} 2016 Aug 30. doi:
+10.7326/M16-0918. {[}Epub ahead of print{]}.
+
+Hutcheon JA, *Riddell C, Strumpf EC, Lee L, \textbf{Harper S}. Safety of
+labour and delivery following obstetrical service closures in small
+community hospitals in British Columbia, Canada. \emph{Canadian Medical
+Association Journal} 2016 Nov 7. pii: cmaj.160461. {[}Epub ahead of
+print{]}.
+
+Carter R, Quesnel-Vallee A, Levesque J-F, \textbf{Harper S}. Measuring
+the effect of Family Medicine Group enrolment on avoidable visits to
+emergency departments by patients with diabetes in Quebec, Canada.
+\emph{Journal of Evaluation in Clinical Practice} 2016 Aug 30. doi:
+10.1111/jep.12627. {[}Epub ahead of print{]}.
+
+Gray A, \textbf{Harper S}. Richer F. Individual- and community-level
+determinants of Inuit youth mental wellness. \emph{Can J Public Health}
+2016; 107(3): e251-e257.
+
+Nandi A, Maloney S, Agarwal P, Chandrashekar A, \textbf{Harper S}. The
+effect of an affordable daycare program on health and economic
+well-being in Rajasthan, India: protocol for a cluster-randomized impact
+evaluation study. \emph{BMC Public Health.} 2016 Jun 9;16:490. doi:
+10.1186/s12889-016-3176-9.
+
+Kopec JA, Sayre EC, Fines P, Flanagan WM, Nadeau C, Okhmatovskaia A,
+Wolfson MC, Simulation Technology for Applied Research Team (Buckeridge
+D, Dahaghin S, \textbf{Harper S}, Heath A, Hennessy D, Liu R, Manuel D,
+Oderkirk J, Rahman M, Sharif B, Smith B, Tuna, M). Effects of Reductions
+in Body Mass Index on the Future Osteoarthritis Burden in Canada: A
+Population-Based Microsimulation Study. \emph{Arthritis Care and
+Research} 2016; 68(8):1098-1105.
+
+Charters TJ, \textbf{Harper S}, Strumpf EC, Subramanian SV, Arcaya M,
+Nandi A. The effect of metropolitan-area mortgage delinquency on health
+behaviors, access to health services, and self-rated health in the
+United States, 2003-2010. \emph{Soc Sci Med} 2016 Jul;161:74-82.
+
+Majid MF, Mendoza Rodriguez JM, \textbf{Harper S}, Frank J, Nandi A. Do
+minimum wages improve early life health? Evidence from developing
+countries. \emph{Soc Sci Med} 2016 Jun;158:105-13.
+
+Nandi A, *Hajizadeh M, \textbf{Harper S}, Koski A, Strumpf EC, Heymann
+SJ. Increased duration of paid maternity leave lowers infant mortality
+in low- and middle-income countries: a quasi-experimental study.
+\emph{PLoS Medicine} 2016 Mar 29;13(3):e1001985. doi:
+10.1371/journal.pmed.1001985. eCollection 2016.
+
+Hajna S, Ross NA, Joseph L, \textbf{Harper S}, Dasgupta K. Neighbourhood
+Walkability and Daily Steps in Adults with Type 2 Diabetes. \emph{PLoS
+ONE.} 2016 Mar 18;11(3):e0151544. . eCollection 2016.
+
+Austin N, \textbf{Harper S}, Strumpf EC. Estimating the impact of racial
+residential segregation on birth weight: an instrumental variables
+approach. \emph{Epidemiology} 2016 Sep;27(5):682-9.
+
+Austin N, \textbf{Harper S}, Kaufman JS, Hamra G. Challenges in
+Reproducing Results from Publicly Available Data: An Example of Sexual
+Orientation and Cardiovascular Disease Risk. \emph{J Epidemiol Community
+Health} 2016 2016;70(8):807-12.
+
+McKinnon B, \textbf{Harper S}, Kaufman JS. Do Socioeconomic Inequalities
+in Neonatal Mortality Reflect Inequalities in Coverage of Maternal
+Health Services? Evidence from 48 Low- and Middle-Income Countries.
+\emph{Matern Child Health J.} 2015 Nov 6. {[}Epub ahead of print{]}
+
+\textbf{Harper S}, Charters TJ, Strumpf EC. Trends in socioeconomic
+inequalities in motor vehicle accident mortality in the United States,
+1995-2010. \emph{Am J Epidemiol.} 2015; 182(7):606-614.
+
+Hutcheon JA, Strumpf EC, \textbf{Harper S}, Giesbrecht E. Maternal and
+neonatal outcomes after implementation of a hospital policy to limit
+planned Cesarean deliveries before 39 weeks' gestation. \emph{BJOG: An
+International Journal of Obstetrics and Gynaecology} 2015;122(9):1200-6.
+
+Hajna S, Ross NA, Joseph L, \textbf{Harper S}, Dasgupta K. Neighbourhood
+walkability, daily steps and utilitarian walking in Canadian adults.
+\emph{BMJ Open.} 2015 Nov 24;5(11):e008964.
+
+Hajizadeh M, Heymann J, Strumpf E, \textbf{Harper S}, Nandi A. Paid
+maternity leave and childhood vaccination uptake: Longitudinal evidence
+from 20 low-and-middle-income countries. \emph{Soc Sci Med}
+2015;140:104-17.
+
+Richardson RA, Charters TJ, Strumpf EC, \textbf{Harper S}. Trends in
+socioeconomic inequalities in drug poisoning mortality in the United
+States, 1994-2010. \emph{Am J Public Health} 2015;105(9):1859-65
+
+\textbf{Harper S}, Charters TJ, Strumpf EC, Galea S, Nandi A. Economic
+downturns and suicide mortality in the United States, 1980-2010.
+\emph{Int J Epidemiol.} 2015;44(3):956-66.
+
+McKinnon B, \textbf{Harper S}, Kaufman JS. Who benefits from removing
+user fees for facility-based delivery services? Evidence on
+socioeconomic differences from Ghana, Senegal, Kenya, and Niger.
+\emph{Social Science \& Medicine} 2015;135:117-123.
+
+McKinnon B, \textbf{Harper S}, Kaufman JS, Bergevin Y. Removing user
+fees for facility-based delivery services: a difference-in-differences
+evaluation from ten sub-Saharan African countries. \emph{Health Policy
+\& Planning} 2015;30(4):432-41.
+
+\textbf{Harper S}. APC? It's easy as 1,2,3! \emph{American Journal of
+Epidemiology.} 2015;182(4):313-7..
+
+Nandi A, \textbf{Harper S}. How consequential is social epidemiology? A
+review of recent evidence. \emph{Current Epidemiology Reports} 2014.
+doi: 10.1007/s40471-014-0031-3.
+
+McKinnon B, \textbf{Harper S}, Kaufman JS, Bergevin Y. Removing user
+fees for facility-based delivery services: a difference-in-differences
+evaluation from ten sub-Saharan African countries. \emph{Health Policy
+\& Planning} 2014 May 10. doi: 10.1093/heapol/czu027 {[}Epub ahead of
+print{]}.
+
+Frenz P, Delgado I, Kaufman JS, \textbf{Harper S}. Achieving effective
+universal health coverage with equity: evidence from Chile. \emph{Health
+Policy Plan.} 2014;29(6):717-731.
+
+\textbf{Harper S}, MacLehose RF, Kaufman JS. Trends in the black-white
+life expectancy gap among US states, 1990-2011. \emph{Health Affairs}
+2014;33(8):1375-82.
+
+Auger N, Feuillet P, Martel S, Lo E, Barry AD, \textbf{Harper S}.
+Mortality inequality in populations with equal life expectancy:
+Arriaga's decomposition method in SAS, Stata, and Excel. \emph{Annals of
+Epidemiology.} 2014;24(8):575-580.e571.
+
+Manuel DG, Ho TH, \textbf{Harper S}, Anderson GM, Lynch J, Rosella LC.
+Modelling preventive effectiveness to estimate the equity tipping point:
+At what coverage can individual preventive interventions reduce
+socioeconomic disparities in diabetes risk? \emph{Chronic diseases and
+injuries in Canada.} 2014;34(2-3):94-102.
+
+King NB, Fraser V, Boikos C, *Richardson R, \textbf{Harper S}.
+Determinants of increased opioid-related mortality in the United States
+and Canada, 1990-2013: A systematic review. \emph{Am J Public Health.}
+2014;104(8):e32-e42.
+
+Smith BT, Smith PM, \textbf{Harper S}, Manuel DG, Mustard CA. Reducing
+social inequalities in health: The role of simulation modelling in
+chronic disease epidemiology to evaluate the impact of population health
+interventions. \emph{Journal of Epidemiology and Community Health.}
+2014;68(4):384-389.
+
+McKinnon B, \textbf{Harper S}, Kaufman JS, Bergevin Y. Socioeconomic
+inequality in neonatal mortality in countries of low and middle income:
+A multicountry analysis. \emph{The Lancet Global Health.}
+2014;2(3):165-173.
+
+McKinnon B, \textbf{Harper S}, Kaufman JS, Abdullah M. Distance to
+emergency obstetric services and early neonatal mortality in ethiopia.
+\emph{Tropical Medicine and International Health.} 2014.
+
+Hutcheon JA, \textbf{Harper S}, Strumpf EC, Lee L, Marquette G. Using
+inter-institutional practice variation to understand the risks and
+benefits of routine labour induction at 41+0 weeks. \emph{BJOG: An
+International Journal of Obstetrics and Gynaecology.} 2014.
+
+\textbf{Harper S}, Strumpf EC, Burris S, Smith GD, Lynch J. The Effect
+of Mandatory Seat Belt Laws on Seat Belt Use by Socioeconomic Position.
+\emph{Journal of Policy Analysis and Management.} 2014;33(1):141-161.
+
+Kaufman JS, \textbf{Harper S}. Health equity: Utopian and scientific.
+\emph{Preventive Medicine} 2013;57:739?40.
+
+Nandi A, Charters TJ, Strumpf EC, Heymann J, \textbf{Harper S}. Economic
+conditions and health behaviours during the `Great Recession'. \emph{J
+Epidemiol Community Health.} 2013;67:1038-1046.
+
+Maika M, Mittinty MN, Brinkman S, \textbf{Harper S}, Satriawan E, Lynch
+JW. Changes in Socioeconomic Inequality in Indonesian Children's
+Cognitive Function from 2000 to 2007: A Decomposition Analysis.
+\emph{PLoS ONE} 2013; 8(10):?e78809.?doi:10.1371/journal.pone.0078809.
+
+Speybroeck N, Van Malderen C, \textbf{Harper S}, Maller B,
+Devleesschauwer B. Simulation models for socioeconomic inequalities of
+health: A systematic review. \emph{Int J Environ Res Public Health.}
+2013; 10(11), 5750-5780. doi:10.3390/ijerph10115750
+
+\textbf{Harper S}, Ruder E, Roman HA, Geggel A, Nweke O, Payne-Sturges
+D, Levy JI. Using inequality measures to incorporate environmental
+justice into regulatory analyses. \emph{Int J Environ Res Public
+Health.} 2013;10(9):4039-59. doi: 10.3390/ijerph10094039.
+
+Auger N, \textbf{Harper S}, Barry AD, Diverging socioeconomic inequality
+in life expectancy of Francophones and Anglophones in Montreal, Quebec:
+Tobacco to blame? \emph{Journal of Public Health.} 2013;21(4):317-324.
+
+McKinnon B, \textbf{Harper S}, Moore S. The relationship of living
+arrangements and depressive symptoms among older adults in sub-Saharan
+Africa. \emph{BMC Public Health} 2013;13:
+682.??doi:10.1186/1471-2458-13-682
+
+\textbf{Harper S}, King NB, Young ME. Impact of selective evidence
+presentation on judgments of health inequality trends: an experimental
+study \emph{PLoS ONE} 2013;8(5): doi: 10.1371/journal.pone.0063362.
+
+\textbf{Harper S}, King N. Best practice for what? \emph{The Milbank
+Quarterly.} 2013;91(1):205-209.
+
+Platt R, \textbf{Harper S}. Survey data with sampling weights: is there
+a "best" approach? \emph{Environmental Research} 2013;120:43-144.
+
+King NB, \textbf{Harper S}, Young ME. Who cares about health
+inequalities? \emph{Health Policy \& Planning} 2013;28(5):558-571.
+
+Young ME, King NB, \textbf{Harper S}. The influence of popular media on
+perceptions of personal and population risk in possible disease
+outbreaks.?\emph{Health, Risk, and Society} 2013;15(1):103-114.
+
+Auger N, Park AL, \textbf{Harper S}. Francophone and Anglophone
+perinatal health: temporal and regional inequalities in a Canadian
+setting, 1981-2008. \emph{International Journal of Public Health}
+2012;57(6):925-934.
+
+Speybroeck N, \textbf{Harper S}, de Savigny D, Victora C. Inequalities
+of health indicators for policy makers: Seven Hints. \emph{Int J Public
+Health} 2012;57(5): 855-858. {[}Erratum published: 2012;57(5):
+859-860{]}.
+
+Kaufman JS, \textbf{Harper S}. Deficiency of the odds ratio for common
+outcomes {[}Letter{]}. \emph{Am J Psychiatry.} 2012 Oct;169(10):1118;
+author reply 1118-9. {[}Comment on: Chen LS et al.~Interplay of genetic
+risk factors (CHRNA5-CHRNA3-CHRNB4) and cessation treatments in smoking
+cessation success. \emph{Am J Psychiatry} 2012; 169:735?742.{]}
+
+\textbf{Harper S}, Strumpf EC. Social epidemiology: Questionable answers
+and answerable questions. \emph{Epidemiology} 2012;23(6):795-8.
+
+Hosseinpoor AR, Bergen N, Kunst A, \textbf{Harper S}, Guthold R, Rekve
+D, Tursan d'Espaignet E, Naidoo N, Chatterji S. Socioeconomic
+inequalities in risk factors for noncommunicable diseases in low-income
+and middle-income countries. \emph{BMC Public Health.} 2012 Oct
+28;12(1):912.
+
+King NB, \textbf{Harper S}, Young ME. Use of relative and absolute
+effect measures in reporting health inequalities: structured review.
+\emph{BMJ} 2012;345:e5774.
+
+Elani HW, \textbf{Harper S}, Allison PJ, Bedos C, Kaufman JS.
+Socio-economic Inequalities and Oral Health in Canada and the United
+States. \emph{Journal of Dental Research} 2012;91(9):865?870.
+
+Hosseinpoor AR, \textbf{Harper S}, Lee J, Lynch J, Mathers C, Abou-Zahr
+C. International shortfall inequality in life expectancy in women and in
+men, 1950-2010. \emph{Bulletin of the World Health Organization}
+2012;90:588-594.
+
+Hosseinpoor AR, Bergen N, Mendis S, \textbf{Harper S}, Verdes E, Kunst
+A, Chatterji S. Socioeconomic inequality in the prevalence of
+noncommunicable diseases in low- and middle-income countries: Results
+from the World Health Survey. \emph{BMC Public Health} 2012;12:474.
+
+Yang S, Khang Y-H, \textbf{Harper S}, Lynch J, Chun H. The Changing
+Gender Differences in Life Expectancy in Korea 1970-2005. \emph{Social
+Science \& Medicine} 2012;75:1280-7.
+
+Toporowski A, \textbf{Harper S}, Fuhrer R, Buffler PA, Detels R, Krieger
+N, Franco EL. Burden of disease, health indicators and challenges for
+epidemiology in North America. \emph{Int J Epidemiol.}
+2012;41(2):540-56.
+
+\textbf{Harper S}, Rushani D, Kaufman JS. Trends in the Black-White Life
+Expectancy Gap, 2003-2008. \emph{JAMA} 2012; 307: 2257-2259.
+
+Banack HR, \textbf{Harper S}, Kaufman JS. Re: Number of coronary heart
+disease risk factors and mortality in patients with myocardial
+infarction {[}Letter{]}. \emph{JAMA} 2012;307:1137-8. {[}Comment on:
+Canto JG, Kiefe CI, Rogers WJ, et al.~Number of coronary heart disease
+risk factors and mortality in patients with first myocardial infarction.
+\emph{JAMA.} 2011;306(19):2120?2127.{]}
+
+Auger N, \textbf{Harper S}, Barry AD, Trempe N, Daniel M. Inequality in
+life expectancy between the Francophone majority and Anglophone minority
+of a Canadian population. \emph{European J Epidemiol} 2012;27:27?38.
+
+\textbf{Harper S}, Strumpf EC, Kaufman JS. Do Medical Marijuana Laws
+Increase Marijuana Use? Replication Study and Extension. \emph{Ann
+Epidemiol} 2012;22:207-12.
+
+\textbf{Harper S}, Kaufman JS, King NB. Re: Cigarette smoking as a risk
+factor for coronary heart disease in women compared with men: a
+systematic review and meta-analysis of prospective cohort studies.
+{[}Letter{]} \emph{Lancet} 2012;379:801-2. {[}Comment on: Huxley RR,
+Woodward M. Cigarette smoking as a risk factor for coronary heart
+disease in women compared with men: a systematic review and
+meta-analysis of prospective cohort studies. \emph{Lancet.} 2011 Oct
+8;378(9799):1297-305{]}
+
+Auger N, Delezire P, \textbf{Harper S}, Platt RW. Maternal education and
+stillbirth. \emph{Epidemiology} 2012;23: 247-254
+
+Auger N, Park AL, \textbf{Harper S}, Daniel M, Roncarlo F, Platt RW.
+Educational inequalities in preterm and term small-for-gestational-age
+birth over time. \emph{Ann Epidemiol} 2012;22:160-67.
+
+\textbf{Harper S}, *McKinnon B. Global socioeconomic inequalities in
+tobacco use: Internationally comparable estimates from the World Health
+Surveys. \emph{Cancer Causes Control} 2012;23:11?25.
+
+Kaufman JS, \textbf{Harper S}, King NB. RE: Higher cardiovascular
+disease prevalence and mortality among younger blacks compared to whites
+{[}Letter{]}. \emph{American Journal of Medicine} 2011 May 124(5): e5-6.
+{[}Comment on: Jolly S, et al.~Higher cardiovascular disease prevalence
+and mortality among younger blacks compared to whites. \emph{Am J Med.}
+2010 Sep;123(9):811-8{]}
+
+Agha G, Murabito JM, Lynch JW, Abrahamowicz M, \textbf{Harper S}B,
+Loucks EB. Relation of Socioeconomic Position with Ankle-Brachial Index.
+\emph{Am J Cardiology} 2011;108:1651-7.
+
+Auger N, Roncarlo F, \textbf{Harper S}. Increasing educational
+inequality in preterm birth in Quebec, Canada, 1981-2006. \emph{Journal
+of Epidemiology \& Community Health} 2011;65:1091-1096.
+
+Auger N, Gamache P, Adam-Smith J, \textbf{Harper S}. Relative and
+absolute disparities in preterm birth related to neighbourhood
+education. \emph{Ann Epidemiol} 2011;21;481-488.
+
+Sadana R. \textbf{Harper S}. Data systems linking social determinants of
+health with health outcomes - advancing public goods to support research
+and evidence-based policy and programs. \emph{Public Health Reports}
+2011;126 Suppl 3:6-13.
+
+Larose A, Moore S, \textbf{Harper S}, Lynch J. Global income-related
+inequalities in HIV testing. \emph{J Public Health} 2011;33:345-352
+
+Adam-Smith J, \textbf{Harper S}, Auger N. Causes of widening life
+expectancy inequalities in Quebec, Canada, 1989-2004. \emph{Can J Public
+Health} 2011;102:375-381
+
+Smith BT, Loucks EB, \textbf{Harper S}, Abrahamowicz M, Fox CS, Lynch
+JW. Life course socioeconomic position and incidence of type 2 diabetes:
+Framingham Offspring Study. \emph{Am J Epidemiol} 2011;173:438-447.
+
+McKinnon B, \textbf{Harper S}, Moore DS. Decomposing Income Related
+Inequality in Cervical Screening in 67 Countries. \emph{Int J Public
+Health} 2011;56(2):139-152.
+
+\textbf{Harper S}, Lynch J, Davey Smith G. Social determinants and the
+decline of cardiovascular diseases: Understanding the links. \emph{Ann
+Rev Public Health} 2011;32:39-69.
+
+Speybroeck N, Konings P, Lynch J, \textbf{Harper S}, Hosseinpoor A,
+Berkvens D, Lorant V, Geckova A. Decomposing socioeconomic health
+inequalities. \emph{Int J Public Health} 2010;55:347-51.
+
+McTavish S, Moore S, \textbf{Harper S}, Lynch J. National female
+literacy, individual socio-economic status, and maternal health care use
+in sub-Saharan Africa. \emph{Soc Sci Med} 2010;71(11): 1958-63.
+
+Kopec JA, Fines P, Manuel DG, Buckeridge D, Flanagan WM, Oderkirk J,
+Abrahamowicz M, \textbf{Harper S}, Sharif B, Okhmatovskaia A, Sayre EC,
+Rahman MM, Wolfson MC. Validation of Population-Based Disease Simulation
+Models: A Review of Concepts and Methods. \emph{BMC Public Health}
+2010;10:710.
+
+\textbf{Harper S}. Inequalities in Cancer Survival and the NHS Cancer
+Plan: Evidence of Progress? \emph{Br J Cancer} 2010;103:437-8.
+
+Yang S, Khang Y-H, \textbf{Harper S}, Davey Smith G, Leon D, Lynch J.
+Understanding the Rapid Increase in Life Expectancy in South Korea.
+\emph{Am J Public Health} 2010;100:896-903.
+
+Moore S, Hall JN, \textbf{Harper S}, Lynch JW. Global and National
+Socio-Economic Disparities in Obesity, Overweight, and Underweight
+Status. \emph{Journal of Obesity} 2010;2010:1-11.
+
+\textbf{Harper S}, King N, Meersman SC, Breen N, Reichman ME, Lynch J.
+Implicit value judgments in the measurement of health inequalities.
+\emph{Milbank Quarterly} 2010;88:4-29. Translated and published in
+Spanish as: Juicios de valor implicitos en la medicien de las
+desigualdades en salud. \emph{Rev Panam Salud Publica} vol.35 n.4
+Apr.~2014.
+
+Konings P, \textbf{Harper S}, Lynch J, Berkvens D, Hosseinpoor A, Lorant
+V, Geckova A, Speybroeck N. Analysis of Socioeconomic Inequalities using
+the Concentration Index. \emph{Int J Public Health} 2010;55:71?74.
+
+King NB, Kaufman JS, \textbf{Harper S}. Relative Measures Alone Tell
+Only Part of the Story {[}Letter{]}. \emph{Am J Public Health} 2010
+Nov;100(11):2014-5; author reply 2015-6. {[}Comment on: Rubin MS, et al.
+Examination of inequalities in HIV/AIDS mortality in the United States
+from a fundamental cause perspective. \emph{Am J Public Health.}
+2010;100(6):1053?1059{]}
+
+\textbf{Harper S}. Essay Review: Rose?s Strategy of Preventive Medicine.
+\emph{Int J Epidemiol} 2009;38:1743-45.
+
+\textbf{Harper S}. Commentary: Trends in indigenous inequalities in
+health in New Zealand. \emph{Int J Epidemiol} 2009;38: 1722-1724.
+
+Alvarado BE, \textbf{Harper S}, Platt R, Davey Smith G, Lynch G. Would
+Achieving Healthy-People 2010?s Targets Reduce Both Population Levels
+and Social Disparities in Heart Disease? \emph{Circ Cardiovasc Qual
+Outcomes} 2009;2:598-606.
+
+\textbf{Harper S}, Lynch J, Meersman SC, Breen N, Davis WW, Reichman ME.
+Trends in race-ethnic and socioeconomic disparities in breast cancer
+incidence, stage at diagnosis, screening, mortality, and survival,
+1987-2005. \emph{Cancer Epidemiol Biomarkers Prev} 2009;18:121-31.
+
+Hall JN, Moore DS, \textbf{Harper S}, Lynch J. Global variability in low
+fruit and vegetable consumption. \emph{Am J Prev Med} 2009;
+36(5):402-409.
+
+Khang Y-H, Lynch J, Yang S, \textbf{Harper S}, Yun S-C, Jung-Choi K, Kim
+HR. The contribution of material, psychosocial, and behavioral factors
+in explaining educational and occupational mortality inequalities in a
+nationally representative sample of South Koreans: Relative and absolute
+perspectives. \emph{Soc Sci Med} 2009;68(5):858-66.
+
+\textbf{Harper S}, Lynch J, Meersman SC, Breen N, Davis WW, Reichman ME.
+An overview of methods for monitoring social disparities in cancer with
+an example using trends in lung cancer incidence by socioeconomic
+position and race-ethnicity, 1992-2004. \emph{Am J Epidemiol}
+2008;167(8):889-99.
+
+\textbf{Harper S}, Lynch J, Meersman SC, Breen N, Davis WW, Reichman ME.
+Response to Messer. \emph{Am J Epidemiol} 2008;167(8):905-7.
+
+\textbf{Harper S}, Lynch J. Trends in socioeconomic inequalities in
+adult health behaviors among U.S. states, 1990-2004 \emph{Public Health
+Rep} 2007;122(2):177-89.
+
+\textbf{Harper S}, Lynch J. Highly active antiretroviral therapy and
+socioeconomic inequalities in AIDS mortality in Spain. (letter)
+\emph{Eur J Public Health} 2007;17(2):231.
+
+\textbf{Harper S}, Lynch J, Burris S, Davey Smith G. Trends in the
+black-white life expectancy gap in the United States, 1983-2003.
+\emph{JAMA} 2007;297(11):1224-32.
+
+Cho H-J, Khang Y-H, Yang S, \textbf{Harper S}, Lynch J. Socioeconomic
+differentials in cause-specific mortality among South Korean
+adolescents. \emph{Int J Epidemiol} 2007; 36:50-57
+
+\textbf{Harper S}. Did clean water reduce black-white mortality
+inequalities in the United States? \emph{Int J Epidemiol} 2007;36:
+248-257.
+
+\textbf{Harper S}, Lynch J. Commentary: Using innovative inequality
+measures in epidemiology. \emph{Int J Epidemiol} 2007;36: 926-928.
+
+Lynch J, Davey Smith G, \textbf{Harper S}, Bainbridge K. Explaining the
+social gradient in coronary heart disease: comparing relative and
+absolute risk approaches. \emph{J Epidemiol Community Health}
+2006;60:436-441. (*2006 paper of the year nominee by \emph{Lancet}
+2007;369:91-92;cited in the Best of Epidemiology and Cardiovascular
+Prevention in 2006 by \emph{Archives des Maladies du Coeur et des
+Vaisseaux} 2007;100:57-64)
+
+Jackson R, Lynch J, \textbf{Harper S}. Does Rose?s population prevention
+axiom apply to coronary heart disease prevention in the 21st century?
+\emph{BMJ} 2006;332:617-618.
+
+Kelleher C, Lynch JW, Daly L, \textbf{Harper S}, Fitz-simon N, Bimpeh Y,
+Daly E, Ulmer H. The "Americanisation" of migrants: Evidence for the
+contribution of ethnicity, social deprivation, lifestyle and life-course
+processes to the mid-20th century coronary heart disease epidemic in the
+US. \emph{Soc Sci Med} 2006;63:465-84.
+
+\textbf{Harper S}. What explains widening geographic differences in life
+expectancy in New Zealand? \emph{Int J Epidemiol} 2006;35:604-6.
+
+Lynch J, \textbf{Harper S}, Davey Smith G, Kaplan G. Association between
+income inequality and mortality across U.S. states depends upon time
+period and source of income data. \emph{Am J Public Health}
+2005;95:1424-1430.
+
+Huynh M, Parker J, Pamuk E, \textbf{Harper S}, Schoendorf K. Contextual
+effect of income inequality on birth outcomes. \emph{Int J Epidemiol}
+2005;34: 888-895.
+
+Lynch J, Davey Smith G, \textbf{Harper S}, Hillemeier M, Ross N, Wolfson
+M. Is income inequality a determinant of population health? Part 1. A
+systematic review. \emph{Milbank Q} 2004;82(1):5-99.
+
+Lynch J, Davey Smith G, \textbf{Harper S}, Hillemeier M. Is income
+inequality a determinant of population health? Part 2. U.S. national and
+regional trends in income inequality and age- and cause-specific
+mortality. \emph{Milbank Q} 2004;82(2):355-400.
+
+Lynch J, \textbf{Harper S}, Davey Smith G, Ross N, Wolfson M, Dunn J. US
+regional and national cause-specific mortality and trends in income
+inequality: descriptive findings. \emph{Demographic Res} {[}serial
+online{]} 2004;Special collection 2(Article 8):184-228. Available at
+http://www.demographic-research.org/special/2/8/s2-8.pdf.
+
+Kelleher CC, Lynch JW, \textbf{Harper S}, Tay J, Nolan G. Hurling Alone?
+How social capital failed to save the Irish from cardio-vascular disease
+in the United States of America. \emph{Am J Public Health}
+2004;94:2162-9.
+
+Hillemeier MM, Lynch J, \textbf{Harper S}, Raghunathan T, Kaplan GA.
+Relative or absolute standards for child poverty: a state-level analysis
+of infant and child mortality. \emph{Am J Public Health} 2003;
+93(4):652-7.
+
+Hillemeier MM, Lynch J, \textbf{Harper S}, Casper M. Measuring
+contextual characteristics for community health. \emph{Health Serv Res}
+2003;38:1645-1718
+
+Lynch, J, \textbf{Harper S}, and Davey Smith G. Commentary: Plugging
+leaks and repelling boarders?where to next for the SS Income Inequality?
+\emph{Int J Epidemiol} 2003;32(6):1029-36
+
+\textbf{Harper S}, Lynch, J, Hsu, WL, Everson, SA, Hillemeier MM,
+Raghunathan TE, Salonen JT, Kaplan GA. Life course socioeconomic
+conditions and adult psychosocial functioning. \emph{Int J Epidemiol}
+2002;31(2):395-403.
 
 \subsubsection{Technical reports}\label{technical-reports}
 
-\begin{etaremune}
+Seboka S, Arnaud J, Therrien MC, Lamothe F, Authier MA, Kaiser D, Nandi
+A, \textbf{Harper S}, Nazar HA. Étude de compréhension des plans
+d'action communautaires de lutte à la COVID-19: impacts sur les
+indicateurs de suivi de la pandémie. Cité-ID LivingLab, Gouvernance de
+la résilience urbaine, ENAP; 2022 Mar 15
 
-\item Seboka S, Arnaud J, Therrien MC, Lamothe F, Authier MA, Kaiser D, Nandi A, \textbf{Harper S}, Nazar HA. Étude de compréhension des plans d’action communautaires de lutte à la COVID-19: impacts sur les indicateurs de suivi de la pandémie. Cité-ID LivingLab, Gouvernance de la résilience urbaine, ENAP; 2022 Mar 15
+Hetherington E, Nandi A, \textbf{Harper S}, Vincent I. Impact Evaluation
+Report. \emph{Tabora Newborn Maternal Health Initiative}. September 2021
+Available at
+\href{https://www.careevaluations.org/wp-content/uploads/TAMANI-impact-eval-report-FINAL.pdf}{CARE
+Evaluations}
 
-\item Hetherington E, Nandi A, \textbf{Harper S}, Vincent I. Impact Evaluation Report. \emph{Tabora Newborn Maternal Health Initiative}. September 2021 Available at
-\href{https://www.careevaluations.org/wp-content/uploads/TAMANI-impact-eval-report-FINAL.pdf}{CARE Evaluations}
+Levy J, \textbf{Harper S}. Using Inequality Measures to Incorporate
+Environmental Justice into Regulatory Analyses at US EPA. US
+Environmental Protection Agency, 2015.
 
-\item   Levy J, \textbf{Harper S}. Using Inequality Measures to Incorporate Environmental Justice into Regulatory Analyses at US EPA. US Environmental Protection Agency, 2015.
+\textbf{Harper S}, King N. \emph{Scan Of Scenario Building in Population
+Health With a Focus on Social Determinants Of Health}. Public Health
+Agency of Canada, 2009
 
-\item \textbf{Harper S}, King N. \emph{Scan Of Scenario Building in Population Health With a Focus on Social Determinants Of Health}. Public Health Agency of Canada, 2009
+\textbf{Harper S}, Lynch J. \emph{Selected Comparisons of Measures of
+Health Disparities: A Review Using Databases Containing Data Relevant to
+Healthy People 2010 Cancer Related Objectives}. National Cancer
+Institute, NCI Cancer Surveillance Monograph Series, Number 6, 2007.
 
-\item \textbf{Harper S}, Lynch J.  \emph{Selected Comparisons of Measures of Health Disparities: A Review Using Databases Containing Data Relevant to Healthy People 2010 Cancer Related Objectives}.  National Cancer Institute, NCI Cancer Surveillance Monograph Series, Number 6, 2007.
+\textbf{Harper S}, Lynch J. \emph{Methods for Measuring Cancer
+Disparities: Using Data Relevant to Healthy People 2010 Cancer-Related
+Objectives}. NCI Cancer Surveillance Monograph Series, Number 6.
+Bethesda, MD: National Cancer Institute, 2005. NIH Publication
+No.~05-5777.
 
-\item \textbf{Harper S}, Lynch J. \emph{Methods for Measuring Cancer Disparities: Using Data Relevant to Healthy People 2010 Cancer-Related Objectives}. NCI Cancer Surveillance Monograph Series, Number 6. Bethesda, MD: National Cancer Institute, 2005. NIH Publication No. 05-5777.
+Hillemeier MM, Lynch J, \textbf{Harper S}, Casper M. \emph{Data Set
+Directory of Social Determinants of Health at the Local Level}. Atlanta,
+GA: US Department of Health and Human Services, 2004
 
-\item Hillemeier MM, Lynch J, \textbf{Harper S}, Casper M.  \emph{Data Set Directory of Social Determinants of Health at the Local Level}.  Atlanta, GA: US Department of Health and Human Services, 2004 
-
-\item Eberhardt MS, Ingram DD, Makuc DM, Pamuk ER, Fried VM, \textbf{Harper SB}, Schoenborn CA, Xia H. \emph{Urban and Rural Health Chartbook}.  Health, United States, 2001. Hyattsville, MD: National Center for Health Statistics, 2001.
-
-
-\end{etaremune}
+Eberhardt MS, Ingram DD, Makuc DM, Pamuk ER, Fried VM, \textbf{Harper
+SB}, Schoenborn CA, Xia H. \emph{Urban and Rural Health Chartbook}.
+Health, United States, 2001. Hyattsville, MD: National Center for Health
+Statistics, 2001.
 
 \subsubsection{Reviews, book chapters,
 books}\label{reviews-book-chapters-books}
 
-\begin{etaremune}
+\textbf{Harper S}, Lynch J. Measuring and Decomposing Health
+Inequalities. In: Oakes JM, Kaufman JS (eds). Methods in Social
+Epidemiology, 2nd Edition; San Francisco, CA: Jossey-Bass, 2017,
+pp.~91-131.
 
-\item \textbf{Harper S}, Lynch J. Measuring and Decomposing Health Inequalities. In: Oakes JM, Kaufman JS (eds).  Methods in Social Epidemiology, 2nd Edition; San Francisco, CA: Jossey-Bass, 2017, pp. 91-131.
+Strumpf EC, \textbf{Harper S}, Kaufman JS, Fixed Effects and
+Difference-in-Differences. In: Oakes JM, Kaufman JS (eds). Methods in
+Social Epidemiology, 2nd Edition; San Francisco, CA: Jossey-Bass, 2017,
+pp.~341-68.
 
-\item Strumpf EC, \textbf{Harper S}, Kaufman JS, Fixed Effects and Difference-in-Differences. In: Oakes JM, Kaufman JS (eds).  Methods in Social Epidemiology, 2nd Edition; San Francisco, CA: Jossey-Bass, 2017, pp. 341-68.
+Agha G, \textbf{Harper S}, Easton CB, Fine M, Loucks EB. Socioeconomic
+position. In: Waldstein SR (ed.). Behavioral and Social Science in
+Medicine: Principles and Practice of Biopsychosocial Care. Springer,
+2015.
 
-\item   Agha G, \textbf{Harper S}, Easton CB, Fine M, Loucks EB. Socioeconomic position. In: Waldstein SR (ed.). Behavioral and Social Science in Medicine: Principles and Practice of Biopsychosocial Care. Springer, 2015.
+Hosseinpoor A, Bergen N, Ragins K, Barros JD, \textbf{Harper S}, Lee JH,
+Victora C. Health Inequality Monitoring: with a special focus on low-
+and middle-income countries. Geneva: World Health Organization, 2013.
 
-\item Hosseinpoor A, Bergen N, Ragins K, Barros JD, \textbf{Harper S}, Lee JH, Victora C. Health Inequality Monitoring: with a special focus on low- and middle-income countries. Geneva: World Health Organization, 2013. 
+\textbf{Harper S}, Lynch J. Measuring Health inequalities. In: Oakes JM,
+Kaufman JS (eds.). Methods in Social Epidemiology. San Francisco:
+Jossey-Bass, 2006, pp.~134-68.
 
-\item \textbf{Harper S}, Lynch J.  Measuring Health inequalities.  In: Oakes JM, Kaufman JS (eds.).  Methods in Social Epidemiology. San Francisco: Jossey-Bass, 2006, pp. 134-68.
-
-\item McKeown RE, \textbf{Harper SB}.  Epidemiology Kept Simple, by B. Burt Gerstman. Epimonitor 1999;20(6):11-2.
-
-\end{etaremune}
+McKeown RE, \textbf{Harper SB}. Epidemiology Kept Simple, by B. Burt
+Gerstman. Epimonitor 1999;20(6):11-2.
 
 \subsubsection{Abstracts and conference
 presentations}\label{abstracts-and-conference-presentations}
 
-\begin{etaremune}
+\textbf{Harper S}. Paper discussant of Wilding A, "Community asset
+participation improves health and reduces health inequalities". European
+Health Economics Association PhD Conference, 2021
 
-\item \textbf{Harper S}. Paper discussant of Wilding A, "Community asset participation improves health and reduces health inequalities". European Health Economics Association PhD Conference, 2021
+Nandi A, \textbf{Harper S}, Singh P, Agarwal P, Chandrashekhar A, Kumar
+S, Sridhar M. Affordable Daycare to Empower Indian Women. Canadian
+Economic Association Annual Meeting, Montreal, 2018.
 
-\item Nandi A, \textbf{Harper S}, Singh P, Agarwal P, Chandrashekhar A, Kumar S, Sridhar M. Affordable Daycare to Empower Indian Women. Canadian Economic Association Annual Meeting, Montreal, 2018.
+\textbf{Harper S}. Would Stronger Seat Belt Laws Reduce Motor Vehicle
+Crash Deaths? Semi-Bayesian Analysis. Population Association of America,
+Apr 2017
 
-\item \textbf{Harper S}. Would Stronger Seat Belt Laws Reduce Motor Vehicle Crash Deaths? Semi-Bayesian Analysis. Population
-Association of America, Apr 2017
+\textbf{Harper S}, Nandi A. Application of Natural Experiments to
+Evaluate and Answer Social and Development Questions. Institute for
+Financial Management and Research Training Session. Chennai, India, Nov
+11, 2016
 
-\item \textbf{Harper S}, Nandi A. Application of Natural Experiments to Evaluate and Answer Social and Development Questions. Institute for Financial Management and Research Training Session. Chennai, India, Nov 11, 2016
+Richardson R, Charters TJ, King NB, \textbf{Harper S}. Trends in
+socioeconomic inequalities in accidental drug poisoning mortality in the
+United States, 1994-2010. Society for Epidemiologic Research Annual
+Meeting, Seattle, WA, 2014
 
-\item   *Richardson R, Charters TJ, King NB, \textbf{Harper S}. Trends in socioeconomic inequalities in accidental drug poisoning mortality in the United States, 1994-2010. Society for Epidemiologic Research Annual Meeting, Seattle, WA, 2014
+Charters TJ, \textbf{Harper S}, Strumpf EC. Socioeconomic inequalities
+in Motor Vehicle Accident Deaths, USA 1995-2010. Poster presentation at
+Society for Epidemiologic Research Annual Meeting, Seattle, WA, 2014
 
-\item   Charters TJ, \textbf{Harper S}, Strumpf EC. Socioeconomic inequalities in Motor Vehicle Accident Deaths, USA 1995-2010. Poster presentation at Society for Epidemiologic Research Annual Meeting, Seattle, WA, 2014
+Koski A, *Hajizadeh M, Heymann J, Strumpf E, \textbf{Harper S}, and
+Nandi A. Increases in Paid Maternal Leave Associated with Reductions in
+Neonatal Mortality: A Multilevel Analysis of 300,000 Births from 20
+Low-And-Middle-Income Countries. Contributed session at Society for
+Epidemiologic Research Annual Meeting, Seattle, WA, 2014
 
-\item   *Koski A, *Hajizadeh M, Heymann J, Strumpf E, \textbf{Harper S}, and Nandi A. Increases in Paid Maternal Leave Associated with Reductions in Neonatal Mortality: A Multilevel Analysis of 300,000 Births from 20 Low-And-Middle-Income Countries. Contributed session at Society for Epidemiologic Research Annual Meeting, Seattle, WA, 2014
+Austin N, \textbf{Harper S}, Strumpf EC. Estimating the impact of racial
+residential segregation on birth weight: an instrumental variables
+approach. Poster presentation at Society for Epidemiologic Research
+Annual Meeting, Seattle, WA, 2014
 
-\item   *Austin N, \textbf{Harper S}, Strumpf EC. Estimating the impact of racial residential segregation on birth weight: an instrumental variables approach. Poster presentation at Society for Epidemiologic Research Annual Meeting, Seattle, WA, 2014
+\textbf{Harper S}, Charters TJ, E.C. Strumpf EC. Does seatbelt use
+explain socioeconomic differences in traffic accident mortality? Poster
+presentation at Society for Epidemiologic Research Annual Meeting,
+Seattle, WA, 2014
 
-\item   \textbf{Harper S}, Charters TJ, E.C. Strumpf EC. Does seatbelt use explain socioeconomic differences in traffic accident mortality? Poster presentation at Society for Epidemiologic Research Annual Meeting, Seattle, WA, 2014
+\textbf{Harper S}, King N, Young ME. The Impact of Framing the Scale of
+Inequality on Judgments about Intervention Impacts. ``Health Equity:
+What People Think'' Dalhousie 9 Oct 2013.
 
-\item   \textbf{Harper S}, King N, Young ME. The Impact of Framing the Scale of Inequality on Judgments about Intervention Impacts. “Health Equity: What People Think” Dalhousie 9 Oct 2013. 
+Speybroeck N, Carine Van Malderen C, \textbf{Harper S}, Müller B,
+Devleesschauwer B. Simulation models for socioeconomic inequalities of
+health: A systematic review. European Public Health Conference EUPHA
+13-16 Nov 2013.
 
-\item   Speybroeck N, Carine Van Malderen C, \textbf{Harper S}, Müller B, Devleesschauwer B. Simulation models for socioeconomic inequalities of health: A systematic review. European Public Health Conference EUPHA 13-16 Nov 2013.
+Auger N, \textbf{Harper S}, Barry AD. Socioeconomic inequality in life
+expectancy of Anglophones in Montréal. International Conference on
+Communication in Healthcare, September 29-October 2, 2013, Montreal,
+Quebec
 
-\item   Auger N, \textbf{Harper S}, Barry AD. Socioeconomic inequality in life expectancy of Anglophones in Montréal. International Conference on Communication in Healthcare, September 29-October 2, 2013, Montreal, Quebec 
+\textbf{Harper S}, *Adam-Smith J, King NB. Trends and demographic
+patterns in non-medical use of prescription opioids, 2002-2010. Society
+for Epidemiologic Research Annual Meeting, June 18-21, 2013, Boston, MA,
+USA.
 
-\item   \textbf{Harper S}, *Adam-Smith J, King NB. Trends and demographic patterns in non-medical use of prescription opioids, 2002-2010. Society for Epidemiologic Research Annual Meeting, June 18-21, 2013, Boston, MA, USA.
+\textbf{Harper S}, Nandi AK, Charters T, Strumpf EC, Nandi AK. The
+Effect of Recessions on Suicide Mortality in the United States. Society
+for Epidemiologic Research Annual Meeting, June 18-21, 2013, Boston, MA,
+USA.
 
-\item   \textbf{Harper S}, Nandi AK, Charters T, Strumpf EC, Nandi AK. The Effect of Recessions on Suicide Mortality in the United States. Society for Epidemiologic Research Annual Meeting, June 18-21, 2013, Boston, MA, USA.
+Smith BT, Smith PM, Manuel DG, \textbf{Harper S}, Mustard CA. The
+Association Between Socioeconomic Position, Modifiable Risk Factors and
+Heart Disease Incidence in Canada: The National Population Health
+Survey. Canadian Society for Epidemiology and Biostatistics Biennial
+Meeting, St John's, Newfoundland, March 8 2013.
 
-\item   Smith BT, Smith PM, Manuel DG, \textbf{Harper S}, Mustard CA. The Association Between Socioeconomic Position, Modifiable Risk Factors and Heart Disease Incidence in Canada: The National Population Health Survey. Canadian Society for Epidemiology and Biostatistics Biennial Meeting, St John’s, Newfoundland, March 8 2013.
+Nandi AK, Charters T, Strumpf EC, \textbf{Harper S}. The Effect of
+Recessions on Suicide Mortality in the United States. Canadian Society
+for Epidemiology and Biostatistics Biennial Meeting, St John's,
+Newfoundland, March 8 2013.
 
-\item   Nandi AK, Charters T, Strumpf EC, \textbf{Harper S}. The Effect of Recessions on Suicide Mortality in the United States. Canadian Society for Epidemiology and Biostatistics Biennial Meeting, St John’s, Newfoundland, March 8 2013.
+Smith BT, Smith PM, Manuel DG, \textbf{Harper S}, Mustard CA. The
+Association Between Socioeconomic Position, Modifiable Risk Factors and
+Heart Disease Incidence in Canada: The National Population Health
+Survey. Canadian Society for Epidemiology and Biostatistics Biennial
+Meeting, St John's, Newfoundland, March 8 2013.
 
-\item   Smith BT, Smith PM, Manuel DG, \textbf{Harper S}, Mustard CA. The Association Between Socioeconomic Position, Modifiable Risk Factors and Heart Disease Incidence in Canada: The National Population Health Survey. Canadian Society for Epidemiology and Biostatistics Biennial Meeting, St John’s, Newfoundland, March 8 2013.
+\textbf{Harper S}, Ruder E, Roman HA, Geggel A, Payne-Sturges D, Levy
+JI. Using inequality measures to incorporate environmental justice into
+regulatory analyses at the United States Environmental Protection
+Agency. Environmental Health 2013, Boston, MA, USA, March 3-6, 2013.
 
-\item   \textbf{Harper S}, Ruder E, Roman HA, Geggel A, Payne-Sturges D, Levy JI. Using inequality measures to incorporate environmental justice into regulatory analyses at the United States Environmental Protection Agency. Environmental Health 2013, Boston, MA, USA, March 3-6, 2013.
+Hutcheon JA, \textbf{Harper S}, Strumpf EC, Lee L, Marquette G. Risks
+and benefits of routine labour induction at 41+0 weeks: an analysis of
+inter-institutional practice variation. Annual Meeting of the Society
+for Maternal Fetal Medicine, San Francisco, CA USA, Feb 11-16, 2013.
 
-\item   Hutcheon JA, \textbf{Harper S}, Strumpf EC, Lee L, Marquette G. Risks and benefits of routine labour induction at 41+0 weeks: an analysis of inter-institutional practice variation. Annual Meeting of the Society for Maternal Fetal Medicine, San Francisco, CA USA, Feb 11-16, 2013.
+King NB, \textbf{Harper S}, Young ME. Use of relative and absolute
+effect measures in reporting health inequalities: a structured review.
+ACT Now: Accuracy, Completeness, and Transparency in health research
+reporting organised by the EQUATOR Network, Freiburg, Germany from
+11th-12th October 2012.
 
-\item King NB, \textbf{Harper S}, Young ME. Use of relative and absolute effect measures in reporting health inequalities: a structured review. ACT Now: Accuracy, Completeness, and Transparency in health research reporting organised by the EQUATOR Network, Freiburg, Germany from 11th-12th October 2012.
+Young ME, King N, \textbf{Harper S}. The impact of framing on judgments
+about health inequalities. Society for Medical Decision Making. October
+22-26, 2011, Chicago, IL.
 
-\item   Young ME, King N, \textbf{Harper S}. The impact of framing on judgments about health inequalities. Society for Medical Decision Making. October 22-26, 2011, Chicago, IL.
+Young ME, King N, \textbf{Harper S}. The influence of popular media on
+perceptions of personal and population risk in possible disease
+outbreaks. Society for Medical Decision Making. October 22-26, 2011,
+Chicago, IL.
 
-\item   Young ME, King N, \textbf{Harper S}. The influence of popular media on perceptions of personal and population risk in possible disease outbreaks. Society for Medical Decision Making. October 22-26, 2011, Chicago, IL.
+Frenz P, Delgado I, Kaufman J, \textbf{Harper S}. Changes in equity of
+access to health care after health reform in Chile. International
+Society for Equity in Health, 6th International Conference, September
+26-28, 2011, Cartagena, Colombia.
 
-\item   Frenz P, Delgado I, Kaufman J, \textbf{Harper S}. Changes in equity of access to health care after health reform in Chile. International Society for Equity in Health, 6th International Conference, September 26-28, 2011, Cartagena, Colombia.
+Young ME, King NB, \textbf{Harper S}, Humphreys KR. The influence of
+popular media on perceptions of personal and population risk in possible
+disease outbreaks. Society for Medical Decision Making, Toronto, 2010
 
-\item   Young ME, King NB, \textbf{Harper S}, Humphreys KR. The influence of popular media on perceptions of personal and population risk in possible disease outbreaks. Society for Medical Decision Making, Toronto, 2010
+Bennett C, Manuel D, Flanagan WM, Tuna M, Okhmatovskaya A, Finès P,
+Sayre EC, \textbf{Harper S}. Reporting guidelines for modelling studies.
+Third General Conference of the International Microsimulation
+Association, 8-10 June 2011, Stockholm
 
-\item   Bennett C, Manuel D, Flanagan WM, Tuna M, Okhmatovskaya A, Finès P, Sayre EC, \textbf{Harper S}. Reporting guidelines for modelling studies. Third General Conference of the International Microsimulation Association, 8-10 June 2011, Stockholm
+Sirjoosingh C, Ramanakumar A, \textbf{Harper S}, Strumpf E, Portelance
+L, Ferenczy A, Gilbert L, Franco E. Racial Disparities in Cervical
+Cancer Treatment and Survival in the United States. 26th International
+Papillomavirus Conference, Montreal, QC, July 2010
 
-\item   Sirjoosingh C, Ramanakumar A, \textbf{Harper S}, Strumpf E, Portelance L, Ferenczy A, Gilbert L, Franco E. Racial Disparities in Cervical Cancer Treatment and Survival in the United States. 26th International Papillomavirus Conference, Montreal, QC, July 2010
+Sayre EC, Kopec JA, Sharif B, Flanagan WM, Fines P, Rahman M,
+Abrahamowicz M, Buckeridge D, \textbf{Harper S}, Lynch J, Manuel D,
+Oderkirk J, Wolfson M. Projecting the effects of a 5-point reduction in
+body mass index on knee or hip osteoarthritis and health-related quality
+of life in a closed population to 2031: a microsimulation study. 2010
+American College of Rheumatology ACR/AHRP Annual Scientific Meeting,
+Atlanta, GA, USA, November 6-11, 2010
 
-\item   Sayre EC, Kopec JA, Sharif B, Flanagan WM, Fines P, Rahman M, Abrahamowicz M, Buckeridge D, \textbf{Harper S}, Lynch J, Manuel D, Oderkirk J, Wolfson M. Projecting the effects of a 5-point reduction in body mass index on knee or hip osteoarthritis and health-related quality of life in a closed population to 2031: a microsimulation study. 2010 American College of Rheumatology ACR/AHRP Annual Scientific Meeting, Atlanta, GA, USA, November 6-11, 2010
+Young ME, \textbf{Harper S}, King NB. Who cares about health
+inequalities? Findings from the World Health Survey. Society for Medical
+Decision Making, Toronto, 2010
 
-\item   Young ME, \textbf{Harper S}, King NB. Who cares about health inequalities? Findings from the World Health Survey. Society for Medical Decision Making, Toronto, 2010
+\textbf{Harper S}, King NB, Young ME. Who cares about health
+inequalities? Society for Epidemiologic Research, Seattle, 2010
 
-\item   \textbf{Harper S}, King NB, Young ME. Who cares about health inequalities? Society for Epidemiologic Research, Seattle, 2010
+King N, \textbf{Harper S}. Justice, by the numbers, or, can ethicists do
+policy without math? Presentation CREUM, University of Montreal, 2010
 
-\item   King N, \textbf{Harper S}. Justice, by the numbers, or, can ethicists do policy without math? Presentation CREUM, University of Montreal, 2010
+Auger N, Roncarlo F, \textbf{Harper S}. Rising educational inequality in
+preterm birth in Québec. Canadian Public Health Association Annual
+Meeting, Toronto, 2010
 
-\item   Auger N, Roncarlo F, \textbf{Harper S}. Rising educational inequality in preterm birth in Québec. Canadian Public Health Association Annual Meeting, Toronto, 2010
+\textbf{Harper S}. Methods for Assessing Disproportionality. EPA
+Symposium on Strengthening Environmental Justice and Decision Making.
+Washington, DC, 2010
 
-\item   \textbf{Harper S}. Methods for Assessing Disproportionality. EPA Symposium on Strengthening Environmental Justice and Decision Making. Washington, DC, 2010
+\textbf{Harper S}. Do Mandatory Seat Belt Laws Affect Socioeconomic
+Inequalities in Seat Belt Use? Department of Epidemiology Seminar,
+University of Michigan, 2010
 
-\item \textbf{Harper S}. Do Mandatory Seat Belt Laws Affect Socioeconomic Inequalities in Seat Belt Use? Department of Epidemiology Seminar, University of Michigan, 2010
+Renahy E, Alvarado-Llano B, \textbf{Harper S}, Quesnel-Vallée A. Social
+Exclusion as a Determinant of Health Inequalities. Population
+Association of America Annual Meeting, 2010
 
-\item Renahy E, Alvarado-Llano B, \textbf{Harper S}, Quesnel-Vallée A. Social Exclusion as a Determinant of Health Inequalities. Population Association of America Annual Meeting, 2010
+Smith BT, Loucks EB, \textbf{Harper S}, Abrahamowicz M, Fox CS, Lynch
+JW. Life course socioeconomic position and incidence of type 2 diabetes:
+Framingham Offspring Study. Society for Epidemiologic Research Annual
+Meeting, 2009.
 
-\item   Smith BT, Loucks EB, \textbf{Harper S}, Abrahamowicz M, Fox CS, Lynch JW. Life course socioeconomic position and incidence of type 2 diabetes: Framingham Offspring Study. Society for Epidemiologic Research Annual Meeting, 2009.
+Agha G, Murabito JM, Lynch JW, Abrahamowicz M, \textbf{Harper S}B,
+Loucks EB. Lifecourse socioeconomic position and ankle-brachial index.
+Society for Epidemiologic Research Annual Meeting, 2009.
 
-\item   Agha G, Murabito JM, Lynch JW, Abrahamowicz M, \textbf{Harper S}B, Loucks EB. Lifecourse socioeconomic position and ankle-brachial index. Society for Epidemiologic Research Annual Meeting, 2009.
+\textbf{Harper S}. Global inequalities in tobacco consumption. Robert
+Wood Johnson Health and Society Scholars Lecture, University of
+Michigan, 2009
 
-\item   \textbf{Harper S}. Global inequalities in tobacco consumption.  Robert Wood Johnson Health and Society Scholars Lecture, University of Michigan, 2009
+Breen N, Scoppa S, \textbf{Harper S}, Meersman S, Campbell D, Reichman
+ME. Introduction to Health Disparities Calculator (HD*Calc). American
+Public Health Association Annual Meeting, 2009
 
-\item   Breen N, Scoppa S, \textbf{Harper S}, Meersman S, Campbell D, Reichman ME. Introduction to Health Disparities Calculator (HD*Calc).  American Public Health Association Annual Meeting, 2009
+Hosseinpoor AR, Abouzhar C, Mathers CD, \textbf{Harper S}, Lynch J.
+Global inequality in life expectancy among women and among men,
+1970-2005. XXVI IUSSP International Population Conference. Marrakech,
+Morroco 2009
 
-\item   Hosseinpoor AR, Abouzhar C, Mathers CD, \textbf{Harper S}, Lynch J.  Global inequality in life expectancy among women and among men, 1970-2005.   XXVI IUSSP International Population Conference.  Marrakech, Morroco 2009
+King N, \textbf{Harper S}. What's Wrong with Health Inequalities? Hixon
+Hour Lecture, University of Kansas Medical Center, April, 2008.
 
-\item King N, \textbf{Harper S}.  What's Wrong with Health Inequalities? Hixon Hour Lecture, University of Kansas Medical Center, April, 2008.
+\textbf{Harper S}, Yang S, Lynch J. Is There a Suicide Belt in the
+United States? Society for Epidemiologic Research Annual Meeting,
+Chicago, IL, 2008
 
-\item   \textbf{Harper S}, Yang S, Lynch J.  Is There a Suicide Belt in the United States?  Society for Epidemiologic Research Annual Meeting, Chicago, IL, 2008
+King N, \textbf{Harper S}. The Moral Complexity of Measurement, or, All
+Health Inequalities are not Created Equal. Paper presented at the annual
+European Society of Medicine and Health Care conference in Cardiff,
+United Kingdom, August 15-18, 2007.
 
-\item   King N, \textbf{Harper S}.  The Moral Complexity of Measurement, or, All Health Inequalities are not Created Equal.  Paper presented at the annual European Society of Medicine and Health Care conference in Cardiff, United Kingdom, August 15-18, 2007.
+\textbf{Harper S}, Lynch J, Burris S. Do mandatory seat belt laws reduce
+inequalities in seat belt use? Society for Epidemiologic Research Annual
+Meeting, Boston, MA, 2007
 
-\item   \textbf{Harper S}, Lynch J, Burris S.  Do mandatory seat belt laws reduce inequalities in seat belt use?  Society for Epidemiologic Research Annual Meeting, Boston, MA, 2007
+Lynch J, \textbf{Harper S}, Davey Smith G. Health equity and
+globalization: Reflections on 25 years of research on social
+inequalities in health. Australian Health Promotion Association Annual
+Meeting, Adelaide, 2007
 
-\item Lynch J, \textbf{Harper S}, Davey Smith G.  Health equity and globalization: Reflections on 25 years of research on social inequalities in health. Australian Health Promotion Association Annual Meeting, Adelaide, 2007
+Kurz D, Platt J, Kunnath J, \textbf{Harper S}, Lynch J. Bridging Online
+Learning for Non-Traditional Students. Twelfth Sloan-C International
+Conference on Asynchronous Learning Networks, Orlando, FL, 2006.
 
-\item   Kurz D, Platt J, Kunnath J, \textbf{Harper S}, Lynch J. Bridging Online Learning for Non-Traditional Students.  Twelfth Sloan-C International Conference on Asynchronous Learning Networks, Orlando, FL, 2006.
+Kurz D, Platt J, Kunnath J, \textbf{Harper S}, Lynch J. Connecting the
+public health practice and academic communities through innovative
+training to address health disparities. American Public Health
+Association Annual Meeting, Boston, MA, 2006.
 
-\item   Kurz D, Platt J, Kunnath J, \textbf{Harper S}, Lynch J. Connecting the public health practice and academic communities through innovative training to address health disparities.  American Public Health Association Annual Meeting, Boston, MA, 2006.
+\textbf{Harper S}, Lynch J. Why has the black-white life expectancy gap
+declined? Paper presented at the Population Association of America
+Annual Meeting, Los Angeles, CA, 2006.
 
-\item   \textbf{Harper S}, Lynch J.  Why has the black-white life expectancy gap declined?  Paper presented at the Population Association of America Annual Meeting, Los Angeles, CA, 2006.
+\textbf{Harper S}, Lynch J. Accounting for changes in health
+inequalities in obesity and smoking in the United States, 1960-2000.
+Paper presented at the Population Association of America Annual Meeting,
+Los Angeles, CA, 2006.
 
-\item   \textbf{Harper S}, Lynch J.  Accounting for changes in health inequalities in obesity and smoking in the United States, 1960-2000.  Paper presented at the Population Association of America Annual Meeting, Los Angeles, CA, 2006.
+King N, \textbf{Harper S}. If racial disparities in health are the
+problem, can racially targeted drugs be a solution? Paper presented at
+the Race, Pharmaceuticals, and Medical Technologies conference at MIT,
+Boston, MA, April 7-8, 2006.
 
-\item   King N, \textbf{Harper S}.  If racial disparities in health are the problem, can racially targeted drugs be a solution?  Paper presented at the Race, Pharmaceuticals, and Medical Technologies conference at MIT, Boston, MA, April 7-8, 2006.
+\textbf{Harper S}, Lynch J, Raghunathan. Changes in socioeconomic
+inequality and health achievement in obesity and smoking among U.S.
+states, 1990-2002. Paper presented at the American Public Health
+Association Annual Conference, Washington, DC, 2004
 
-\item   \textbf{Harper S}, Lynch J, Raghunathan.  Changes in socioeconomic inequality and health achievement in obesity and smoking among U.S. states, 1990-2002.  Paper presented at the American Public Health Association Annual Conference, Washington, DC, 2004
+\textbf{Harper S}, Yang S, Angell SA, Hillemeier MM, Morenoff J, Davey
+Smith G, Lynch JW. Is social capital associated with all causes of
+death? Paper presented at the American Public Health Association Annual
+Conference, Washington, DC, 2004
 
-\item   \textbf{Harper S}, Yang S, Angell SA, Hillemeier MM, Morenoff J,  Davey Smith G, Lynch JW.  Is social capital associated with all causes of death?  Paper presented at the American Public Health Association Annual Conference, Washington, DC, 2004
+\textbf{Harper S}, Lynch J, Raghunathan T. Monitoring Socioeconomic
+Health Disparities: Smoking, Obesity, and Physical Inactivity in U.S.
+States 1990-2002. Paper presented at the 2nd National CDC Prevention
+Conference on Heart Disease and Stroke, Atlanta, GA, 17 August 2004.
 
-\item \textbf{Harper S}, Lynch J, Raghunathan T.  Monitoring Socioeconomic Health Disparities: Smoking, Obesity, and Physical Inactivity in U.S. States 1990-2002. Paper presented at the 2nd National CDC Prevention Conference on Heart Disease and Stroke, Atlanta, GA, 17 August 2004.
+\textbf{Harper S}, Lynch J, Raghunathan T. Application of Relative Risk
+and Health Concentration Index to Monitoring Trends in Socioeconomic
+Inequalities in Obesity and Smoking among U.S. States. Paper presented
+at the Society for Epidemiologic Research Annual Conference, Salt Lake
+City, UT, 17 June 2004.
 
-\item   \textbf{Harper S}, Lynch J, Raghunathan T.  Application of Relative Risk and Health Concentration Index to Monitoring Trends in Socioeconomic Inequalities in Obesity and Smoking among U.S. States. Paper presented at the Society for Epidemiologic Research Annual Conference, Salt Lake City, UT, 17 June 2004.
+Huynh M, Parker J, Pamuk E, \textbf{Harper S}, Schoendorf K. Income
+inequality may affect birth outcome through several pathways in a
+nationally representative cohort of US women. Poster presented at the
+Society for Perinatal Epidemiologic Research Annual Conference, Salt
+Lake City, UT, 15 June 2004.
 
-\item   Huynh M, Parker J, Pamuk E, \textbf{Harper S}, Schoendorf K. Income inequality may affect birth outcome through several pathways in a nationally representative cohort of US women.  Poster presented at the Society for Perinatal Epidemiologic Research Annual Conference, Salt Lake City, UT, 15 June 2004.
-
-\item   \textbf{Harper S}, Ronzio CR, Pamuk E.  Metropolitan area structural inequality and mortality.  Paper presented at the American Public Health Association Annual Conference, Boston, 2000.
-
-\end{etaremune}
+\textbf{Harper S}, Ronzio CR, Pamuk E. Metropolitan area structural
+inequality and mortality. Paper presented at the American Public Health
+Association Annual Conference, Boston, 2000.
 
 \subsubsection{Policy briefs}\label{policy-briefs}
 
-\begin{etaremune}
+Clark S, \textbf{Harper S}, Weber B. 2022. ``Growing Up in Rural
+America: New Disadvantages and Surprising Advantages.'' Brief 2022-9.
+\emph{Rural Population Research Network}.
 
-\item Clark S, \textbf{Harper S}, Weber B. 2022. “Growing Up in Rural America: New Disadvantages and Surprising Advantages.” Brief 2022-9. \emph{Rural Population Research Network}.
+Nazar H, Nandi A, \textbf{Harper S}. 2018. "Affordable Daycare for
+Empowering Indian Women". Policy Brief.
 
-\item Nazar H, Nandi A, \textbf{Harper S}. 2018. "Affordable Daycare for Empowering Indian Women". Policy Brief.
-
-\end{etaremune}
 
 
 

@@ -2,10 +2,12 @@
   {
     "listing": "/talks/index.html",
     "items": [
+      "/talks/rff-le/index.html",
       "/talks/asm/index.html",
       "/talks/des-mlm/index.html",
       "/talks/des-dd/index.html",
       "/talks/mortal/index.html",
+      "/talks/rff-bhet/index.html",
       "/talks/nasem/index.html",
       "/talks/ser/index.html",
       "/talks/hei/index.html",

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.samharper.org/cv/index.html</loc>
-    <lastmod>2025-02-04T15:52:33.649Z</lastmod>
+    <lastmod>2025-04-28T13:03:31.575Z</lastmod>
   </url>
   <url>
     <loc>https://www.samharper.org/teaching/epib-706-fall-2020/index.html</loc>
@@ -259,5 +259,13 @@
   <url>
     <loc>https://www.samharper.org/teaching/pphs-617-2020/index.html</loc>
     <lastmod>2024-11-25T19:02:31.642Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/talks/rff-bhet/index.html</loc>
+    <lastmod>2025-02-25T11:03:00.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.samharper.org/talks/rff-le/index.html</loc>
+    <lastmod>2025-02-25T11:27:43.825Z</lastmod>
   </url>
 </urlset>
