@@ -4,20 +4,15 @@ execute:
   echo: false
   message: false
   warning: false
-# listing:
-#   - id: articles
-#     contents: "*/index.qmd"
-#     sort: "date desc"
-#     # template: ../html/research/listing.ejs
-#     categories: true
 page-layout: full
 include-back-link: false
 toc-location: right
-cache: true
+cache: false
 ---
 
 ```{r setup}
 library(here)
+library(htmltools)
 source(here("_common.R"))
 
 pubs <- get_pubs()

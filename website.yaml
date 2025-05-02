@@ -331,6 +331,55 @@ references:
   URL: https://linkinghub.elsevier.com/retrieve/pii/S0828282X18300163
   volume: '34'
 
+- id: bannon2025
+  accessed:
+    - year: 2025
+      month: 4
+      day: 30
+  author:
+    - family: Bannon
+      given: Olivia S.
+    - family: Been
+      given: Jasper V.
+    - family: Harper
+      given: Sam
+    - family: Laverty
+      given: Anthony A.
+    - family: Millett
+      given: Christopher
+    - family: Lenthe
+      given: Frank J.
+      non-dropping-particle: van
+    - family: Filippidis
+      given: Filippos T.
+    - family: Radó
+      given: Márta K.
+  citation-key: bannon2025
+  container-title: The Lancet Public Health
+  container-title-short: The Lancet Public Health
+  DOI: 10.1016/S2468-2667(25)00065-9
+  ISSN: 2468-2667
+  issue: '5'
+  issued:
+    - year: 2025
+      month: 5
+      day: 1
+  language: English
+  page: e380-e390
+  publisher: Elsevier
+  source: www.thelancet.com
+  title: >-
+    Cigarette taxation and socioeconomic inequalities in under-5 mortality
+    across 94 low-income and middle-income countries: a longitudinal ecological
+    study
+  title-short: >-
+    Cigarette taxation and socioeconomic inequalities in under-5 mortality
+    across 94 low-income and middle-income countries
+  type: article-journal
+  URL: >-
+    https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(25)00065-9/fulltext
+  volume: '10'
+
 - id: breen2017
   abstract: >-
     Colorectal cancer mortality rates dropped by half in the past three decades,
@@ -1640,6 +1689,61 @@ references:
   type: article-journal
   URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11544523/
   volume: '14'
+
+- id: richardson2025
+  abstract: >-
+    Loneliness is highly prevalent and can have severe health consequences.
+    While generally assumed to increase with age, some evidence suggests the
+    relationship between age and loneliness may vary across country. In this
+    study, we investigate the contribution of demographic and health factors to
+    age-related inequalities in loneliness both within and across countries. We
+    used population-based cross-sectional data from 64,324 older adults (age
+    range: 50–90 years) across 29 countries. Loneliness was measured with the 3
+    item UCLA loneliness scale. We quantified the magnitude of age inequalities
+    in loneliness using concentration indices, and we estimated the contribution
+    of demographic and health factors to age inequalities in loneliness using a
+    decomposition approach. Loneliness was generally more concentrated among the
+    oldest adults in the sample, although in the US and the Netherlands it was
+    more concentrated among younger adults. Top contributors to age inequalities
+    in loneliness were being unmarried and not working; however, the amount that
+    factors contributed to inequalities differed markedly by country. Age
+    inequalities in loneliness, and contributors to these inequalities, vary
+    substantially across countries, suggesting that loneliness is not an
+    inevitable consequence of age but may instead be shaped by environments
+    within countries (e.g. social cohesion).
+  accessed:
+    - year: 2025
+      month: 4
+      day: 30
+  author:
+    - family: Richardson
+      given: Robin A.
+    - family: Harper
+      given: Sam
+    - family: Keyes
+      given: Katherine K.
+    - family: Crowe
+      given: Christopher L.
+    - family: Calvo
+      given: Esteban
+  citation-key: richardson2025
+  container-title: Aging & Mental Health
+  DOI: 10.1080/13607863.2025.2473634
+  ISSN: 1360-7863
+  issue: '0'
+  issued:
+    - year: 2025
+  page: 1-9
+  PMID: '40259450'
+  publisher: Routledge
+  source: Taylor and Francis+NEJM
+  title: >-
+    Contributors to age inequalities in loneliness among older adults: a
+    decomposition analysis of 29 countries
+  title-short: Contributors to age inequalities in loneliness among older adults
+  type: article-journal
+  URL: https://doi.org/10.1080/13607863.2025.2473634
+  volume: '0'
 
 - id: socha2023
   abstract: "Treatment effects can be measured on the relative scale (eg, risk ratios, odds ratios) or the absolute scale (eg, risk differences). If the baseline risk of an outcome is different between subgroups, the effect of the treatment will differ between subgroups on at least one scale (relative, absolute, or both). We illustrate this using two examples from the literature where only relative effects were estimated, but conclusions about subgroup differences would likely have changed had absolute effects also been considered. To identify all meaningful subgroup differences, researchers and clinicians should compare\_effects on the relative and absolute scale."

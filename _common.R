@@ -15,22 +15,6 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-# gscholar_stats <- function(url) {
-#   cites <- get_cites(url)
-#   return(glue::glue(
-#     'Citations: {cites$citations} | h-index: {cites$hindex} | i10-index: # {cites$i10index}'
-#   ))
-# }
-# 
-# get_cites <- function(url) {
-#   html <- xml2::read_html(url)
-#   node <- rvest::html_nodes(html, xpath='//*[@id="gsc_rsb_st"]')
-#   cites_df <- rvest::html_table(node)[[1]]
-#   cites <- data.frame(t(as.data.frame(cites_df)[,2]))
-#   names(cites) <- c('citations', 'hindex', 'i10index')
-#   return(cites)
-# }
-
 # Vancouver style author formatting
 format_author_vancouver <- function(author_name) {
   # Split the author name by comma
@@ -56,29 +40,27 @@ reformat_authors_vancouver <- function(authors) {
   return(paste(formatted_authors, collapse = ", "))
 }
 
-# Function to get the URL from CrossRef
+
+library(bib2df)
+library(dplyr)
+library(stringr)
+library(rcrossref)
+library(here)
+library(readr)
+
+# Helper: fallback URL resolver
 get_crossref_url <- function(doi) {
-  # Check if DOI is missing or NA
-  if (is.na(doi) || doi == "") {
-    return(NA)
-  }
-  tryCatch(
-    {
-      # Query CrossRef and extract the URL from the link tibble
-      res <- cr_works(doi)
-      if (!is.null(res$data$link)) {
-        # Extract the first URL from the 'link' tibble
-        res$data$link[[1]]$URL[1]
-      } else {
-        # Return NA if no link is available
-        NA
-      }
-    },
-    error = function(e) {
-      # Return NA if there's an error
-      NA
+  if (is.na(doi) || doi == "") return(NA)
+
+  tryCatch({
+    res <- cr_works(doi)
+    if (!is.null(res$data$link) && "URL" %in% names(res$data$link[[1]])) {
+      return(res$data$link[[1]]$URL[1])
     }
-  )
+    paste0("https://doi.org/", doi)
+  }, error = function(e) {
+    NA
+  })
 }
 
 # Define name replacements
@@ -108,22 +90,52 @@ name_replacements <- c(
       'Mah SM' = 'Mah SM*')
       # Add more names as needed
 
+# function to clean and standardize titles before joining:
+
+normalize_title <- function(title) {
+  title %>%
+    str_to_lower() %>%
+    #str_replace_all("[[:punct:]]", "") %>%  # remove punctuation
+    str_replace_all("[–—−‐‑]", "-")     # normalize dash variants
+    #str_squish()                            # collapse whitespace
+}
+
+# Main function
 get_pubs <- function() {
-    pubs <- here("papers", "website.bib") %>% 
-      bib2df() %>% rename_with(tolower) %>%
-      arrange(desc(date)) %>%
-      mutate(title = gsub("[{}]", "", title),
-             booktitle = gsub("[{}]", "", booktitle),
-             mtitle = str_to_lower(title),
-             stitle = word(string = mtitle, start = 1, 
-              end = 4, sep = fixed(" ")),
-             year = str_sub(date, 1,4),
-             url = ifelse(is.na(url),
-               sapply(doi, get_crossref_url), url),
-             url = gsub("\\.pdf|\\?(.*)", "", url))
-    gsp <- read_rds(here("data", "gspubs.rds")) %>%
-       select(mtitle, cites, id_scholar)
-    
+  # Load bib and standardize fields
+  pubs <- here("papers", "website.bib") %>%
+    bib2df() %>%
+    rename_with(tolower) %>%
+    arrange(desc(date)) %>%
+    mutate(
+      title     = gsub("[{}]", "", title),
+      booktitle = gsub("[{}]", "", booktitle),
+      mtitle    = normalize_title(title),
+      stitle    = word(mtitle, 1, 4, sep = fixed(" ")),
+      year      = str_sub(date, 1, 4)
+    )
+
+  # Resolve missing URLs
+  missing <- pubs %>%
+    filter((is.na(url) | url == "") & !is.na(doi) & doi != "")
+
+  if (nrow(missing) > 0) {
+    message(glue::glue("Looking up {nrow(missing)} missing URLs from CrossRef..."))
+    resolved <- sapply(missing$doi, get_crossref_url)
+    pubs <- pubs %>%
+      left_join(tibble(doi = missing$doi, url_resolved = resolved), by = "doi") %>%
+      mutate(
+        url = ifelse(is.na(url) | url == "", url_resolved, url),
+        url = gsub("\\.pdf|\\?(.*)", "", url)
+      ) %>%
+      select(-url_resolved)
+  }
+
+  # Merge in Google Scholar metrics if available
+  gsp_path <- here("data", "gspubs.rds")
+  if (file.exists(gsp_path)) {
+    gsp <- read_rds(gsp_path) %>%
+      select(mtitle, cites, id_scholar)
     pubs <- pubs %>% 
       left_join(gsp, by = "mtitle") %>%
       select(-mtitle, -stitle)
@@ -139,10 +151,11 @@ get_pubs <- function() {
     pubs$url_summary <- file.path(pubs$bibtexkey, "index.html")
     pubs$url_scholar <- ifelse(
       is.na(pubs$id_scholar), NA, 
-      glue::glue('https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ipf8idcAAAAJ&citation_for_view=Ipf8idcAAAAJJ:{pubs$id_scholar}')
+      glue::glue('https://scholar.google.com/citations?view_op=view_citation&hl=en&user#=Ipf8idcAAAAJ&citation_for_view=Ipf8idcAAAAJJ:{pubs$id_scholar}')
     )
-    
-    return(pubs)
+  }
+
+  return(pubs)
 }
 
 make_citations <- function(pubs) {
@@ -267,11 +280,11 @@ make_altmetric <- function(pub) {
 }
 
 aside <- function(text) {
-  return(tag("aside", list(text)))
+  return(htmltools::tag("aside", list(text)))
 }
 
 center <- function(text) {
-  return(tag("center", list(text)))
+  return(htmltools::tag("center", list(text)))
 }
 
 aside_center <- function(text) {
@@ -279,7 +292,7 @@ aside_center <- function(text) {
 }
 
 aside_center_b <- function(text) {
-  return(aside(center(list(tag("b", text)))))
+  return(aside(center(list(htmltools::tag("b", text)))))
 }
 
 markdown_to_html <- function(text) {
@@ -298,7 +311,7 @@ markdown_to_html <- function(text) {
   )
   
   # Render the text as HTML
-  return(HTML(markdown::renderMarkdown(text = text)))
+  return(htmltools::HTML(markdown::renderMarkdown(text = text)))
 }
 
 make_icons <- function(pub) {
@@ -379,11 +392,11 @@ icon_link <- function(
 }
 
 make_icon_text <- function(icon, text) {
-  return(HTML(paste0(make_icon(icon), " ", text)))
+  return(htmltools::HTML(paste0(make_icon(icon), " ", text)))
 }
 
 make_icon <- function(icon) {
-  return(tag("i", list(class = icon)))
+  return(htmltools::tag("i", list(class = icon)))
 }
 
 last_updated <- function() {
