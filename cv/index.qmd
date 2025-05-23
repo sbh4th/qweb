@@ -60,7 +60,7 @@ editor_options:
 # Appointments
 
 |   |   |
-|---|---|
+|:---|:---|
 | 2024-present | Professor, Department of Epidemiology, Biostatistics & Occupational Health, McGill University                           |
 | 2019-2022 | Endowed Chair of of Impact of Health and Social Policies on Health Inequality, Erasmus Medical Center, Rotterdam, The Netherlands |
 | 2015-2024 | Associate Professor, Department of Epidemiology, Biostatistics & Occupational Health, McGill University                           |
@@ -246,7 +246,8 @@ editor_options:
 ### International
 |   |     |
 |---|-----|
-| 2024 | *Impacts of transitioning to clean household energy.* Seminar given at the University of Copenhagen Section of Social Medicine, Copenhagen, DK, Nov 21, 2024 |
+| 2025 | *Do we need 'Natural Experiments'?* Seminar given (remotely) for the launch of the UK MRC's *Framework for natural experimental evaluations: Launch event*, May 23, 2025 |
+| 2024 | *Impacts of transitioning to clean household energy.* Seminar given at the University of Copenhagen Section of Social Medicine, Copenhagen, DK, Nov 21, 2024
 | 2024 | Keynote Address: *Multilevel Models in Social Epidemiology: Past, Present, and Future.* Danish Epidemiology Society Annual Meeting, Aarhus University, Aarhus, DK Nov 7, 2024 |
 | 2024| Invited Workshop: *Difference-in-Differences for Social Epidemiology*. Danish Epidemiology Society Annual Meeting, Aarhus University, Aarhus, DK Nov 6, 2024 |
 | 2024 | *Despair and Disadvantage: Some Questions* Presentation given at the MORTAL workshop, Nuffield College, Oxford University, UK Jun 10-11, 2024 |

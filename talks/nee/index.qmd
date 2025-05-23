@@ -1,0 +1,24 @@
+---
+title: "Do we need 'Natural Experiments'?"
+date: "2025-05-23"
+image: "featured.png"
+categories: ["impact evaluation", "difference-in-differences", "evidence", "quasi-experiments", "causal inference"]
+
+---
+
+Seminar given (remotely) for the launch of the UK MRC's *Framework for natural experimental evaluations: Launch event*, May 23, 2025
+
+Below you can access the slides.
+
+:::columns
+::: {.column width="45%"}
+<center> [HTML version](https://samharper.org/nee) </center>
+[![](featured.png)](https://samharper.org/nee){width=50%}
+:::
+
+::: {.column width="45%"}
+<center> [PDF version](nee.pdf) </center>
+[![](featured.png)](nee.pdf){width=30%}
+:::
+
+:::

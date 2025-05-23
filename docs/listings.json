@@ -1,16 +1,8 @@
 [
   {
-    "listing": "/talks/index.html",
+    "listing": "/research/index.html",
     "items": [
-      "/talks/asm/index.html",
-      "/talks/des-mlm/index.html",
-      "/talks/des-dd/index.html",
-      "/talks/mortal/index.html",
-      "/talks/nasem/index.html",
-      "/talks/ser/index.html",
-      "/talks/hei/index.html",
-      "/talks/rsf/index.html",
-      "/talks/kickoff/index.html"
+      "/research/articles/harper-2021-wv/index.html"
     ]
   },
   {
@@ -22,9 +14,18 @@
     ]
   },
   {
-    "listing": "/research/index.html",
+    "listing": "/talks/index.html",
     "items": [
-      "/research/articles/harper-2021-wv/index.html"
+      "/talks/nee/index.html",
+      "/talks/asm/index.html",
+      "/talks/des-mlm/index.html",
+      "/talks/des-dd/index.html",
+      "/talks/mortal/index.html",
+      "/talks/nasem/index.html",
+      "/talks/ser/index.html",
+      "/talks/hei/index.html",
+      "/talks/rsf/index.html",
+      "/talks/kickoff/index.html"
     ]
   }
 ]
