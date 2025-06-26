@@ -1,4 +1,5 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
@@ -7,21 +8,22 @@
   letterpaper,
   DIV=11,
   numbers=noendperiod]{scrartcl}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -39,9 +41,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -67,8 +66,7 @@
 \makeatother
 
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -80,17 +78,33 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
 
 \usepackage{etaremune}
 \usepackage{doi}
@@ -140,14 +154,9 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Curriculum Vitae},
   colorlinks=true,
@@ -161,7 +170,6 @@
 \title{Curriculum Vitae}
 \author{}
 \date{}
-
 \begin{document}
 \maketitle
 
@@ -169,8 +177,8 @@
 \section{Identification}\label{identification}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -193,8 +201,8 @@ Languages: & English, French (Basic) \\
 \section{Education}\label{education}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -212,8 +220,8 @@ USA. \\
 \section{Appointments}\label{appointments}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -236,8 +244,8 @@ Biostatistics \& Occupational Health, McGill University \\
 Recognition}\label{special-honors-awards-and-recognition}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -269,8 +277,8 @@ Johnson Foundation. \\
 lectures}\label{postgraduate-guest-lectures}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -314,8 +322,8 @@ Occupational Health, McGill University. \\
 \subsection{International}\label{international}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -363,8 +371,8 @@ Supervised}\label{research-trainees-supervised}
 \subsubsection{Postdoctoral fellows (7)}\label{postdoctoral-fellows-7}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -383,13 +391,14 @@ Supervised}\label{research-trainees-supervised}
 \subsubsection{Doctoral students (13)}\label{doctoral-students-13}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
 2022-present & Siobhan Carroll (co-supervised with Jill Baumgartner) \\
+& ~~ \emph{Dr.~Robert Remis Fellowship, \$60,000 (2024-2026)} \\
 2021-present & Wenlu Yuan (co-supervised with Jill Baumgartner) \\
 2021-present & Peter Socha (co-supervised with Jennifer Hutcheon) \\
 & ~~ \emph{FRQS doctoral award, \$100,000 (2023-2025)} \\
@@ -439,8 +448,8 @@ University} \\
 (8)}\label{masters-degree-students-8}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -466,8 +475,8 @@ University} \\
 \paragraph{Completed degree}\label{completed-degree}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -489,8 +498,8 @@ University} \\
 \paragraph{Current}\label{current}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -507,12 +516,15 @@ Presentations}\label{invited-lectures-talks-presentations}
 \subsubsection{International}\label{international-1}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
+2025 & \emph{Do we need `Natural Experiments'?} Seminar given (remotely)
+for the launch of the UK MRC's \emph{Framework for natural experimental
+evaluations: Launch event}, May 23, 2025 \\
 2024 & \emph{Impacts of transitioning to clean household energy.}
 Seminar given at the University of Copenhagen Section of Social
 Medicine, Copenhagen, DK, Nov 21, 2024 \\
@@ -606,8 +618,8 @@ Symposium, National Cancer Institute, Bethesda, MD USA. \\
 \subsubsection{National}\label{national}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -637,8 +649,8 @@ Framework.} Queen's University, Kingston. \\
 \subsubsection{Editorial boards}\label{editorial-boards}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -671,7 +683,8 @@ Cancer; BMC Cancer; European Journal of Public Health; Cancer Causes \&
 Control; PLOS ONE; Addiction; Population Health Metrics; Global Health
 Action; Traffic Injury Prevention; Cancer; Oxford University Press (book
 proposal); Journal of Drug Issues; Environmental Health; Nature
-Communications Medicine; Nature; Nature Medicine }
+Communications Medicine; Nature; Nature Medicine; The Lancet Regional
+Health -- Southeast Asia }
 
 \paragraph{General Medicine}\label{general-medicine}
 
@@ -683,7 +696,7 @@ Cardiology}
 \paragraph{Health Policy}\label{health-policy}
 
 \emph{Milbank Quarterly; Health Affairs; Health Policy; Health Services
-Research; Evaluation Review}
+Research; Evaluation Review; Medical Decision Making}
 
 \paragraph{Social Science}\label{social-science}
 
@@ -708,8 +721,8 @@ Letters; American Journal of Economics \& Sociology}
 \subsubsection{Panel Member}\label{panel-member}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -731,8 +744,8 @@ Canadian Cancer Society Research Institute (CCSRI). \\
 \subsubsection{Ad hoc reviews}\label{ad-hoc-reviews-1}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -765,8 +778,8 @@ Responsibilities}\label{administrative-responsibilities}
 \subsubsection{Current}\label{current-1}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -778,8 +791,8 @@ Biostatistics \& Occupational Health (starting January, 2015) \\
 \subsubsection{Past}\label{past}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -793,8 +806,8 @@ Biostatistics \& Occupational Health \\
 \subsubsection{International}\label{international-2}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -827,8 +840,8 @@ Disparities Think Tank, National Cancer Institute, Bethesda, MD USA. \\
 \subsubsection{National}\label{national-1}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -844,8 +857,8 @@ Statistics Canada \\
 \subsubsection{University}\label{university}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -861,8 +874,8 @@ Statistics Management Committee \\
 \subsubsection{Departmental}\label{departmental}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -990,8 +1003,8 @@ theses}\label{reviews-of-protocols-and-theses}
 organization}\label{conference-workshop-and-panel-organization}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8500}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1199,8 +1212,8 @@ areas of focus are:
 \subsection{Personal Support Awards}\label{personal-support-awards}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8000}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8000}}@{}}
 \toprule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -1450,6 +1463,18 @@ Cook, Jerald Lawless, Erica Moodie, Robert Platt)\\
 journals}\label{articles-in-peer-reviewed-journals}
 
 *Indicates one of my trainees.
+
+Hutcheon JA, \textbf{Harper S}, Cordingley MC, Liauw J, Skoll MA, Socha
+PM, Srour M, Ting JY, Strumpf EC. Antenatal Corticosteroid
+Administration and Childhood Respiratory Morbidity: A Regression
+Discontinuity Study. \emph{BJOG: An International Journal of Obstetrics
+\& Gynaecology}. 2025; 1471-0528.18252.
+
+Bannon OS, Been JV, \textbf{Harper S}, Laverty AA, Millett C, van Lenthe
+FJ, Filippidis FT, Radó MK. Cigarette Taxation and Socioeconomic
+Inequalities in Under-5 Mortality across 94 Low-Income and Middle-Income
+Countries: A Longitudinal Ecological Study. \emph{The Lancet Public
+Health}. 2025; 10: e380-e390.
 
 Chen D, Momen NC, Ejlskov L, Bødkergaard K, Werenberg Dreier J, et
 al.~Socioeconomic inequalities in mortality associated with mental
