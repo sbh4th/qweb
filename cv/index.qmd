@@ -313,7 +313,7 @@ editor_options:
 *Annals of Internal Medicine; BMJ (top 10% of peer reviewers in 2007); The Lancet; PLOS Medicine; JAMA; New England Journal of Medicine; Canadian Medical Association Journal; JAMA Pediatrics; Canadian J Cardiology*
 
 #### Health Policy
-*Milbank Quarterly; Health Affairs; Health Policy; Health Services Research; Evaluation Review*
+*Milbank Quarterly; Health Affairs; Health Policy; Health Services Research; Evaluation Review; Medical Decision Making*
 
 #### Social Science
 *Demography; Population Studies; Social Compass; Social Science History; Sociological Focus; Journal of Health and Social Behavior; Population Research and Policy Review; Journal of Health and Social Behavior*
@@ -800,6 +800,10 @@ My research focuses on investigating how social and environmental factors impact
 ### Articles in peer reviewed journals
 
 \*Indicates one of my trainees.
+
+Hutcheon JA, **Harper S**, Cordingley MC, Liauw J, Skoll MA, Socha PM, Srour M, Ting JY, Strumpf EC. Antenatal Corticosteroid Administration and Childhood Respiratory Morbidity: A Regression Discontinuity Study. *BJOG: An International Journal of Obstetrics & Gynaecology*. 2025; 1471-0528.18252.
+
+Bannon OS, Been JV, **Harper S**, Laverty AA, Millett C, van Lenthe FJ, Filippidis FT, Radó MK. Cigarette Taxation and Socioeconomic Inequalities in Under-5 Mortality across 94 Low-Income and Middle-Income Countries: A Longitudinal Ecological Study. *The Lancet Public Health*. 2025; 10: e380-e390.
 
 Chen D, Momen NC, Ejlskov L, Bødkergaard K, Werenberg Dreier J, et al. Socioeconomic inequalities in mortality associated with mental disorders: a population‐based cohort study. *World Psychiatry* 2025;24(1):92-102.
 

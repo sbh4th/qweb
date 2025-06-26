@@ -20,4 +20,3 @@ gsp <- scholar::get_publications("Ipf8idcAAAAJ&hl") %>%
 
 # write to file
 write_rds(gsp, here("data", "gspubs.rds"))
-    
