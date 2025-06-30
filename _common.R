@@ -273,7 +273,8 @@ make_pub <- function(pub, index = NULL) {
 
 make_altmetric <- function(pub) {
   altmetric <- ""
-  if (pub$category == 'ARTICLE') {
+  #if (pub$category == 'ARTICLE') {
+  if (isTRUE(pub$category == "ARTICLE")) {
     altmetric <- glue::glue('<div data-badge-type="donut" data-doi="{pub$doi}" data-hide-no-mentions="true" class="altmetric-embed"></div>')
   }
   return(altmetric)
@@ -316,7 +317,8 @@ markdown_to_html <- function(text) {
 
 make_icons <- function(pub) {
   html <- c()
-  if (pub$summary) {
+  #if (pub$summary) {
+  if (isTRUE(pub$summary)) {
     html <- c(html, as.character(icon_link(
       icon = "fas fa-external-link-alt",
       text = "Summary",
@@ -325,7 +327,8 @@ make_icons <- function(pub) {
       target = "_self"
     )))      
   }
-  if (!is.na(pub$url)) {
+  #if (!is.na(pub$url)) {
+  if (!is.null(pub$url) && length(pub$url) == 1 && !is.na(pub$url)) {
     html <- c(html, as.character(icon_link(
       icon = "fas fa-external-link-alt",
       text = "View",
@@ -361,7 +364,10 @@ make_icons <- function(pub) {
 #      url  = pub$url_rg
 #    )))
 #  }
-  if (!is.na(pub$url_scholar)) {
+  # if (!is.na(pub$url_scholar)) {
+  if (!is.null(pub$url_scholar) && 
+      length(pub$url_scholar) == 1 && 
+      !is.na(pub$url_scholar)) {
     html <- c(html, as.character(icon_link(
       icon = "ai ai-google-scholar",
       # text = "&nbsp;",
