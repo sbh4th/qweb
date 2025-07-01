@@ -5,20 +5,14 @@ title: "Curriculum Vitae"
 #    toc: true
 
 format:
-  pdf:
-    colorlinks: true
-    link-citations: true
-    keep-tex: true
-    number-sections: true
-    fontfamily: CrimsonPro
-    include-in-header:
-      - text: |
-          \usepackage{etaremune}
-          \usepackage{doi}
-          \usepackage{enumitem}
-          \setlist[itemize]{noitemsep}
-          \usepackage{scrlayer-scrpage}
-          \rohead{\textsf{CV - S.Harper}}
+  typst:
+    keep-typ: true
+    output-file: cv-typ.pdf
+    fontsize: 10pt
+    mainfont: C059
+    font-paths: fonts
+    section-numbering: "1."
+    color-links: true
 editor_options: 
   markdown: 
     wrap: sentence
@@ -46,7 +40,7 @@ editor_options:
 | Citizenship: | 	United States, Canada (Naturalized)  |
 | Languages: | English, French (Basic) |
 
-: {tbl-colwidths="\[15,85\]"}
+: {tbl-colwidths="\[20,80\]"}
 
 # Education
 
