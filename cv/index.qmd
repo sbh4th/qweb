@@ -1,24 +1,24 @@
 ---
 title: "Curriculum Vitae"
-#format: 
-#  html:
-#    toc: true
+format: 
+  html:
+    toc: true
 
-format:
-  pdf:
-    colorlinks: true
-    link-citations: true
-    keep-tex: true
-    number-sections: true
-    fontfamily: CrimsonPro
-    include-in-header:
-      - text: |
-          \usepackage{etaremune}
-          \usepackage{doi}
-          \usepackage{enumitem}
-          \setlist[itemize]{noitemsep}
-          \usepackage{scrlayer-scrpage}
-          \rohead{\textsf{CV - S.Harper}}
+#format:
+#  pdf:
+#    colorlinks: true
+#    link-citations: true
+#    keep-tex: true
+#    number-sections: true
+#    fontfamily: CrimsonPro
+#    include-in-header:
+#      - text: |
+#          \usepackage{etaremune}
+#          \usepackage{doi}
+#          \usepackage{enumitem}
+#          \setlist[itemize]{noitemsep}
+#          \usepackage{scrlayer-scrpage}
+#          \rohead{\textsf{CV - S.Harper}}
 editor_options: 
   markdown: 
     wrap: sentence
@@ -582,6 +582,20 @@ My research focuses on investigating how social and environmental factors impact
 
 ## Research Grants
 ### Current
+
+| **The Influence of Reviewer Expertise and Engagement on Peer Review of Grants**
+|    Agency: Social Science and Humanities Research Council of Canada 
+|    Role: PI
+|    Amount: CAD \$780,000
+|    Duration: 2025-2028
+| 
+
+| **Evaluating the Child Health Consequences of a Major Welfare Reform in Denmark**
+|    Agency: Independent Research Fund Denmark, The Inge Lehmann Programme
+|    Role: Co-Applicant (NPI Else Foverskov)
+|    Amount: DKK 3.599.989 / CAD \$780,000
+|    Duration: 2026-2029
+| 
 
 | **Examining the role of discrimination in restricting women’s labor force participation in India: Developing the foundation for an experimental correspondence study**
 |    Agency: Social Science and Humanities Research Council of Canada

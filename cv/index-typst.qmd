@@ -49,7 +49,7 @@ editor_options:
 | 2001-2005 | Doctor of Philosophy in Epidemiologic Science, University of Michigan, Ann Arbor, MI, USA. Dissertation: *Using Publicly Available Data to Monitor and Investigate Health Inequalities.* |
 | 1997-1999 | Master of Science in Public Health, Epidemiology, University of South Carolina, Columbia, SC, USA. Thesis: *A Multilevel Analysis of Intimate Partner Violence.*                         |
 | 1991-1995 | Bachelor of Arts, Biology. Westminster College, Fulton, MO, USA.                                                                                                                       |
-: {tbl-colwidths="\[15,85\]"}
+: {tbl-colwidths="\[17,83\]"}
 
 # Appointments
 
@@ -62,7 +62,7 @@ editor_options:
 | 2008-2010 | Assistant Professor (Non-Tenure Track), Department of Epidemiology, Biostatistics & Occupational Health, McGill University        |
 | 2005-2008 | Postdoctoral Fellow, Department of Epidemiology, Biostatistics & Occupational Health, McGill University |
 
-: {tbl-colwidths="\[15,85\]"}
+: {tbl-colwidths="\[17,83\]"}
 
 
 # Special Honors, Awards, and Recognition
@@ -78,7 +78,7 @@ editor_options:
 | 2007      | Nominee, top article for 2007: The Year in Research, Robert Wood Johnson Foundation.                                                                |
 | 2007      | Nominee, Paper of the Year, 2006, Lancet. 
 
-: {tbl-colwidths="\[15,85\]"}
+: {tbl-colwidths="\[17,83\]"}
 
 # Teaching
 
@@ -101,7 +101,7 @@ editor_options:
 | 2007 |  Guest Lecture on Life Tables, EPIB 602 (Introduction to Population Health), Department of Epidemiology, Biostatistics & Occupational Health, McGill University. | 
 | 2006 |  Guest Lecture on Measuring Health Inequalities, EPIB 670 (Introduction to Population Health and Social Epidemiology) | 
 
-: {tbl-colwidths="\[15,85\]"}
+: {tbl-colwidths="\[17,83\]"}
 
 
 ### Undergraduate
@@ -122,7 +122,7 @@ editor_options:
 | 2011 |  Co-Instructor (3 lectures), *Ph.D. course in Advanced Social Epidemiology: A focus on Methodology, Context and Lifecourse.* Institute of Public Health, University of Copenhagen, Denmark. |
 | 2009 |  Co-Instructor, *Social Determinants of Health---Principles and Methods*, Institut national de la santé et de la recherche médicale (INSERM), Paris, France. | 
 
-: {tbl-colwidths="\[15,85\]"}
+: {tbl-colwidths="\[17,83\]"}
 
 ## Research Trainees Supervised
 ### Postdoctoral fellows (7)
@@ -139,7 +139,7 @@ editor_options:
 | |   *CIHR Fellowship, $73,333* |
 | 2011-2012 | Kristin Voigt (co-supervised with Nick King)      |
 
-: {tbl-colwidths="\[15,85\]"}
+: {tbl-colwidths="\[17,83\]"}
 
 ### Doctoral students (13)
 
@@ -186,7 +186,7 @@ editor_options:
 | |    *Faculty of Medicine International Travel Fund (2012)* |
 | |    *HD-IDEAS Matching Studentship (2010, 2013)* |
 
-: {tbl-colwidths="\[15,85\]"}
+: {tbl-colwidths="\[17,83\]"}
 
 ### Master's degree students (8)
 

@@ -179,8 +179,6 @@
   abstract: none,
   abstract-title: none,
   cols: 1,
-  margin: (x: 1.25in, y: 1.25in),
-  paper: "us-letter",
   lang: "en",
   region: "US",
   font: "libertinus serif",
@@ -193,18 +191,12 @@
   heading-color: black,
   heading-line-height: 0.65em,
   sectionnumbering: none,
-  pagenumbering: "1",
   toc: false,
   toc_title: none,
   toc_depth: none,
   toc_indent: 1.5em,
   doc,
 ) = {
-  set page(
-    paper: paper,
-    margin: margin,
-    numbering: pagenumbering,
-  )
   set par(justify: true)
   set text(lang: lang,
            region: region,
@@ -215,8 +207,7 @@
     align(center)[#block(inset: 2em)[
       #set par(leading: heading-line-height)
       #if (heading-family != none or heading-weight != "bold" or heading-style != "normal"
-           or heading-color != black or heading-decoration == "underline"
-           or heading-background-color != none) {
+           or heading-color != black) {
         set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)
         text(size: title-size)[#title]
         if subtitle != none {
@@ -288,12 +279,17 @@
   stroke: none
 )
 
+#set page(
+  paper: "us-letter",
+  margin: (x: 1.25in, y: 1.25in),
+  numbering: "1",
+)
+
 #show: doc => article(
   title: [Curriculum Vitae],
   font: ("C059",),
   fontsize: 10pt,
   sectionnumbering: "1.",
-  pagenumbering: "1",
   toc_title: [Table of contents],
   toc_depth: 3,
   cols: 1,
@@ -320,7 +316,7 @@
 = Education
 <education>
 #table(
-  columns: (15%, 85%),
+  columns: (17%, 83%),
   align: (auto,auto,),
   [2001-2005], [Doctor of Philosophy in Epidemiologic Science, University of Michigan, Ann Arbor, MI, USA. Dissertation: #emph[Using Publicly Available Data to Monitor and Investigate Health Inequalities.];],
   [1997-1999], [Master of Science in Public Health, Epidemiology, University of South Carolina, Columbia, SC, USA. Thesis: #emph[A Multilevel Analysis of Intimate Partner Violence.];],
@@ -329,7 +325,7 @@
 = Appointments
 <appointments>
 #table(
-  columns: (15%, 85%),
+  columns: (17%, 83%),
   align: (left,left,),
   [2024-present], [Professor, Department of Epidemiology, Biostatistics & Occupational Health, McGill University],
   [2019-2022], [Endowed Chair of of Impact of Health and Social Policies on Health Inequality, Erasmus Medical Center, Rotterdam, The Netherlands],
@@ -341,7 +337,7 @@
 = Special Honors, Awards, and Recognition
 <special-honors-awards-and-recognition>
 #table(
-  columns: (15%, 85%),
+  columns: (17%, 83%),
   align: (auto,auto,),
   [2020], [Paper of the Year (2019), #emph[American Journal of Epidemiology];],
   [2019], [Top 1% of Peer Reviewers - Social Sciences, Publons],
@@ -361,7 +357,7 @@
 === Postgraduate guest lectures
 <postgraduate-guest-lectures>
 #table(
-  columns: (15%, 85%),
+  columns: (17%, 83%),
   align: (auto,auto,),
   [2023 (Apr)], [Guest Lecturer, Bias Analysis, EPIB 705 (Advanced Methods in Epidemiology), Department of Epidemiology, Biostatistics & Occupational Health, McGill University.],
   [2014 (Fall)], [Guest Lecturer (2 lectures), EPIB 604 (Epidemiologic Analysis), Department of Epidemiology, Biostatistics & Occupational Health, McGill University.],
@@ -380,7 +376,7 @@
 == International
 <international>
 #table(
-  columns: (15%, 85%),
+  columns: (17%, 83%),
   align: (auto,auto,),
   [2024 (Dec)], [Co-Instructor (4 lectures), #emph[Ph.D.~course in Advanced Social Epidemiology];. Institute of Public Health, University of Copenhagen, Denmark.],
   [2021 (Oct)], [Co-Instructor (4 lectures), #emph[Ph.D.~course in Advanced Social Epidemiology];. Institute of Public Health, University of Copenhagen, Denmark.],
@@ -400,7 +396,7 @@
 === Postdoctoral fellows (7)
 <postdoctoral-fellows-7>
 #table(
-  columns: (15%, 85%),
+  columns: (17%, 83%),
   align: (auto,auto,),
   [2020-2023], [Erin Hetherington],
   [], [~~#emph[CIHR Fellowship, \$120,000];],
@@ -415,7 +411,7 @@
 === Doctoral students (13)
 <doctoral-students-13>
 #table(
-  columns: (15%, 85%),
+  columns: (17%, 83%),
   align: (auto,auto,),
   [2022-present], [Siobhan Carroll (co-supervised with Jill Baumgartner)],
   [], [~~ #emph[Dr.~Robert Remis Fellowship, \$60,000 (2024-2026)];],
