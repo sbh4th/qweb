@@ -1,0 +1,15 @@
+{
+  "hash": "9c96eed5f1a74e4bd6212b3f36f7aa8d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n#  \n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\">  </div>\n<div class=\"g-col-1\">  </div>\n</div>\n\n```\n\n:::\n:::\n\n\n**Abstract**:\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

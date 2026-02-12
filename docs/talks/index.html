@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fc539113232677d296c547e50173fa21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-99258d85ffddbd9841977770f8edb96b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -122,7 +123,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -229,7 +230,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbiUyQ2RpZmZlcmVuY2UtaW4tZGlmZmVyZW5jZXMlMkNldmlkZW5jZSUyQ3F1YXNpLWV4cGVyaW1lbnRzJTJDY2F1c2FsJTIwaW5mZXJlbmNl" data-listing-date-sort="1747951200000" data-listing-file-modified-sort="1748015374289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
+<div class="quarto-post image-right" data-index="0" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbiUyQ2RpZmZlcmVuY2UtaW4tZGlmZmVyZW5jZXMlMkNldmlkZW5jZSUyQ3F1YXNpLWV4cGVyaW1lbnRzJTJDY2F1c2FsJTIwaW5mZXJlbmNl" data-listing-date-sort="1747972800000" data-listing-file-modified-sort="1754659521779" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
 <div class="thumbnail"><a href="../talks/nee/index.html" class="no-external">
 
 <img loading="lazy" src="../talks/nee/featured.png" class="thumbnail-image">
@@ -254,7 +255,7 @@ May 23, 2025
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbiUyQ2RpZmZlcmVuY2UtaW4tZGlmZmVyZW5jZXMlMkNtZWRpYXRpb24=" data-listing-date-sort="1732143600000" data-listing-file-modified-sort="1732297193148" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
+<div class="quarto-post image-right" data-index="1" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbiUyQ2RpZmZlcmVuY2UtaW4tZGlmZmVyZW5jZXMlMkNtZWRpYXRpb24=" data-listing-date-sort="1732165200000" data-listing-file-modified-sort="1754659521654" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
 <div class="thumbnail"><a href="../talks/asm/index.html" class="no-external">
 
 <img loading="lazy" src="../talks/asm/featured.png" class="thumbnail-image">
@@ -279,7 +280,7 @@ Nov 21, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bXVsdGlsZXZlbCUyMG1vZGVscyUyQ3NvY2lhbCUyMGVwaWRlbWlvbG9neQ==" data-listing-date-sort="1730934000000" data-listing-file-modified-sort="1732296723481" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
+<div class="quarto-post image-right" data-index="2" data-categories="bXVsdGlsZXZlbCUyMG1vZGVscyUyQ3NvY2lhbCUyMGVwaWRlbWlvbG9neQ==" data-listing-date-sort="1730955600000" data-listing-file-modified-sort="1754659521734" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
 <div class="thumbnail"><a href="../talks/des-mlm/index.html" class="no-external">
 
 <img loading="lazy" src="../talks/des-mlm/featured.png" class="thumbnail-image">
@@ -304,7 +305,7 @@ Nov 7, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="cXVhc2ktZXhwZXJpbWVudHMlMkNkaWZmZXJlbmNlLWluLWRpZmZlcmVuY2VzJTJDc29jaWFsJTIwZXBpZGVtaW9sb2d5" data-listing-date-sort="1730847600000" data-listing-file-modified-sort="1732294477522" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
+<div class="quarto-post image-right" data-index="3" data-categories="cXVhc2ktZXhwZXJpbWVudHMlMkNkaWZmZXJlbmNlLWluLWRpZmZlcmVuY2VzJTJDc29jaWFsJTIwZXBpZGVtaW9sb2d5" data-listing-date-sort="1730869200000" data-listing-file-modified-sort="1754659521680" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
 <div class="thumbnail"><a href="../talks/des-dd/index.html" class="no-external">
 
 <img loading="lazy" src="../talks/des-dd/featured.png" class="thumbnail-image">
@@ -329,7 +330,7 @@ Nov 6, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="aGVhbHRoJTIwaW5lcXVhbGl0aWVzJTJDbGlmZSUyMGV4cGVjdGFuY3k=" data-listing-date-sort="1717970400000" data-listing-file-modified-sort="1729960892388" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
+<div class="quarto-post image-right" data-index="4" data-categories="aGVhbHRoJTIwaW5lcXVhbGl0aWVzJTJDbGlmZSUyMGV4cGVjdGFuY3k=" data-listing-date-sort="1717992000000" data-listing-file-modified-sort="1754659521759" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
 <div class="thumbnail"><a href="../talks/mortal/index.html" class="no-external">
 
 <img loading="lazy" src="../talks/mortal/featured.png" class="thumbnail-image">
@@ -354,7 +355,7 @@ Jun 10, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="aGVhbHRoJTIwaW5lcXVhbGl0aWVzJTJDc29jaWFsJTIwZGV0ZXJtaW5hbnRz" data-listing-date-sort="1687298400000" data-listing-file-modified-sort="1729958147826" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
+<div class="quarto-post image-right" data-index="5" data-categories="aGVhbHRoJTIwaW5lcXVhbGl0aWVzJTJDc29jaWFsJTIwZGV0ZXJtaW5hbnRz" data-listing-date-sort="1687320000000" data-listing-file-modified-sort="1754659521778" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="44">
 <div class="thumbnail"><a href="../talks/nasem/index.html" class="no-external">
 
 <img loading="lazy" src="../talks/nasem/featured.png" class="thumbnail-image">
@@ -379,7 +380,7 @@ Jun 21, 2023
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="bXVsdGlsZXZlbCUyMG1vZGVscyUyQ3NvY2lhbCUyMGVwaWRlbWlvbG9neQ==" data-listing-date-sort="1686693600000" data-listing-file-modified-sort="1729959613887" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
+<div class="quarto-post image-right" data-index="6" data-categories="bXVsdGlsZXZlbCUyMG1vZGVscyUyQ3NvY2lhbCUyMGVwaWRlbWlvbG9neQ==" data-listing-date-sort="1686715200000" data-listing-file-modified-sort="1754659521834" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
 <div class="thumbnail"><a href="../talks/ser/index.html" class="no-external">
 
 <img loading="lazy" src="../talks/ser/featured.png" class="thumbnail-image">
@@ -404,7 +405,7 @@ Jun 14, 2023
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="YWlyJTIwcG9sbHV0aW9uJTJDaGVhbHRoJTIwaW5lcXVhbGl0aWVzJTJDc29jaWFsJTIwZGV0ZXJtaW5hbnRz" data-listing-date-sort="1589925600000" data-listing-file-modified-sort="1729959712581" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
+<div class="quarto-post image-right" data-index="7" data-categories="YWlyJTIwcG9sbHV0aW9uJTJDaGVhbHRoJTIwaW5lcXVhbGl0aWVzJTJDc29jaWFsJTIwZGV0ZXJtaW5hbnRz" data-listing-date-sort="1589947200000" data-listing-file-modified-sort="1754659521734" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
 <div class="thumbnail"><a href="../talks/hei/index.html" class="no-external">
 
 <img loading="lazy" src="../talks/hei/featured.png" class="thumbnail-image">
@@ -429,7 +430,7 @@ May 20, 2020
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="cnVyYWwlMjBoZWFsdGglMkNoZWFsdGglMjBpbmVxdWFsaXRpZXMlMkNzdWljaWRl" data-listing-date-sort="1552604400000" data-listing-file-modified-sort="1729960032235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="quarto-post image-right" data-index="8" data-categories="cnVyYWwlMjBoZWFsdGglMkNoZWFsdGglMjBpbmVxdWFsaXRpZXMlMkNzdWljaWRl" data-listing-date-sort="1552622400000" data-listing-file-modified-sort="1754659521793" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
 <div class="thumbnail"><a href="../talks/rsf/index.html" class="no-external">
 
 <img loading="lazy" src="../talks/rsf/featured.png" class="thumbnail-image">
@@ -454,7 +455,7 @@ Mar 15, 2019
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="cXVhc2ktZXhwZXJpbWVudHMlMkNoZWFsdGglMjBpbmVxdWFsaXRpZXM=" data-listing-date-sort="1539295200000" data-listing-file-modified-sort="1729960225005" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
+<div class="quarto-post image-right" data-index="9" data-categories="cXVhc2ktZXhwZXJpbWVudHMlMkNoZWFsdGglMjBpbmVxdWFsaXRpZXM=" data-listing-date-sort="1539316800000" data-listing-file-modified-sort="1754659521743" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
 <div class="thumbnail"><a href="../talks/kickoff/index.html" class="no-external">
 
 <img loading="lazy" src="../talks/kickoff/featured.png" class="thumbnail-image">
@@ -533,13 +534,14 @@ Oct 12, 2018
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

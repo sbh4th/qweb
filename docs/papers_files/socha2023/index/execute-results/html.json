@@ -1,0 +1,15 @@
+{
+  "hash": "830d50aa74136f0a67258832ca7e60f5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n# Subgroup Effects Should Be Examined Using Both Relative and Absolute Effect Measures \n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\"> <p>Socha P*, <strong>Harper S</strong>, Hutcheon JA.  “Subgroup Effects Should Be Examined Using Both Relative and Absolute Effect Measures” <em>Australian and New Zealand Journal of Obstetrics and Gynaecology</em>. 2023; 63: 469–472. DOI: <a href=\"https://doi.org/10.1111/ajo.13656\">10.1111/ajo.13656</a> Citations: 1</p>\n </div>\n<div class=\"g-col-1\"> <div data-badge-type=\"donut\" data-doi=\"10.1111/ajo.13656\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\"></div> </div>\n</div>\n<a href=\"https://obgyn.onlinelibrary.wiley.com/doi/10.1111/ajo.13656\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-external-link-alt\"></i> View</a><a href=\"https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user#=Ipf8idcAAAAJ&amp;citation_for_view=Ipf8idcAAAAJJ:uVUOdF_882EC\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"ai ai-google-scholar\"></i> Scholar</a>\n```\n\n:::\n:::\n\n\n**Abstract**:\n\nTreatment effects can be measured on the relative scale (eg, risk ratios, odds ratios) or the absolute scale (eg, risk differences). If the baseline risk of an outcome is different between subgroups, the effect of the treatment will differ between subgroups on at least one scale (relative, absolute, or both). We illustrate this using two examples from the literature where only relative effects were estimated, but conclusions about subgroup differences would likely have changed had absolute effects also been considered. To identify all meaningful subgroup differences, researchers and clinicians should compare~effects on the relative and absolute scale.\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

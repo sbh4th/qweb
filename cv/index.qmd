@@ -218,6 +218,7 @@ editor_options:
 |           |                                                |
 |-----------|------------------------------------------------|
 | 2022-2024	| Martha Lee (PhD, Epidemiology) |
+| 2021-2022	| Doris Duncan (PhD, Epidemiology) |
 | 2017-2020	| Mabel Carabali (PhD, Epidemiology) |
 | 2016-2020	| Eva Graham, (PhD, Epidemiology) |
 | 2014-2019	| Stephanie Law (PhD, Epidemiology) |
@@ -235,9 +236,9 @@ editor_options:
 #### Current
 |           |                                                |
 |-----------|------------------------------------------------|
+| 2025-present	| Adwoa Safowaa (PhD, Epidemiology) |
 | 2024-present	| Jordyn Gattie (MSc, Epidemiology) |
 | 2022-present	| Sarah Windle (PhD, Epidemiology) |
-| 2021-present	| Doris Duncan (PhD, Epidemiology) |
 | 2014-present	| Miriam Kinkaid (PhD, Epidemiology) |
 
 : {tbl-colwidths="\[15,85\]"}

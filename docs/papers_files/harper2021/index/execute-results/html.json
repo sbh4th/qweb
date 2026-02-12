@@ -1,0 +1,15 @@
+{
+  "hash": "814b622797e21dc8d6ea78e09bb8caad",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n# Declining Life Expectancy in the United States: Missing the Trees for the Forest \n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\"> <p><strong>Harper S</strong>, Riddell CA*, King NB.  “Declining Life Expectancy in the United States: Missing the Trees for the Forest” <em>Annual Review of Public Health</em>. 2021; 42: 381–403. DOI: <a href=\"https://doi.org/10.1146/annurev-publhealth-082619-104231\">10.1146/annurev-publhealth-082619-104231</a> Citations: 157</p>\n </div>\n<div class=\"g-col-1\"> <div data-badge-type=\"donut\" data-doi=\"10.1146/annurev-publhealth-082619-104231\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\"></div> </div>\n</div>\n<a href=\"https://doi.org/10.1146/annurev-publhealth-082619-104231\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-external-link-alt\"></i> View</a><a href=\"https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user#=Ipf8idcAAAAJ&amp;citation_for_view=Ipf8idcAAAAJJ:7Hz3ACDFbsoC\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"ai ai-google-scholar\"></i> Scholar</a>\n```\n\n:::\n:::\n\n\n**Abstract**:\n\nIn recent years, life expectancy in the United States has stagnated, followed by three consecutive years of decline. The decline is small in absolute terms but is unprecedented and has generated considerable research interest and theorizing about potential causes. Recent trends show that the decline has affected nearly all race/ethnic and gender groups, and the proximate causes of the decline are increases in opioid overdose deaths, suicide, homicide, and Alzheimer's disease. A slowdown in the long-term decline in mortality from cardiovascular diseases has also prevented life expectancy from improving further. Although a popular explanation for the decline is the cumulative decline in living standards across generations, recent trends suggest that distinct mechanisms for specific causes of death are more plausible explanations. Interventions to stem the increase in overdose deaths, reduce access to mechanisms that contribute to violent deaths, and decrease cardiovascular risk over the life course are urgently needed to improve mortality in the United States.\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

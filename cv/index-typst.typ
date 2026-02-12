@@ -860,6 +860,18 @@ My research focuses on investigating how social and environmental factors impact
 <research-grants>
 === Current
 <current-2>
+#strong[The Influence of Reviewer Expertise and Engagement on Peer Review of Grants] \
+~~~Agency: Social Science and Humanities Research Council of Canada \
+~~~Role: PI \
+~~~Amount: CAD \$192,017 \
+~~~Duration: 2025-2028 \
+
+#strong[Evaluating the Child Health Consequences of a Major Welfare Reform in Denmark] \
+~~~Agency: Independent Research Fund Denmark, The Inge Lehmann Programme \
+~~~Role: Co-Applicant (NPI Else Foverskov) \
+~~~Amount: DKK 3.599.989 / CAD \$780,000 \
+~~~Duration: 2026-2029 \
+
 #strong[Examining the role of discrimination in restricting women's labor force participation in India: Developing the foundation for an experimental correspondence study] \
 ~~~Agency: Social Science and Humanities Research Council of Canada \
 ~~~Role: Co-Applicant (NPI Arijit Nandi) \
@@ -1047,6 +1059,22 @@ My research focuses on investigating how social and environmental factors impact
 === Articles in peer reviewed journals
 <articles-in-peer-reviewed-journals>
 \*Indicates one of my trainees.
+
+\*Socha PM, Oskoui M, Hutcheon JA, #strong[Harper S];. A multivariable model for improving the identification of cerebral palsy cases in administrative health data. #emph[Ann Epidemiol.] 2026.
+
+Hutcheon JA, #strong[Harper S];, Cordingley MC, Liauw J, Skoll MA, \*Socha PM, et al.~Antenatal Corticosteroid Administration and Childhood Respiratory Morbidity: A Regression Discontinuity Study. #emph[BJOG.] 2026;133(2):263-71.
+
+Windle SB, #strong[Harper S];, Arneja J, \*Socha P, Nandi A. Systematic reviews of quasi-experimental studies: challenges and considerations. #emph[J Clin Epidemiol.] 2025;112121.
+
+\*Socha PM, Hutcheon JA, Strumpf EC, Liauw J, Srour M, Ting JY, Skoll MA, #strong[Harper S];. Antenatal Corticosteroids and Risk of Cerebral Palsy: A Regression Discontinuity Study. J #emph[Pediatr];. 2025;114960.
+
+Li X, Brehmer C, Hirst K, \*Sternbach T, \*Yuan W, Zhang X, et al.~Multi-year Evaluation of a Clean Heating Policy on Residents' Air Pollution Exposures in Beijing, China. #emph[Environ Sci Technol.] 2025;59(45):24347-58.
+
+Lall R, \*Socha PM, #strong[Harper S];, Ofili DFC, Hetherington E. Inequalities in preterm birth among immigrants to Canada by race and time since immigration: A population‐based repeated cross‐sectional study. #emph[Int J Gynaecol Obstet.] 2025.
+
+\*Yuan W, Li X, Brehmer C, \*Sternbach T, Zhang X, Carter E, et al.~Effects of Outdoor and Household Air Pollution on Hand Grip Strength in a Longitudinal Study of Rural Beijing Adults. #emph[Int J Environ Res Public Health.] 2025;22(8):1283.
+
+Ma J, Zhu X, Li X, Zhang X, Zhao F, Zhao A, et al.~Investigating indoor VOC complexities in rural Beijing: Environmental, resident behavioral, and household energy-use paradigms. #emph[Build Environ.] 2025;279:113042.
 
 Hutcheon JA, #strong[Harper S];, Cordingley MC, Liauw J, Skoll MA, Socha PM, Srour M, Ting JY, Strumpf EC. Antenatal Corticosteroid Administration and Childhood Respiratory Morbidity: A Regression Discontinuity Study. #emph[BJOG: An International Journal of Obstetrics & Gynaecology];. 2025; 1471-0528.18252.
 

@@ -1,0 +1,15 @@
+{
+  "hash": "73553d71a88a7a9c1631ea835cedd72d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n# Accounting for Selection Bias in Studies of Acute Cardiac Events \n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\"> <p>Banack HR, <strong>Harper S</strong>, Kaufman JS.  “Accounting for Selection Bias in Studies of Acute Cardiac Events” <em>Canadian Journal of Cardiology</em>. 2018; 34: 709–716. DOI: <a href=\"https://doi.org/10.1016/j.cjca.2018.01.013\">10.1016/j.cjca.2018.01.013</a> Citations: 24</p>\n </div>\n<div class=\"g-col-1\"> <div data-badge-type=\"donut\" data-doi=\"10.1016/j.cjca.2018.01.013\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\"></div> </div>\n</div>\n<a href=\"https://linkinghub.elsevier.com/retrieve/pii/S0828282X18300163\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-external-link-alt\"></i> View</a><a href=\"https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user#=Ipf8idcAAAAJ&amp;citation_for_view=Ipf8idcAAAAJJ:4hFrxpcac9AC\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"ai ai-google-scholar\"></i> Scholar</a>\n```\n\n:::\n:::\n\n\n**Abstract**:\n\nBackground: In cardiovascular research, pre-hospital mortality represents an important potential source of selection bias. Inverse probability of censoring weights are a method to account for this source of bias. The objective of this article is to examine and correct for the influence of selection bias due to pre-hospital mortality on the relationship between cardiovascular risk factors and all-cause mortality after an acute cardiac event.\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

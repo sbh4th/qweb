@@ -1,0 +1,15 @@
+{
+  "hash": "db7a749ea9aada046645fa3493d99b91",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n# Effect of COVID-19 Lockdown on Maternity Care and Maternal Outcome in the Netherlands: A National Quasi-Experimental Study \n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\"> <p>Gravesteijn B, Boderie N, Akker T, Bertens L, Bloemenkamp K, Burgos Ochoa L, {P.R.E.P.A.R.E.-consortium} NA.  “Effect of COVID-19 Lockdown on Maternity Care and Maternal Outcome in the Netherlands: A National Quasi-Experimental Study” <em>Public Health</em>. 2024; 235: 15–25. DOI: <a href=\"https://doi.org/10.1016/j.puhe.2024.06.024\">10.1016/j.puhe.2024.06.024</a> Citations: 1</p>\n </div>\n<div class=\"g-col-1\"> <div data-badge-type=\"donut\" data-doi=\"10.1016/j.puhe.2024.06.024\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\"></div> </div>\n</div>\n<a href=\"https://api.elsevier.com/content/article/PII:S0033350624002658\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-external-link-alt\"></i> View</a><a href=\"https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user#=Ipf8idcAAAAJ&amp;citation_for_view=Ipf8idcAAAAJJ:JP7YXuLIOvAC\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"ai ai-google-scholar\"></i> Scholar</a>\n```\n\n:::\n:::\n\n\n**Abstract**:\n\nNA\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

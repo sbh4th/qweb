@@ -1,0 +1,25 @@
+---
+format: html
+lightbox: true
+execute:
+  echo: false
+---
+
+```{r setup, include=FALSE}
+source(here::here("_common.R"))
+pub <- get_pubs() %>% 
+    filter(bibtexkey == 'socha2026')
+pub$summary <- FALSE
+```
+
+# `r pub$title` 
+
+```{r}
+make_pub(pub)
+```
+
+**Abstract**:
+
+`r pub$abstract`
+
+

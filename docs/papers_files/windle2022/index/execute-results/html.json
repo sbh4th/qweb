@@ -1,0 +1,15 @@
+{
+  "hash": "3673eb819cd39fe88ab3a0be2401168e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n# The Impact of Cannabis Decriminalization and Legalization on Road Safety Outcomes: A Systematic Review \n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\"> <p>Windle SB, Socha P*, Nazif-Munoz JI, <strong>Harper S</strong>, Nandi A.  “The Impact of Cannabis Decriminalization and Legalization on Road Safety Outcomes: A Systematic Review” <em>American Journal of Preventive Medicine</em>. 2022; 63: 1037–1052. DOI: <a href=\"https://doi.org/10.1016/j.amepre.2022.07.012\">10.1016/j.amepre.2022.07.012</a> Citations: 43</p>\n </div>\n<div class=\"g-col-1\"> <div data-badge-type=\"donut\" data-doi=\"10.1016/j.amepre.2022.07.012\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\"></div> </div>\n</div>\n<a href=\"https://linkinghub.elsevier.com/retrieve/pii/S0749379722004093\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-external-link-alt\"></i> View</a><a href=\"https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user#=Ipf8idcAAAAJ&amp;citation_for_view=Ipf8idcAAAAJJ:KNjnJ3z-R6IC\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"ai ai-google-scholar\"></i> Scholar</a>\n```\n\n:::\n:::\n\n\n**Abstract**:\n\nNA\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

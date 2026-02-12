@@ -1,0 +1,15 @@
+{
+  "hash": "b971b605fd7e505edece18eed7f755a8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: html\nlightbox: true\nexecute:\n  echo: false\n---\n\n\n\n# Contributors to Age Inequalities in Loneliness among Older Adults: A Decomposition Analysis of 29 Countries \n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"pub\">\n<div class=\"grid\">\n<div class=\"g-col-11\"> <p>Richardson RA*, <strong>Harper S</strong>, Keyes KK, Crowe CL, Calvo E.  “Contributors to Age Inequalities in Loneliness among Older Adults: A Decomposition Analysis of 29 Countries” <em>Aging &amp; Mental Health</em>. 2025; 0: 1–9. DOI: <a href=\"https://doi.org/10.1080/13607863.2025.2473634\">10.1080/13607863.2025.2473634</a> Citations: 0</p>\n </div>\n<div class=\"g-col-1\"> <div data-badge-type=\"donut\" data-doi=\"10.1080/13607863.2025.2473634\" data-hide-no-mentions=\"true\" class=\"altmetric-embed\"></div> </div>\n</div>\n<a href=\"https://doi.org/10.1080/13607863.2025.2473634\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"fas fa-external-link-alt\"></i> View</a><a href=\"https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user#=Ipf8idcAAAAJ&amp;citation_for_view=Ipf8idcAAAAJJ:lYAcb2jw7qUC\" class=\"icon-link\" target=\"_blank\" rel=\"noopener\"><i class=\"ai ai-google-scholar\"></i> Scholar</a>\n```\n\n:::\n:::\n\n\n**Abstract**:\n\nLoneliness is highly prevalent and can have severe health consequences. While generally assumed to increase with age, some evidence suggests the relationship between age and loneliness may vary across country. In this study, we investigate the contribution of demographic and health factors to age-related inequalities in loneliness both within and across countries. We used population-based cross-sectional data from 64,324 older adults (age range: 50–90 years) across 29 countries. Loneliness was measured with the 3 item UCLA loneliness scale. We quantified the magnitude of age inequalities in loneliness using concentration indices, and we estimated the contribution of demographic and health factors to age inequalities in loneliness using a decomposition approach. Loneliness was generally more concentrated among the oldest adults in the sample, although in the US and the Netherlands it was more concentrated among younger adults. Top contributors to age inequalities in loneliness were being unmarried and not working; however, the amount that factors contributed to inequalities differed markedly by country. Age inequalities in loneliness, and contributors to these inequalities, vary substantially across countries, suggesting that loneliness is not an inevitable consequence of age but may instead be shaped by environments within countries (e.g. social cohesion).\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
