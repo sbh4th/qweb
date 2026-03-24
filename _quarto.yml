@@ -9,7 +9,7 @@ execute:
 
 website:
   title: "Sam Harper"
-  site-url: "https://www.samharper.org"
+  site-url: "https://samharper.org"
   repo-url: "https://github.com/sbh4th/qweb"
   repo-actions: [issue]
   navbar:
