@@ -46,15 +46,22 @@ meta <- bib |>
   mutate(
     idx        = sapply(ntitle, match_scholar, gsp_nt = gsp$ntitle),
     cites      = gsp$cites[idx],
-    id_scholar = as.character(gsp$cid[idx])
+    # pubid  → used in citation_for_view URL on Scholar profile page
+    # cid    → used in scholar?cites= URL to list citing articles
+    id_scholar = as.character(gsp$pubid[idx]),
+    cid        = as.character(gsp$cid[idx])
   ) |>
-  select(key, cites, id_scholar)
+  select(key, cites, id_scholar, cid)
 
-# Apply any manual overrides
+# Apply any manual overrides (MANUAL_IDS values are pubids)
 for (k in names(MANUAL_IDS)) {
-  meta$id_scholar[meta$key == k] <- MANUAL_IDS[[k]]
-  scholar_cites <- gsp$cites[as.character(gsp$cid) == MANUAL_IDS[[k]]]
-  if (length(scholar_cites)) meta$cites[meta$key == k] <- scholar_cites
+  pubid <- MANUAL_IDS[[k]]
+  meta$id_scholar[meta$key == k] <- pubid
+  row <- which(as.character(gsp$pubid) == pubid)
+  if (length(row)) {
+    meta$cites[meta$key == k] <- gsp$cites[row[1]]
+    meta$cid[meta$key == k]   <- as.character(gsp$cid[row[1]])
+  }
 }
 
 write_csv(meta, here("papers", "_meta.csv"), na = "")

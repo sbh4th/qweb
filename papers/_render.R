@@ -131,10 +131,17 @@ render_pub <- function(p) {
     btns <- tagAppendChild(btns,
       tags$a(href = p$url_scholar, target = "_blank", class = "pub-btn btn-scholar", "Scholar"))
 
-  # Citations badge
-  if (!is.na(p$cites) && as.integer(p$cites) > 0)
+  # Citations badge — links to citing articles when cid is available
+  if (!is.na(p$cites) && as.integer(p$cites) > 0) {
+    cite_label <- paste0("Cited: ", p$cites)
     btns <- tagAppendChild(btns,
-      tags$span(class = "pub-btn btn-cites", paste0("Cited: ", p$cites)))
+      if (!is.na(p$url_cites))
+        tags$a(href = p$url_cites, target = "_blank",
+               class = "pub-btn btn-cites", cite_label)
+      else
+        tags$span(class = "pub-btn btn-cites", cite_label)
+    )
+  }
 
   # Abstract toggle (Bootstrap collapse, available in Quarto/litera theme)
   abs_block <- NULL
@@ -205,7 +212,8 @@ render_pub_list <- function(category = "ARTICLE") {
   # --- Load metadata ---
   meta_path <- here("papers", "_meta.csv")
   if (file.exists(meta_path)) {
-    meta <- read_csv(meta_path, show_col_types = FALSE)
+    meta <- read_csv(meta_path, show_col_types = FALSE,
+                     col_types = cols(cid = col_character()))
     pubs <- left_join(pubs, meta, by = "key")
   } else {
     pubs$cites      <- NA_integer_
@@ -223,6 +231,13 @@ render_pub_list <- function(category = "ARTICLE") {
     paste0("https://scholar.google.com/citations?view_op=view_citation",
            "&hl=en&user=Ipf8idcAAAAJ&citation_for_view=Ipf8idcAAAAJ:",
            pubs$id_scholar),
+    NA_character_
+  )
+  # cid can be a comma-separated list; use only the first value
+  first_cid <- sub(",.*", "", pubs$cid)
+  pubs$url_cites <- ifelse(
+    !is.na(pubs$cid) & pubs$cid != "NA",
+    paste0("https://scholar.google.com/scholar?oi=bibs&hl=en&cites=", first_cid),
     NA_character_
   )
 
