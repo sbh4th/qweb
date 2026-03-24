@@ -1,4 +1,137 @@
 /* css styles */
+
+/* -------------------------------------------------------------------------
+   Publication list — year-grouped layout
+   ------------------------------------------------------------------------- */
+
+/* Two-column grid: narrow year label | wider entry content */
+.pub-list {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  column-gap: 1.5rem;
+  row-gap: 0;
+}
+
+.pub-year-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding-top: 0.2rem;
+  color: #444;
+}
+
+/* Each year group's entries stack vertically in column 2 */
+.pub-year-entries {
+  grid-column: 2;
+}
+
+.pub-entry {
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.pub-entry p {
+  margin-bottom: 0.3rem;
+}
+
+/* --- Buttons --- */
+.pub-buttons {
+  margin-top: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+
+.pub-btn {
+  display: inline-block;
+  padding: 1px 9px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  line-height: 1.6;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-view {
+  background-color: #2196f3;
+  color: white;
+  border-color: #1e88e5;
+}
+.btn-view:hover { background-color: #1976d2; color: white; }
+
+.btn-scholar {
+  background-color: #2196f3;
+  color: white;
+  border-color: #1e88e5;
+}
+.btn-scholar:hover { background-color: #1976d2; color: white; }
+
+.btn-abstract {
+  background-color: #2196f3;
+  color: white;
+  border-color: #1e88e5;
+  font-family: inherit;
+}
+.btn-abstract:hover { background-color: #1976d2; color: white; }
+
+.btn-cites {
+  background-color: #e8e8e8;
+  color: #555;
+  border-color: #ccc;
+}
+
+/* --- Inline abstract (collapsed by default) --- */
+.pub-abstract-body {
+  margin-top: 0.5rem;
+  font-size: 0.88rem;
+  color: #444;
+  border-left: 3px solid #ddd;
+  padding-left: 0.75rem;
+}
+
+.pub-abstract-body p {
+  margin: 0;
+}
+
+/* --- Search box --- */
+.pub-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.pub-search-input {
+  flex: 1;
+  max-width: 480px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pub-search-input:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.15);
+}
+
+.pub-search-count {
+  font-size: 0.85rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* --- Altmetric donut --- */
+.pub-altmetric {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0.3rem;
+}
 /*@font-face {
   font-family: "MyFont";
   src: url(".ttf");
