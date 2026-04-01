@@ -1,0 +1,109 @@
+[System]
+Output filename=Z:\OneDrive - McGill University\delaware\ann-mort-states.txt
+Matrix filename=mortality-trends Matrix-3
+Database name=Mortality - All COD, Aggregated With State, Total U.S. (1969-2013) <Katrina/Rita Population Adjustment>
+
+[Session Options]
+Type=Rate
+RatesAsCasesPer=100000
+
+[Export Options]
+GZipped=false
+Variable format=numeric
+File format=DOS/Windows
+Field delimiter=tab
+Missing character=space
+Fields with delimiter in quotes=false
+Remove thousands separators=true
+Flags included=false
+Variable names included=false
+Column Variables as Stats=false
+
+[Variables]
+Var1Name=State
+Var1Dimension=Row
+Var2Name=Race (White, Black)
+Var2Base=Race recode (White, Black, Other)
+Var2Dimension=Row
+Var3Name=Year (1999-2013)
+Var3Base=Year of death
+Var3Dimension=Row
+Var4Name=Age-Adjusted Rate
+Var5Name=Count
+Var6Name=Population
+
+[Format=State]
+0=Alabama
+1=Alaska
+2=Arizona
+3=Arkansas
+4=California
+5=Colorado
+6=Connecticut
+7=Delaware
+8=Washington DC
+9=Florida
+10=Georgia
+11=Hawaii
+12=Idaho
+13=Illinois
+14=Indiana
+15=Iowa
+16=Kansas
+17=Kentucky
+18=Louisiana
+19=Maine
+20=Maryland
+21=Massachusetts
+22=Michigan
+23=Minnesota
+24=Mississippi
+25=Missouri
+26=Montana
+27=Nebraska
+28=Nevada
+29=New Hampshire
+30=New Jersey
+31=New Mexico
+32=New York
+33=North Carolina
+34=North Dakota
+35=Ohio
+36=Oklahoma
+37=Oregon
+38=Pennsylvania
+39=Rhode Island
+40=South Carolina
+41=South Dakota
+42=Tennessee
+43=Texas
+44=Utah
+45=Vermont
+46=Virginia
+47=Washington
+48=West Virginia
+49=Wisconsin
+50=Wyoming
+51=Hurricane Katrina/Rita Evacuees - Populations Only - 2005
+
+[Format=Race (White, Black)]
+0=White
+1=Black
+
+[Format=Year (1999-2013)]
+0=1999
+1=2000
+2=2001
+3=2002
+4=2003
+5=2004
+6=2005
+7=2006
+8=2007
+9=2008
+10=2009
+11=2010
+12=2011
+13=2012
+14=2013
+

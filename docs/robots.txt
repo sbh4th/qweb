@@ -1,1 +1,1 @@
-Sitemap: https://www.samharper.org/sitemap.xml
+Sitemap: https://samharper.org/sitemap.xml

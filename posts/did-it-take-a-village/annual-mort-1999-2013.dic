@@ -1,0 +1,53 @@
+[System]
+Output filename=Z:\OneDrive - McGill University\delaware\annual-mort-1999-2013.txt
+Matrix filename=Rate Session-1 Matrix-3
+Database name=Mortality - All COD, Aggregated With State, Total U.S. (1969-2013) <Katrina/Rita Population Adjustment>
+
+[Session Options]
+Type=Rate
+RatesAsCasesPer=100000
+
+[Export Options]
+GZipped=false
+Variable format=numeric
+File format=DOS/Windows
+Field delimiter=tab
+Missing character=space
+Fields with delimiter in quotes=false
+Remove thousands separators=true
+Flags included=false
+Variable names included=false
+Column Variables as Stats=false
+
+[Variables]
+Var1Name=Race (White, Black)
+Var1Base=Race recode (White, Black, Other)
+Var1Dimension=Row
+Var2Name=Year (1999-2013)
+Var2Base=Year of death
+Var2Dimension=Row
+Var3Name=Age-Adjusted Rate
+Var4Name=Count
+Var5Name=Population
+
+[Format=Race (White, Black)]
+0=White
+1=Black
+
+[Format=Year (1999-2013)]
+0=1999
+1=2000
+2=2001
+3=2002
+4=2003
+5=2004
+6=2005
+7=2006
+8=2007
+9=2008
+10=2009
+11=2010
+12=2011
+13=2012
+14=2013
+

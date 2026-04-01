@@ -1,0 +1,97 @@
+"Notes"	"Sex"	"Sex Code"	"Race"	"Race Code"	"Year"	"Year Code"	Count	Population	Age-Adjusted Rate
+	"Female"	"F"	"Black or African American"	"2054-5"	"1999"	"1999"	37	16243	246.9
+	"Female"	"F"	"Black or African American"	"2054-5"	"2000"	"2000"	29	16985	184.8
+	"Female"	"F"	"Black or African American"	"2054-5"	"2001"	"2001"	25	17815	147.2
+	"Female"	"F"	"Black or African American"	"2054-5"	"2002"	"2002"	34	18852	204.1
+	"Female"	"F"	"Black or African American"	"2054-5"	"2003"	"2003"	34	19838	180.2
+	"Female"	"F"	"Black or African American"	"2054-5"	"2004"	"2004"	31	20845	161.1
+	"Female"	"F"	"Black or African American"	"2054-5"	"2005"	"2005"	26	22151	133.8
+	"Female"	"F"	"Black or African American"	"2054-5"	"2006"	"2006"	40	23510	191.2
+	"Female"	"F"	"Black or African American"	"2054-5"	"2007"	"2007"	27	24845	115.6
+	"Female"	"F"	"Black or African American"	"2054-5"	"2008"	"2008"	34	26156	145.5
+	"Female"	"F"	"Black or African American"	"2054-5"	"2009"	"2009"	28	27365	113.7
+	"Female"	"F"	"Black or African American"	"2054-5"	"2010"	"2010"	34	28653	126.4
+	"Female"	"F"	"Black or African American"	"2054-5"	"2011"	"2011"	28	29954	108.3
+	"Female"	"F"	"Black or African American"	"2054-5"	"2012"	"2012"	29	31196	99.9
+	"Female"	"F"	"Black or African American"	"2054-5"	"2013"	"2013"	27	32639	87.6
+	"Female"	"F"	"White"	"2106-3"	"1999"	"1999"	173	101234	160.7
+	"Female"	"F"	"White"	"2106-3"	"2000"	"2000"	178	103449	162.1
+	"Female"	"F"	"White"	"2106-3"	"2001"	"2001"	192	105581	171.8
+	"Female"	"F"	"White"	"2106-3"	"2002"	"2002"	159	107938	138.8
+	"Female"	"F"	"White"	"2106-3"	"2003"	"2003"	170	110690	148.1
+	"Female"	"F"	"White"	"2106-3"	"2004"	"2004"	150	113716	126.7
+	"Female"	"F"	"White"	"2106-3"	"2005"	"2005"	198	117238	162.8
+	"Female"	"F"	"White"	"2106-3"	"2006"	"2006"	165	121079	132.6
+	"Female"	"F"	"White"	"2106-3"	"2007"	"2007"	182	124330	140.8
+	"Female"	"F"	"White"	"2106-3"	"2008"	"2008"	155	128101	120.1
+	"Female"	"F"	"White"	"2106-3"	"2009"	"2009"	150	130662	112.9
+	"Female"	"F"	"White"	"2106-3"	"2010"	"2010"	175	133901	126.8
+	"Female"	"F"	"White"	"2106-3"	"2011"	"2011"	139	136612	98.1
+	"Female"	"F"	"White"	"2106-3"	"2012"	"2012"	126	139698	89.9
+	"Female"	"F"	"White"	"2106-3"	"2013"	"2013"	125	143259	85.5
+	"Male"	"M"	"Black or African American"	"2054-5"	"1999"	"1999"	35	12590	326.4
+	"Male"	"M"	"Black or African American"	"2054-5"	"2000"	"2000"	30	13225	255.6
+	"Male"	"M"	"Black or African American"	"2054-5"	"2001"	"2001"	20	13946	166.3
+	"Male"	"M"	"Black or African American"	"2054-5"	"2002"	"2002"	30	14529	273.7
+	"Male"	"M"	"Black or African American"	"2054-5"	"2003"	"2003"	31	15217	259.6
+	"Male"	"M"	"Black or African American"	"2054-5"	"2004"	"2004"	36	15958	285.3
+	"Male"	"M"	"Black or African American"	"2054-5"	"2005"	"2005"	34	16908	217.7
+	"Male"	"M"	"Black or African American"	"2054-5"	"2006"	"2006"	35	17985	246.7
+	"Male"	"M"	"Black or African American"	"2054-5"	"2007"	"2007"	38	18979	223.0
+	"Male"	"M"	"Black or African American"	"2054-5"	"2008"	"2008"	29	20088	157.3
+	"Male"	"M"	"Black or African American"	"2054-5"	"2009"	"2009"	33	20967	172.6
+	"Male"	"M"	"Black or African American"	"2054-5"	"2010"	"2010"	32	22003	182.6
+	"Male"	"M"	"Black or African American"	"2054-5"	"2011"	"2011"	25	22979	135.1
+	"Male"	"M"	"Black or African American"	"2054-5"	"2012"	"2012"	28	24069	147.0
+	"Male"	"M"	"Black or African American"	"2054-5"	"2013"	"2013"	31	25103	154.4
+	"Male"	"M"	"White"	"2106-3"	"1999"	"1999"	165	84094	209.8
+	"Male"	"M"	"White"	"2106-3"	"2000"	"2000"	218	86312	267.9
+	"Male"	"M"	"White"	"2106-3"	"2001"	"2001"	197	88535	233.6
+	"Male"	"M"	"White"	"2106-3"	"2002"	"2002"	164	90874	192.1
+	"Male"	"M"	"White"	"2106-3"	"2003"	"2003"	177	93585	199.1
+	"Male"	"M"	"White"	"2106-3"	"2004"	"2004"	184	96603	202.0
+	"Male"	"M"	"White"	"2106-3"	"2005"	"2005"	191	99727	203.9
+	"Male"	"M"	"White"	"2106-3"	"2006"	"2006"	196	103235	199.0
+	"Male"	"M"	"White"	"2106-3"	"2007"	"2007"	162	106508	168.0
+	"Male"	"M"	"White"	"2106-3"	"2008"	"2008"	172	110012	163.1
+	"Male"	"M"	"White"	"2106-3"	"2009"	"2009"	157	112585	145.9
+	"Male"	"M"	"White"	"2106-3"	"2010"	"2010"	165	115497	150.9
+	"Male"	"M"	"White"	"2106-3"	"2011"	"2011"	151	118354	137.7
+	"Male"	"M"	"White"	"2106-3"	"2012"	"2012"	156	121415	134.8
+	"Male"	"M"	"White"	"2106-3"	"2013"	"2013"	168	124767	142.2
+"---"
+"Dataset: United States and Puerto Rico Cancer Statistics, 1999-2013 Incidence"
+"Query Parameters:"
+"Title:"
+"Age Groups: 50-54 years, 55-59 years, 60-64 years , 65-69 years, 70-74 years, 75-79 years, 80-84 years, 85+ years"
+"Cancer Sites: Colon and Rectum"
+"Ethnicity: All"
+"Race: Black or African American, White"
+"Sex: All"
+"States: Delaware (10)"
+"Year: All, 1999 to 2013"
+"Group By: Sex, Race, Year"
+"Show Totals: False"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Standard Population: 2000 U.S. Std. Million"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/cancer-v2013.html for more information."
+"---"
+"Query Date: Jan 18, 2017 3:50:38 PM"
+"---"
+"Suggested Citation: United States Cancer Statistics: 1999 - 2013 Incidence, WONDER Online Database. United States Department of"
+"Health and Human Services, Centers for Disease Control and Prevention and National Cancer Institute; 2016. Accessed at"
+"http://wonder.cdc.gov/cancer-v2013.html on Jan 18, 2017 3:50:38 PM"
+"---"
+Caveats:
+"1. Data are from selected statewide and metropolitan area cancer registries that meet data quality criteria. Incidence data"
+"shown for the United States are diagnoses and populations from included registries only."
+"2. Information on primary site, behavior, and histology was coded according to the International Classification of Diseases for"
+"Oncology, Third Edition (ICD-O-3) and categorized according to the revised SEER recodes dated January 27, 2003, which define"
+"standard groupings of primary cancer sites."
+"3. For the 2005 year, the Census Bureau estimates that 203,937 persons were displaced from Alabama, Louisiana, Mississippi and"
+"Texas due to Hurricanes Katrina and Rita. CDC WONDER does not include the displaced persons in the 2005 population counts for"
+"these states, nor are these counts included in the summary populations for the affected division, regions or national"
+"population. However, the USCS web site does include these displaced persons in the national population figures for 2005."
